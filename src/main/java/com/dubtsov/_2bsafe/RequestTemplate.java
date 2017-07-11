@@ -2,40 +2,64 @@ package com.dubtsov._2bsafe;
 
 import com.squareup.okhttp.*;
 
+import java.io.IOException;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Created by user on 10.07.17.
  */
 public class RequestTemplate {
 
-    private String postmanToken;
+    private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
-    private HashMap<String, String> content;
+    private Map<String, String> content;
+    OkHttpClient client;
 
     public RequestTemplate(String postmanToken, String url, HashMap<String, String> content){
+        this.content = new LinkedHashMap<String, String>();
         this.postmanToken = postmanToken;
         this.url = url;
         this.content = content;
     }
 
-    public void convertHashContentToBodyString(){
-
+    public RequestTemplate(String url, HashMap<String, String> content){
+        this.content = new LinkedHashMap<String, String>();
+        this.url = url;
+        this.content = content;
     }
 
-    /*OkHttpClient client = new OkHttpClient();
+    private String convertHashContentToBodyString(){
+        String result = "";
+        if(!content.isEmpty()) {
+            for (Map.Entry entry : content.entrySet()) {
+                result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
+            }
+            result = result.substring(2, result.length());
+            return result;
+        } else{
+            return result;
+        }
+    }
 
-    MediaType mediaType = MediaType.parse("application/json");
-    //RequestBody body = RequestBody.create(mediaType, "{\"em\": \"1111n@gmail.com\", \"pwd\": \"111\"}");
-    RequestBody body = RequestBody.create(mediaType, "{\"em\": \"1111n@gmail.com\", \"pwd\": \"111\"}");
-    Request request = new Request.Builder()
-            .url("https://lkn.safec.ru/os_api/accounts/v1.0/reg/step1")
-            .post(body)
-            .addHeader("content-type", "application/json")
-            .addHeader("cache-control", "no-cache")
-            .addHeader("postman-token", "6dcae102-e715-be1d-ab81-b6274c5bc0b3")
-            .build();
+    public Request getRequest(){
+        MediaType mediaType = MediaType.parse("application/json");
+        System.out.println("{" + convertHashContentToBodyString() + "}");
+        RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", postmanToken)
+                .build();
+        return request;
+    }
 
-    Response response = client.newCall(request).execute();*/
-
+    public Response getResponse() throws IOException {
+        client = new OkHttpClient();
+        Response response = client.newCall(getRequest()).execute();
+        return response;
+    }
 }
