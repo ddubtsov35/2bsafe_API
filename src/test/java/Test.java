@@ -8,7 +8,7 @@ public class Test {
 
     @org.junit.Test
     public void test(){
-        //qwe42
+        //qwe4
         Assert.assertTrue(true);
     }
 }
