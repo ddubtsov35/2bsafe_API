@@ -8,7 +8,6 @@ public class Test {
 
     @org.junit.Test
     public void test(){
-        //qwe423
         Assert.assertTrue(true);
     }
 }
