@@ -10,22 +10,21 @@ import java.util.Map;
 /**
  * Created by user on 10.07.17.
  */
-public class RequestTemplate {
+public class RequestTemplateClass {
 
-    //11
     private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
     private Map<String, String> content;
     OkHttpClient client;
 
-    public RequestTemplate(String postmanToken, String url, HashMap<String, String> content){
+    public RequestTemplateClass(String postmanToken, String url, HashMap<String, String> content){
         this.content = new LinkedHashMap<String, String>();
         this.postmanToken = postmanToken;
         this.url = url;
         this.content = content;
     }
 
-    public RequestTemplate(String url, HashMap<String, String> content){
+    public RequestTemplateClass(String url, HashMap<String, String> content){
         this.content = new LinkedHashMap<String, String>();
         this.url = url;
         this.content = content;
@@ -58,9 +57,9 @@ public class RequestTemplate {
         return request;
     }
 
-    public Response getResponse() throws IOException {
+    /*public Response getResponse() throws IOException {
         client = new OkHttpClient();
         Response response = client.newCall(getRequest()).execute();
         return response;
-    }
+    }*/
 }
