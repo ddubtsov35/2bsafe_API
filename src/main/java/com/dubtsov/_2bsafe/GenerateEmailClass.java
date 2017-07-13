@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class GenerateEmailClass {
 
-    private static String pathToFile = "/home/user/IdeaProjects/2bsafe_API/iterator";
+    private static String pathToFile = "./src/main/resources/iterator";
 
     public static int getCountFromFile() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
