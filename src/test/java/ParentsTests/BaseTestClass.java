@@ -1,8 +1,9 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.RequestTemplateClass;
+import com.dubtsov._2bsafe.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.ResponseClass;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
@@ -13,13 +14,13 @@ import java.util.LinkedHashMap;
 public class BaseTestClass {
 
     HashMap<String, String> content;
-    RequestTemplateClass request;
     ResponseClass response;
+    RegistrationUserStep1Class registrationUserStep1Class;
 
-    public BaseTestClass(){
+    public BaseTestClass() throws IOException {
        content = new LinkedHashMap<String, String>();
-       //request = new RequestTemplateClass("https://lkn.safec.ru/os_api/accounts/v1.0/reg/step1", content);
        response = new ResponseClass();
+       registrationUserStep1Class = new RegistrationUserStep1Class();
     }
 
 }
