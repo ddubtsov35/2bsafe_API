@@ -1,4 +1,4 @@
-package com.dubtsov._2bsafe;
+package com.dubtsov._2bsafe.Functions;
 
 import com.dubtsov._2bsafe.Models.RegisteredUser;
 import netscape.javascript.JSObject;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by user on 14.07.17.
  */
-public class ParseResponse {
+public class GetRegisteredUsersClass {
 
     private static List<RegisteredUser> registeredUsersList;
     private static String resultJsonStringGlobal;
@@ -29,6 +29,7 @@ public class ParseResponse {
 
     private static String getResultJsonString(String registeredUserListString) throws ParseException {
         parser = new JSONParser();
+        //System.out.println("registeredUserListString " + registeredUserListString);
         obj = parser.parse(registeredUserListString);
         jsonObj = (JSONObject) obj;
         resultJsonStringGlobal = jsonObj.get("result").toString();
@@ -43,7 +44,7 @@ public class ParseResponse {
         return Integer.parseInt(itemsJsonString);
     }
 
-    public static void getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
+    public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
         registeredUsersList = new ArrayList<>();
         String resultJsonString = getResultJsonString(registeredUserListString);
         obj = parser.parse(resultJsonString);
@@ -52,8 +53,7 @@ public class ParseResponse {
         for(int i=0; i<jsonArray.size(); i++){
             registeredUsersList.add(new RegisteredUser(jsonArray.get(i).toString()));
         }
-        System.out.println(registeredUsersList.get(0).toString());
-
+        return registeredUsersList;
     }
 
 }

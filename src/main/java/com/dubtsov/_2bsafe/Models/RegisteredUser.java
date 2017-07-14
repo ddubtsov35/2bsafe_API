@@ -1,14 +1,9 @@
 package com.dubtsov._2bsafe.Models;
 
-import com.dubtsov._2bsafe.RegistrationUserStep1Class;
-
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
-import netscape.javascript.JSObject;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

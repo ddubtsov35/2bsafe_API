@@ -1,6 +1,7 @@
-package com.dubtsov._2bsafe;
+package com.dubtsov._2bsafe.Functions;
 
 import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
+import com.dubtsov._2bsafe.Response.ResponseClass;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,6 +15,8 @@ public class BaseClass {
     ResponseClass response;
     String constPassword;
     String dynamicPassword;
+    DeleteUserClass deleteUserClass;
+    AuthorisationUserClass authorisationUserClass;
 
     public BaseClass() throws IOException {
         content = new LinkedHashMap<String, String>();

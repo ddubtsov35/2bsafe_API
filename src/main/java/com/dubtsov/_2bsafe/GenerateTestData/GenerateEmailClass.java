@@ -11,7 +11,9 @@ public class GenerateEmailClass {
 
     public static int getCountFromFile() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
-        return Integer.parseInt(reader.readLine());
+        int result = Integer.parseInt(reader.readLine());
+        reader.close();
+        return result;
     }
 
     private static void setCountFromFile(int count) throws IOException {

@@ -1,4 +1,4 @@
-package com.dubtsov._2bsafe;
+package com.dubtsov._2bsafe.Response;
 
 import com.squareup.okhttp.*;
 import com.sun.javafx.scene.layout.region.Margins;
@@ -76,15 +76,17 @@ public class ResponseClass {
                 .build();
         System.out.println("REQUEST ");
         System.out.println(request.toString());
-        System.out.println(request.body().toString());
-        System.out.println(request.headers());
-        content.clear();
+        System.out.println();
+        //System.out.println(request.body().toString());
+        //System.out.println(request.headers());
+        //content.clear();
         return request;
     }
 
     public Response getResponse() throws IOException {
         response = client.newCall(getRequest()).execute();
-        System.out.println("Response: " + response.body().string());
+        System.out.println("Response: " + response.code());
+        System.out.println();
         return response;
     }
 
