@@ -1,8 +1,6 @@
-package com.dubtsov._2bsafe;
+package com.dubtsov._2bsafe.GenerateTestData;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by user on 12.07.17.

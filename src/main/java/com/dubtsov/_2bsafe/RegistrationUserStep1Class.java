@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe;
 
+import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
+
 import java.io.IOException;
 
 /**

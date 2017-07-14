@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe;
 
+import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -15,7 +17,6 @@ public class BaseClass {
 
     public BaseClass() throws IOException {
         content = new LinkedHashMap<String, String>();
-        response = new ResponseClass();
         this.constPassword = "qqqqqq";
         this.dynamicPassword = "qqqqqq" + GenerateEmailClass.getCountFromFile();
     }

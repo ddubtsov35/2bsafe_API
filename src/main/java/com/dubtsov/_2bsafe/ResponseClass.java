@@ -1,6 +1,8 @@
 package com.dubtsov._2bsafe;
 
 import com.squareup.okhttp.*;
+import com.sun.javafx.scene.layout.region.Margins;
+import com.sun.xml.internal.ws.commons.xmlutil.Converter;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -16,21 +18,20 @@ public class ResponseClass {
     private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
     private Map<String, String> content;
-    OkHttpClient client;
-    Response response;
+    private OkHttpClient client = new OkHttpClient();
+    private Response response;
+    private String sessionId = "";
 
     public ResponseClass(String postmanToken, String url, HashMap<String, String> content){
-        client = new OkHttpClient();
         this.content = new LinkedHashMap<String, String>();
         this.postmanToken = postmanToken;
-        this.url = prefixUrl + url;
+        this.url = url;
         this.content = content;
     }
 
     public ResponseClass(String url, HashMap<String, String> content){
-        client = new OkHttpClient();
         this.content = new LinkedHashMap<String, String>();
-        this.url = prefixUrl + url;
+        this.url = url;
         this.content = content;
     }
 
@@ -40,18 +41,30 @@ public class ResponseClass {
         String result = "";
         if(!this.content.isEmpty()) {
             for (Map.Entry entry : content.entrySet()) {
-                result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
+                try {
+                    Integer.parseInt(entry.getValue().toString());
+                } catch(NumberFormatException e) {
+                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
+                    continue;
+                }
+                //0 для выборки всех пользователей sortf
+                if(Integer.parseInt(entry.getValue().toString())  == 0) {
+                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + entry.getValue();
+                } else{
+                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
+                }
+                continue;
             }
-            result = result.substring(2, result.length());
-            return result;
         } else{
             return result;
         }
+        result = result.substring(2, result.length());
+        System.out.println(result);
+        return result;
     }
 
     private Request getRequest(){
         MediaType mediaType = MediaType.parse("application/json");
-        System.out.println("RequestBody: {" + convertHashContentToBodyString() + "}");
         RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
         Request request = new Request.Builder()
                 .url(url)
@@ -59,7 +72,13 @@ public class ResponseClass {
                 .addHeader("content-type", "application/json")
                 .addHeader("cache-control", "no-cache")
                 .addHeader("postman-token", postmanToken)
+                .addHeader("cookie", sessionId)
                 .build();
+        System.out.println("REQUEST ");
+        System.out.println(request.toString());
+        System.out.println(request.body().toString());
+        System.out.println(request.headers());
+        content.clear();
         return request;
     }
 
@@ -78,4 +97,5 @@ public class ResponseClass {
     public void setContent(Map<String, String> content) {
         this.content = content;
     }
+    public void setSessionId(String sessionId){ this.sessionId = sessionId;}
 }
