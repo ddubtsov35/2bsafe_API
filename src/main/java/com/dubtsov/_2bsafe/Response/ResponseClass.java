@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Response;
 
+import com.dubtsov._2bsafe.Functions.ContentClearFlag;
+import com.dubtsov._2bsafe.Functions.ListRegisteredUsersClass;
 import com.squareup.okhttp.*;
 import com.sun.javafx.scene.layout.region.Margins;
 import com.sun.xml.internal.ws.commons.xmlutil.Converter;
@@ -77,16 +79,26 @@ public class ResponseClass {
         System.out.println("REQUEST ");
         System.out.println(request.toString());
         System.out.println();
-        //System.out.println(request.body().toString());
-        //System.out.println(request.headers());
-        //content.clear();
+        System.out.println(request.body().toString());
+        System.out.println(request.headers());
+       /* if(ContentClearFlag.isContentClearFlag()) {
+            content.clear();
+        }*/
         return request;
     }
 
     public Response getResponse() throws IOException {
         response = client.newCall(getRequest()).execute();
         System.out.println("Response: " + response.code());
+        System.out.println("Response: " + response.headers());
+        System.out.println("Response: " + response.cacheResponse());
         System.out.println();
+
+        ListRegisteredUsersClass listRegisteredUsersClass = new ListRegisteredUsersClass();
+        String ses = listRegisteredUsersClass.getSessionId(response.headers().toString());
+        System.out.println("44444 " + response.headers().toString());
+        System.out.println("33333 " + ses);
+        setSessionId(ses);
         return response;
     }
 

@@ -36,13 +36,13 @@ public class GetRegisteredUsersClass {
         return resultJsonStringGlobal;
     }
 
-    public static int getRegisteredUsersCount(String registeredUserListString) throws ParseException {
+    /*public static int getRegisteredUsersCount(String registeredUserListString) throws ParseException {
         String resultJsonString = getResultJsonString(registeredUserListString);
         obj = parser.parse(resultJsonString);
         jsonObj = (JSONObject) obj;
         itemsJsonString = jsonObj.get("num").toString();
         return Integer.parseInt(itemsJsonString);
-    }
+    }*/
 
     public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
         registeredUsersList = new ArrayList<>();
@@ -50,8 +50,10 @@ public class GetRegisteredUsersClass {
         obj = parser.parse(resultJsonString);
         jsonObj = (JSONObject) obj;
         jsonArray = (JSONArray) jsonObj.get("items");
+        itemsJsonString = jsonObj.get("num").toString();
         for(int i=0; i<jsonArray.size(); i++){
             registeredUsersList.add(new RegisteredUser(jsonArray.get(i).toString()));
+            registeredUsersList.get(i).setCount(Integer.parseInt(itemsJsonString = jsonObj.get("num").toString()));
         }
         return registeredUsersList;
     }

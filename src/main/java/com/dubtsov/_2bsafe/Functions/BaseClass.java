@@ -11,15 +11,16 @@ import java.util.LinkedHashMap;
  * Created by user on 12.07.17.
  */
 public class BaseClass {
-    HashMap<String, String> content;
+    HashMap superContent;
     ResponseClass response;
     String constPassword;
     String dynamicPassword;
     DeleteUserClass deleteUserClass;
     AuthorisationUserClass authorisationUserClass;
+    ListRegisteredUsersClass listRegisteredUsersClass;
 
     public BaseClass() throws IOException {
-        content = new LinkedHashMap<String, String>();
+        superContent = new LinkedHashMap<>();
         this.constPassword = "qqqqqq";
         this.dynamicPassword = "qqqqqq" + GenerateEmailClass.getCountFromFile();
     }

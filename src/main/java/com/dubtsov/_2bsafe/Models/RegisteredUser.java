@@ -20,12 +20,15 @@ public class RegisteredUser {
     public String name;
     public int cnum;
     public Date act_date;
+    public int act_code;
     public String em;
     public String ph;
     public int acc_id;
     public Date reg_date;
     public int tnum;
+    private int count;
 
+    public RegisteredUser(){}
 
     public RegisteredUser(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
@@ -37,7 +40,8 @@ public class RegisteredUser {
         jsonObj = (JSONObject) obj;
 
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-        Date actDate = format.parse(jsonObj.get("act_date").toString());
+        Date actDate;
+        if(!jsonObj.get("act_date").toString().equals("None")) {actDate =format.parse(jsonObj.get("act_date").toString());} else {actDate = null;}
         Date regDate = format.parse(jsonObj.get("reg_date").toString());
 
 
@@ -49,6 +53,7 @@ public class RegisteredUser {
         setAcc_id(Integer.parseInt(jsonObj.get("acc_id").toString()));
         setReg_date(regDate);
         setTnum(Integer.parseInt(jsonObj.get("tnum").toString()));
+        if(jsonObj.get("act_code") != null) {setAct_code(Integer.parseInt(jsonObj.get("act_code").toString()));}
     }
 
     @Override
@@ -127,5 +132,21 @@ public class RegisteredUser {
 
     public void setTnum(int tnum) {
         this.tnum = tnum;
+    }
+
+    public int getAct_code() {
+        return act_code;
+    }
+
+    public void setAct_code(int act_code) {
+        this.act_code = act_code;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 }
