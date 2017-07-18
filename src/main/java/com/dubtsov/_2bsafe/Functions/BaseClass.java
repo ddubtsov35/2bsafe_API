@@ -10,18 +10,19 @@ import java.util.LinkedHashMap;
 /**
  * Created by user on 12.07.17.
  */
-public class BaseClass {
-    HashMap superContent;
-    ResponseClass response;
-    String constPassword;
-    String dynamicPassword;
-    DeleteUserClass deleteUserClass;
-    AuthorisationUserClass authorisationUserClass;
-    ListRegisteredUsersClass listRegisteredUsersClass;
+public  class BaseClass {
 
-    public BaseClass() throws IOException {
-        superContent = new LinkedHashMap<>();
-        this.constPassword = "qqqqqq";
-        this.dynamicPassword = "qqqqqq" + GenerateEmailClass.getCountFromFile();
-    }
+    protected static HashMap superContent = new LinkedHashMap<>();
+    protected ResponseClass response;
+    protected String constPassword = "qqqqqq";
+    protected String dynamicPassword = "qqqqqq" + GenerateEmailClass.getCountFromFile();
+    protected DeleteUserClass deleteUserClass;
+    protected AuthorisationUserClass authorisationUserClass;
+    protected ListRegisteredUsersClass listRegisteredUsersClass;
+    protected PasswordChangeClass passwordChangeClass;
+    protected RegistrationUserStep1Class registrationUserStep1Class;
+    protected RegistrationUserStep2Class registrationUserStep2Class;
+    protected RecoveryPasswordClass recoveryPasswordClass;
+
+    public BaseClass() throws IOException {}
 }

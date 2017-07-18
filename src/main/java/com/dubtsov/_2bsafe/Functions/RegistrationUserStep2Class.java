@@ -36,7 +36,7 @@ public class RegistrationUserStep2Class extends BaseClass{
 
         System.out.println( this.content);
 
-        response = new ResponseClass("https://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
+        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
         response.getResponse();
     }
 

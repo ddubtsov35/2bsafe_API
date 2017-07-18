@@ -2,11 +2,12 @@ package com.dubtsov._2bsafe.Response;
 
 import com.dubtsov._2bsafe.Functions.ContentClearFlag;
 import com.dubtsov._2bsafe.Functions.ListRegisteredUsersClass;
-import com.squareup.okhttp.*;
 import com.sun.javafx.scene.layout.region.Margins;
-import com.sun.xml.internal.ws.commons.xmlutil.Converter;
+import okhttp3.*;
 
+import javax.net.ssl.*;
 import java.io.IOException;
+import java.security.cert.CertificateException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,23 +17,23 @@ import java.util.Map;
  */
 public class ResponseClass {
 
-    private String prefixUrl = "https://lkn.safec.ru";
+    private String prefixUrl = "http://lkn.safec.ru";
     private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
     private Map<String, String> content;
     private OkHttpClient client = new OkHttpClient();
     private Response response;
-    private String sessionId = "";
+    private static String sessionId = "";
 
     public ResponseClass(String postmanToken, String url, HashMap<String, String> content){
-        this.content = new LinkedHashMap<String, String>();
+        this.content = new LinkedHashMap<>();
         this.postmanToken = postmanToken;
         this.url = url;
         this.content = content;
     }
 
     public ResponseClass(String url, HashMap<String, String> content){
-        this.content = new LinkedHashMap<String, String>();
+        this.content = new LinkedHashMap<>();
         this.url = url;
         this.content = content;
     }
@@ -40,6 +41,7 @@ public class ResponseClass {
     public ResponseClass(){}
 
     private String convertHashContentToBodyString(){
+        System.out.println("content " + content);
         String result = "";
         if(!this.content.isEmpty()) {
             for (Map.Entry entry : content.entrySet()) {
@@ -79,8 +81,6 @@ public class ResponseClass {
         System.out.println("REQUEST ");
         System.out.println(request.toString());
         System.out.println();
-        System.out.println(request.body().toString());
-        System.out.println(request.headers());
        /* if(ContentClearFlag.isContentClearFlag()) {
             content.clear();
         }*/
@@ -90,17 +90,56 @@ public class ResponseClass {
     public Response getResponse() throws IOException {
         response = client.newCall(getRequest()).execute();
         System.out.println("Response: " + response.code());
-        System.out.println("Response: " + response.headers());
-        System.out.println("Response: " + response.cacheResponse());
         System.out.println();
 
         ListRegisteredUsersClass listRegisteredUsersClass = new ListRegisteredUsersClass();
         String ses = listRegisteredUsersClass.getSessionId(response.headers().toString());
-        System.out.println("44444 " + response.headers().toString());
-        System.out.println("33333 " + ses);
         setSessionId(ses);
         return response;
     }
+
+    /*private static OkHttpClient getUnsafeOkHttpClient() {
+        try {
+            // Create a trust manager that does not validate certificate chains
+            final TrustManager[] trustAllCerts = new TrustManager[] {
+                    new X509TrustManager() {
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                        }
+
+                        @Override
+                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                            return new java.security.cert.X509Certificate[]{};
+                        }
+                    }
+            };
+
+            // Install the all-trusting trust manager
+            final SSLContext sslContext = SSLContext.getInstance("SSL");
+            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
+            // Create an ssl socket factory with our all-trusting manager
+            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
+
+            OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            builder.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
+            builder.hostnameVerifier(new HostnameVerifier() {
+                @Override
+                public boolean verify(String hostname, SSLSession session) {
+                    return true;
+                }
+            });
+
+            OkHttpClient okHttpClient = builder.build();
+            return okHttpClient;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }*/
+
 
     public void setPostmanToken(String postmanToken) {
         this.postmanToken = postmanToken;

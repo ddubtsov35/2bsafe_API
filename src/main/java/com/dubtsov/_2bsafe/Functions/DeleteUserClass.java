@@ -20,7 +20,7 @@ public class DeleteUserClass extends BaseClass{
 
         HashMap thisContent = new LinkedHashMap();
         thisContent.put("pwd", content.get("pwd").toString());
-        response = new ResponseClass("https://lkn.safec.ru/os_api/accounts/v1.0/delete_account", thisContent);
+        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", thisContent);
         response.getResponse();
     }
 }
