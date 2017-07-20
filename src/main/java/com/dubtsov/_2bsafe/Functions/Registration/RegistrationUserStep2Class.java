@@ -1,12 +1,12 @@
-package com.dubtsov._2bsafe.Functions;
+package com.dubtsov._2bsafe.Functions.Registration;
 
-import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
+import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Response.ResponseClass;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by user on 17.07.17.
  */
-public class RegistrationUserStep2Class extends BaseClass{
+public class RegistrationUserStep2Class extends BaseClass {
 
     public RegistrationUserStep2Class() throws IOException {
     }
@@ -36,8 +36,8 @@ public class RegistrationUserStep2Class extends BaseClass{
 
         System.out.println( this.content);
 
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
-        response.getResponse();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
+        responseClass.getResponse();
     }
 
 }

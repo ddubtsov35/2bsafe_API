@@ -1,13 +1,9 @@
 package com.dubtsov._2bsafe.Response;
 
-import com.dubtsov._2bsafe.Functions.ContentClearFlag;
-import com.dubtsov._2bsafe.Functions.ListRegisteredUsersClass;
-import com.sun.javafx.scene.layout.region.Margins;
+import com.dubtsov._2bsafe.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import okhttp3.*;
 
-import javax.net.ssl.*;
 import java.io.IOException;
-import java.security.cert.CertificateException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -25,17 +21,22 @@ public class ResponseClass {
     private Response response;
     private static String sessionId = "";
 
-    public ResponseClass(String postmanToken, String url, HashMap<String, String> content){
+    public ResponseClass(String postmanToken, String url, HashMap content){
         this.content = new LinkedHashMap<>();
         this.postmanToken = postmanToken;
         this.url = url;
         this.content = content;
     }
 
-    public ResponseClass(String url, HashMap<String, String> content){
+    public ResponseClass(String url, HashMap content){
         this.content = new LinkedHashMap<>();
         this.url = url;
         this.content = content;
+    }
+
+    public ResponseClass(String url){
+        this.content = new LinkedHashMap<>();
+        this.url = url;
     }
 
     public ResponseClass(){}
@@ -98,47 +99,23 @@ public class ResponseClass {
         return response;
     }
 
-    /*private static OkHttpClient getUnsafeOkHttpClient() {
-        try {
-            // Create a trust manager that does not validate certificate chains
-            final TrustManager[] trustAllCerts = new TrustManager[] {
-                    new X509TrustManager() {
-                        @Override
-                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                        }
-
-                        @Override
-                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                        }
-
-                        @Override
-                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                            return new java.security.cert.X509Certificate[]{};
-                        }
-                    }
-            };
-
-            // Install the all-trusting trust manager
-            final SSLContext sslContext = SSLContext.getInstance("SSL");
-            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
-            // Create an ssl socket factory with our all-trusting manager
-            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-
-            OkHttpClient.Builder builder = new OkHttpClient.Builder();
-            builder.sslSocketFactory(sslSocketFactory, (X509TrustManager)trustAllCerts[0]);
-            builder.hostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String hostname, SSLSession session) {
-                    return true;
-                }
-            });
-
-            OkHttpClient okHttpClient = builder.build();
-            return okHttpClient;
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }*/
+    public Response getRequestAddChildrenCardList() throws Exception {
+        MediaType mediaType = MediaType.parse("multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
+        String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + content.get("name").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + content.get("phone").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + content.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n" + content.get("send_sms").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"file\"; filename=\"" + content.get("file") + "\"\r\nContent-Type: image/jpeg\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
+        //String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + content.get("name") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + content.get("phone") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + content.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n1\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
+        System.out.println(qqq);
+        RequestBody body = RequestBody.create(mediaType,qqq);
+                Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW")
+                .addHeader("cache-control", "no-cache")
+                        .addHeader("postman-token", "d3938f7b-a5b6-e681-d5a5-a580b3391f40")
+                        .addHeader("cookie", sessionId)
+                .build();
+        response = client.newCall(request).execute();
+        return response;
+    }
 
 
     public void setPostmanToken(String postmanToken) {

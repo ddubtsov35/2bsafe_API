@@ -1,5 +1,8 @@
-package com.dubtsov._2bsafe.Functions;
+package com.dubtsov._2bsafe.Functions.Authorisation;
 
+import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.parser.ParseException;
@@ -13,21 +16,23 @@ import java.util.LinkedHashMap;
  */
 public class AuthorisationUserClass extends BaseClass {
 
+    HashMap content;
+
     public AuthorisationUserClass() throws IOException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
     public Response authorisationUser(HashMap content) throws IOException {
+        System.out.println(content);
         content = preparationContent(content);
         content.put("dtype", 0);
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", content);
-        return response.getResponse();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", content);
+        return responseClass.getResponse();
     }
 
-    private HashMap preparationContent(HashMap content){
+    public HashMap preparationContent(HashMap content){
         HashMap cloneContent = new LinkedHashMap<>();
-        System.out.println("1114444444 " + content);
         cloneContent.put("pwd", content.get("pwd").toString());
         if(content.containsKey("em")) {
             Object obj = content.remove("em");
@@ -35,6 +40,7 @@ public class AuthorisationUserClass extends BaseClass {
             content.put("login", obj);
         }
         content.put("pwd", cloneContent.get("pwd"));
+        System.out.println("PreparationContent " + content);
         return content;
     }
 
@@ -47,7 +53,6 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep2Class.registrationUserStep2(content);
         //Authorisation
         Response response = authorisationUser(content);
-        System.out.println("super!!!! " + superContent);
         return response;
     }
 

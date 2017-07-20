@@ -1,4 +1,4 @@
-package com.dubtsov._2bsafe.Functions;
+package com.dubtsov._2bsafe.Parse;
 
 import com.dubtsov._2bsafe.Models.RegisteredUser;
 import netscape.javascript.JSObject;
@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by user on 14.07.17.
  */
-public class GetRegisteredUsersClass {
+public class GetRegisteredUsers {
 
     private static List<RegisteredUser> registeredUsersList;
     private static String resultJsonStringGlobal;
@@ -47,6 +47,7 @@ public class GetRegisteredUsersClass {
     public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
         registeredUsersList = new ArrayList<>();
         String resultJsonString = getResultJsonString(registeredUserListString);
+        System.out.println("resultJsonString " + resultJsonString);
         obj = parser.parse(resultJsonString);
         jsonObj = (JSONObject) obj;
         jsonArray = (JSONArray) jsonObj.get("items");

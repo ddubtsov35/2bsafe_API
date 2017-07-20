@@ -1,11 +1,15 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Functions.*;
+import com.dubtsov._2bsafe.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Functions.RegisteredUsers.DeleteUserClass;
+import com.dubtsov._2bsafe.Functions.RegisteredUsers.ListRegisteredUsersClass;
+import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.GenerateTestData.GeneratePhoneClass;
 import com.dubtsov._2bsafe.Response.ResponseClass;
 import org.json.simple.parser.ParseException;
-import org.junit.After;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,8 +33,8 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void checkEmailPhoneExist() throws IOException {
-        ContentClearFlag.setContentClearFlag(false);
-        HashMap<String, String> email = registrationUserStep1Class.registrationUserStep1();
+        //ContentClearFlag.setContentClearFlag(false);
+        HashMap email = registrationUserStep1Class.registrationUserStep1();
         superContent.put("em", (String) email.get("em"));
         superContent.put("ph", GeneratePhoneClass.getGeneratedPhone());
         response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", superContent);
@@ -66,8 +70,6 @@ public class RegistrationTests extends BaseClass {
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
-        //System.out.println("countUsersBefore " + countUsersBefore);
-        //System.out.println("countUsersAfter " + countUsersAfter);
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }
 

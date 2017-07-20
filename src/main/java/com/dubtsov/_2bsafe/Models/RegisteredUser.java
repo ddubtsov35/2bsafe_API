@@ -17,15 +17,15 @@ public class RegisteredUser {
     private static Object obj;
     private static JSONObject jsonObj;
 
-    public String name;
-    public int cnum;
-    public Date act_date;
-    public int act_code;
-    public String em;
-    public String ph;
-    public int acc_id;
-    public Date reg_date;
-    public int tnum;
+    private String name;
+    private int cnum;
+    private Date act_date;
+    private int act_code;
+    private String em;
+    private String ph;
+    private int acc_id;
+    private Date reg_date;
+    private int tnum;
     private int count;
 
     public RegisteredUser(){}
