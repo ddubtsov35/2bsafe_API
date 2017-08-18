@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="2bsafe_API_tests" target="1.7" />
+      <module name="2bsafe_API_tests" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

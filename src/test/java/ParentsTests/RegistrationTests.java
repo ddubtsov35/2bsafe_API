@@ -1,14 +1,14 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Functions.Authorisation.AuthorisationUserClass;
-import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Functions.RegisteredUsers.DeleteUserClass;
-import com.dubtsov._2bsafe.Functions.RegisteredUsers.ListRegisteredUsersClass;
-import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep1Class;
-import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep2Class;
-import com.dubtsov._2bsafe.GenerateTestData.GenerateEmailClass;
-import com.dubtsov._2bsafe.GenerateTestData.GeneratePhoneClass;
-import com.dubtsov._2bsafe.Response.ResponseClass;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
+import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -54,11 +54,11 @@ public class RegistrationTests extends BaseClass {
         //Create test user and remember his password
         HashMap content = registrationUserStep1Class.registrationUserStep1();
         //Verification account
-        registrationUserStep2Class.registrationUserStep2(content);
+        registrationUserStep2Class.registrationUserStep2Web(content);
         //Authorisation
         authorisationUserClass.authorisationUser(content);
         //Delete user
-        deleteUserClass.deleteUser(content);
+        deleteUserClass.deleteUser();
         //Authorisation
         int codeRepeatAuthorisation = authorisationUserClass.authorisationUser(content).code();
 
@@ -75,7 +75,7 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void sendCodeActivation() throws IOException {
-        String result = registrationUserStep1Class.sendCodeRegistration();
+        String result = registrationUserStep1Class.sendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }

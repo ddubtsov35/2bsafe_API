@@ -1,13 +1,13 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Functions.Authorisation.AuthorisationUserClass;
-import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Functions.Logout.LogoutClass;
-import com.dubtsov._2bsafe.Functions.PasswordChange.PasswordChangeClass;
-import com.dubtsov._2bsafe.Functions.RecoveryPassword.RecoveryPasswordClass;
-import com.dubtsov._2bsafe.Functions.RegisteredUsers.DeleteUserClass;
-import com.dubtsov._2bsafe.Functions.Registration.RegistrationUserStep1Class;
-import okhttp3.Response;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
+import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
+import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.PasswordChangeClass;
+import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordClass;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,8 +21,6 @@ import java.util.LinkedHashMap;
  */
 public class AuthorisationTests extends BaseClass {
 
-
-    Response response;
     HashMap content = new LinkedHashMap();
 
     public AuthorisationTests() throws IOException {
@@ -35,8 +33,16 @@ public class AuthorisationTests extends BaseClass {
     }
 
     @Test
-    public void authorisation() throws IOException, ParseException, java.text.ParseException {
-        response = authorisationUserClass.RegistrationAndAuthorisation();
+    public void authorisationWeb() throws IOException, ParseException, java.text.ParseException {
+        response = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        String result = response.body().string();
+        System.out.println("Result " + result);
+        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+    }
+
+    @Test
+    public void authorisationAndroid() throws IOException, ParseException, java.text.ParseException {
+        response = authorisationUserClass.RegistrationAndAuthorisationAndroid();
         String result = response.body().string();
         System.out.println("Result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -45,26 +51,31 @@ public class AuthorisationTests extends BaseClass {
     @Test
     public void recoveryPassword() throws IOException {
         registrationUserStep1Class.registrationUserStep1();
-        //content.put("login", superContent.get("em"));
-        response = recoveryPasswordClass.recoveryPassword(authorisationUserClass.preparationContent(superContent));
-        deleteUserClass.deleteUser(superContent);
+        content.put("login", superContent.get("em"));
+        response = recoveryPasswordClass.recoveryPasswordStart(content);
+        //deleteUserClass.deleteUser();
+        InputClass inputClass = new InputClass();
+        content.put("code", inputClass.code());
+        response = recoveryPasswordClass.recoveryPasswordConfirm(content);
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
 
     @Test
     public void successPasswordChange() throws IOException, ParseException, java.text.ParseException {
-        response = authorisationUserClass.RegistrationAndAuthorisation();
+        response = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
         content.put("login", superContent.get("login"));
         content.put("pwd", superContent.get("npwd"));
+        content.put("dtype", 0);
         response = authorisationUserClass.authorisationUser(content);
-        deleteUserClass.deleteUser(superContent);
-        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
+        //deleteUserClass.deleteUser();
+        String resp = response.body().string();
+        Assert.assertTrue(resp.contains("\"scs\": true")&&  response.code() == 200);
     }
 
     @Test
     public void logout() throws ParseException, java.text.ParseException, IOException {
-        authorisationUserClass.RegistrationAndAuthorisation();
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = logoutClass.logout();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
 

@@ -1,13 +1,13 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Functions.Authorisation.AuthorisationUserClass;
-import com.dubtsov._2bsafe.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Functions.ChildrenCard.DeleteChildrenCardClass;
-import com.dubtsov._2bsafe.Functions.ChildrenCard.GetChildrenCardListClass;
-import com.dubtsov._2bsafe.Functions.RegisteredUsers.DeleteUserClass;
-import com.dubtsov._2bsafe.Functions.RegisteredUsers.ListRegisteredUsersClass;
-import okhttp3.Response;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChangeChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.DeleteChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GetChildrenCardListClass;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -22,7 +22,6 @@ import java.util.LinkedHashMap;
 public class ChildrenCardsTests extends BaseClass {
 
     HashMap content;
-    Response response;
 
     public ChildrenCardsTests() throws IOException {
         addChildrenCardClass = new AddChildrenCardClass();
@@ -32,11 +31,23 @@ public class ChildrenCardsTests extends BaseClass {
         deleteUserClass = new DeleteUserClass();
         content = new LinkedHashMap();
         deleteChildrenCardClass = new DeleteChildrenCardClass();
+        changeChildrenCardClass = new ChangeChildrenCardClass();
     }
 
     @Test
-    public void addChildrenCards() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisation();
+    public void addChildrenCardsWeb() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        int countCardBefore = getChildrenCardListClass.getChildrenCardListCount();
+        System.out.println("countCardBefore  " + countCardBefore);
+        response = addChildrenCardClass.addChildrenCard();
+        int countCardAfter = getChildrenCardListClass.getChildrenCardListCount();
+        System.out.println("countCardAfter  " + countCardAfter);
+        Assert.assertTrue(countCardAfter - countCardBefore == 1 && response.code() == 200);
+    }
+
+    @Test
+    public void addChildrenCardsAndroid() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
         int countCardBefore = getChildrenCardListClass.getChildrenCardListCount();
         System.out.println("countCardBefore  " + countCardBefore);
         response = addChildrenCardClass.addChildrenCard();
@@ -47,13 +58,13 @@ public class ChildrenCardsTests extends BaseClass {
 
     @Test
     public void getChildrenCardsList() throws IOException, ParseException, java.text.ParseException {
-        authorisationUserClass.RegistrationAndAuthorisation();
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(getChildrenCardListClass.getChildrenCardListCount() == 0);
     }
 
     @Test
     public void deleteChildrenCards() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisation();
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = addChildrenCardClass.addChildrenCard();
         int countCardBefore = getChildrenCardListClass.getChildrenCardListCount();
         System.out.println("countCardBefore  " + countCardBefore);
@@ -65,12 +76,32 @@ public class ChildrenCardsTests extends BaseClass {
 
     @Test
     public void changeChildrenCardsPhone() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisation();
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = addChildrenCardClass.addChildrenCard();
-
-
-        Assert.assertTrue(countCardBefore - countCardAfter == 1 && response.code() == 200);
+        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "phone");
+        System.out.println(getChildrenCardListClass.getChildrenCardList().get(0));
+        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
     }
+
+    @Test
+    public void changeChildrenCardsAge() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        response = addChildrenCardClass.addChildrenCard();
+        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "age");
+        System.out.println(getChildrenCardListClass.getChildrenCardList().get(0));
+        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getAge().equals("99"));
+    }
+
+    @Test
+    public void changeChildrenCardsAll() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        response = addChildrenCardClass.addChildrenCard();
+        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "all");
+        //Assert.assertTrue(getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
+        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getAge().equals("99") && getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
+    }
+
+
 
 
 
