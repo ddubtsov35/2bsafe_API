@@ -14,22 +14,22 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordCl
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
-import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.prefs.BackingStoreException;
 
 /**
- * Created by user on 16.08.17.
+ * Created by user on 23.08.17.
  */
-public class AuthorisationTest extends BaseClass{
+public class ChildrenCardTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public AuthorisationTest() throws IOException {
+    public ChildrenCardTest() throws IOException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         recoveryPasswordClass = new RecoveryPasswordClass();
         logoutClass = new LogoutClass();
@@ -44,9 +44,11 @@ public class AuthorisationTest extends BaseClass{
         profileSetClass = new ProfileSetClass();
     }
 
+
     @Test
-    public void authorisation() throws IOException, ParseException, java.text.ParseException {
+    public void getChildrenCardList() throws Exception {
         response = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addChildrenCardClass.addChildrenCard();
         content.put("cid","");
         content.put("em",superContent.get("login"));
         content.put("pwd",superContent.get("pwd"));
@@ -59,14 +61,35 @@ public class AuthorisationTest extends BaseClass{
         content.put("mod","TestMod");
         content.put("type",1);
         response = authorisationChildClass.authorisationChildren(content);
-        String result = response.body().string();
-        Assert.assertTrue(result.contains("\"scs\": true"));
+        childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
+        content.put("cid",childrenResponseAuthorisationModel.getCid());
+        content.put("ckey",childrenResponseAuthorisationModel.getCkey());
+        Assert.assertTrue(profileListClass.getProfileList(content).size() == 1);
     }
 
-
-
-
-
-
+    @Test
+    public void selectChildrenCard() throws Exception {
+        response = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addChildrenCardClass.addChildrenCard();
+        content.put("cid","");
+        content.put("em",superContent.get("login"));
+        content.put("pwd",superContent.get("pwd"));
+        content.put("token", GenerateTokenClass.getGeneratedToken());
+        content.put("sname","TestDevice");
+        content.put("os","Android");
+        content.put("osv","10");
+        content.put("scr","Doxya");
+        content.put("man","TestMan");
+        content.put("mod","TestMod");
+        content.put("type",1);
+        response = authorisationChildClass.authorisationChildren(content);
+        childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
+        content.put("cid",childrenResponseAuthorisationModel.getCid());
+        content.put("ckey",childrenResponseAuthorisationModel.getCkey());
+        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        String result = profileSetClass.selectProfileCardResponse(content).body().string();
+        System.out.println("selectChildrenCard " + result);
+        Assert.assertTrue(result.contains("\"scs\": true"));
+    }
 
 }

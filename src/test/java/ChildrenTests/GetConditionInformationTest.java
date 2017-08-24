@@ -2,6 +2,8 @@ package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponseClass;
+import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GenerationRequestJsonClass;
+import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GetConditionInformation;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
@@ -14,8 +16,6 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordCl
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
-import org.json.simple.parser.ParseException;
-import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -23,13 +23,13 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 /**
- * Created by user on 16.08.17.
+ * Created by user on 23.08.17.
  */
-public class AuthorisationTest extends BaseClass{
+public class GetConditionInformationTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public AuthorisationTest() throws IOException {
+    public GetConditionInformationTest() throws IOException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         recoveryPasswordClass = new RecoveryPasswordClass();
         logoutClass = new LogoutClass();
@@ -42,11 +42,14 @@ public class AuthorisationTest extends BaseClass{
         profileListClass = new ProfileListClass();
         addChildrenCardClass = new AddChildrenCardClass();
         profileSetClass = new ProfileSetClass();
+        generationRequestJsonClass = new GenerationRequestJsonClass();
+        getConditionInformation = new GetConditionInformation();
     }
 
     @Test
-    public void authorisation() throws IOException, ParseException, java.text.ParseException {
+    public void getConditionInformation() throws Exception {
         response = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addChildrenCardClass.addChildrenCard();
         content.put("cid","");
         content.put("em",superContent.get("login"));
         content.put("pwd",superContent.get("pwd"));
@@ -59,14 +62,14 @@ public class AuthorisationTest extends BaseClass{
         content.put("mod","TestMod");
         content.put("type",1);
         response = authorisationChildClass.authorisationChildren(content);
-        String result = response.body().string();
-        Assert.assertTrue(result.contains("\"scs\": true"));
+        childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
+        content.put("cid",childrenResponseAuthorisationModel.getCid());
+        content.put("ckey",childrenResponseAuthorisationModel.getCkey());
+        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        profileSetClass.selectProfileCardResponse(content);
+        System.out.println("childrenResponseAuthorisationModel " + getConditionInformation.getConditionInformation(generationRequestJsonClass.getGenerationRequestJson(content)).toString());
+        //Assert.assertTrue(result.contains("\"scs\": true"));
     }
-
-
-
-
-
 
 
 }

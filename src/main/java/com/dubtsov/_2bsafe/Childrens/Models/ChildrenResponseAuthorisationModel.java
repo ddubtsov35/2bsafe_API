@@ -7,19 +7,21 @@ import org.json.simple.parser.ParseException;
 /**
  * Created by user on 16.08.17.
  */
-public class ResponseAuthorisation {
+public class ChildrenResponseAuthorisationModel {
 
     private static JSONParser parser;
     private static Object obj;
     private static JSONObject jsonObj;
 
-    private int bto;
-    private int cid;
+    private int ito;
+    private String cid;
     private String ckey;
     private String aid;
     private int sto;
 
-    public ResponseAuthorisation(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public ChildrenResponseAuthorisationModel(){};
+
+    public ChildrenResponseAuthorisationModel(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
 
@@ -27,28 +29,38 @@ public class ResponseAuthorisation {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-
-        if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));} else{setBto(Integer.parseInt(null));}
-        if(jsonObj.get("cid") != null) {setCid(Integer.parseInt(jsonObj.get("cid").toString()));} else{setCid(Integer.parseInt(null));}
+        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIto(Integer.parseInt(null));}
+        jsonObj = (JSONObject) jsonObj.get("res");
+        if(jsonObj.get("cid") != null) {setCid(jsonObj.get("cid").toString());} else{setCid("");}
         if(jsonObj.get("ckey") != null) {setCkey(jsonObj.get("ckey").toString());} else{setCkey("");}
         if(jsonObj.get("aid") != null) {setAid(jsonObj.get("aid").toString());} else{setAid("");}
         if(jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));} else{setSto(Integer.parseInt(null));}
     }
 
-
-    public int getBto() {
-        return bto;
+    @Override
+    public String toString() {
+        return "ChildrenResponseAuthorisationModel{" +
+                "ito=" + ito +
+                ", cid='" + cid + '\'' +
+                ", ckey='" + ckey + '\'' +
+                ", aid='" + aid + '\'' +
+                ", sto=" + sto +
+                '}';
     }
 
-    public void setBto(int bto) {
-        this.bto = bto;
+    public int getIto() {
+        return ito;
     }
 
-    public int getCid() {
+    public void setIto(int ito) {
+        this.ito = ito;
+    }
+
+    public String getCid() {
         return cid;
     }
 
-    public void setCid(int cid) {
+    public void setCid(String cid) {
         this.cid = cid;
     }
 

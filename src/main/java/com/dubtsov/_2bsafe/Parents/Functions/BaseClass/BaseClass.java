@@ -1,6 +1,12 @@
 package com.dubtsov._2bsafe.Parents.Functions.BaseClass;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponseClass;
+import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GenerationRequestJsonClass;
+import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GetConditionInformation;
+import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.*;
 import com.dubtsov._2bsafe.Parents.Functions.Interval.SetIntervalUpdateClass;
@@ -45,6 +51,12 @@ public  class BaseClass {
     protected String rnd = "rnd1";
     protected AuthorisationChildClass authorisationChildClass;
     protected GetChildrenCardInfoClass getChildrenCardInfoClass;
+    protected ProfileListClass profileListClass;
+    protected ProfileSetClass profileSetClass;
+    protected ChildrenAuthorisationResponseClass childrenAuthorisationResponseClass;
+    protected ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
+    protected GenerationRequestJsonClass generationRequestJsonClass;
+    protected GetConditionInformation getConditionInformation;
 
     public BaseClass() throws IOException {}
 }

@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Response;
 
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import okhttp3.*;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,6 +15,7 @@ import java.util.Map;
 public class ResponseClass {
 
     private String prefixUrl = "http://lkn.safec.ru";
+    private JSONObject jsonRequest;
     private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
     private Map<String, String> content;
@@ -38,6 +40,11 @@ public class ResponseClass {
 
     public ResponseClass(String url){
         this.content = new LinkedHashMap();
+        this.url = url;
+    }
+
+    public ResponseClass(String url, JSONObject jsonRequest){
+        this.jsonRequest = jsonRequest;
         this.url = url;
     }
 
@@ -70,6 +77,26 @@ public class ResponseClass {
         return result;
     }
 
+    private Request getJsonRequest(){
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, String.valueOf(jsonRequest));
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", postmanToken)
+                .addHeader("cookie", sessionId)
+                .build();
+        System.out.println("REQUEST ");
+        System.out.println(request.toString());
+        System.out.println();
+       /* if(ContentClearFlag.isContentClearFlag()) {
+            content.clear();
+        }*/
+        return request;
+    }
+
     private Request getRequest(){
         MediaType mediaType = MediaType.parse("application/json");
         RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
@@ -90,14 +117,32 @@ public class ResponseClass {
         return request;
     }
 
+    public Response getJsonResponse() throws IOException {
+        response = client.newCall(getJsonRequest()).execute();
+        System.out.println();
+
+        try {
+            listRegisteredUsersClass = new ListRegisteredUsersClass();
+            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
+            setSessionId(sessionId);
+        } catch (StringIndexOutOfBoundsException e){
+            return response;
+        }
+        return response;
+    }
+
     public Response getResponse() throws IOException {
         response = client.newCall(getRequest()).execute();
         System.out.println("Response: " + response.code());
         System.out.println();
 
-        listRegisteredUsersClass = new ListRegisteredUsersClass();
-        String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
-        setSessionId(sessionId);
+        try {
+            listRegisteredUsersClass = new ListRegisteredUsersClass();
+            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
+            setSessionId(sessionId);
+        } catch (StringIndexOutOfBoundsException e){
+            return response;
+        }
         return response;
     }
 
