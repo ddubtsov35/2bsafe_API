@@ -14,16 +14,10 @@ import java.util.LinkedHashMap;
  * Created by user on 20.07.17.
  */
 public class SetIntervalUpdateClass extends BaseClass{
-    HashMap content;
-    public SetIntervalUpdateClass() throws IOException {
-        content = new LinkedHashMap();
-        getChildrenCardListClass = new GetChildrenCardListClass();
-    }
 
-    public Response setIntervalUpdate() throws IOException, ParseException, java.text.ParseException {
-        content.put("profile_id",  getChildrenCardListClass.getChildrenCardList().get(0).getProfile_id());
-        content.put("ito", 999);
-        content.put("rnd", rnd);
+    public SetIntervalUpdateClass() throws IOException {}
+
+    public Response setIntervalUpdate(HashMap content) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/set_info_timeout", content);
         return responseClass.getResponse();
     }

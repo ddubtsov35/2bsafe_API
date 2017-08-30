@@ -2,19 +2,18 @@ package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponseClass;
-import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GenerationRequestJsonClass;
-import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GetConditionInformation;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
+import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GeneratedRequestJsonClass;
+import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
+import com.dubtsov._2bsafe.Childrens.PackageProcessingCommands.GenerateJsonPackageProcessingCommandClass;
+import com.dubtsov._2bsafe.Childrens.PackageProcessingCommands.PackageProcessingCommandsClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
+import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedJsonRulesTriggerClass;
+import com.dubtsov._2bsafe.Childrens.RulesTrigger.RulesTriggerClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
-import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.PasswordChangeClass;
-import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordClass;
-import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
-import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,26 +23,28 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 /**
- * Created by user on 23.08.17.
+ * Created by user on 24.08.17.
  */
-public class GetConditionInformationTest extends BaseClass{
-
+public class PackageProcessingCommandsTest extends BaseClass{
     HashMap content = new LinkedHashMap();
 
-    public GetConditionInformationTest() throws IOException {
+    public PackageProcessingCommandsTest() throws IOException {
+        generatedRequestJsonClass = new GeneratedRequestJsonClass();
         authorisationUserClass = new AuthorisationUserClass();
-        authorisationChildClass = new AuthorisationChildClass();
-        childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
-        profileListClass = new ProfileListClass();
         addChildrenCardClass = new AddChildrenCardClass();
+        authorisationChildClass = new AuthorisationChildClass();
+        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
+        childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
+        notifyChangeAppClass = new NotifyChangeAppClass();
+        profileListClass = new ProfileListClass();
         profileSetClass = new ProfileSetClass();
-        generationRequestJsonClass = new GenerationRequestJsonClass();
-        getConditionInformation = new GetConditionInformation();
+        rulesTriggerClass = new RulesTriggerClass();
+        generatedJsonRulesTriggerClass = new GeneratedJsonRulesTriggerClass();
+        packageProcessingCommandsClass = new PackageProcessingCommandsClass();
     }
 
     @Test
-    public void getConditionInformation() throws Exception {
+    public void packageProcessingCommands() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addChildrenCardClass.addChildrenCard();
         content.put("cid","");
@@ -63,10 +64,10 @@ public class GetConditionInformationTest extends BaseClass{
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
         content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
         profileSetClass.selectProfileCardResponse(content);
-        response = getConditionInformation.getConditionInformationResponse(generationRequestJsonClass.getGenerationRequestJson(content));
+
+        response = packageProcessingCommandsClass.packageProcessingCommands(GenerateJsonPackageProcessingCommandClass.generatedJsonNotifyChangeApp(content));
         String result = response.body().string();
+        System.out.println("RESULT " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
-
-
 }

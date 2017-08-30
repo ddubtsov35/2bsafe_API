@@ -16,7 +16,7 @@ public class GetDeviceShortInfo {
             deviceShortInfo = new DeviceShortInfo(deviceShortInfoString);
         } catch (ParseException e){}
         finally {
-            return null;
+            return deviceShortInfo;
         }
     }
 

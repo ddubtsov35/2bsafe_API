@@ -21,15 +21,15 @@ public class GetInformationTests  extends BaseClass{
         getChildrenCardListClass = new GetChildrenCardListClass();
     }
 
-    @Test
+    /*@Test
     public void failSetIntervalUpdate() throws Exception {
         response = authorisationUserClass.RegistrationAndAuthorisationAndroid();
         System.out.println(response.body().string());
         addChildrenCardClass.addChildrenCard();
-        response = setIntervalUpdateClass.setIntervalUpdate();
+        response = setIntervalUpdateClass.setIntervalUpdate(content);
         //465 == success, потому что карточка не привязана к устройству
         Assert.assertTrue(response.body().string().contains("\"scs\": false") &&  response.code() == 465);
-    }
+    }*/
 
     @Test
     public void getChildrenCardList() throws Exception {
