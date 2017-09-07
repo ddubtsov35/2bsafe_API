@@ -10,13 +10,8 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChangeChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.DeleteChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GetChildrenCardListClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.GetIntervalUpdateClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.SetIntervalUpdateClass;
-import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
-import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,7 +19,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.Set;
 
 /**
  * Created by user on 29.08.17.

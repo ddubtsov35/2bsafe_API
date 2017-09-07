@@ -45,7 +45,7 @@ public class ChildrenCardTest extends BaseClass{
     }
 
 
-    @Test
+   /* @Test
     public void getChildrenCardList() throws Exception {
         response = authorisationUserClass.RegistrationAndAuthorisationWeb();
         addChildrenCardClass.addChildrenCard();
@@ -90,6 +90,6 @@ public class ChildrenCardTest extends BaseClass{
         String result = profileSetClass.selectProfileCardResponse(content).body().string();
         System.out.println("selectChildrenCard " + result);
         Assert.assertTrue(result.contains("\"scs\": true"));
-    }
+    }*/
 
 }

@@ -1,4 +1,4 @@
-package com.dubtsov._2bsafe.Parents.Functions.Interval;
+package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Models.GetDataUpdate;

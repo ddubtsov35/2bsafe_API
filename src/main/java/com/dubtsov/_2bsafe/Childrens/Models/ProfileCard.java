@@ -13,8 +13,6 @@ public class ProfileCard {
     private static Object obj;
     private static JSONObject jsonObj;
 
-    String jsonObjectString;
-
     private int profile_id;
     private String name;
     private int age;
@@ -26,8 +24,6 @@ public class ProfileCard {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-
-        this.jsonObjectString = jsonObjectString;
 
         setObject(jsonObjectString);
     }

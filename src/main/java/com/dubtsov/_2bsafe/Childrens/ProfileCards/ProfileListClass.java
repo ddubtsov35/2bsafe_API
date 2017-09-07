@@ -19,8 +19,7 @@ public class ProfileListClass extends BaseClass{
 
     public List<ProfileCard> getProfileList(HashMap content) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", content);
-        String responseString = responseClass.getResponse().body().string();
-        return GetProfileList.getProfileCard(responseString);
+        return GetProfileList.getProfileCard(responseClass.getResponse().body().string());
     }
 
     public Response getProfileListResponse(HashMap content) throws IOException {

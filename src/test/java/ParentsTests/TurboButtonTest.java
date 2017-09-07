@@ -10,8 +10,6 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.GetIntervalUpdateClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.SetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.SetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;

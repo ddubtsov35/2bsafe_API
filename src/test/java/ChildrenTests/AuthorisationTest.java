@@ -14,6 +14,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordCl
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -28,6 +29,7 @@ import java.util.LinkedHashMap;
 public class AuthorisationTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
+    AuthorisationUser authorisationUser;
 
     public AuthorisationTest() throws IOException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
@@ -46,7 +48,8 @@ public class AuthorisationTest extends BaseClass{
 
     @Test
     public void authorisation() throws IOException, ParseException, java.text.ParseException {
-        response = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
+        System.out.println(authorisationUser.toString());
         content.put("cid","");
         content.put("em",superContent.get("login"));
         content.put("pwd",superContent.get("pwd"));

@@ -11,9 +11,7 @@ import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedJsonRulesTriggerClass
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.Rules.AddRulesClass;
-import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateRequestAddRule;
-import com.dubtsov._2bsafe.Parents.Functions.Rules.GetRulesListClass;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.*;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.SetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
@@ -47,6 +45,8 @@ public class RulesTest extends BaseClass{
         setTurboButtonClass = new SetTurboButtonClass();
         rulesListClass = new GetRulesListClass();
         addRulesClass = new AddRulesClass();
+        switchRuleClass = new SwitchRuleClass();
+        ruleDeleteClass = new RuleDeleteClass();
     }
 
     @Test
@@ -136,7 +136,37 @@ public class RulesTest extends BaseClass{
     }
 
     @Test
-    public void test() throws Exception {
+    public void switchRule() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addChildrenCardClass.addChildrenCard();
+        content.put("cid","");
+        content.put("em",superContent.get("login"));
+        content.put("pwd",superContent.get("pwd"));
+        content.put("token", GenerateTokenClass.getGeneratedToken());
+        content.put("sname","TestDevice");
+        content.put("os","Android");
+        content.put("osv","10");
+        content.put("scr","Doxya");
+        content.put("man","TestMan");
+        content.put("mod","TestMod");
+        content.put("type",1);
+        response = authorisationChildClass.authorisationChildren(content);
+        childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
+        content.put("cid",childrenResponseAuthorisationModel.getCid());
+        content.put("ckey",childrenResponseAuthorisationModel.getCkey());
+        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        content.put("enabled", 1);
+
+        content.put("rule_id", addRulesClass.getRuleId(addRulesClass.addRule(GenerateRequestAddRule.generatedJsonRules(content))));
+        response = switchRuleClass.switchRules(content);
+
+        String result = response.body().string();
+
+        Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
+    }
+
+    @Test
+    public void deleteRule() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addChildrenCardClass.addChildrenCard();
         content.put("cid","");
@@ -156,6 +186,16 @@ public class RulesTest extends BaseClass{
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
         content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
 
-        System.out.println(rulesListClass.getRulesList().size());
+        content.put("rule_id", addRulesClass.getRuleId(addRulesClass.addRule(GenerateRequestAddRule.generatedJsonRules(content))));
+
+        System.out.println("qweqweqwe1 " + rulesListClass.getRulesList().size());
+
+        response = ruleDeleteClass.deleteRules(content);
+
+        System.out.println("qweqweqwe2 " + rulesListClass.getRulesList().size());
+
+        String result = response.body().string();
+
+        Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 }

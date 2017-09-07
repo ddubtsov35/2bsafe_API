@@ -4,7 +4,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GetChildrenCardListClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.SetIntervalUpdateClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -31,7 +31,7 @@ public class GetInformationTests  extends BaseClass{
         Assert.assertTrue(response.body().string().contains("\"scs\": false") &&  response.code() == 465);
     }*/
 
-    @Test
+    /*@Test
     public void getChildrenCardList() throws Exception {
         response = authorisationUserClass.RegistrationAndAuthorisationAndroid();
         System.out.println(response.body().string());
@@ -46,5 +46,5 @@ public class GetInformationTests  extends BaseClass{
         response = addChildrenCardClass.addChildrenCard();
         //TODO присоединяем устройство
 
-    }
+    }*/
 }

@@ -49,21 +49,21 @@ public class RegistrationTests extends BaseClass {
         Assert.assertEquals(response.getResponse().code(), 200);
     }
 
-    @Test
+    /*@Test
     public void deleteUser() throws IOException, ParseException, java.text.ParseException {
         //Create test user and remember his password
         HashMap content = registrationUserStep1Class.registrationUserStep1();
         //Verification account
         registrationUserStep2Class.registrationUserStep2Web(content);
-        //Authorisation
+        //AuthorisationUser
         authorisationUserClass.authorisationUser(content);
         //Delete user
         deleteUserClass.deleteUser();
-        //Authorisation
+        //AuthorisationUser
         int codeRepeatAuthorisation = authorisationUserClass.authorisationUser(content).code();
 
         Assert.assertTrue(codeRepeatAuthorisation == 401);
-    }
+    }*/
 
     @Test
     public void createNewUser() throws IOException, ParseException, java.text.ParseException {

@@ -7,8 +7,8 @@ import javax.swing.*;
  */
 public class InputClass {
 
-    public int code() {
-        String code = JOptionPane.showInputDialog("Введите код подтверждения из email");
+    public int code(String email) {
+        String code = JOptionPane.showInputDialog("Введите код подтверждения из email " + email);
         return Integer.parseInt(code);
     }
 }

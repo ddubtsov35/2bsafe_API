@@ -15,12 +15,22 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedJsonRulesTriggerClass;
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.RulesTriggerClass;
 import com.dubtsov._2bsafe.Childrens.StatisticsInformation.GetStatisticsInformationClass;
+import com.dubtsov._2bsafe.Parents.Functions.Account.AccountSettingClass;
+import com.dubtsov._2bsafe.Parents.Functions.Apps.AppsClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChangeEmailPhone.ChangeEmailClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.*;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.GetIntervalUpdateClass;
-import com.dubtsov._2bsafe.Parents.Functions.Interval.SetIntervalUpdateClass;
+import com.dubtsov._2bsafe.Parents.Functions.FAQ.GetFaqByIdClass;
+import com.dubtsov._2bsafe.Parents.Functions.FAQ.GetFaqListClass;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
+import com.dubtsov._2bsafe.Parents.Functions.HelpMe.HelpMeParentClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
 import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.PasswordChangeClass;
+import com.dubtsov._2bsafe.Parents.Functions.Permissions.PermissionsClass;
+import com.dubtsov._2bsafe.Parents.Functions.Poll.PollClass;
 import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
@@ -28,10 +38,18 @@ import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1C
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.AddRulesClass;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.GetRulesListClass;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.RuleDeleteClass;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.SwitchRuleClass;
+import com.dubtsov._2bsafe.Parents.Functions.Push.PushClass;
+import com.dubtsov._2bsafe.Parents.Functions.Tariffs.TariffsClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.SetTurboButtonClass;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.AddZoneClass;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.DeleteZoneClass;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.GetZoneClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
+import com.dubtsov._2bsafe.Parents.Tickets.SendTicketClass;
 import okhttp3.Response;
 
 import java.io.IOException;
@@ -83,6 +101,26 @@ public  class BaseClass {
     protected SetTurboButtonClass setTurboButtonClass;
     protected GetRulesListClass rulesListClass;
     protected AddRulesClass addRulesClass;
+    protected SwitchRuleClass switchRuleClass;
+    protected RuleDeleteClass ruleDeleteClass;
+    protected GetFaqListClass getFaqListClass;
+    protected GetFaqByIdClass getFaqByIdClass;
+    protected SendTicketClass sendTicketClass;
+    protected AccountSettingClass setAccountSettingClass;
+    protected ChangeEmailClass changeEmailClass;
+    protected PollClass pollClass;
+    protected GetZoneClass getZoneClass;
+    protected AddZoneClass addZoneClass;
+    protected DeleteZoneClass deleteZoneClass;
+    protected AddAndSelectChildrenCardClass addAndSelectChildrenCardClass;
+    protected PushClass pushClass;
+    protected GroupsAppClass groupsAppClass;
+    protected IntervalBlockClass intervalBlockClass;
+    protected HelpMeParentClass helpMeParentClass;
+    protected PermissionsClass permissionsClass;
+    protected AppsClass appsClass;
+    protected TariffsClass tariffsClass;
+
 
     public BaseClass() throws IOException {}
 }

@@ -103,9 +103,6 @@ public class ChildrenCardsTests extends BaseClass {
 
 
 
-
-
-
     //Delete users
     /*List<RegisteredUser> registeredList = listRegisteredUsersClass.getListRegisteredUsers();
         System.out.println(registeredList);

@@ -44,13 +44,13 @@ public class GetRules {
         }
     }
 
-    public static int getRuleId(Response addRuleResponse) throws ParseException, IOException {
+    public static Integer getRuleId(Response addRuleResponse) throws ParseException, IOException {
         parser = new JSONParser();
-        //System.out.println("getRulesListResponse " + getRulesListResponse);
         String result = addRuleResponse.body().string();
+        System.out.println("result " + result);
         obj = parser.parse(result);
         jsonObj = (JSONObject) obj;
-        return (int) jsonObj.get("rule_id");
+        return Integer.parseInt(jsonObj.get("rule_id").toString());
     }
 
 }

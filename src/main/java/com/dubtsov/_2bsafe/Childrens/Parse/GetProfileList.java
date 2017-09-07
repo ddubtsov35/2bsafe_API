@@ -27,10 +27,10 @@ public class GetProfileList {
         parser = new JSONParser();
         jsonObj = (JSONObject) obj;
         try {
-            System.out.println("qwe " + profileCardString);
             profileCard = new ArrayList<>();
             obj = parser.parse(profileCardString);
             jsonObj = (JSONObject) obj;
+            System.out.println("jsonObj " + jsonObj);
             jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
                 profileCard.add(new ProfileCard(jsonArray.get(i).toString()));

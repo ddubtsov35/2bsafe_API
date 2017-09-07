@@ -34,14 +34,6 @@ public class GetRegisteredUsers {
         return resultJsonStringGlobal;
     }
 
-    /*public static int getRegisteredUsersCount(String registeredUserListString) throws ParseException {
-        String resultJsonString = getResultJsonString(registeredUserListString);
-        obj = parser.parse(resultJsonString);
-        jsonObj = (JSONObject) obj;
-        itemsJsonString = jsonObj.get("num").toString();
-        return Integer.parseInt(itemsJsonString);
-    }*/
-
     public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
         registeredUsersList = new ArrayList();
         String resultJsonString = getResultJsonString(registeredUserListString);
