@@ -35,7 +35,7 @@ public class ChangeEmailPhoneTest extends BaseClass{
         content.put("em", newEmail);
         authorisationUserClass.authorisationUser(superContent);
         response = changeEmailClass.changeEmail(content);
-        Timeout.waitEmailVerification();
+        Timeout.waitEmailVerification(content.get("em").toString());
         String afterEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
         System.out.println("beforeEmail " + beforeEmail);
         System.out.println("afterEmail " + afterEmail);

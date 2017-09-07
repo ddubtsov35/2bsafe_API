@@ -7,8 +7,8 @@ import javax.swing.*;
  */
 public class Timeout {
 
-    public static void waitEmailVerification() {
-        JOptionPane.showInputDialog("Нажмите на кнопку подтверждения после перехода по ссылке для смены пароля");
+    public static void waitEmailVerification(String email) {
+        JOptionPane.showInputDialog("Нажмите на кнопку подтверждения после перехода по ссылке для смены пароля " + email);
     }
 
 }

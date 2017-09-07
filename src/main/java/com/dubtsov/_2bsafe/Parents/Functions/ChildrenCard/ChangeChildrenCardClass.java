@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class ChangeChildrenCardClass extends BaseClass{
 
-    HashMap content;
+    HashMap content = new LinkedHashMap();
 
     public ChangeChildrenCardClass() throws IOException {}
 
@@ -38,7 +38,6 @@ public class ChangeChildrenCardClass extends BaseClass{
 
 
     public Response changeChildrenCard(List<ChildrenCard> getChildrenCardList, String type) throws IOException {
-        content = new LinkedHashMap();
         content.put("profile_id", getChildrenCardList.get(0).getProfile_id());
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", generateContent(type));
         return  responseClass.getResponse();

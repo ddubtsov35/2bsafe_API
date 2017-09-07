@@ -20,7 +20,7 @@ public class AuthorisationUserClass extends BaseClass {
     HashMap content;
     AuthorisationUser authorisationUser;
 
-    public AuthorisationUserClass() throws IOException {
+    public AuthorisationUserClass() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
@@ -39,14 +39,6 @@ public class AuthorisationUserClass extends BaseClass {
         }
         return content;
     }
-
-    /*public HashMap getContentRegistration() throws IOException {
-        //Create test user and remember his password
-        content = registrationUserStep1Class.registrationUserStep1();
-        superContent.put("em", content.get("em"));
-        superContent.put("pwd", content.get("pwd"));
-        return content;
-    }*/
 
     public AuthorisationUser RegistrationAndAuthorisationWeb() throws IOException, ParseException, java.text.ParseException {
         //Verification account

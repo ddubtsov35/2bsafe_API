@@ -17,14 +17,16 @@ import java.util.List;
  */
 public class RegistrationUserStep2Class extends BaseClass {
 
-    public RegistrationUserStep2Class() throws IOException {
+    List<RegisteredUser> registeredUserList;
+
+    public RegistrationUserStep2Class() throws IOException, ParseException, java.text.ParseException {
+        listRegisteredUsersClass = new ListRegisteredUsersClass();
+        registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
     }
 
     private HashMap content = new LinkedHashMap();
 
     public HashMap registrationUserStep2Web(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        listRegisteredUsersClass = new ListRegisteredUsersClass();
-        List<RegisteredUser> registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
         RegisteredUser targetUser = new RegisteredUser();
         for(int i=0; i<registeredUserList.size();i++){
             if(registeredUserList.get(i).getEm().equals(content.get("em"))){
@@ -32,22 +34,18 @@ public class RegistrationUserStep2Class extends BaseClass {
                 break;
             }
         }
-        this.content.put("dtype", 0);
-        this.content.put("em", targetUser.getEm());
-        this.content.put("code", targetUser.getAct_code());
-
         content.put("dtype", 0);
+        content.put("em", targetUser.getEm());
+        content.put("code", targetUser.getAct_code());
 
         System.out.println( this.content);
 
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  content);
         responseClass.getResponse();
         return content;
     }
 
     public HashMap registrationUserStep2AndroidPhone(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        listRegisteredUsersClass = new ListRegisteredUsersClass();
-        List<RegisteredUser> registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
         RegisteredUser targetUser = new RegisteredUser();
         for(int i=0; i<registeredUserList.size();i++){
             if(registeredUserList.get(i).getEm().equals(content.get("em"))){
@@ -57,26 +55,20 @@ public class RegistrationUserStep2Class extends BaseClass {
         }
         String generatedToken = GenerateTokenClass.getGeneratedToken();
 
-        this.content.put("em", targetUser.getEm());
-        this.content.put("dtype", 1);
-        this.content.put("was_restored", false);
-        this.content.put("code", targetUser.getAct_code());
-        this.content.put("token", generatedToken);
-        this.content.put("os", "testOS");
-        this.content.put("osv", "testVersion");
-        this.content.put("scr", "DoxyaNaDoxya");
-        this.content.put("man", "testMan");
-        this.content.put("mod", "testMod");
-        this.content.put("type", 1);
-        this.content.put("rnd", rnd);
+        content.put("em", targetUser.getEm());
+        content.put("dtype", 1);
+        content.put("was_restored", false);
+        content.put("code", targetUser.getAct_code());
+        content.put("token", generatedToken);
+        content.put("os", "testOS");
+        content.put("osv", "testVersion");
+        content.put("scr", "DoxyaNaDoxya");
+        content.put("man", "testMan");
+        content.put("mod", "testMod");
+        content.put("type", 1);
 
-        content.putAll(this.content);
-        content.remove("lkid");
-
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  this.content);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  content);
         String getLkid = responseClass.getResponse().body().string();
-        System.out.println("getLKID1 " + getLkid);
-        System.out.println("getLKID2 " + getLkid.substring(getLkid.indexOf("lkid"),getLkid.indexOf("lkid",getLkid.indexOf("\""))));
         content.put("lkid", getLkid.substring(getLkid.indexOf("lkid"),getLkid.indexOf("lkid",getLkid.indexOf("\""))));
         return content;
     }

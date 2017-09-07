@@ -63,7 +63,6 @@ public  class BaseClass {
 
     protected static HashMap superContent = new LinkedHashMap();
     protected ResponseClass responseClass;
-    protected String constPassword = "wwwwww";
     protected String dynamicPassword = "wwwwww" + GenerateEmailClass.getCountFromFile();
     protected DeleteUserClass deleteUserClass;
     protected AuthorisationUserClass authorisationUserClass;
