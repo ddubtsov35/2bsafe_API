@@ -21,7 +21,7 @@ import java.util.HashMap;
  */
 public class RegistrationTests extends BaseClass {
 
-    public RegistrationTests() throws IOException {
+    public RegistrationTests() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep2Class = new RegistrationUserStep2Class();
         listRegisteredUsersClass = new ListRegisteredUsersClass();

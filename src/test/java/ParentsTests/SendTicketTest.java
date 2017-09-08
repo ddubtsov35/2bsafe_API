@@ -4,7 +4,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
-import com.dubtsov._2bsafe.Parents.Tickets.SendTicketClass;
+import com.dubtsov._2bsafe.Parents.Functions.Tickets.SendTicketClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class SendTicketTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public SendTicketTest() throws IOException {
+    public SendTicketTest() throws IOException, ParseException, java.text.ParseException {
         sendTicketClass = new SendTicketClass();
         authorisationUserClass = new AuthorisationUserClass();
     }

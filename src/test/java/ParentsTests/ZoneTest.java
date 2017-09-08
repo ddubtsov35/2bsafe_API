@@ -27,7 +27,7 @@ public class ZoneTest extends BaseClass{
     AddZone addZone;
 
 
-    public ZoneTest() throws IOException {
+    public ZoneTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         getZoneClass = new GetZoneClass();
         addZoneClass = new AddZoneClass();

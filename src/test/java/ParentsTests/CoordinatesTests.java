@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.*;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -17,7 +18,7 @@ import java.util.List;
  * Created by user on 16.08.17.
  */
 public class CoordinatesTests extends BaseClass {
-    public CoordinatesTests() throws IOException {
+    public CoordinatesTests() throws IOException, ParseException, java.text.ParseException {
 
         addChildrenCardClass = new AddChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();

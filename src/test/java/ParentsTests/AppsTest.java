@@ -45,7 +45,7 @@ public class AppsTest extends BaseClass{
         content.put("aliases", "qwe");
         content.put("name", "qwe");
         content.put("group_id", groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content)).getGroup_id());
-        app = appsClass.getAppsInfo(content);
+        app = appsClass.getAppsInfo();
         Assert.assertTrue(app.getScs().contains("true"));
     }
 
@@ -57,7 +57,7 @@ public class AppsTest extends BaseClass{
         content.put("aliases", "qwe");
         content.put("name", "qwe");
         content.put("group_id", groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content)).getGroup_id());
-        appsInGroup = appsClass.getAppsInGroup(content);
+        appsInGroup = appsClass.getAppsInGroup();
         System.out.println(appsInGroup.toString());
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
     }
@@ -67,7 +67,7 @@ public class AppsTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
-        appsDetailInfo = appsClass.getDetailInfo(content);
+        appsDetailInfo = appsClass.getDetailInfo();
         System.out.println(appsDetailInfo.toString());
         Assert.assertTrue(appsDetailInfo.getScs().contains("true"));
     }
@@ -78,7 +78,7 @@ public class AppsTest extends BaseClass{
         content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("block", "0");
-        response = appsClass.getAppsBlock(content);
+        response = appsClass.getAppsBlock();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("true"));
@@ -90,7 +90,7 @@ public class AppsTest extends BaseClass{
         content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("block", "0");
-        response = appsClass.getAppsBlockUpdate(content);
+        response = appsClass.getAppsBlockUpdate();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("true"));
@@ -101,7 +101,7 @@ public class AppsTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
-        response = appsClass.getAppsUpdate(content);
+        response = appsClass.getAppsUpdate();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("true"));
@@ -112,7 +112,7 @@ public class AppsTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
-        response = appsClass.getAppsDelete(content);
+        response = appsClass.getAppsDelete();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": false") && response.code() == 200);

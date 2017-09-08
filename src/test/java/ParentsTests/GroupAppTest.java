@@ -10,6 +10,7 @@ import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.Push.PushClass;
 import com.dubtsov._2bsafe.Parents.Models.AddSession;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -28,7 +29,7 @@ public class GroupAppTest extends BaseClass{
     GroupApp groupApp;
     List<String> aliases = new LinkedList<>();
 
-    public GroupAppTest() throws IOException {
+    public GroupAppTest() throws IOException, ParseException, java.text.ParseException {
         addChildrenCardClass = new AddChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();

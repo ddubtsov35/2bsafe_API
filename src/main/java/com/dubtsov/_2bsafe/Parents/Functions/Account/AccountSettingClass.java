@@ -1,10 +1,12 @@
 package com.dubtsov._2bsafe.Parents.Functions.Account;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateAccountContent;
 import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import com.dubtsov._2bsafe.Parents.Parse.GetAccountSetting;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -15,20 +17,25 @@ import java.util.HashMap;
  */
 public class AccountSettingClass extends BaseClass{
 
+    private static JSONObject jsonObject;
+
     public AccountSettingClass() throws IOException {}
 
-    public Response setAccountSetting(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", content);
-        return responseClass.getResponse();
+    public Response setAccountSetting() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateAccountContent.getSetAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response setAllAccountSetting(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_all_settings", content);
-        return responseClass.getResponse();
+    public Response setAllAccountSetting() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateAccountContent.getSetAllAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_all_settings", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public AccountSettings getAccountSetting(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", content);
+    public AccountSettings getAccountSetting() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateAccountContent.getAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", jsonObject);
         return GetAccountSetting.getAccountSettings(responseClass.getResponse().body().string());
     }
 

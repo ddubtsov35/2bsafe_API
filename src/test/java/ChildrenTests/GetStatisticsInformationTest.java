@@ -25,7 +25,7 @@ public class GetStatisticsInformationTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public GetStatisticsInformationTest() throws IOException {
+    public GetStatisticsInformationTest() throws IOException, ParseException, java.text.ParseException {
         getStatisticsInformationClass = new GetStatisticsInformationClass();
         authorisationUserClass = new AuthorisationUserClass();
         addChildrenCardClass = new AddChildrenCardClass();
@@ -51,7 +51,7 @@ public class GetStatisticsInformationTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());

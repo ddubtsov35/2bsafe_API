@@ -14,6 +14,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordCl
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,7 +30,7 @@ public class ChildrenCardTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public ChildrenCardTest() throws IOException {
+    public ChildrenCardTest() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         recoveryPasswordClass = new RecoveryPasswordClass();
         logoutClass = new LogoutClass();

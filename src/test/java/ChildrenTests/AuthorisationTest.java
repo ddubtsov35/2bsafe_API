@@ -31,7 +31,7 @@ public class AuthorisationTest extends BaseClass{
     HashMap content = new LinkedHashMap();
     AuthorisationUser authorisationUser;
 
-    public AuthorisationTest() throws IOException {
+    public AuthorisationTest() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         recoveryPasswordClass = new RecoveryPasswordClass();
         logoutClass = new LogoutClass();
@@ -61,7 +61,7 @@ public class AuthorisationTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true"));
     }

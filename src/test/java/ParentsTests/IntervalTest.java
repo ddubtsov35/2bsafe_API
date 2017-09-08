@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -27,7 +28,7 @@ public class IntervalTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public IntervalTest() throws IOException {
+    public IntervalTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GeneratedRequestJsonClass();
         authorisationUserClass = new AuthorisationUserClass();
         addChildrenCardClass = new AddChildrenCardClass();
@@ -56,7 +57,7 @@ public class IntervalTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
@@ -83,7 +84,7 @@ public class IntervalTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());

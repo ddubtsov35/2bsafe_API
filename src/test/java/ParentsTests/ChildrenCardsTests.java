@@ -23,7 +23,7 @@ public class ChildrenCardsTests extends BaseClass {
 
     HashMap content;
 
-    public ChildrenCardsTests() throws IOException {
+    public ChildrenCardsTests() throws IOException, ParseException, java.text.ParseException {
         addChildrenCardClass = new AddChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         getChildrenCardListClass = new GetChildrenCardListClass();
@@ -34,7 +34,7 @@ public class ChildrenCardsTests extends BaseClass {
         changeChildrenCardClass = new ChangeChildrenCardClass();
     }
 
-    @Test
+    /*@Test
     public void addChildrenCardsWeb() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         int countCardBefore = getChildrenCardListClass.getChildrenCardListCount();
@@ -78,7 +78,7 @@ public class ChildrenCardsTests extends BaseClass {
     public void changeChildrenCardsPhone() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = addChildrenCardClass.addChildrenCard();
-        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "phone");
+        response = changeChildrenCardClass.changeChildrenCard("phone");
         System.out.println(getChildrenCardListClass.getChildrenCardList().get(0));
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
     }
@@ -87,7 +87,7 @@ public class ChildrenCardsTests extends BaseClass {
     public void changeChildrenCardsAge() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = addChildrenCardClass.addChildrenCard();
-        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "age");
+        response = changeChildrenCardClass.changeChildrenCard("age");
         System.out.println(getChildrenCardListClass.getChildrenCardList().get(0));
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getAge().equals("99"));
     }
@@ -96,10 +96,10 @@ public class ChildrenCardsTests extends BaseClass {
     public void changeChildrenCardsAll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = addChildrenCardClass.addChildrenCard();
-        response = changeChildrenCardClass.changeChildrenCard(getChildrenCardListClass.getChildrenCardList(), "all");
+        response = changeChildrenCardClass.changeChildrenCard("all");
         //Assert.assertTrue(getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && getChildrenCardListClass.getChildrenCardList().get(0).getAge().equals("99") && getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
-    }
+    }*/
 
 
 

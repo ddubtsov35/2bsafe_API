@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.SetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -26,7 +27,7 @@ import java.util.LinkedHashMap;
 public class TurboButtonTest extends BaseClass{
     HashMap content = new LinkedHashMap();
 
-    public TurboButtonTest() throws IOException {
+    public TurboButtonTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GeneratedRequestJsonClass();
         authorisationUserClass = new AuthorisationUserClass();
         addChildrenCardClass = new AddChildrenCardClass();
@@ -55,7 +56,7 @@ public class TurboButtonTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
@@ -82,7 +83,7 @@ public class TurboButtonTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());

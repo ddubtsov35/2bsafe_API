@@ -11,6 +11,7 @@ import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
 import com.dubtsov._2bsafe.Parents.Models.AddIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -29,7 +30,7 @@ public class IntervalBlockTest extends BaseClass{
     GroupApp groupApp;
     AddIntervalBlock addIntervalBlock;
 
-    public IntervalBlockTest() throws IOException {
+    public IntervalBlockTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         intervalBlockClass = new IntervalBlockClass();

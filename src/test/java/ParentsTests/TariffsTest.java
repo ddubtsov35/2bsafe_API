@@ -25,7 +25,7 @@ public class TariffsTest extends BaseClass{
     List<TariffList> tariffList;
     HashMap content = new LinkedHashMap();
 
-    public TariffsTest() throws IOException {
+    public TariffsTest() throws IOException, ParseException, java.text.ParseException {
         tariffsClass = new TariffsClass();
         authorisationUserClass = new AuthorisationUserClass();
         profileListClass = new ProfileListClass();

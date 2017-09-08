@@ -21,7 +21,7 @@ public class PermissionTest extends BaseClass{
     HashMap content = new LinkedHashMap();
     Permission permission;
 
-    public PermissionTest() throws IOException {
+    public PermissionTest() throws IOException, ParseException, java.text.ParseException {
         permissionsClass = new PermissionsClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();

@@ -16,6 +16,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordCl
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -30,7 +31,7 @@ public class GetConditionInformationTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
 
-    public GetConditionInformationTest() throws IOException {
+    public GetConditionInformationTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
@@ -57,7 +58,7 @@ public class GetConditionInformationTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());

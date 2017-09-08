@@ -1,10 +1,12 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateChangeChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -16,30 +18,13 @@ import java.util.List;
  */
 public class ChangeChildrenCardClass extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
+    JSONObject jsonObject;
 
     public ChangeChildrenCardClass() throws IOException {}
 
-    private HashMap generateContent(String type){
-        switch (type){
-            case "phone":
-                content.put("phone", GeneratePhoneClass.getStaticPhone());
-                break;
-            case "age":
-                content.put("age", 99);
-                break;
-            case "all":
-                content.put("phone", GeneratePhoneClass.getStaticPhone());
-                content.put("age", 99);
-                break;
-        }
-        return content;
-    }
-
-
-    public Response changeChildrenCard(List<ChildrenCard> getChildrenCardList, String type) throws IOException {
-        content.put("profile_id", getChildrenCardList.get(0).getProfile_id());
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", generateContent(type));
+    public Response changeChildrenCard(String type) throws IOException {
+        jsonObject = GenerateChangeChildrenCardContent.getChangeChildrenCardContent(type);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
         return  responseClass.getResponse();
     }
 

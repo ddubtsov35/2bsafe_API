@@ -25,7 +25,7 @@ public class AuthorisationTests extends BaseClass {
     HashMap content = new LinkedHashMap();
     AuthorisationUser authorisationUser;
 
-    public AuthorisationTests() throws IOException {
+    public AuthorisationTests() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class = new RegistrationUserStep1Class();
         recoveryPasswordClass = new RecoveryPasswordClass();
         logoutClass = new LogoutClass();
@@ -58,7 +58,7 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
 
-    @Test
+    /*@Test
     public void successPasswordChange() throws IOException, ParseException, java.text.ParseException {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
@@ -67,7 +67,7 @@ public class AuthorisationTests extends BaseClass {
         content.put("dtype", 0);
         authorisationUser = authorisationUserClass.authorisationUser(content);
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
-    }
+    }*/
 
     @Test
     public void logout() throws ParseException, java.text.ParseException, IOException {

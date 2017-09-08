@@ -28,24 +28,13 @@ public class AddAndSelectChildrenCardClass extends BaseClass{
 
     public HashMap AddAndSelectChildrenCard() throws Exception {
         addChildrenCardClass.addChildrenCard();
-        content.put("cid","");
-        content.put("em",superContent.get("login"));
-        content.put("pwd",superContent.get("pwd"));
-        content.put("token", GenerateTokenClass.getGeneratedToken());
-        content.put("sname","TestDevice");
-        content.put("os","Android");
-        content.put("osv","10");
-        content.put("scr","Doxya");
-        content.put("man","TestMan");
-        content.put("mod","TestMod");
-        content.put("type",1);
-        response = authorisationChildClass.authorisationChildren(content);
+        response = authorisationChildClass.authorisationChildren();
+        System.out.println("response211111 " + response.body().string());
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
         content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
         response = profileSetClass.selectProfileCardResponse(content);
-        System.out.println("selectProfileCard " + response.body().string());
         return content;
     }
 

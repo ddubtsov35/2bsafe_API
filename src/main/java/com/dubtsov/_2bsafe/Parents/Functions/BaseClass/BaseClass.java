@@ -49,7 +49,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Zone.DeleteZoneClass;
 import com.dubtsov._2bsafe.Parents.Functions.Zone.GetZoneClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
-import com.dubtsov._2bsafe.Parents.Tickets.SendTicketClass;
+import com.dubtsov._2bsafe.Parents.Functions.Tickets.SendTicketClass;
 import okhttp3.Response;
 
 import java.io.IOException;
@@ -59,7 +59,7 @@ import java.util.LinkedHashMap;
 /**
  * Created by user on 12.07.17.
  */
-public  class BaseClass {
+public class BaseClass {
 
     protected static HashMap superContent = new LinkedHashMap();
     protected ResponseClass responseClass;
@@ -119,6 +119,7 @@ public  class BaseClass {
     protected PermissionsClass permissionsClass;
     protected AppsClass appsClass;
     protected TariffsClass tariffsClass;
+    protected AccountSettingClass accountSettingClass;
 
 
     public BaseClass() throws IOException {}

@@ -23,7 +23,7 @@ public class PollTittleTest extends BaseClass{
     PollTittle pollTittle;
     Poll poll;
 
-    public PollTittleTest() throws IOException {
+    public PollTittleTest() throws IOException, ParseException, java.text.ParseException {
         pollClass = new PollClass();
         authorisationUserClass = new AuthorisationUserClass();
     }

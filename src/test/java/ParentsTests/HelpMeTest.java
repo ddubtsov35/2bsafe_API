@@ -26,7 +26,7 @@ public class HelpMeTest extends BaseClass {
     HashMap content = new LinkedHashMap();
     HelpMe helpMe;
 
-    public HelpMeTest() throws IOException {
+    public HelpMeTest() throws IOException, ParseException, java.text.ParseException {
         helpMeParentClass = new HelpMeParentClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
