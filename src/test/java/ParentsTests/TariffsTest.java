@@ -51,7 +51,7 @@ public class TariffsTest extends BaseClass{
     @Test
     public void getChangeTariff() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
 
         int targetId = 0;
         int idCurrentTariff = tariffsClass.getCurrentTariff().getTariff();

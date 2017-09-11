@@ -1,7 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateAppsContent;
 import com.dubtsov._2bsafe.Parents.Models.Apps;
 import com.dubtsov._2bsafe.Parents.Models.AppsDetailInfo;
 import com.dubtsov._2bsafe.Parents.Models.AppsInGroup;
@@ -12,7 +11,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 04.09.17.

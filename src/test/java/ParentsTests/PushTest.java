@@ -3,12 +3,11 @@ package ParentsTests;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Push.GenerateJsonNotifyList;
 import com.dubtsov._2bsafe.Parents.Functions.Push.PushClass;
 import com.dubtsov._2bsafe.Parents.Models.AddSession;
 import com.dubtsov._2bsafe.Parents.Models.NotifyList;
-import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Ignore;
@@ -28,7 +27,7 @@ public class PushTest extends BaseClass {
     AddSession addSession;
 
     public PushTest() throws IOException, ParseException, java.text.ParseException {
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         pushClass = new PushClass();
@@ -38,7 +37,7 @@ public class PushTest extends BaseClass {
     @Test
     public void initSession() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         addSession = pushClass.InitSession(content);
         System.out.println(addSession.toString());
         Assert.assertTrue(addSession.getScs().equals("true") && !addSession.getSes_key().equals(""));
@@ -47,7 +46,7 @@ public class PushTest extends BaseClass {
     @Test
     public void lockScreen() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("text", "TestText");
         content.put("pin", "111111");
         response = pushClass.lockScreen(content);
@@ -58,7 +57,7 @@ public class PushTest extends BaseClass {
     @Test
     public void onSound() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.onSound(content);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -67,7 +66,7 @@ public class PushTest extends BaseClass {
     @Test
     public void update() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.update(content);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -77,7 +76,7 @@ public class PushTest extends BaseClass {
     @Test
     public void updateLong() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.updateLong(content);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -86,7 +85,7 @@ public class PushTest extends BaseClass {
     @Test
     public void getNotifyList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         notifyList = pushClass.getNotifyList(GenerateJsonNotifyList.generatedJsonRules(content));
         Assert.assertTrue(notifyList.getScs().contains("\"scs\": true"));
     }

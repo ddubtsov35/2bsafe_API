@@ -1,5 +1,6 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
@@ -10,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateGetChildrenCardListContent extends BaseContent{
+public class GenerateGetChildrenCardListContent extends BaseContent {
     public GenerateGetChildrenCardListContent() throws ParseException {}
 
     public static JSONObject getChildrenCardListContent() throws IOException {

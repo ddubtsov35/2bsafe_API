@@ -15,15 +15,19 @@ import java.util.HashMap;
  * Created by user on 31.08.17.
  */
 public class HelpMeParentClass extends BaseClass{
-    public HelpMeParentClass() throws IOException {
-    }
 
-    public HelpMe getHelpMe(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/get", content);
+    JSONObject jsonObject;
+
+    public HelpMeParentClass() throws IOException {}
+
+    public HelpMe getHelpMe() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateHelpMeContent.getHelpMe();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/get", jsonObject);
         return GetHelpMe.getHelpMe(responseClass.getResponse().body().string());
     }
 
-    public Response setHelpMe(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+    public Response setHelpMe() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateHelpMeContent.setHelpMe();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/set", jsonObject);
         return responseClass.getJsonResponse();
     }

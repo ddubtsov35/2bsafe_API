@@ -19,26 +19,30 @@ import java.util.List;
  * Created by user on 31.08.17.
  */
 public class IntervalBlockClass extends BaseClass{
+
+    JSONObject jsonObject;
+
     public IntervalBlockClass() throws IOException {}
 
-    public List<IntervalBlock> getIntervalBlockList(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", content);
-        return GetIntervalBlock.getIntervalBlock(responseClass.getResponse().body().string());
+    public List<IntervalBlock> getIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+        jsonObject =
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
+        return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
     }
 
-    public AddIntervalBlock addIntervalBlockList(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+    public AddIntervalBlock addIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
         return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
-    public Response editIntervalBlockList(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", content);
-        return responseClass.getResponse();
+    public Response editIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response deleteIntervalBlockList(HashMap content) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", content);
-        return responseClass.getResponse();
+    public Response deleteIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
 }

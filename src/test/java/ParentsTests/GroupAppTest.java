@@ -3,12 +3,8 @@ package ParentsTests;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateAddGroupJson;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateSetGroupJson;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
-import com.dubtsov._2bsafe.Parents.Functions.Push.PushClass;
-import com.dubtsov._2bsafe.Parents.Models.AddSession;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
@@ -27,10 +23,9 @@ public class GroupAppTest extends BaseClass{
 
     HashMap content = new LinkedHashMap();
     GroupApp groupApp;
-    List<String> aliases = new LinkedList<>();
 
     public GroupAppTest() throws IOException, ParseException, java.text.ParseException {
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         groupsAppClass = new GroupsAppClass();
@@ -40,10 +35,8 @@ public class GroupAppTest extends BaseClass{
     @Test
     public void setGroupApp() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "TestAliases");
-        content.put("group_id", 2);
-        response = groupsAppClass.setGroupApp(GenerateSetGroupJson.generatedJsonRules(content));
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        response = groupsAppClass.setGroupApp();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -52,10 +45,8 @@ public class GroupAppTest extends BaseClass{
     @Test
     public void addGroupApp() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "TestAliases");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content));
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
         Assert.assertTrue(groupApp.getScs().equals("true") && groupApp.getGroup_id() != 0);
     }
@@ -63,14 +54,9 @@ public class GroupAppTest extends BaseClass{
     @Test
     public void editGroupApp() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "TestAliases");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content));
-        content.put("blocked", false);
-        content.put("name", "EditedName");
-        content.put("group_id", groupApp.getGroup_id());
-        response = groupsAppClass.editGroupApp(content);
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        groupApp = groupsAppClass.addGroupApp();
+        response = groupsAppClass.editGroupApp();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -78,12 +64,9 @@ public class GroupAppTest extends BaseClass{
     @Test
     public void deleteGroupApp() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "TestAliases");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content));
-        content.put("group_id", groupApp.getGroup_id());
-        response = groupsAppClass.deleteGroupApp(content);
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        groupApp = groupsAppClass.addGroupApp();
+        response = groupsAppClass.deleteGroupApp();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }

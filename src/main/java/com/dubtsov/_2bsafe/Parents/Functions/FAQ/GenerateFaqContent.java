@@ -1,0 +1,22 @@
+package com.dubtsov._2bsafe.Parents.Functions.FAQ;
+
+import com.dubtsov._2bsafe.Parents.Functions.FAQ.GetFaqListClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
+
+/**
+ * Created by user on 11.09.17.
+ */
+public class GenerateFaqContent extends BaseContent {
+
+    public static JSONObject getChildrenCardListContent() throws IOException, ParseException, java.text.ParseException {
+        GetFaqListClass getFaqListClass = new GetFaqListClass();
+        jsonObj.put("fid", getFaqListClass.getFaqListLk().get(0).getFid());
+        return jsonObj;
+    }
+
+}

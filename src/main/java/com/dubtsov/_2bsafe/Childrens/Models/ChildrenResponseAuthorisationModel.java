@@ -13,6 +13,7 @@ public class ChildrenResponseAuthorisationModel {
     private static Object obj;
     private static JSONObject jsonObj;
 
+    private String scs;
     private int ito;
     private String cid;
     private String ckey;
@@ -29,6 +30,7 @@ public class ChildrenResponseAuthorisationModel {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIto(Integer.parseInt(null));}
         jsonObj = (JSONObject) jsonObj.get("res");
         if(jsonObj.get("cid") != null) {setCid(jsonObj.get("cid").toString());} else{setCid("");}
@@ -86,5 +88,13 @@ public class ChildrenResponseAuthorisationModel {
 
     public void setSto(int sto) {
         this.sto = sto;
+    }
+
+    public String getScs() {
+        return scs;
+    }
+
+    public void setScs(String scs) {
+        this.scs = scs;
     }
 }

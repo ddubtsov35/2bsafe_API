@@ -1,5 +1,7 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.Authorisation;
 
+import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -9,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAuthorisationChildren extends BaseContent{
+public class GenerateAuthorisationChildren extends BaseContent {
 
     public GenerateAuthorisationChildren() throws ParseException {}
 

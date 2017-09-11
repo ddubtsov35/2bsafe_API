@@ -1,23 +1,20 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
-import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
-import com.dubtsov._2bsafe.Parents.UserPool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
  * Created by user on 07.09.17.
  */
-public class GenerateRegistrationContent extends BaseContent{
+public class GenerateRegistrationContent extends BaseContent {
 
     private static ListRegisteredUsersClass listRegisteredUsersClass;
     private static List<RegisteredUser> registeredUserList;

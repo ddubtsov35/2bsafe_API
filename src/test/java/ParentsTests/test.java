@@ -2,12 +2,7 @@ package ParentsTests;
 
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.UserPool.UserPool;
-import com.sun.jna.platform.win32.Netapi32Util;
-import org.json.simple.JSONObject;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
@@ -24,8 +19,8 @@ public class test extends BaseClass{
 
     @Test
     public void test() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AddAndSelectChildrenCardClass addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        //JSONObject jsonObject = new JSONObject();
+        //jsonObject.put("qwre", "qwe");
+        System.out.println(UserPool.getUserFromFile().toString());
     }
 }

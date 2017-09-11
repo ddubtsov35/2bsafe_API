@@ -30,7 +30,7 @@ public class PermissionTest extends BaseClass{
     @Test
     public void getPermission() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         permission = permissionsClass.getPermission(content);
         System.out.println(permission.toString());
         Assert.assertTrue(permission.getScs().equals("true"));
@@ -39,7 +39,7 @@ public class PermissionTest extends BaseClass{
     @Test
     public void setPermission() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("geo", 0);
         content.put("wifi", 0);
         content.put("datetime", 0);

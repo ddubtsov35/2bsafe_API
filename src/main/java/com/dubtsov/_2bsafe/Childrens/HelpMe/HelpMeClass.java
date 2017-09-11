@@ -11,9 +11,13 @@ import java.io.IOException;
  * Created by user on 24.08.17.
  */
 public class HelpMeClass extends BaseClass{
+
+    JSONObject jsonObject;
+
     public HelpMeClass() throws IOException {}
 
-    public Response helpMe(JSONObject jsonObject) throws IOException {
+    public Response helpMe() throws IOException {
+
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
         return responseClass.getJsonResponse();
     }

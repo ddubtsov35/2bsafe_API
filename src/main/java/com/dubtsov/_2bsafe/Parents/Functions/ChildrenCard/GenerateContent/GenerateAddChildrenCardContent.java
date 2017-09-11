@@ -1,5 +1,6 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateNameClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import org.json.simple.JSONObject;
@@ -13,7 +14,7 @@ import java.util.Random;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAddChildrenCardContent extends BaseContent{
+public class GenerateAddChildrenCardContent extends BaseContent {
 
     private static Random random;
 

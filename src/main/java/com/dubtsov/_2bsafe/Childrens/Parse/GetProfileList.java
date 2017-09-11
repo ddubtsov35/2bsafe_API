@@ -31,9 +31,10 @@ public class GetProfileList {
             obj = parser.parse(profileCardString);
             jsonObj = (JSONObject) obj;
             System.out.println("jsonObj " + jsonObj);
+            String scs = jsonObj.get("scs").toString();
             jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
-                profileCard.add(new ProfileCard(jsonArray.get(i).toString()));
+                profileCard.add(new ProfileCard(jsonArray.get(i).toString(), scs));
             }
             return profileCard;
         } catch (ParseException e) {

@@ -13,6 +13,7 @@ public class ProfileCard {
     private static Object obj;
     private static JSONObject jsonObj;
 
+    private String scs;
     private int profile_id;
     private String name;
     private int age;
@@ -20,10 +21,12 @@ public class ProfileCard {
 
     public ProfileCard(){};
 
-    public ProfileCard(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public ProfileCard(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
+
+        setScs(scs);
 
         setObject(jsonObjectString);
     }
@@ -65,5 +68,13 @@ public class ProfileCard {
 
     public void setBusy(int busy) {
         this.busy = busy;
+    }
+
+    public String getScs() {
+        return scs;
+    }
+
+    public void setScs(String scs) {
+        this.scs = scs;
     }
 }

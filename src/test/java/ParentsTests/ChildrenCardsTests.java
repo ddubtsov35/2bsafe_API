@@ -2,15 +2,10 @@ package ParentsTests;
 
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChangeChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.DeleteChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GetChildrenCardListClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import org.json.simple.parser.ParseException;
-import org.junit.Assert;
-import org.junit.Test;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -24,7 +19,7 @@ public class ChildrenCardsTests extends BaseClass {
     HashMap content;
 
     public ChildrenCardsTests() throws IOException, ParseException, java.text.ParseException {
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         getChildrenCardListClass = new GetChildrenCardListClass();
         listRegisteredUsersClass = new ListRegisteredUsersClass();

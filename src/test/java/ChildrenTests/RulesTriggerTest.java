@@ -11,7 +11,7 @@ import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedJsonRulesTriggerClass
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.RulesTriggerClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
@@ -31,7 +31,7 @@ public class RulesTriggerTest extends BaseClass{
     public RulesTriggerTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GeneratedRequestJsonClass();
         authorisationUserClass = new AuthorisationUserClass();
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
@@ -57,12 +57,12 @@ public class RulesTriggerTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
-        profileSetClass.selectProfileCardResponse(content);
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
+        profileSetClass.selectProfileCardResponse();
 
         response = rulesTriggerClass.rulesTrigger(generatedJsonRulesTriggerClass.generatedJsonRulesTrigger(content));
         String result = response.body().string();

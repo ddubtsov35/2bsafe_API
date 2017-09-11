@@ -1,9 +1,10 @@
 package com.dubtsov._2bsafe.Childrens.NotifyChangeApp;
 
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.HashMap;
+import java.io.IOException;
 
 /**
  * Created by user on 24.08.17.
@@ -17,15 +18,15 @@ public class GeneratedRequestJsonClass {
     JSONArray jsonArray2;
 
 
-    public JSONObject generatedJsonNotifyChangeApp(HashMap content){
+    public JSONObject generatedJsonNotifyChangeApp() throws IOException {
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
         jsonObject3 = new JSONObject();
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
 
-        jsonObject.put("cid", content.get("cid"));
-        jsonObject.put("ckey", content.get("ckey"));
+
+        jsonObject = GenerateGetProfileListContent.getProfileListContent();
 
         jsonObject2.put("name", "TestName");
         jsonObject2.put("alias", "alias");

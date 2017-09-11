@@ -5,37 +5,27 @@ import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponse
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 31.08.17.
  */
 public class AddAndSelectChildrenCardClass extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public AddAndSelectChildrenCardClass() throws IOException {
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
         profileListClass = new ProfileListClass();
         profileSetClass = new ProfileSetClass();
     }
 
-    public HashMap AddAndSelectChildrenCard() throws Exception {
+    public void AddAndSelectChildrenCard() throws Exception {
         addChildrenCardClass.addChildrenCard();
-        response = authorisationChildClass.authorisationChildren();
-        System.out.println("response211111 " + response.body().string());
-        childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
-        content.put("cid",childrenResponseAuthorisationModel.getCid());
-        content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
-        response = profileSetClass.selectProfileCardResponse(content);
-        return content;
+        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        response = profileSetClass.selectProfileCardResponse();
+        System.out.println("selectProfileCard " + response.body().string());
     }
 
 }

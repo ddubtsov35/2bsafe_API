@@ -13,7 +13,7 @@ public class GenerateAddBlockIntervalJson {
     private static JSONObject jsonObject;
     private static JSONArray jsonArray;
 
-    public static JSONObject generatedAddBlockInterval(HashMap content){
+    public static JSONObject generatedAddBlockInterval(){
         jsonObject = new JSONObject();
         jsonArray = new JSONArray();
         jsonObject.put("profile_id", content.get("profile_id"));

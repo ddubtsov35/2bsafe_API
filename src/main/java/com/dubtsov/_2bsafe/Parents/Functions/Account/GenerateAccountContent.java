@@ -1,17 +1,17 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.Account;
 
-import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.jar.JarEntry;
 
 /**
  * Created by user on 07.09.17.
  */
-public class GenerateAccountContent extends BaseContent{
+public class GenerateAccountContent extends BaseContent {
 
     public GenerateAccountContent() throws ParseException {}
 

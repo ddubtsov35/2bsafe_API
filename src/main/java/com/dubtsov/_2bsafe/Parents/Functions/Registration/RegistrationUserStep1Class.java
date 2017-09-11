@@ -1,15 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 12.07.17.

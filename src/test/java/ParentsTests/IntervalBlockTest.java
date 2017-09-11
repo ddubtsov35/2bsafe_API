@@ -3,8 +3,6 @@ package ParentsTests;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateAddGroupJson;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateSetGroupJson;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.GenerateAddBlockIntervalJson;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
@@ -40,10 +38,10 @@ public class IntervalBlockTest extends BaseClass{
     @Test
     public void getIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupJson.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
         System.out.println(groupApp.toString());
         content.put("group_id", groupApp.getGroup_id());
         content.put("alias", "alias");
@@ -55,10 +53,10 @@ public class IntervalBlockTest extends BaseClass{
     @Test
     public void addIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupJson.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
         System.out.println(groupApp.toString());
         content.put("group_id", groupApp.getGroup_id());
         content.put("alias", "alias");
@@ -76,10 +74,10 @@ public class IntervalBlockTest extends BaseClass{
     @Test
     public void editIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupJson.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
         System.out.println(groupApp.toString());
         content.put("group_id", groupApp.getGroup_id());
         content.put("alias", "alias");
@@ -97,10 +95,10 @@ public class IntervalBlockTest extends BaseClass{
     @Test
     public void deleteIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupJson.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
         System.out.println(groupApp.toString());
         content.put("group_id", groupApp.getGroup_id());
         content.put("alias", "alias");

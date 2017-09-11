@@ -1,5 +1,6 @@
-package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
+package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -9,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAppsContent extends BaseContent{
+public class GenerateAppsContent extends BaseContent {
     public GenerateAppsContent() throws ParseException {}
 
     public static JSONObject getAppsInfoContent() throws IOException {

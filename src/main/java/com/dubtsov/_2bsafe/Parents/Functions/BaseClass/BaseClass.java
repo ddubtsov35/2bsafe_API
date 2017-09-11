@@ -72,15 +72,11 @@ public class BaseClass {
     protected RegistrationUserStep2Class registrationUserStep2Class;
     protected RecoveryPasswordClass recoveryPasswordClass;
     protected LogoutClass logoutClass;
-    protected AddChildrenCardClass addChildrenCardClass;
-    protected GetChildrenCardListClass getChildrenCardListClass;
-    protected DeleteChildrenCardClass deleteChildrenCardClass;
-    protected ChangeChildrenCardClass changeChildrenCardClass;
+    protected ChildrenCardClass addChildrenCardClass;
     protected SetIntervalUpdateClass setIntervalUpdateClass;
     protected Response response;
     protected String rnd = "rnd1";
     protected AuthorisationChildClass authorisationChildClass;
-    protected GetChildrenCardInfoClass getChildrenCardInfoClass;
     protected ProfileListClass profileListClass;
     protected ProfileSetClass profileSetClass;
     protected ChildrenAuthorisationResponseClass childrenAuthorisationResponseClass;

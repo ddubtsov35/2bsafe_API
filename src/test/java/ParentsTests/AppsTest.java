@@ -5,7 +5,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Apps.AppsClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateAddGroupJson;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateGroupContent;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.Apps;
@@ -40,11 +40,11 @@ public class AppsTest extends BaseClass{
     @Test
     public void getMainInfoApps() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("rnd", GenerateTokenClass.getGeneratedToken());
         content.put("aliases", "qwe");
         content.put("name", "qwe");
-        content.put("group_id", groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content)).getGroup_id());
+        content.put("group_id", groupsAppClass.addGroupApp(GenerateGroupContent.generatedAddGroup(content)).getGroup_id());
         app = appsClass.getAppsInfo();
         Assert.assertTrue(app.getScs().contains("true"));
     }
@@ -52,11 +52,11 @@ public class AppsTest extends BaseClass{
     @Test
     public void getAppsInGroup() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("rnd", GenerateTokenClass.getGeneratedToken());
         content.put("aliases", "qwe");
         content.put("name", "qwe");
-        content.put("group_id", groupsAppClass.addGroupApp(GenerateAddGroupJson.generatedAddGroup(content)).getGroup_id());
+        content.put("group_id", groupsAppClass.addGroupApp(GenerateGroupContent.generatedAddGroup(content)).getGroup_id());
         appsInGroup = appsClass.getAppsInGroup();
         System.out.println(appsInGroup.toString());
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
@@ -65,7 +65,7 @@ public class AppsTest extends BaseClass{
     @Test
     public void getDetailInfo() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         appsDetailInfo = appsClass.getDetailInfo();
         System.out.println(appsDetailInfo.toString());
@@ -75,7 +75,7 @@ public class AppsTest extends BaseClass{
     @Test
     public void getAppsBlock() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("block", "0");
         response = appsClass.getAppsBlock();
@@ -87,7 +87,7 @@ public class AppsTest extends BaseClass{
     @Test
     public void getAppsBlockUpdate() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         content.put("block", "0");
         response = appsClass.getAppsBlockUpdate();
@@ -99,7 +99,7 @@ public class AppsTest extends BaseClass{
     @Test
     public void getAppsUpdate() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         response = appsClass.getAppsUpdate();
         String result = response.body().string();
@@ -110,7 +110,7 @@ public class AppsTest extends BaseClass{
     @Test
     public void getAppsDelete() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content = addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         content.put("aliases", "qwe");
         response = appsClass.getAppsDelete();
         String result = response.body().string();

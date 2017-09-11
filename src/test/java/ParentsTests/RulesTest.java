@@ -7,10 +7,9 @@ import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GeneratedRequestJsonClass;
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
-import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedJsonRulesTriggerClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.*;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GetTurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.SetTurboButtonClass;
@@ -34,7 +33,7 @@ public class RulesTest extends BaseClass{
     public RulesTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GeneratedRequestJsonClass();
         authorisationUserClass = new AuthorisationUserClass();
-        addChildrenCardClass = new AddChildrenCardClass();
+        addChildrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
@@ -64,12 +63,12 @@ public class RulesTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
-        profileSetClass.selectProfileCardResponse(content);
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
+        profileSetClass.selectProfileCardResponse();
 
         response = rulesListClass.getRulesListResponse();
         String result = response.body().string();
@@ -92,12 +91,12 @@ public class RulesTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
-        profileSetClass.selectProfileCardResponse(content);
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
+        profileSetClass.selectProfileCardResponse();
 
         content.put("rule_id",0);
         response = rulesListClass.getRulesByProfileResponse(content);
@@ -120,11 +119,11 @@ public class RulesTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
 
         int beforeRulesCount = rulesListClass.getRulesList().size();
         response = addRulesClass.addRule(GenerateRequestAddRule.generatedJsonRules(content));
@@ -150,11 +149,11 @@ public class RulesTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
         content.put("enabled", 1);
 
         content.put("rule_id", addRulesClass.getRuleId(addRulesClass.addRule(GenerateRequestAddRule.generatedJsonRules(content))));
@@ -180,11 +179,11 @@ public class RulesTest extends BaseClass{
         content.put("man","TestMan");
         content.put("mod","TestMod");
         content.put("type",1);
-        response = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         childrenResponseAuthorisationModel = childrenAuthorisationResponseClass.childrenResponseAuthorisation(response);
         content.put("cid",childrenResponseAuthorisationModel.getCid());
         content.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        content.put("profile_id", profileListClass.getProfileList(content).get(0).getProfile_id());
+        content.put("profile_id", profileListClass.getProfileList().get(0).getProfile_id());
 
         content.put("rule_id", addRulesClass.getRuleId(addRulesClass.addRule(GenerateRequestAddRule.generatedJsonRules(content))));
 

@@ -11,7 +11,7 @@ public class GetGpsPosition {
 
     private static GpsPositionModel gpsPositionModel;
 
-    public GpsPositionModel gpsPositionModel(String gpsPositionString){
+    public static GpsPositionModel getGpsPositionModel(String gpsPositionString){
         try {
             gpsPositionModel = new GpsPositionModel(gpsPositionString);
         } catch (ParseException e){}
