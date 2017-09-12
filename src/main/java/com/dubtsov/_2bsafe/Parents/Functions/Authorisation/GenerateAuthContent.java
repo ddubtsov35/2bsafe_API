@@ -14,10 +14,13 @@ import java.io.IOException;
 public class GenerateAuthContent extends BaseContent{
 
     public static JSONObject getAuthContent() throws IOException, ParseException {
+        System.out.println("1 " + jsonObj);
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
         }
+        System.out.println("2 " + jsonObj);
         jsonObj.put("dtype", 0);
+        System.out.println("3 " + jsonObj);
         return jsonObj;
     }
 

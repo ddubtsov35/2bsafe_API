@@ -25,7 +25,6 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
-
     public JSONObject preparationContent(JSONObject jsonObject){
         if(jsonObject.containsKey("em")) {
             Object obj = jsonObject.remove("em");
@@ -52,7 +51,9 @@ public class AuthorisationUserClass extends BaseClass {
     }
 
     public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
+        System.out.println("jsonObject " + jsonObject);
         jsonObject = GenerateAuthContent.getAuthContent();
+        System.out.println("jsonObject " + jsonObject);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }

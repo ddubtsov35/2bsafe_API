@@ -51,15 +51,10 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void deleteUser() throws Exception {
-        //Create test user and remember his password
-        HashMap content = registrationUserStep1Class.registrationUserStep1();
-        //Verification account
+        registrationUserStep1Class.registrationUserStep1();
         registrationUserStep2Class.registrationUserStep2Web();
-        //AuthorisationUser
         authorisationUserClass.authorisationUser();
-        //Delete user
         deleteUserClass.deleteUser();
-        //AuthorisationUser
         String success = authorisationUserClass.authorisationUser().getScs();
 
         Assert.assertTrue(success.equals("false"));

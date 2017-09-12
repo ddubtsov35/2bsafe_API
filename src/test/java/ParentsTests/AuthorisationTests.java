@@ -49,11 +49,9 @@ public class AuthorisationTests extends BaseClass {
     @Test
     public void recoveryPassword() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
-        content.put("login", superContent.get("em"));
         response = recoveryPasswordClass.recoveryPasswordStart();
         deleteUserClass.deleteUser();
         InputClass inputClass = new InputClass();
-        content.put("code", inputClass.code(superContent.get("em").toString()));
         response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
