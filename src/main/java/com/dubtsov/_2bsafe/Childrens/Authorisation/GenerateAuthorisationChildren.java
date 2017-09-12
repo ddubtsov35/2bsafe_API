@@ -16,9 +16,9 @@ public class GenerateAuthorisationChildren extends BaseContent {
     public GenerateAuthorisationChildren() throws ParseException {}
 
     public static JSONObject getAuthorisationChildrenContent() throws IOException {
-        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        jsonObj = GenerateRegistrationContent.jsonObjectRegStep1Content;
         jsonObj.put("cid","");
-        jsonObj.put("em", jsonObj.get("em"));
+        jsonObj.put("em", jsonObj.get("login"));
         jsonObj.put("pwd", jsonObj.get("pwd"));
         jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
         jsonObj.put("sname","TestDevice");

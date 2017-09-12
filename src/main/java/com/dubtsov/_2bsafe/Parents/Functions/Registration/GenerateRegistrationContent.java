@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
@@ -18,6 +19,7 @@ public class GenerateRegistrationContent extends BaseContent {
 
     private static ListRegisteredUsersClass listRegisteredUsersClass;
     private static List<RegisteredUser> registeredUserList;
+    public static JSONObject jsonObjectRegStep1Content;
 
     public GenerateRegistrationContent() throws Exception {
         listRegisteredUsersClass = new ListRegisteredUsersClass();
@@ -27,16 +29,15 @@ public class GenerateRegistrationContent extends BaseContent {
     public static JSONObject getRegistrationStep1Content() throws IOException {
         jsonObj.put("em", GenerateEmailClass.getGeneratedEmail());
         jsonObj.put("pwd", "wwwwww" + GenerateEmailClass.getCountFromFile());
+        jsonObjectRegStep1Content = jsonObj;
         return jsonObj;
     }
 
-
-    /*------------------------------------------------------------------------------*/
-
-
     public static JSONObject getRegistrationStep2ContentWeb() throws IOException {
-        jsonObj = getRegistrationStep1Content();
+        InputClass inputClass = new InputClass();
+        jsonObj.put("em", jsonObjectRegStep1Content.get("em"));
         jsonObj.put("dtype", 0);
+        jsonObj.put("code", inputClass.code(jsonObjectRegStep1Content.get("em").toString()));
         return jsonObj;
     }
 
@@ -64,5 +65,4 @@ public class GenerateRegistrationContent extends BaseContent {
         jsonObj.put("type", 1);
         return jsonObj;
     }
-
 }

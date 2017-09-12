@@ -15,6 +15,7 @@ public class GetChildrenResponseAuthorisation {
 
     public static ChildrenResponseAuthorisationModel getChildrenResponseAuthorisation(String childrenResponseString) throws ParseException, java.text.ParseException {
         try {
+            System.out.println("childrenResponseString " + childrenResponseString);
             childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel(childrenResponseString);
             return childrenResponseAuthorisationModel;
         } catch (ParseException e){

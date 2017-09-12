@@ -49,7 +49,96 @@ public class ResponseClass {
 
     public ResponseClass(){}
 
-    private String convertHashContentToBodyString(){
+
+    private Request getJsonRequest(){
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, String.valueOf(jsonRequest));
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", postmanToken)
+                .addHeader("cookie", sessionId)
+                .build();
+        System.out.println(request.toString());
+        System.out.println("RequestJson " + String.valueOf(jsonRequest));
+        return request;
+    }
+
+
+    public Response getJsonResponse() throws IOException {
+        response = client.newCall(getJsonRequest()).execute();
+        try {
+            listRegisteredUsersClass = new ListRegisteredUsersClass();
+            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
+            setSessionId(sessionId);
+        } catch (StringIndexOutOfBoundsException e){
+            return response;
+        }
+        System.out.println(response);
+        System.out.println();
+        return response;
+    }
+
+    public Response getRequestAddChildrenCardList() throws Exception {
+        MediaType mediaType = MediaType.parse("multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
+        //String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + content.get("name").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + "+" + content.get("phone").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + content.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n" + content.get("send_sms").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"file\"; filename=\"" + content.get("file") + "\"\r\nContent-Type: image/png\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
+        String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"rnd\"\r\n\r\nrnd1\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + jsonRequest.get("name") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + jsonRequest.get("phone") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + jsonRequest.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n0\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
+        System.out.println();
+        RequestBody body = RequestBody.create(mediaType,qqq);
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW")
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", postmanToken)
+                .addHeader("cookie", sessionId)
+                .build();
+        System.out.println("REQUEST ");
+        System.out.println(request.toString());
+        response = client.newCall(request).execute();
+        System.out.println("Response: " + response.body().string());
+        System.out.println();
+        return response;
+    }
+
+        /*private Request getRequest(){
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .addHeader("content-type", "application/json")
+                .addHeader("cache-control", "no-cache")
+                .addHeader("postman-token", postmanToken)
+                .addHeader("cookie", sessionId)
+                .build();
+        System.out.println("REQUEST ");
+        System.out.println(convertHashContentToBodyString().toString());
+        System.out.println();
+       *//* if(ContentClearFlag.isContentClearFlag()) {
+            content.clear();
+        }*//*
+        return request;
+    }*/
+
+    /*public Response getResponse() throws IOException {
+        response = client.newCall(getRequest()).execute();
+        System.out.println("Response: " + response.code());
+        System.out.println();
+
+        try {
+            listRegisteredUsersClass = new ListRegisteredUsersClass();
+            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
+            setSessionId(sessionId);
+        } catch (StringIndexOutOfBoundsException e){
+            return response;
+        }
+        return response;
+    }*/
+
+    /*private String convertHashContentToBodyString(){
         System.out.println("content " + content);
         String result = "";
         if(!this.content.isEmpty()) {
@@ -74,99 +163,7 @@ public class ResponseClass {
         result = result.substring(2, result.length());
         System.out.println(result);
         return result;
-    }
-
-    private Request getJsonRequest(){
-        MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, String.valueOf(jsonRequest));
-        Request request = new Request.Builder()
-                .url(url)
-                .post(body)
-                .addHeader("content-type", "application/json")
-                .addHeader("cache-control", "no-cache")
-                .addHeader("postman-token", postmanToken)
-                .addHeader("cookie", sessionId)
-                .build();
-        System.out.println("REQUEST ");
-        System.out.println(request.toString());
-        System.out.println();
-       /* if(ContentClearFlag.isContentClearFlag()) {
-            content.clear();
-        }*/
-        return request;
-    }
-
-    private Request getRequest(){
-        MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
-        Request request = new Request.Builder()
-                .url(url)
-                .post(body)
-                .addHeader("content-type", "application/json")
-                .addHeader("cache-control", "no-cache")
-                .addHeader("postman-token", postmanToken)
-                .addHeader("cookie", sessionId)
-                .build();
-        System.out.println("REQUEST ");
-        System.out.println(convertHashContentToBodyString().toString());
-        System.out.println();
-       /* if(ContentClearFlag.isContentClearFlag()) {
-            content.clear();
-        }*/
-        return request;
-    }
-
-    public Response getJsonResponse() throws IOException {
-        response = client.newCall(getJsonRequest()).execute();
-        System.out.println();
-
-        try {
-            listRegisteredUsersClass = new ListRegisteredUsersClass();
-            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
-            setSessionId(sessionId);
-        } catch (StringIndexOutOfBoundsException e){
-            return response;
-        }
-        return response;
-    }
-
-    public Response getResponse() throws IOException {
-        response = client.newCall(getRequest()).execute();
-        System.out.println("Response: " + response.code());
-        System.out.println();
-
-        try {
-            listRegisteredUsersClass = new ListRegisteredUsersClass();
-            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
-            setSessionId(sessionId);
-        } catch (StringIndexOutOfBoundsException e){
-            return response;
-        }
-        return response;
-    }
-
-    public Response getRequestAddChildrenCardList() throws Exception {
-        MediaType mediaType = MediaType.parse("multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW");
-        //String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + content.get("name").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + "+" + content.get("phone").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + content.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n" + content.get("send_sms").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"file\"; filename=\"" + content.get("file") + "\"\r\nContent-Type: image/png\r\n\r\n\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
-        String qqq = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"rnd\"\r\n\r\nrnd1\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + jsonRequest.get("name") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"phone\"\r\n\r\n" + jsonRequest.get("phone") + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"age\"\r\n\r\n" + jsonRequest.get("age").toString() + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n0\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
-        System.out.println();
-        RequestBody body = RequestBody.create(mediaType,qqq);
-                Request request = new Request.Builder()
-                .url(url)
-                .post(body)
-                        .addHeader("content-type", "multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW")
-                        .addHeader("cache-control", "no-cache")
-                        .addHeader("postman-token", postmanToken)
-                        .addHeader("cookie", sessionId)
-                .build();
-        System.out.println("REQUEST ");
-        System.out.println(request.toString());
-        response = client.newCall(request).execute();
-        System.out.println("Response: " + response.body().string());
-        System.out.println();
-        return response;
-    }
-
+    }*/
 
     public void setPostmanToken(String postmanToken) {
         this.postmanToken = postmanToken;

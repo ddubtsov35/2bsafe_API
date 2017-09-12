@@ -20,7 +20,7 @@ public class RegistrationUserStep1Class extends BaseClass {
 
     public JSONObject registrationUserStep1() throws IOException, ParseException {
         jsonObject = UserPool.getUserFromFile();
-        if(jsonObject != null) {
+        if(jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep1Content();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step1", jsonObject);
             responseClass.getJsonResponse();

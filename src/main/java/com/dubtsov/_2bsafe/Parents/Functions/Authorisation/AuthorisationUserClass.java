@@ -21,6 +21,7 @@ public class AuthorisationUserClass extends BaseClass {
     JSONObject jsonObject;
 
     public AuthorisationUserClass() throws IOException, ParseException, java.text.ParseException {
+        registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
@@ -35,6 +36,7 @@ public class AuthorisationUserClass extends BaseClass {
     }
 
     public AuthorisationUser RegistrationAndAuthorisationWeb() throws IOException, ParseException, java.text.ParseException {
+        registrationUserStep1Class.registrationUserStep1();
         jsonObject = registrationUserStep2Class.registrationUserStep2Web();
         jsonObject = preparationContent(jsonObject);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
@@ -42,6 +44,7 @@ public class AuthorisationUserClass extends BaseClass {
     }
 
     public AuthorisationUser RegistrationAndAuthorisationAndroid() throws IOException, ParseException, java.text.ParseException {
+        registrationUserStep1Class.registrationUserStep1();
         jsonObject = registrationUserStep2Class.registrationUserStep2AndroidPhone();
         jsonObject = preparationContent(jsonObject);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
