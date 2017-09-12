@@ -47,27 +47,24 @@ public class AuthorisationTests extends BaseClass {
     }
 
     @Test
-    public void recoveryPassword() throws IOException {
+    public void recoveryPassword() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
         content.put("login", superContent.get("em"));
-        response = recoveryPasswordClass.recoveryPasswordStart(content);
-        //deleteUserClass.deleteUser();
+        response = recoveryPasswordClass.recoveryPasswordStart();
+        deleteUserClass.deleteUser();
         InputClass inputClass = new InputClass();
         content.put("code", inputClass.code(superContent.get("em").toString()));
-        response = recoveryPasswordClass.recoveryPasswordConfirm(content);
+        response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
 
-    /*@Test
-    public void successPasswordChange() throws IOException, ParseException, java.text.ParseException {
+    @Test
+    public void successPasswordChange() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
-        content.put("login", superContent.get("login"));
-        content.put("pwd", superContent.get("npwd"));
-        content.put("dtype", 0);
-        authorisationUser = authorisationUserClass.authorisationUser(content);
+        authorisationUser = authorisationUserClass.authorisationUser();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
-    }*/
+    }
 
     @Test
     public void logout() throws ParseException, java.text.ParseException, IOException {

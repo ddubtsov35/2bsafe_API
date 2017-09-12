@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -8,24 +10,23 @@ import java.util.HashMap;
 /**
  * Created by user on 23.08.17.
  */
-public class GenerationRequestJsonClass {
+public class GenerateConditionInformationContent extends BaseContent{
 
-    JSONObject jsonObject1;
-    JSONObject jsonObject2_1;
-    JSONObject jsonObject2_2;
-    JSONObject jsonObject2_3;
-    JSONObject jsonObject2_4;
-    JSONObject jsonObject2_5;
-    JSONObject jsonObject2_6;
-    JSONObject jsonObject2_7;
-    JSONObject jsonObject2_8;
-    JSONObject jsonObject2_0;
-    JSONObject jsonObject3;
-    JSONArray jsonArray1;
-    JSONArray jsonArray2;
-    JSONArray jsonArray3;
+    private static JSONObject jsonObject1;
+    private static JSONObject jsonObject2_1;
+    private static JSONObject jsonObject2_2;
+    private static JSONObject jsonObject2_3;
+    private static JSONObject jsonObject2_4;
+    private static JSONObject jsonObject2_5;
+    private static JSONObject jsonObject2_6;
+    private static JSONObject jsonObject2_7;
+    private static JSONObject jsonObject2_8;
+    private static JSONObject jsonObject3;
+    private static JSONArray jsonArray1;
+    private static JSONArray jsonArray2;
+    private static JSONArray jsonArray3;
 
-    public JSONObject getGenerationRequestJson(HashMap content){
+    public static JSONObject getConditionInformationContent() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -35,14 +36,13 @@ public class GenerationRequestJsonClass {
         jsonObject2_6 = new JSONObject();
         jsonObject2_7 = new JSONObject();
         jsonObject2_8 = new JSONObject();
-        jsonObject2_0 = new JSONObject();
         jsonObject3 = new JSONObject();
         jsonArray1 = new JSONArray();
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
 
-        jsonObject3.put("cid", content.get("cid"));
-        jsonObject3.put("ckey", content.get("ckey"));
+        jsonObject3.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
+        jsonObject3.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
 
         jsonObject1.put("op", "TestOperator");
         jsonObject1.put("sig", 50);

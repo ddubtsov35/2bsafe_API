@@ -1,6 +1,6 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
@@ -28,7 +28,7 @@ public class TariffsTest extends BaseClass{
     public TariffsTest() throws IOException, ParseException, java.text.ParseException {
         tariffsClass = new TariffsClass();
         authorisationUserClass = new AuthorisationUserClass();
-        profileListClass = new ProfileListClass();
+        profileClass = new ProfileClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
@@ -52,19 +52,7 @@ public class TariffsTest extends BaseClass{
     public void getChangeTariff() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-
-        int targetId = 0;
-        int idCurrentTariff = tariffsClass.getCurrentTariff().getTariff();
-        tariffList = tariffsClass.getTariffsList();
-        for(int i = 0; i < tariffList.size(); i++){
-            if(idCurrentTariff != tariffList.get(i).getId()){
-                targetId = tariffList.get(i).getId();
-                break;
-            }
-        }
-
-        content.put("tariff_id", targetId);
-        response = tariffsClass.setTariff(content);
+        response = tariffsClass.setTariff();
         System.out.println("response " + response);
         Assert.assertTrue(response.code() == 200);
     }

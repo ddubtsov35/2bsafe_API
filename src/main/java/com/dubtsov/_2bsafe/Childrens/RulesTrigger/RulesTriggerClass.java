@@ -12,9 +12,13 @@ import java.util.HashMap;
  * Created by user on 24.08.17.
  */
 public class RulesTriggerClass  extends BaseClass{
+
+    JSONObject jsonObject;
+
     public RulesTriggerClass() throws IOException {}
 
-    public Response rulesTrigger(JSONObject jsonObject) throws IOException {
+    public Response rulesTrigger() throws Exception {
+        jsonObject = GeneratedRulesTriggerContent.getRulesTriggerContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/rules_trigger", jsonObject);
         return responseClass.getJsonResponse();
     }

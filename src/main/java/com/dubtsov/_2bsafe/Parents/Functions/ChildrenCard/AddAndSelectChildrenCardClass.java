@@ -1,9 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponseClass;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 
 import java.io.IOException;
@@ -14,17 +12,15 @@ import java.io.IOException;
 public class AddAndSelectChildrenCardClass extends BaseClass{
 
     public AddAndSelectChildrenCardClass() throws IOException {
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenAuthorisationResponseClass = new ChildrenAuthorisationResponseClass();
-        profileListClass = new ProfileListClass();
-        profileSetClass = new ProfileSetClass();
+        profileClass = new ProfileClass();
     }
 
     public void AddAndSelectChildrenCard() throws Exception {
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
-        response = profileSetClass.selectProfileCardResponse();
+        response = profileClass.selectProfileCardResponse();
         System.out.println("selectProfileCard " + response.body().string());
     }
 

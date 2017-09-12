@@ -1,39 +1,37 @@
 package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 /**
  * Created by user on 29.08.17.
  */
-public class GenerateRequestAddRule {
+public class GenerateRequestAddRule extends BaseContent{
 
     private static JSONObject jsonObject;
-    private static JSONObject jsonObject2;
     private static JSONObject jsonObject3;
-    private static JSONObject jsonObject4;
     private static JSONObject jsonObject5;
     private static JSONArray jsonArray;
     private static JSONArray jsonArray2;
-    private static ResponseClass responseClass;
+    private static RulesClass rulesClass;
 
 
-    public static JSONObject generatedJsonRules(HashMap content){
-        responseClass = new ResponseClass();
+    public static JSONObject addRuleContent() throws Exception {
         jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
         jsonObject3 = new JSONObject();
-        jsonObject4 = new JSONObject();
         jsonObject5 = new JSONObject();
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
 
-        jsonObject.put("name", content.get("cid"));
+        jsonObject.put("name", "TestName");
         jsonObject.put("profiles",jsonArray);
-        jsonArray.add(content.get("profile_id"));
+        jsonArray.add(GenerateProfileIdContent.getProfileId());
 
         jsonObject3.put(10,"Выключить");
         jsonObject.put("triggers",jsonObject3);
@@ -47,6 +45,19 @@ public class GenerateRequestAddRule {
 
         System.out.println("jsonObject " + jsonObject);
         return jsonObject;
+    }
+
+    public static JSONObject getDel_Get_Content() throws Exception {
+        rulesClass = new RulesClass();
+        jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
+        return jsonObj;
+    }
+
+    public static JSONObject getSwitchContent() throws Exception {
+        rulesClass = new RulesClass();
+        jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
+        jsonObj.put("enabled", 0);
+        return jsonObj;
     }
 
 }

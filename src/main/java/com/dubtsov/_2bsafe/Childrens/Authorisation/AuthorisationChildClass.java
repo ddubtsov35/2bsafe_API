@@ -3,7 +3,6 @@ package com.dubtsov._2bsafe.Childrens.Authorisation;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.Parse.GetChildrenResponseAuthorisation;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.Authorisation.GenerateAuthorisationChildren;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;

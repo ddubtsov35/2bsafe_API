@@ -31,12 +31,12 @@ public class ChildrenResponseAuthorisationModel {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIto(Integer.parseInt(null));}
+        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
         jsonObj = (JSONObject) jsonObj.get("res");
         if(jsonObj.get("cid") != null) {setCid(jsonObj.get("cid").toString());} else{setCid("");}
         if(jsonObj.get("ckey") != null) {setCkey(jsonObj.get("ckey").toString());} else{setCkey("");}
         if(jsonObj.get("aid") != null) {setAid(jsonObj.get("aid").toString());} else{setAid("");}
-        if(jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));} else{setSto(Integer.parseInt(null));}
+        if(jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));}
     }
 
     @Override

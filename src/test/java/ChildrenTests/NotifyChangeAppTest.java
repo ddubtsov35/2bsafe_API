@@ -1,10 +1,9 @@
 package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
-import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GeneratedRequestJsonClass;
+import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GenerateNotifyChangeAppContent;
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
@@ -24,22 +23,21 @@ public class NotifyChangeAppTest extends BaseClass{
     HashMap content = new LinkedHashMap();
 
     public NotifyChangeAppTest() throws IOException, ParseException, java.text.ParseException {
-        generatedRequestJsonClass = new GeneratedRequestJsonClass();
+        generatedRequestJsonClass = new GenerateNotifyChangeAppContent();
         authorisationUserClass = new AuthorisationUserClass();
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         notifyChangeAppClass = new NotifyChangeAppClass();
-        profileSetClass = new ProfileSetClass();
+        profileClass = new ProfileClass();
     }
 
     @Test
     public void notifyChangeApp() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileSetClass.selectProfileCardResponse();
-        response = notifyChangeAppClass.notifyChangeApp(generatedRequestJsonClass.generatedJsonNotifyChangeApp());
+        profileClass.selectProfileCardResponse();
+        response = notifyChangeAppClass.notifyChangeApp();
         String result = response.body().string();
         System.out.println("RESULT " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);

@@ -32,13 +32,13 @@ public class RegistrationTests extends BaseClass {
     ResponseClass response;
 
     @Test
-    public void checkEmailPhoneExist() throws IOException {
+    public void checkEmailPhoneExist() throws IOException, ParseException {
         //ContentClearFlag.setContentClearFlag(false);
         HashMap email = registrationUserStep1Class.registrationUserStep1();
         superContent.put("em", (String) email.get("em"));
         superContent.put("ph", GeneratePhoneClass.getGeneratedPhone());
         response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", superContent);
-        Assert.assertEquals(response.getResponse().code(), 409);
+        Assert.assertEquals(response.getJsonResponse().code(), 409);
     }
 
     @Test
@@ -46,27 +46,27 @@ public class RegistrationTests extends BaseClass {
         superContent.put("em", GenerateEmailClass.getGeneratedEmail());
         superContent.put("ph", GeneratePhoneClass.getGeneratedPhone());
         response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", superContent);
-        Assert.assertEquals(response.getResponse().code(), 200);
+        Assert.assertEquals(response.getJsonResponse().code(), 200);
     }
 
-    /*@Test
-    public void deleteUser() throws IOException, ParseException, java.text.ParseException {
+    @Test
+    public void deleteUser() throws Exception {
         //Create test user and remember his password
         HashMap content = registrationUserStep1Class.registrationUserStep1();
         //Verification account
-        registrationUserStep2Class.registrationUserStep2Web(content);
+        registrationUserStep2Class.registrationUserStep2Web();
         //AuthorisationUser
-        authorisationUserClass.authorisationUser(content);
+        authorisationUserClass.authorisationUser();
         //Delete user
         deleteUserClass.deleteUser();
         //AuthorisationUser
-        int codeRepeatAuthorisation = authorisationUserClass.authorisationUser(content).code();
+        String success = authorisationUserClass.authorisationUser().getScs();
 
-        Assert.assertTrue(codeRepeatAuthorisation == 401);
-    }*/
+        Assert.assertTrue(success.equals("false"));
+    }
 
     @Test
-    public void createNewUser() throws IOException, ParseException, java.text.ParseException {
+    public void createNewUser() throws Exception {
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
@@ -74,7 +74,7 @@ public class RegistrationTests extends BaseClass {
     }
 
     @Test
-    public void sendCodeActivation() throws IOException {
+    public void sendCodeActivation() throws IOException, ParseException {
         String result = registrationUserStep1Class.sendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
@@ -86,8 +86,5 @@ public class RegistrationTests extends BaseClass {
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }*/
-
-
-
 
 }

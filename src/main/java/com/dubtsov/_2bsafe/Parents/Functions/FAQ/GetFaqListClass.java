@@ -19,11 +19,11 @@ public class GetFaqListClass extends BaseClass{
 
     public List<Faq> getFaqListLk() throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/faq/get_list");
-        return GetFaq.getFaqList(responseClass.getResponse().body().string());
+        return GetFaq.getFaqList(responseClass.getJsonResponse().body().string());
     }
 
     public List<Faq> getFaqListVis() throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/land/v1.0/faq/get_list");
-        return GetFaq.getFaqList(responseClass.getResponse().body().string());
+        return GetFaq.getFaqList(responseClass.getJsonResponse().body().string());
     }
 }

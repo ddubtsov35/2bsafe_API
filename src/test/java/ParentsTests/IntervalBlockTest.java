@@ -4,7 +4,6 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
-import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.GenerateAddBlockIntervalJson;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
 import com.dubtsov._2bsafe.Parents.Models.AddIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
@@ -22,8 +21,6 @@ import java.util.List;
  * Created by user on 31.08.17.
  */
 public class IntervalBlockTest extends BaseClass{
-
-    HashMap content = new LinkedHashMap();
     List<IntervalBlock> intervalBlock;
     GroupApp groupApp;
     AddIntervalBlock addIntervalBlock;
@@ -39,13 +36,9 @@ public class IntervalBlockTest extends BaseClass{
     public void getIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "qwe");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
-        content.put("group_id", groupApp.getGroup_id());
-        content.put("alias", "alias");
-        intervalBlock = intervalBlockClass.getIntervalBlockList(content);
+        intervalBlock = intervalBlockClass.getIntervalBlockList();
         System.out.println(intervalBlock.toString());
         Assert.assertTrue(intervalBlock.get(0).getScs().equals("true"));
     }
@@ -54,18 +47,8 @@ public class IntervalBlockTest extends BaseClass{
     public void addIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "qwe");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
-        System.out.println(groupApp.toString());
-        content.put("group_id", groupApp.getGroup_id());
-        content.put("alias", "alias");
-        content.put("type", 2);
-        content.put("name", "TestName");
-        content.put("repeat", 2);
-        content.put("interval_start", "2001-12-12");
-        content.put("interval_end", "2001-12-12");
-        addIntervalBlock = intervalBlockClass.addIntervalBlockList(GenerateAddBlockIntervalJson.generatedAddBlockInterval(content));
+        groupApp = groupsAppClass.addGroupApp();
+        addIntervalBlock = intervalBlockClass.addIntervalBlockList();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -75,18 +58,9 @@ public class IntervalBlockTest extends BaseClass{
     public void editIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "qwe");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
+        groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
-        content.put("group_id", groupApp.getGroup_id());
-        content.put("alias", "alias");
-        content.put("type", 2);
-        content.put("name", "TestName");
-        content.put("repeat", 2);
-        content.put("interval_start", "2001-12-12");
-        content.put("interval_end", "2001-12-12");
-        response = intervalBlockClass.editIntervalBlockList(content);
+        response = intervalBlockClass.editIntervalBlockList();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -96,20 +70,9 @@ public class IntervalBlockTest extends BaseClass{
     public void deleteIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("aliases", "qwe");
-        content.put("name", "testName");
-        groupApp = groupsAppClass.addGroupApp(GenerateSetGroupContent.generatedJsonRules(content));
-        System.out.println(groupApp.toString());
-        content.put("group_id", groupApp.getGroup_id());
-        content.put("alias", "alias");
-        content.put("type", 2);
-        content.put("name", "TestName");
-        content.put("repeat", 2);
-        content.put("interval_start", "2001-12-12");
-        content.put("interval_end", "2001-12-12");
-        addIntervalBlock = intervalBlockClass.addIntervalBlockList(GenerateAddBlockIntervalJson.generatedAddBlockInterval(content));
-        content.put("interval_id", addIntervalBlock.getIntervals());
-        response = intervalBlockClass.deleteIntervalBlockList(content);
+        groupApp = groupsAppClass.addGroupApp();
+        addIntervalBlock = intervalBlockClass.addIntervalBlockList();
+        response = intervalBlockClass.deleteIntervalBlockList();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);

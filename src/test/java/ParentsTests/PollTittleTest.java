@@ -19,7 +19,6 @@ import java.util.LinkedHashMap;
  */
 public class PollTittleTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
     PollTittle pollTittle;
     Poll poll;
 
@@ -31,36 +30,28 @@ public class PollTittleTest extends BaseClass{
     @Test
     public void getPollTittle() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content.put("rnd", GenerateTokenClass.getGeneratedToken());
-        pollTittle = pollClass.getPoll(content);
+        pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
         Assert.assertTrue(pollTittle.getScs().equals("true"));
     }
 
     @Test
-    public void getPoll() throws ParseException, java.text.ParseException, IOException {
+    public void getPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content.put("rnd", GenerateTokenClass.getGeneratedToken());
-        pollTittle = pollClass.getPoll(content);
+        pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
-        content.put("pid", pollTittle.getPid());
-        poll = pollClass.getPollById(content);
+        poll = pollClass.getPollById();
         System.out.println(poll.toString());
         Assert.assertTrue(poll.getScs().equals("true"));
     }
 
     @Test
-    public void setPoll() throws ParseException, java.text.ParseException, IOException {
+    public void setPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        content.put("rnd", GenerateTokenClass.getGeneratedToken());
-        pollTittle = pollClass.getPoll(content);
+        pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
-        content.put("pid", pollTittle.getPid());
-        poll = pollClass.getPollById(content);
-        System.out.println(poll.toString());
-        content.put("vid", poll.getVid());
-        content.put("option", poll.getOptions());
-        response = pollClass.setPoll(content);
+        poll = pollClass.getPollById();
+        response = pollClass.setPoll();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true")&&  response.code() == 200);
     }

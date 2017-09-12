@@ -48,4 +48,10 @@ public class AuthorisationUserClass extends BaseClass {
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
+    public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
+        jsonObject = GenerateAuthContent.getAuthContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+
 }

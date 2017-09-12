@@ -16,8 +16,8 @@ public class HelpMeClass extends BaseClass{
 
     public HelpMeClass() throws IOException {}
 
-    public Response helpMe() throws IOException {
-
+    public Response helpMe() throws Exception {
+        jsonObject = GenerateHelpMeContent.getHelpMeContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
         return responseClass.getJsonResponse();
     }

@@ -1,10 +1,8 @@
 package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Childrens.Authorisation.ChildrenAuthorisationResponseClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Childrens.StatisticsInformation.GetStatisticsInformationClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
@@ -27,18 +25,18 @@ public class GetStatisticsInformationTest extends BaseClass{
     public GetStatisticsInformationTest() throws IOException, ParseException, java.text.ParseException {
         getStatisticsInformationClass = new GetStatisticsInformationClass();
         authorisationUserClass = new AuthorisationUserClass();
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
-        profileSetClass = new ProfileSetClass();
+        profileClass = new ProfileClass();
     }
 
     @Test
     public void getStatisticsInformation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
-        profileSetClass.selectProfileCardResponse();
+        profileClass.selectProfileCardResponse();
         response = getStatisticsInformationClass.getStatisticsInformation();
         String result = response.body().string();
         System.out.println("Result string " + result);

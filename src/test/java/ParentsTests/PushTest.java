@@ -4,7 +4,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.Push.GenerateJsonNotifyList;
+import com.dubtsov._2bsafe.Parents.Functions.Push.GenerateNotifyListContent;
 import com.dubtsov._2bsafe.Parents.Functions.Push.PushClass;
 import com.dubtsov._2bsafe.Parents.Models.AddSession;
 import com.dubtsov._2bsafe.Parents.Models.NotifyList;
@@ -27,7 +27,7 @@ public class PushTest extends BaseClass {
     AddSession addSession;
 
     public PushTest() throws IOException, ParseException, java.text.ParseException {
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         pushClass = new PushClass();
@@ -38,7 +38,7 @@ public class PushTest extends BaseClass {
     public void initSession() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        addSession = pushClass.InitSession(content);
+        addSession = pushClass.InitSession();
         System.out.println(addSession.toString());
         Assert.assertTrue(addSession.getScs().equals("true") && !addSession.getSes_key().equals(""));
     }
@@ -47,9 +47,7 @@ public class PushTest extends BaseClass {
     public void lockScreen() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("text", "TestText");
-        content.put("pin", "111111");
-        response = pushClass.lockScreen(content);
+        response = pushClass.lockScreen();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -58,7 +56,7 @@ public class PushTest extends BaseClass {
     public void onSound() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        response = pushClass.onSound(content);
+        response = pushClass.onSound();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -67,7 +65,7 @@ public class PushTest extends BaseClass {
     public void update() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        response = pushClass.update(content);
+        response = pushClass.update();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -77,7 +75,7 @@ public class PushTest extends BaseClass {
     public void updateLong() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        response = pushClass.updateLong(content);
+        response = pushClass.updateLong();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -86,7 +84,7 @@ public class PushTest extends BaseClass {
     public void getNotifyList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        notifyList = pushClass.getNotifyList(GenerateJsonNotifyList.generatedJsonRules(content));
+        notifyList = pushClass.getNotifyList();
         Assert.assertTrue(notifyList.getScs().contains("\"scs\": true"));
     }
 }

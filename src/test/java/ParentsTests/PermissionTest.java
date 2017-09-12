@@ -18,7 +18,6 @@ import java.util.LinkedHashMap;
  */
 public class PermissionTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
     Permission permission;
 
     public PermissionTest() throws IOException, ParseException, java.text.ParseException {
@@ -31,7 +30,7 @@ public class PermissionTest extends BaseClass{
     public void getPermission() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        permission = permissionsClass.getPermission(content);
+        permission = permissionsClass.getPermission();
         System.out.println(permission.toString());
         Assert.assertTrue(permission.getScs().equals("true"));
     }
@@ -40,13 +39,7 @@ public class PermissionTest extends BaseClass{
     public void setPermission() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        content.put("geo", 0);
-        content.put("wifi", 0);
-        content.put("datetime", 0);
-        content.put("bt", 0);
-        content.put("tether", 0);
-        content.put("gsm", 0);
-        response = permissionsClass.setPermission(content);
+        response = permissionsClass.setPermission();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);

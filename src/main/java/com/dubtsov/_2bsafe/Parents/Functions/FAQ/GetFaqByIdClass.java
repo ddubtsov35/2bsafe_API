@@ -18,15 +18,15 @@ public class GetFaqByIdClass extends BaseClass{
 
     public GetFaqByIdClass() throws IOException {}
 
-    public Response getFaqListLk(HashMap content) throws IOException, ParseException, java.text.ParseException {
+    public Response getFaqListLk() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateFaqContent.getChildrenCardListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/faq/get", jsonObject);
-        return responseClass.getResponse();
+        return responseClass.getJsonResponse();
     }
 
-    public Response getFaqListVis(HashMap content) throws IOException, ParseException, java.text.ParseException {
+    public Response getFaqListVis() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateFaqContent.getChildrenCardListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/land/v1.0/faq/get", jsonObject);
-        return responseClass.getResponse();
+        return responseClass.getJsonResponse();
     }
 }

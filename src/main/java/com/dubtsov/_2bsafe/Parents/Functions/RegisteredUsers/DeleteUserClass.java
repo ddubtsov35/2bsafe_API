@@ -1,7 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateDeleteChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,14 +16,14 @@ import java.util.LinkedHashMap;
  */
 public class DeleteUserClass extends BaseClass {
 
-    HashMap content;
+    JSONObject jsonObject;
 
     public DeleteUserClass() throws IOException {}
 
-    public void deleteUser() throws IOException {
-        content = new LinkedHashMap();
-        content.put("pwd", superContent.get("pwd").toString());
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", content);
-        responseClass.getResponse();
+    public void deleteUser() throws Exception {
+        jsonObject = GenerateRegisteredUsersContent.deleteAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
+        responseClass.getJsonResponse();
+        UserPool.clearFile();
     }
 }

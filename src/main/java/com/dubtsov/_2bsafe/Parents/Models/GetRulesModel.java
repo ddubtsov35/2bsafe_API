@@ -12,19 +12,13 @@ import java.util.List;
 /**
  * Created by user on 29.08.17.
  */
-public class RulesModel {
+public class GetRulesModel {
 
     private int id;
     private String name;
     private List<Integer> profiles;
     private String triggers;
     private String actions;
-
-    private int intTriggers;
-    private String dataTriggers;
-
-    private int intActions;
-    private String dataActions;
 
     private static JSONParser parser;
     private static Object obj;
@@ -33,7 +27,7 @@ public class RulesModel {
     private static JSONObject jsonObj2;
     private static JSONObject jsonObj3;
 
-    public RulesModel(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public GetRulesModel(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
 
@@ -54,16 +48,12 @@ public class RulesModel {
 
     @Override
     public String toString() {
-        return "RulesModel{" +
+        return "GetRulesModel{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", profiles=" + profiles +
                 ", triggers='" + triggers + '\'' +
                 ", actions='" + actions + '\'' +
-                ", intTriggers=" + intTriggers +
-                ", dataTriggers='" + dataTriggers + '\'' +
-                ", intActions=" + intActions +
-                ", dataActions='" + dataActions + '\'' +
                 '}';
     }
 

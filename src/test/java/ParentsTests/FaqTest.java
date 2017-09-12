@@ -43,7 +43,7 @@ public class FaqTest  extends BaseClass{
     public void getFaqByIdLk() throws ParseException, java.text.ParseException, IOException {
         list = getFaqListClass.getFaqListLk();
         content.put("fid", list.get(0).getFid());
-        response = getFaqByIdClass.getFaqListLk(content);
+        response = getFaqByIdClass.getFaqListLk();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -52,7 +52,7 @@ public class FaqTest  extends BaseClass{
     public void getFaqByIdVis() throws ParseException, java.text.ParseException, IOException {
         list = getFaqListClass.getFaqListVis();
         content.put("fid", list.get(0).getFid());
-        response = getFaqByIdClass.getFaqListVis(content);
+        response = getFaqByIdClass.getFaqListVis();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }

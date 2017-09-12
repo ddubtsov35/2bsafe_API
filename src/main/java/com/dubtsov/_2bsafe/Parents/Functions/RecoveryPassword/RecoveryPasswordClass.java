@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,15 +13,19 @@ import java.util.HashMap;
  */
 public class RecoveryPasswordClass extends BaseClass {
 
+    JSONObject jsonObject;
+
     public RecoveryPasswordClass() throws IOException {}
 
-    public Response recoveryPasswordStart(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/start", content);
-        return responseClass.getResponse();
+    public Response recoveryPasswordStart() throws Exception {
+        jsonObject = GenerateRecoveryPasswordContent.startRecoveryPasswordContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/start", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response recoveryPasswordConfirm(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", content);
-        return responseClass.getResponse();
+    public Response recoveryPasswordConfirm() throws Exception {
+        jsonObject = GenerateRecoveryPasswordContent.confirmRecoveryPasswordContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", jsonObject);
+        return responseClass.getJsonResponse();
     }
 }

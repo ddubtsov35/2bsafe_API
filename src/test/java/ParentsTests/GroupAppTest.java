@@ -25,7 +25,7 @@ public class GroupAppTest extends BaseClass{
     GroupApp groupApp;
 
     public GroupAppTest() throws IOException, ParseException, java.text.ParseException {
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         groupsAppClass = new GroupsAppClass();

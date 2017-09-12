@@ -24,7 +24,7 @@ public class AccountSettingsTest extends BaseClass{
     public AccountSettingsTest() throws IOException, ParseException, java.text.ParseException {
         authorisationChildClass = new AuthorisationChildClass();
         authorisationUserClass = new AuthorisationUserClass();
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         setAccountSettingClass = new AccountSettingClass();
         accountSettingClass = new AccountSettingClass();
     }
@@ -32,7 +32,7 @@ public class AccountSettingsTest extends BaseClass{
     @Test
     public void getAccountSettings() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettings.getScs().equals("true"));
@@ -41,7 +41,7 @@ public class AccountSettingsTest extends BaseClass{
     @Test
     public void setAccountSettings() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
         response = setAccountSettingClass.setAccountSetting();
         String res = response.body().string();
@@ -53,7 +53,7 @@ public class AccountSettingsTest extends BaseClass{
     @Test
     public void setAllAccountSettings() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
         response = setAccountSettingClass.setAllAccountSetting();
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();

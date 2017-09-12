@@ -1,8 +1,10 @@
 package com.dubtsov._2bsafe.Parents.Functions.Logout;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
+import org.json.simple.JSONObject;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -13,16 +15,14 @@ import java.util.LinkedHashMap;
  */
 public class LogoutClass extends BaseClass {
 
-    HashMap content;
+    JSONObject jsonObject;
 
-    public LogoutClass() throws IOException {
-        content = new LinkedHashMap();
-    }
+    public LogoutClass() throws IOException {}
 
     public Response logout() throws IOException {
-        content.put("rnd", rnd);
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/logout", content);
-        return responseClass.getResponse();
+        jsonObject.put("rnd", GenerateTokenClass.getGeneratedToken());
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/logout", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
 }

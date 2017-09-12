@@ -36,35 +36,37 @@ public class ChildrenCardClass extends BaseClass {
         if(jsonObject == null){
             jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+            ChildrenCardPool.setChildrenCard(jsonObject);
             return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
         } else {
             return GetAddChildrenCard.addChildrenCard(jsonObject.toString());
         }
     }
 
-    public void deleteChildrenCard(List<ChildrenCard> getChildrenCardList) throws IOException, ParseException, java.text.ParseException {
+    public void deleteChildrenCard() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateDeleteChildrenCardContent.getDeleteChildrenCardContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
-        responseClass.getResponse();
+        responseClass.getJsonResponse();
+        ChildrenCardPool.clearFile();
     }
 
     public DeviceShortInfo getShortInfo() throws Exception {
         jsonObject = GenerateProfileIdContent.getProfileId();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/short_info", jsonObject);
-        String responseString = responseClass.getResponse().body().string();
+        String responseString = responseClass.getJsonResponse().body().string();
         return GetDeviceShortInfo.getDeviceShortInfo(responseString);
     }
 
     public List<ChildrenCard> getChildrenCardList() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateGetChildrenCardListContent.getChildrenCardListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
-        responseString = responseClass.getResponse().body().string();
+        responseString = responseClass.getJsonResponse().body().string();
         return GetChildrenCardList.getChildrenCardList(responseString);
     }
 
     public Response changeChildrenCard(String type) throws IOException {
         jsonObject = GenerateChangeChildrenCardContent.getChangeChildrenCardContent(type);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
-        return responseClass.getResponse();
+        return responseClass.getJsonResponse();
     }
 }

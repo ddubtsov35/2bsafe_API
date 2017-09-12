@@ -1,14 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Parse;
 
 import com.dubtsov._2bsafe.Parents.Models.Faq;
-import com.dubtsov._2bsafe.Parents.Models.RulesModel;
-import okhttp3.Response;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 

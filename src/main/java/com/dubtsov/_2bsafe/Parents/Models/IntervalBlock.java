@@ -36,11 +36,11 @@ public class IntervalBlock {
         jsonObj = (JSONObject) obj;
 
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
+        if(jsonObj.get("id") != null) {setId(Integer.parseInt(jsonObj.get("id").toString()));}
+        if(jsonObj.get("type") != null) {setType(Integer.parseInt(jsonObj.get("type").toString()));}
+        if(jsonObj.get("interval_start") != null) {setInterval_start(jsonObj.get("interval_start").toString());}
+        if(jsonObj.get("interval_end") != null) {setInterval_end(jsonObj.get("interval_end").toString());}
+        if(jsonObj.get("repeat") != null) {setRepeat(Integer.parseInt(jsonObj.get("repeat").toString()));}
 
     }
 
@@ -65,5 +65,43 @@ public class IntervalBlock {
         this.scs = scs;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public String getInterval_start() {
+        return interval_start;
+    }
+
+    public void setInterval_start(String interval_start) {
+        this.interval_start = interval_start;
+    }
+
+    public String getInterval_end() {
+        return interval_end;
+    }
+
+    public void setInterval_end(String interval_end) {
+        this.interval_end = interval_end;
+    }
+
+    public int getRepeat() {
+        return repeat;
+    }
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
+    }
 }

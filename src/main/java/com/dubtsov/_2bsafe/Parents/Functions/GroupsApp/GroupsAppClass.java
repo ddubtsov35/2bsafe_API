@@ -33,12 +33,12 @@ public class GroupsAppClass extends BaseClass{
     public Response editGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedEditGroup();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/edit", jsonObject);
-        return responseClass.getResponse();
+        return responseClass.getJsonResponse();
     }
 
     public Response deleteGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedDeleteGroup();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
-        return responseClass.getResponse();
+        return responseClass.getJsonResponse();
     }
 }

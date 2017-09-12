@@ -34,7 +34,7 @@ public class AccountSettingClass extends BaseClass{
     public AccountSettings getAccountSetting() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateAccountContent.getAccountContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", jsonObject);
-        return GetAccountSetting.getAccountSettings(responseClass.getResponse().body().string());
+        return GetAccountSetting.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
 }

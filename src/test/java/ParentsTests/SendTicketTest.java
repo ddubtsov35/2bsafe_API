@@ -26,28 +26,16 @@ public class SendTicketTest extends BaseClass{
     }
 
     @Test
-    public void sendTicketWithAuthorisation() throws ParseException, java.text.ParseException, IOException {
+    public void sendTicketWithAuthorisation() throws Exception {
 
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-
-        content.put("subj", "TestSubject");
-        content.put("msg", "TestMessage");
-        content.put("rnd", GenerateTokenClass.getGeneratedToken());
-
-        Assert.assertTrue(sendTicketClass.sendTicket(content)!= 0);
+        Assert.assertTrue(sendTicketClass.sendTicket()!= 0);
     }
 
     @Test
-    public void sendTicketWithoutAuthorisation() throws ParseException, java.text.ParseException, IOException {
-
-        content.put("subj", "TestSubject");
-        content.put("msg", "TestMessage");
-        content.put("em", GenerateEmailClass.getGeneratedEmail());
-        content.put("name", "TestName");
-
-        response = sendTicketClass.sendTicketWithoutAuthorisation(content);
+    public void sendTicketWithoutAuthorisation() throws Exception {
+        response = sendTicketClass.sendTicketWithoutAuthorisation();
         String result = response.body().string();
-
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
 

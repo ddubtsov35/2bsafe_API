@@ -19,7 +19,7 @@ public class GenerateRegistrationContent extends BaseContent {
     private static ListRegisteredUsersClass listRegisteredUsersClass;
     private static List<RegisteredUser> registeredUserList;
 
-    public GenerateRegistrationContent() throws ParseException, IOException, java.text.ParseException {
+    public GenerateRegistrationContent() throws Exception {
         listRegisteredUsersClass = new ListRegisteredUsersClass();
         registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
     }

@@ -2,8 +2,7 @@ package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileSetClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
@@ -22,26 +21,25 @@ public class ChildrenCardTest extends BaseClass{
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
-        profileListClass = new ProfileListClass();
-        addChildrenCardClass = new ChildrenCardClass();
-        profileSetClass = new ProfileSetClass();
+        profileClass = new ProfileClass();
+        childrenCardClass = new ChildrenCardClass();
     }
 
 
     @Test
     public void getChildrenCardList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        Assert.assertTrue(profileListClass.getProfileList().size() == 1);
+        Assert.assertTrue(profileClass.getProfileList().size() == 1);
     }
 
     @Test
     public void selectChildrenCard() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
+        childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
-        String result = profileSetClass.selectProfileCardResponse().body().string();
+        String result = profileClass.selectProfileCardResponse().body().string();
         System.out.println("selectChildrenCard " + result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }

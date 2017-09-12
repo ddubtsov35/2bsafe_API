@@ -1,9 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileListClass;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
@@ -15,11 +14,11 @@ import java.io.IOException;
 public class GenerateSelectChildrenCardContent extends BaseContent {
 
     private static ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
-    private static ProfileListClass profileListClass;
+    private static ProfileClass profileListClass;
 
     public static JSONObject getGenerateSelectChildrenCardContent() throws IOException, ParseException, java.text.ParseException {
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
-        profileListClass = new ProfileListClass();
+        profileListClass = new ProfileClass();
 
         jsonObj.put("cid",childrenResponseAuthorisationModel.getCid());
         jsonObj.put("ckey",childrenResponseAuthorisationModel.getCkey());

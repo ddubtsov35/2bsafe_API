@@ -17,22 +17,17 @@ import java.util.List;
  */
 public class CoordinatesTests extends BaseClass {
     public CoordinatesTests() throws IOException, ParseException, java.text.ParseException {
-
-        addChildrenCardClass = new ChildrenCardClass();
+        childrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
-        getChildrenCardListClass = new GetChildrenCardListClass();
         listRegisteredUsersClass = new ListRegisteredUsersClass();
         deleteUserClass = new DeleteUserClass();
-        deleteChildrenCardClass = new DeleteChildrenCardClass();
-        changeChildrenCardClass = new ChangeChildrenCardClass();
-        getChildrenCardInfoClass = new GetChildrenCardInfoClass();
     }
 
     @Test
     public void qwer() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addChildrenCardClass.addChildrenCard();
-        List<ChildrenCard> childrenCardList = getChildrenCardListClass.getChildrenCardList();
+        childrenCardClass.addChildrenCard();
+        List<ChildrenCard> childrenCardList = childrenCardClass.getChildrenCardList();
         System.out.println(childrenCardList.size());
         //Assert.assertTrue(countCardAfter - countCardBefore == 1 && response.code() == 200);
     }

@@ -1,7 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Parse;
 
-import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
-import com.dubtsov._2bsafe.Parents.Models.RulesModel;
+import com.dubtsov._2bsafe.Parents.Models.GetRulesModel;
+import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
 import okhttp3.Response;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -24,10 +24,9 @@ public class GetRules {
     private static JSONObject jsonObj2;
     private static JSONObject jsonObj3;
 
-    private static List<RulesModel> rulesList;
-    private static String resultJsonStringGlobal;
+    private static List<GetRulesModel> rulesList;
 
-    public static List<RulesModel> getRulesList(String getRulesListResponse) throws ParseException, java.text.ParseException {
+    public static List<GetRulesModel> getRulesList(String getRulesListResponse) throws ParseException, java.text.ParseException {
         rulesList = new ArrayList();
         parser = new JSONParser();
         System.out.println("getRulesListResponse " + getRulesListResponse);
@@ -36,7 +35,7 @@ public class GetRules {
         jsonArray = (JSONArray) jsonObj.get("data");
         if(jsonArray.size() > 0) {
             for (int i = 0; i < jsonArray.size(); i++) {
-                rulesList.add(new RulesModel(jsonArray.get(i).toString()));
+                rulesList.add(new GetRulesModel(jsonArray.get(i).toString()));
             }
             return rulesList;
         } else {
@@ -44,13 +43,15 @@ public class GetRules {
         }
     }
 
-    public static Integer getRuleId(Response addRuleResponse) throws ParseException, IOException {
-        parser = new JSONParser();
-        String result = addRuleResponse.body().string();
-        System.out.println("result " + result);
-        obj = parser.parse(result);
-        jsonObj = (JSONObject) obj;
-        return Integer.parseInt(jsonObj.get("rule_id").toString());
+    private static SetRulesModel getSetRules;
+
+    public static SetRulesModel getSetRules(String getSetRulesString){
+        try {
+            getSetRules = new SetRulesModel(getSetRulesString);
+        } catch (ParseException e){}
+        finally {
+            return getSetRules;
+        }
     }
 
 }

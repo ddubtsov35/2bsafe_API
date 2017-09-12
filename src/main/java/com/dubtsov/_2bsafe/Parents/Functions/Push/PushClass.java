@@ -10,40 +10,47 @@ import okhttp3.Response;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 31.08.17.
  */
 public class PushClass extends BaseClass{
+
+    JSONObject jsonObject;
+
     public PushClass() throws IOException {}
 
-    public AddSession InitSession(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/ses/create", content);
-        return GetSession.addSession(responseClass.getResponse().body().string());
+    public AddSession InitSession() throws Exception {
+        jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/ses/create", jsonObject);
+        return GetSession.addSession(responseClass.getJsonResponse().body().string());
     }
 
-    public Response lockScreen(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/block", content);
-        return responseClass.getResponse();
+    public Response lockScreen() throws IOException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/block", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response onSound(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/alarm", content);
-        return responseClass.getResponse();
+    public Response onSound() throws Exception {
+        jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/alarm", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response update(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update", content);
-        return responseClass.getResponse();
+    public Response update() throws Exception {
+        jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public Response updateLong(HashMap content) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update_long", content);
-        return responseClass.getResponse();
+    public Response updateLong() throws Exception {
+        jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update_long", jsonObject);
+        return responseClass.getJsonResponse();
     }
 
-    public NotifyList getNotifyList(JSONObject jsonObject) throws IOException {
+    public NotifyList getNotifyList() throws Exception {
+        jsonObject = GenerateNotifyListContent.getNotifyListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/get_notify_list", jsonObject);
         return GetNotifyList.getNotifyList(responseClass.getJsonResponse().body().string());
     }

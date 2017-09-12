@@ -17,7 +17,11 @@ import java.util.List;
  */
 public class GetTariff {
 
+    private static JSONParser parser;
+    private static Object obj;
+    private static JSONArray jsonArray;
     private static Tariff tariff;
+    private static List<TariffList> tariffList;
 
     public static Tariff getCurrentTariff(String tariffString){
         try {
@@ -28,14 +32,6 @@ public class GetTariff {
             return tariff;
         }
     }
-
-
-    private static List<TariffList> tariffList;
-
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
 
     public static List<TariffList> getTariffList(String tariffListString){
         parser = new JSONParser();

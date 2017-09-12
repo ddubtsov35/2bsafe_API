@@ -2,7 +2,6 @@ package com.dubtsov._2bsafe.Parents.Functions.IntervalBlock;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Models.AddIntervalBlock;
-import com.dubtsov._2bsafe.Parents.Models.GetDataUpdate;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
 import com.dubtsov._2bsafe.Parents.Parse.GetAddIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Parse.GetIntervalBlock;
@@ -12,7 +11,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -24,23 +22,26 @@ public class IntervalBlockClass extends BaseClass{
 
     public IntervalBlockClass() throws IOException {}
 
-    public List<IntervalBlock> getIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
-        jsonObject =
+    public List<IntervalBlock> getIntervalBlockList() throws Exception {
+        jsonObject = GenerateAddBlockIntervalContent.getListInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
         return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
     }
 
-    public AddIntervalBlock addIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+    public AddIntervalBlock addIntervalBlockList() throws Exception {
+        jsonObject = GenerateAddBlockIntervalContent.addInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
         return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
-    public Response editIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+    public Response editIntervalBlockList() throws Exception {
+        jsonObject = GenerateAddBlockIntervalContent.editInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
 
-    public Response deleteIntervalBlockList() throws IOException, ParseException, java.text.ParseException {
+    public Response deleteIntervalBlockList() throws Exception {
+        jsonObject = GenerateAddBlockIntervalContent.deleteInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
         return responseClass.getJsonResponse();
     }

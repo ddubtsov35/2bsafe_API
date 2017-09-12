@@ -17,9 +17,9 @@ public class GetStatisticsInformationClass extends BaseClass{
 
     public GetStatisticsInformationClass() throws IOException {}
 
-    public Response getStatisticsInformation() throws IOException {
-        //jsonObject =
-        //responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
-        return responseClass.getResponse();
+    public Response getStatisticsInformation() throws Exception {
+        jsonObject = GenerateStatisticInfoContent.getRulesTriggerContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
+        return responseClass.getJsonResponse();
     }
 }

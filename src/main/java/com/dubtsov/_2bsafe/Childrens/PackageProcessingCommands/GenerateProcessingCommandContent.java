@@ -1,7 +1,7 @@
 package com.dubtsov._2bsafe.Childrens.PackageProcessingCommands;
 
-import com.dubtsov._2bsafe.Childrens.HelpMe.GenerateRequestJsonHelpMeClass;
-import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GeneratedRequestJsonClass;
+import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GenerateNotifyChangeAppContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,7 +13,7 @@ import java.util.HashMap;
 /**
  * Created by user on 24.08.17.
  */
-public class GenerateJsonPackageProcessingCommandClass {
+public class GenerateProcessingCommandContent {
     private static JSONObject jsonObject;
     private static JSONObject jsonObject2;
     private static JSONObject jsonObject3;
@@ -25,10 +25,10 @@ public class GenerateJsonPackageProcessingCommandClass {
     private static String result;
     private static String result2;
     private static String result3;
-    private static GeneratedRequestJsonClass generatedRequestJsonClass;
+    private static GenerateNotifyChangeAppContent generatedRequestJsonClass;
 
 
-    public static JSONObject generatedJsonNotifyChangeApp(HashMap content) throws ParseException {
+    public static JSONObject getProcessingCommandsContent() throws Exception {
         responseClass = new ResponseClass();
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
@@ -36,10 +36,9 @@ public class GenerateJsonPackageProcessingCommandClass {
         jsonObject4 = new JSONObject();
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
-        lastRequest = generatedJsonNotifyChangeApp(content).toJSONString();
 
-        jsonObject3.put("cid", content.get("cid"));
-        jsonObject3.put("ckey", content.get("ckey"));
+        jsonObject3.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
+        jsonObject3.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
 
         jsonObject2.put("name", "update");
         jsonObject2.put("body", jsonObject);

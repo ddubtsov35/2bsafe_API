@@ -19,23 +19,20 @@ import java.util.LinkedHashMap;
  */
 public class ChangeEmailPhoneTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public ChangeEmailPhoneTest() throws IOException, ParseException, java.text.ParseException {
         changeEmailClass = new ChangeEmailClass();
         authorisationUserClass = new AuthorisationUserClass();
         listRegisteredUsersClass = new ListRegisteredUsersClass();
     }
 
-    /*@Test
+    @Test
     public void changeEmail() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         String beforeEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
         String newEmail = GenerateEmailClass.getGeneratedEmail();
-        content.put("em", newEmail);
-        authorisationUserClass.authorisationUser(superContent);
+        //authorisationUserClass.authorisationUser();
         response = changeEmailClass.changeEmail();
-        Timeout.waitEmailVerification(content.get("em").toString());
+        Timeout.waitEmailVerification();
         String afterEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
         System.out.println("beforeEmail " + beforeEmail);
         System.out.println("afterEmail " + afterEmail);
@@ -46,11 +43,10 @@ public class ChangeEmailPhoneTest extends BaseClass{
     public void changeEmailError() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         String beforeEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
-        content.put("em", beforeEmail);
-        authorisationUserClass.authorisationUser(superContent);
+        //authorisationUserClass.authorisationUser();
         response = changeEmailClass.changeEmail();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false") && response.code() == 409);
-    }*/
+    }
 
 }

@@ -23,7 +23,7 @@ public class HelpMeParentClass extends BaseClass{
     public HelpMe getHelpMe() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateHelpMeContent.getHelpMe();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/get", jsonObject);
-        return GetHelpMe.getHelpMe(responseClass.getResponse().body().string());
+        return GetHelpMe.getHelpMe(responseClass.getJsonResponse().body().string());
     }
 
     public Response setHelpMe() throws IOException, ParseException, java.text.ParseException {

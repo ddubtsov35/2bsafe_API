@@ -18,6 +18,7 @@ public class ConditionInformationFromDevice {
 
     String jsonObjectString;
 
+    private String scs;
     private int bto;
     private int ito;
     private List<Integer> params;
@@ -64,6 +65,7 @@ public class ConditionInformationFromDevice {
 
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
         if(jsonObj.get("params") != null) {setParams(getListParams(jsonObjectString));} else{setParams(null);}
@@ -149,5 +151,13 @@ public class ConditionInformationFromDevice {
 
     public void setIntervals(List<Intervals> intervals) {
         this.intervals = intervals;
+    }
+
+    public String getScs() {
+        return scs;
+    }
+
+    public void setScs(String scs) {
+        this.scs = scs;
     }
 }

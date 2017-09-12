@@ -69,7 +69,6 @@ public class GenerateAppsContent extends BaseContent {
 
     public static JSONObject getAppsDeleteContent() throws IOException {
         //TODO get profileID
-        //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
         JSONObject jsonObject2 = new JSONObject();
         jsonObject2.put("alias",GenerateTokenClass.getGeneratedToken());
         jsonArray.add(jsonObject2);

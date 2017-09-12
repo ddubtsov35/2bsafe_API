@@ -7,8 +7,9 @@ import org.json.simple.parser.ParseException;
 /**
  * Created by user on 28.08.17.
  */
-public class GetDataUpdate {
+public class DataUpdate {
 
+    private String scs;
     private int ito;
 
     private static JSONParser parser;
@@ -16,7 +17,7 @@ public class GetDataUpdate {
     private static JSONObject jsonObj;
 
 
-    public GetDataUpdate(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public DataUpdate(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
 
@@ -26,10 +27,8 @@ public class GetDataUpdate {
         jsonObj = (JSONObject) obj;
         jsonObj = (JSONObject) jsonObj.get("data");
 
-
-        System.out.println("jsonObj.get(\"ito\") " + jsonObj.get("ito"));
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
-        if(jsonObj.get("turbo") != null) {setIto(Integer.parseInt(jsonObj.get("turbo").toString()));}
     }
 
     public int getIto() {
@@ -38,5 +37,13 @@ public class GetDataUpdate {
 
     public void setIto(int ito) {
         this.ito = ito;
+    }
+
+    public String getScs() {
+        return scs;
+    }
+
+    public void setScs(String scs) {
+        this.scs = scs;
     }
 }

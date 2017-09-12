@@ -1,4 +1,4 @@
-package com.dubtsov._2bsafe.Parents.Functions.Authorisation;
+package com.dubtsov._2bsafe.Childrens.Authorisation;
 
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
