@@ -37,8 +37,8 @@ public class GenerateProcessingCommandContent {
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
 
-        jsonObject3.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
-        jsonObject3.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
+        jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
 
         jsonObject2.put("name", "update");
         jsonObject2.put("body", jsonObject);

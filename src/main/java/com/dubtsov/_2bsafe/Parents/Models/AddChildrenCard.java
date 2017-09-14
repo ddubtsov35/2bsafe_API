@@ -1,8 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 
 /**
  * Created by user on 11.09.17.
@@ -14,18 +17,18 @@ public class AddChildrenCard {
     private static JSONObject jsonObj;
 
     private String scs;
-    private String profile_id;
+    private int profile_id;
 
-    public AddChildrenCard(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public AddChildrenCard(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         setObject(jsonObjectString);
     }
 
-    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("profile_id") != null) {setProfile_id(jsonObj.get("profile_id").toString());}
+        if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));}
     }
 
     @Override
@@ -44,11 +47,11 @@ public class AddChildrenCard {
         this.scs = scs;
     }
 
-    public String getProfile_id() {
+    public int getProfile_id() {
         return profile_id;
     }
 
-    public void setProfile_id(String profile_id) {
+    public void setProfile_id(int profile_id) {
         this.profile_id = profile_id;
     }
 }

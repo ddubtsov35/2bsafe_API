@@ -17,28 +17,18 @@ public class ResponseClass {
     private JSONObject jsonRequest;
     private String postmanToken = "6890b6c8-e300-4787-0233-b79a28139bf3";
     private String url;
-    private Map<String, String> content;
     private OkHttpClient client = new OkHttpClient();
     private Response response;
     private static String sessionId = "";
     private ListRegisteredUsersClass listRegisteredUsersClass;
 
 
-    public ResponseClass(String postmanToken, String url, HashMap content){
-        this.content = new LinkedHashMap();
+    public ResponseClass(String postmanToken, String url){
         this.postmanToken = postmanToken;
         this.url = url;
-        this.content = content;
-    }
-
-    public ResponseClass(String url, HashMap content){
-        this.content = new LinkedHashMap();
-        this.url = url;
-        this.content = content;
     }
 
     public ResponseClass(String url){
-        this.content = new LinkedHashMap();
         this.url = url;
     }
 
@@ -75,9 +65,12 @@ public class ResponseClass {
             setSessionId(sessionId);
         } catch (StringIndexOutOfBoundsException e){
             return response;
+        } finally {
+            System.out.println(response);
+            //System.out.println(response.body().string());
+            System.out.println();
         }
-        System.out.println(response);
-        System.out.println();
+
         return response;
     }
 
@@ -95,10 +88,9 @@ public class ResponseClass {
                 .addHeader("postman-token", postmanToken)
                 .addHeader("cookie", sessionId)
                 .build();
-        System.out.println("REQUEST ");
         System.out.println(request.toString());
         response = client.newCall(request).execute();
-        System.out.println("Response: " + response.body().string());
+        System.out.println("Response: " + response);
         System.out.println();
         return response;
     }
@@ -170,9 +162,6 @@ public class ResponseClass {
     }
     public void setUrl(String url) {
         this.url = url;
-    }
-    public void setContent(Map<String, String> content) {
-        this.content = content;
     }
     public void setSessionId(String sessionId){ this.sessionId = sessionId;}
 }

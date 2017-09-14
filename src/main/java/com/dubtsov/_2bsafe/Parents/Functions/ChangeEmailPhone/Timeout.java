@@ -11,7 +11,7 @@ import java.io.IOException;
 public class Timeout {
 
     public static void waitEmailVerification() throws IOException {
-        JOptionPane.showInputDialog("Нажмите на кнопку подтверждения после перехода по ссылке для смены пароля " + GenerateRegistrationContent.getRegistrationStep1Content().get("em"));
+        JOptionPane.showInputDialog("Нажмите на кнопку подтверждения после перехода по ссылке для смены пароля " + GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
     }
 
 }

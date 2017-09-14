@@ -17,7 +17,7 @@ public class GenerateNotifyChangeAppContent extends BaseContent{
     private static JSONArray jsonArray2;
 
 
-    public static JSONObject appsNotifyContent() throws IOException {
+    public static JSONObject appsNotifyContent() throws Exception {
         jsonObj = new JSONObject();
         jsonObject2 = new JSONObject();
         jsonObject3 = new JSONObject();

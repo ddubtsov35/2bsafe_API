@@ -12,14 +12,14 @@ import org.json.simple.JSONObject;
 public class GenerateRecoveryPasswordContent extends BaseContent{
 
     public static JSONObject startRecoveryPasswordContent() throws Exception {
-        jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content().get("em"));
+        jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
         return jsonObj;
     }
 
     public static JSONObject confirmRecoveryPasswordContent() throws Exception {
         InputClass inputClass = new InputClass();
-        jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content().get("em"));
-        int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content().get("em").toString());
+        jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+        int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString());
         jsonObj.put("code", code);
         return jsonObj;
     }

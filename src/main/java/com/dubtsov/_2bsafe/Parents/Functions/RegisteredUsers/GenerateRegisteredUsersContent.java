@@ -11,7 +11,7 @@ import org.json.simple.JSONObject;
 public class GenerateRegisteredUsersContent extends BaseContent{
 
     public static JSONObject deleteAccountContent() throws Exception {
-        jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content().get("pwd"));
+        jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

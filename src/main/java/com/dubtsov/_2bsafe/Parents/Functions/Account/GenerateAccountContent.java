@@ -16,7 +16,7 @@ public class GenerateAccountContent extends BaseContent {
     public GenerateAccountContent() throws ParseException {}
 
     public static JSONObject getSetAccountContent() throws IOException {
-        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         jsonObj.put("lbat", 2);
         jsonObj.put("nbat", 2);
@@ -35,7 +35,7 @@ public class GenerateAccountContent extends BaseContent {
 
 
     public static JSONObject getSetAllAccountContent() throws IOException {
-        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         jsonObj.put("lbat", 2);
         jsonObj.put("nbat", 2);
@@ -52,7 +52,7 @@ public class GenerateAccountContent extends BaseContent {
 
 
     public static JSONObject getAccountContent() throws IOException {
-        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

@@ -14,7 +14,7 @@ public class GenerateChangeEmailContent extends BaseContent {
     public GenerateChangeEmailContent() throws ParseException {}
 
     public static JSONObject getChangeEmailContent() throws IOException {
-        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
         return jsonObj;
     }
 }

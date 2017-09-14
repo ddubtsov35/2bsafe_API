@@ -20,14 +20,11 @@ import java.util.LinkedHashMap;
  */
 public class GetStatisticsInformationTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public GetStatisticsInformationTest() throws IOException, ParseException, java.text.ParseException {
         getStatisticsInformationClass = new GetStatisticsInformationClass();
         authorisationUserClass = new AuthorisationUserClass();
         childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         profileClass = new ProfileClass();
     }
 
@@ -35,7 +32,7 @@ public class GetStatisticsInformationTest extends BaseClass{
     public void getStatisticsInformation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
-        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         profileClass.selectProfileCardResponse();
         response = getStatisticsInformationClass.getStatisticsInformation();
         String result = response.body().string();

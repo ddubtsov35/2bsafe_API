@@ -25,27 +25,18 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
-    public JSONObject preparationContent(JSONObject jsonObject){
-        if(jsonObject.containsKey("em")) {
-            Object obj = jsonObject.remove("em");
-            jsonObject.remove("em");
-            jsonObject.put("login", obj);
-        }
-        return jsonObject;
-    }
-
     public AuthorisationUser RegistrationAndAuthorisationWeb() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class.registrationUserStep1();
-        jsonObject = registrationUserStep2Class.registrationUserStep2Web();
-        jsonObject = preparationContent(jsonObject);
+        registrationUserStep2Class.registrationUserStep2Web();
+        jsonObject = GenerateAuthContent.getAuthContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
     public AuthorisationUser RegistrationAndAuthorisationAndroid() throws IOException, ParseException, java.text.ParseException {
         registrationUserStep1Class.registrationUserStep1();
-        jsonObject = registrationUserStep2Class.registrationUserStep2AndroidPhone();
-        jsonObject = preparationContent(jsonObject);
+        registrationUserStep2Class.registrationUserStep2AndroidPhone();
+        jsonObject = GenerateAuthContent.getAuthContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }

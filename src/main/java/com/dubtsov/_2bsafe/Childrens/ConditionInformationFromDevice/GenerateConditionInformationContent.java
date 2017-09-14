@@ -41,8 +41,8 @@ public class GenerateConditionInformationContent extends BaseContent{
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
 
-        jsonObject3.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
-        jsonObject3.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
+        jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
 
         jsonObject1.put("op", "TestOperator");
         jsonObject1.put("sig", 50);
@@ -98,7 +98,6 @@ public class GenerateConditionInformationContent extends BaseContent{
         jsonArray3.add(jsonObject2_8);
         jsonObject3.put("sms", jsonArray3);
 
-        System.out.println("jsonObject3 " + jsonObject3.toString());
         return jsonObject3;
     }
 
