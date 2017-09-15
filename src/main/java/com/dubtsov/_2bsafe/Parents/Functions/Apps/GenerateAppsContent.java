@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -10,18 +11,19 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAppsContent extends BaseContent {
+public class GenerateAppsContent{
     public GenerateAppsContent() throws ParseException {}
 
-    public static JSONObject getAppsInfoContent() throws IOException {
+    public static JSONObject getAppsInfoContent() throws Exception {
         //TODO get profileID
-        //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
+        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
+        jsonObj.put("profile_id", jsonObj.get("profile_id"));
         jsonObj.put("rnd",GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 
 
-    public static JSONObject getAppsInGroupContent() throws IOException {
+    /*public static JSONObject getAppsInGroupContent() throws IOException {
         //TODO get profileID
         //TODO get groupID
         //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content();
@@ -74,6 +76,6 @@ public class GenerateAppsContent extends BaseContent {
         jsonArray.add(jsonObject2);
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
-    }
+    }*/
 
 }

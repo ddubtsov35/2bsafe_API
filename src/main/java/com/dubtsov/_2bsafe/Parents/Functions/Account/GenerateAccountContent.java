@@ -28,7 +28,7 @@ public class GenerateAccountContent extends BaseContent {
         jsonObj.put("nsms", 2);
         jsonObj.put("ngps", 2);
         jsonObj.put("name", "Толян");
-        jsonObj.put("em", jsonObj.get("em"));
+        jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
         jsonObj.put("ph", "+71111111111");
         return jsonObj;
     }

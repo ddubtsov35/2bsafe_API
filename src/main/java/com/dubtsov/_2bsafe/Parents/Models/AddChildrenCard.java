@@ -1,6 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
-import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;

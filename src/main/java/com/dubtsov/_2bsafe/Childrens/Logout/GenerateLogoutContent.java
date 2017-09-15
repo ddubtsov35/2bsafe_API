@@ -11,16 +11,10 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateLogoutContent extends BaseContent{
+public class GenerateLogoutContent{
 
     public static JSONObject getLogoutContent() throws Exception {
-        if(CidCkeyPool.getCidFromFile() == null) {
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
-        } else {
-            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
-            jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
-        }
+        JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else {
@@ -32,8 +26,7 @@ public class GenerateLogoutContent extends BaseContent{
     }
 
     public static JSONObject getLogoutWithoutPasswordContent() throws Exception {
-        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("reason", "Mne pysos!");
 
         System.out.println("jsonObject " + jsonObj);

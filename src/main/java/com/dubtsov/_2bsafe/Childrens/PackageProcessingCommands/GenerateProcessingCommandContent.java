@@ -25,7 +25,6 @@ public class GenerateProcessingCommandContent {
     private static String result;
     private static String result2;
     private static String result3;
-    private static GenerateNotifyChangeAppContent generatedRequestJsonClass;
 
 
     public static JSONObject getProcessingCommandsContent() throws Exception {
@@ -36,16 +35,16 @@ public class GenerateProcessingCommandContent {
         jsonObject4 = new JSONObject();
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
+        lastRequest = GenerateNotifyChangeAppContent.appsNotifyContent().toJSONString();
 
-        jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         jsonObject2.put("name", "update");
         jsonObject2.put("body", jsonObject);
         jsonArray.add(jsonObject2);
 
         jsonObject.put("form_date", "2017-01-30");
-        jsonObject.put(null, lastRequest.substring(1, lastRequest.length()-1));
+        jsonObject.put("null", lastRequest.substring(1, lastRequest.length()-1));
 
         jsonObject3.put("commands",jsonArray);
 

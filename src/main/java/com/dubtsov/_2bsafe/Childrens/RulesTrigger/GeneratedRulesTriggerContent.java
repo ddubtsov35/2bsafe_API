@@ -10,23 +10,23 @@ import java.util.HashMap;
 /**
  * Created by user on 24.08.17.
  */
-public class GeneratedRulesTriggerContent extends BaseContent{
-    private static JSONObject jsonObject2;
+public class GeneratedRulesTriggerContent{
 
     public static JSONObject getRulesTriggerContent() throws Exception {
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        JSONArray jsonArray = new JSONArray();
 
-        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
-        jsonArray.add(201);
-        jsonObj.put("rules", jsonArray);
+        jsonArray.add(10);
+        jsonObject2.put("rules", jsonArray);
 
-        jsonObject2.put("lat", 1);
-        jsonObject2.put("long", 1);
-        jsonObject2.put("gtype", 1);
-        jsonObj.put("geo", jsonObject2);
+        jsonObject.put("lat", 1);
+        jsonObject.put("long", 1);
+        jsonObject.put("gtype", 1);
+        jsonObject2.put("geo", jsonObject);
 
-        System.out.println("jsonObject " + jsonObj);
-        return jsonObj;
+
+        System.out.println("jsonObject " + jsonObject2);
+        return jsonObject2;
     }
 }

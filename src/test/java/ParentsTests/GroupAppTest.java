@@ -21,7 +21,6 @@ import java.util.List;
  */
 public class GroupAppTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
     GroupApp groupApp;
 
     public GroupAppTest() throws IOException, ParseException, java.text.ParseException {

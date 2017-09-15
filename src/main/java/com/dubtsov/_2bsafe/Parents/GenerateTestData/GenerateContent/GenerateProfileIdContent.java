@@ -11,11 +11,12 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateProfileIdContent extends BaseContent{
+public class GenerateProfileIdContent{
 
     public GenerateProfileIdContent() throws ParseException {}
 
     public static JSONObject getProfileId() throws Exception {
+        JSONObject jsonObj = new JSONObject();
         ChildrenCardClass addChildrenCardClass = new ChildrenCardClass();
         jsonObj.put("profile_id", addChildrenCardClass.addChildrenCard().getProfile_id());
         return jsonObj;

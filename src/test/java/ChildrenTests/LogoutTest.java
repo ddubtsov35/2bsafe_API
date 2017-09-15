@@ -18,8 +18,6 @@ import java.util.LinkedHashMap;
  */
 public class LogoutTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public LogoutTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();

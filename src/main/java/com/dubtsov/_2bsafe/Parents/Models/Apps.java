@@ -29,6 +29,8 @@ public class Apps {
     private static Object obj2;
     private static JSONObject jsonObj2;
 
+    public Apps() {}
+
 
     public Apps(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);

@@ -22,11 +22,11 @@ public class RegistrationUserStep2Class extends BaseClass {
         if(jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
-            responseClass.getJsonResponse();
+            response = responseClass.getJsonResponse();
 
-            //if(responseClass.getJsonResponse().code() == 200) {
-            UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
-            //}
+            if(response.code() == 200) {
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+            }
 
             return jsonObject;
         } else {

@@ -8,7 +8,6 @@ import com.dubtsov._2bsafe.Childrens.Parse.GetProfileList;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
-import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
@@ -28,13 +27,9 @@ public class ProfileClass extends BaseClass{
     public ProfileClass() throws IOException {}
 
     public List<ProfileCard> getProfileList() throws Exception {
-        if(ChildrenCardPool.getChildrenCardFromFile() == null) {
-            jsonObject = GenerateGetProfileListContent.getProfileListContent();
-            responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
-            return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());
-        } else{
-            return GetProfileList.getProfileCard(ChildrenCardPool.getChildrenCardFromFile().toString());
-        }
+        jsonObject = GenerateGetProfileListContent.getProfileListContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
+        return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());
     }
 
     public ConditionInformationFromDevice setProfileCard() throws Exception {

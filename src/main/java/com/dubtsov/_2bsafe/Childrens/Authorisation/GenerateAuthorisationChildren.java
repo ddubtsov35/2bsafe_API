@@ -41,6 +41,4 @@ public class GenerateAuthorisationChildren extends BaseContent {
         jsonObj.put("type",1);
         return jsonObj;
     }
-
-
 }

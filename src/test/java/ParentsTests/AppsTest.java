@@ -34,13 +34,13 @@ public class AppsTest extends BaseClass{
         appsClass = new AppsClass();
     }
 
-    @Test
+    /*@Test
     public void getMainInfoApps() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         app = appsClass.getAppsInfo();
         Assert.assertTrue(app.getScs().contains("true"));
-    }
+    }*/
 
     @Test
     public void getAppsInGroup() throws Exception {
@@ -51,7 +51,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
     }
 
-    @Test
+    /*@Test
     public void getDetailInfo() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
@@ -98,7 +98,7 @@ public class AppsTest extends BaseClass{
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": false") && response.code() == 200);
-    }
+    }*/
 
 
 

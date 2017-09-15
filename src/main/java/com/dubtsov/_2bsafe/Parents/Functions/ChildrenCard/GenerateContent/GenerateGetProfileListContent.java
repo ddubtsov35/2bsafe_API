@@ -25,11 +25,13 @@ public class GenerateGetProfileListContent {
         profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
             return jsonObj;
         } else{
             authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
             return jsonObj;

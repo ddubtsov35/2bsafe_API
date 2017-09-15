@@ -21,8 +21,7 @@ public class GenerateHelpMeContent {
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
 
-        jsonObject.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObject.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         jsonObject2.put("lat", 1);
         jsonObject2.put("long", 1);
@@ -31,7 +30,6 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        System.out.println("jsonObject " + jsonObject);
         return jsonObject;
     }
 }

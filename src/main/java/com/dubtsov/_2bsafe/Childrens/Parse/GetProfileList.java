@@ -3,7 +3,6 @@ package com.dubtsov._2bsafe.Childrens.Parse;
 import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Childrens.Models.ProfileCard;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
-import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -32,10 +31,6 @@ public class GetProfileList {
         try {
             obj = parser.parse(profileCardString);
             jsonObj = (JSONObject) obj;
-
-            if(ChildrenCardPool.getChildrenCardFromFile() == null) {
-                ChildrenCardPool.setChildrenCard(jsonObj);
-            }
 
             System.out.println("jsonObj " + jsonObj);
             String scs = jsonObj.get("scs").toString();

@@ -18,6 +18,11 @@ public class GroupsAppClass extends BaseClass{
 
     public GroupsAppClass() throws IOException {}
 
+    public Response getListGroupApp() throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/list");
+        return responseClass.getJsonResponse();
+    }
+
     public Response setGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedSetGroup();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/set_app", jsonObject);
