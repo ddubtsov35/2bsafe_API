@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard;
 
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateAddChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateChangeChildrenCardContent;
@@ -12,9 +13,11 @@ import com.dubtsov._2bsafe.Parents.Models.DeviceShortInfo;
 import com.dubtsov._2bsafe.Parents.Parse.GetAddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Parse.GetChildrenCardList;
 import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
@@ -27,19 +30,27 @@ public class ChildrenCardClass extends BaseClass {
 
     JSONObject jsonObject;
     String responseString;
+    AddChildrenCard addChildrenCard;
 
     public ChildrenCardClass() throws IOException {}
 
     public AddChildrenCard addChildrenCard() throws Exception {
-        jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
-        return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
+        jsonObject = ChildrenCardPool.getChildrenCardFromFile();
+        if(jsonObject == null){
+            jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
+            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+            addChildrenCard = GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
+            return addChildrenCard;
+        } else {
+            return null;
+        }
     }
 
     public void deleteChildrenCard() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateDeleteChildrenCardContent.getDeleteChildrenCardContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
         responseClass.getJsonResponse();
+        ChildrenCardPool.clearFile();
     }
 
     public DeviceShortInfo getShortInfo() throws Exception {

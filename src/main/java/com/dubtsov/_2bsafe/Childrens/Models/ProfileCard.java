@@ -19,15 +19,12 @@ public class ProfileCard {
     private int age;
     private int busy;
 
-    public ProfileCard(){};
-
     public ProfileCard(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
         setScs(scs);
-
         setObject(jsonObjectString);
     }
 

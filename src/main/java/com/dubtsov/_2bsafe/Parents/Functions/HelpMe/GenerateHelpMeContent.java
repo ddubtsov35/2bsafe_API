@@ -15,13 +15,13 @@ import java.util.HashMap;
  */
 public class GenerateHelpMeContent extends BaseContent{
 
-    public static JSONObject getHelpMe() throws ParseException, java.text.ParseException, IOException {
+    public static  JSONObject getHelpMe() throws Exception {
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
         return jsonObj;
     }
 
-    public static JSONObject setHelpMe() throws IOException, ParseException, java.text.ParseException {
+    public static JSONObject setHelpMe() throws Exception {
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
         jsonObj.put("state", 0);

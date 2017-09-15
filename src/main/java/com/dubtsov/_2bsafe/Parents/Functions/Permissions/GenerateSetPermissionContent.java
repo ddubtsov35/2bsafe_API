@@ -16,7 +16,7 @@ public class GenerateSetPermissionContent extends BaseContent{
             jsonObj.put("bt", 0);
             jsonObj.put("tether", 0);
             jsonObj.put("gsm", 0);
-            jsonObj.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
             return jsonObj;
         }
 }

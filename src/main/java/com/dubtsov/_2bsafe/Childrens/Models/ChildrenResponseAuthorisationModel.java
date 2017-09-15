@@ -1,8 +1,11 @@
 package com.dubtsov._2bsafe.Childrens.Models;
 
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 
 /**
  * Created by user on 16.08.17.
@@ -22,11 +25,11 @@ public class ChildrenResponseAuthorisationModel {
 
     public ChildrenResponseAuthorisationModel(){};
 
-    public ChildrenResponseAuthorisationModel(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public ChildrenResponseAuthorisationModel(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         setObject(jsonObjectString);
     }
 
-    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
@@ -37,6 +40,10 @@ public class ChildrenResponseAuthorisationModel {
         if(jsonObj.get("ckey") != null) {setCkey(jsonObj.get("ckey").toString());}
         if(jsonObj.get("aid") != null) {setAid(jsonObj.get("aid").toString());}
         if(jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));}
+
+        if(CidCkeyPool.getCidFromFile() == null){
+            CidCkeyPool.setCidCkey(jsonObj);
+        }
     }
 
     @Override

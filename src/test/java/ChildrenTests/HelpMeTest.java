@@ -22,7 +22,6 @@ public class HelpMeTest extends BaseClass{
         authorisationUserClass = new AuthorisationUserClass();
         childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         profileClass = new ProfileClass();
         helpMeClass = new HelpMeClass();
     }
@@ -31,7 +30,7 @@ public class HelpMeTest extends BaseClass{
     public void helpMe() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
-        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         response = helpMeClass.helpMe();
         String result = response.body().string();
         System.out.println("RESULT " + result);

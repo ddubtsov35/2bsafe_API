@@ -34,6 +34,7 @@ public class LogoutTest extends BaseClass{
         authorisationChildClass.authorisationChildren();
         response = childrenLogoutClass.logout();
         String result = response.body().string();
+        System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
@@ -44,6 +45,7 @@ public class LogoutTest extends BaseClass{
         authorisationChildClass.authorisationChildren();
         response = childrenLogoutClass.logoutWithoutPassword();
         String result = response.body().string();
+        System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 }

@@ -14,8 +14,8 @@ import org.json.simple.JSONObject;
 public class GeneratePasswordChangeContent extends BaseContent{
 
     public static JSONObject getPasswordChangeContent() throws Exception {
-        jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content().get("pwd"));
-        jsonObj.put("npwd", new StringBuilder((String) GenerateRegistrationContent.getRegistrationStep1Content().get("pwd")).reverse().toString());
+        jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+        jsonObj.put("npwd", new StringBuilder((String) GenerateRegistrationContent.getRegistrationStep1Content.get("pwd")).reverse().toString());
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

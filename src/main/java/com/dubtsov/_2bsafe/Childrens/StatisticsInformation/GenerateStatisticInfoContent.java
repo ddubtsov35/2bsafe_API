@@ -11,8 +11,8 @@ public class GenerateStatisticInfoContent extends BaseContent{
 
     public static JSONObject getRulesTriggerContent() throws Exception {
 
-        jsonObj.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
-        jsonObj.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
+        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
         jsonObj.put("osv", "testVersion");
 
         System.out.println("jsonObject " + jsonObj);

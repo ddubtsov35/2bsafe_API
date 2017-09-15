@@ -22,27 +22,23 @@ import java.util.LinkedHashMap;
  */
 public class GetConditionInformationTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public GetConditionInformationTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
         childrenCardClass = new ChildrenCardClass();
         profileClass = new ProfileClass();
         generationRequestJsonClass = new GenerateConditionInformationContent();
         getConditionInformation = new GetConditionInformation();
-
     }
 
     @Test
     public void getConditionInformation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
-        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         profileClass.selectProfileCardResponse();
         ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.getConditionInformation();
-        Assert.assertTrue(conditionInformationFromDevice.getScs().contains("\"scs\": true"));
+        Assert.assertTrue(conditionInformationFromDevice.getScs().equals("true"));
     }
 
 

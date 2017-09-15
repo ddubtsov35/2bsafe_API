@@ -21,8 +21,8 @@ public class GenerateHelpMeContent {
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
 
-        jsonObject.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
-        jsonObject.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
+        jsonObject.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObject.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
 
         jsonObject2.put("lat", 1);
         jsonObject2.put("long", 1);

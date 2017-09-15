@@ -16,8 +16,8 @@ public class GeneratedRulesTriggerContent extends BaseContent{
     public static JSONObject getRulesTriggerContent() throws Exception {
         jsonObject2 = new JSONObject();
 
-        jsonObj.put("cid", GenerateCidCkeyContent.getCidCkey().get("cid"));
-        jsonObj.put("ckey", GenerateCidCkeyContent.getCidCkey().get("ckey"));
+        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
         jsonArray.add(201);
         jsonObj.put("rules", jsonArray);
 

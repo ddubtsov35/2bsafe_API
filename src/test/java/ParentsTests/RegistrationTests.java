@@ -35,17 +35,13 @@ public class RegistrationTests extends BaseClass {
     public void checkEmailPhoneExist() throws IOException, ParseException {
         //ContentClearFlag.setContentClearFlag(false);
         HashMap email = registrationUserStep1Class.registrationUserStep1();
-        superContent.put("em", (String) email.get("em"));
-        superContent.put("ph", GeneratePhoneClass.getGeneratedPhone());
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", superContent);
+        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check");
         Assert.assertEquals(response.getJsonResponse().code(), 409);
     }
 
     @Test
     public void checkEmailPhoneNewEmail() throws IOException {
-        superContent.put("em", GenerateEmailClass.getGeneratedEmail());
-        superContent.put("ph", GeneratePhoneClass.getGeneratedPhone());
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", superContent);
+        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check");
         Assert.assertEquals(response.getJsonResponse().code(), 200);
     }
 
