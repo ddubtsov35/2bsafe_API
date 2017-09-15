@@ -21,7 +21,6 @@ public class RegistrationUserStep2Class extends BaseClass {
         jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
         responseClass.getJsonResponse();
-        //UserPool.setUserFromFile(jsonObject);
         return jsonObject;
     }
 

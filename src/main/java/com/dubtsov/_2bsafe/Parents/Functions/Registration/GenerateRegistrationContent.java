@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
@@ -33,11 +34,13 @@ public class GenerateRegistrationContent extends BaseContent {
         return jsonObj;
     }
 
-    public static JSONObject getRegistrationStep2ContentWeb() throws IOException {
+    public static JSONObject getRegistrationStep2ContentWeb() throws IOException, ParseException {
         InputClass inputClass = new InputClass();
-        jsonObj.put("em", jsonObjectRegStep1Content.get("em"));
-        jsonObj.put("dtype", 0);
-        jsonObj.put("code", inputClass.code(jsonObjectRegStep1Content.get("em").toString()));
+        if(UserPool.getUserFromFile() == null) {
+            jsonObj.put("em", jsonObjectRegStep1Content.get("em"));
+            jsonObj.put("dtype", 0);
+            jsonObj.put("code", inputClass.code(jsonObjectRegStep1Content.get("em").toString()));
+        }
         return jsonObj;
     }
 
