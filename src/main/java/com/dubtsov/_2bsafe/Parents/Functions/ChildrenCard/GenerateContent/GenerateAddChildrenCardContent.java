@@ -14,8 +14,9 @@ import java.util.Random;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAddChildrenCardContent extends BaseContent {
+public class GenerateAddChildrenCardContent{
 
+    private static JSONObject jsonObj = new JSONObject();
     private static Random random;
 
     public GenerateAddChildrenCardContent() throws ParseException {}

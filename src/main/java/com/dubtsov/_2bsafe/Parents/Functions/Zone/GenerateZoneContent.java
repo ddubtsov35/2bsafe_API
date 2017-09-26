@@ -8,7 +8,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateZoneContent extends BaseContent{
+public class GenerateZoneContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject addZoneContent() throws Exception {
         jsonObj.put("lat", 0);

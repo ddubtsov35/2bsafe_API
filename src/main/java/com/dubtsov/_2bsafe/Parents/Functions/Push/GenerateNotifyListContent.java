@@ -12,7 +12,10 @@ import java.util.HashMap;
 /**
  * Created by user on 04.09.17.
  */
-public class GenerateNotifyListContent extends BaseContent{
+public class GenerateNotifyListContent{
+
+    private static JSONObject jsonObj = new JSONObject();
+    private static JSONArray jsonArray = new JSONArray();
 
     public static JSONObject getNotifyListContent() throws Exception {
         jsonObj = new JSONObject();

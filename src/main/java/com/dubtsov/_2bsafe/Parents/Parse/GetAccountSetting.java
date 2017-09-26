@@ -14,7 +14,7 @@ public class GetAccountSetting {
     public static AccountSettings getAccountSettings(String accountSettingsString) throws ParseException, java.text.ParseException {
         try {
             accountSettings = new AccountSettings(accountSettingsString);
-            System.out.println("accountSettings " + accountSettings.toString());
+            System.out.println(accountSettings.toString());
         } catch (ParseException e){}
         finally {
             return accountSettings;

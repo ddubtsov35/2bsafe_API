@@ -12,9 +12,10 @@ import java.io.IOException;
 /**
  * Created by user on 11.09.17.
  */
-public class GenerateGpsPositionContent extends BaseContent {
+public class GenerateGpsPositionContent {
 
     private static ChildrenCardClass childrenCardClass;
+    private static JSONObject jsonObj = new JSONObject();
 
     public GenerateGpsPositionContent() throws ParseException {}
 

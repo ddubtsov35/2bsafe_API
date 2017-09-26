@@ -15,7 +15,7 @@ import java.util.LinkedHashMap;
  */
 public class LogoutClass extends BaseClass {
 
-    JSONObject jsonObject;
+    private JSONObject jsonObject = new JSONObject();
 
     public LogoutClass() throws IOException {}
 

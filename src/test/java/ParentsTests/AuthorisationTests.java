@@ -22,7 +22,6 @@ import java.util.LinkedHashMap;
  */
 public class AuthorisationTests extends BaseClass {
 
-    HashMap content = new LinkedHashMap();
     AuthorisationUser authorisationUser;
 
     public AuthorisationTests() throws IOException, ParseException, java.text.ParseException {
@@ -41,7 +40,7 @@ public class AuthorisationTests extends BaseClass {
     }
 
     @Test
-    public void authorisationAndroid() throws IOException, ParseException, java.text.ParseException {
+    public void authorisationAndroid() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationAndroid();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
@@ -51,7 +50,6 @@ public class AuthorisationTests extends BaseClass {
         registrationUserStep1Class.registrationUserStep1();
         response = recoveryPasswordClass.recoveryPasswordStart();
         deleteUserClass.deleteUser();
-        InputClass inputClass = new InputClass();
         response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -60,7 +58,7 @@ public class AuthorisationTests extends BaseClass {
     public void successPasswordChange() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
-        authorisationUser = authorisationUserClass.authorisationUser();
+        authorisationUser = authorisationUserClass.authorisationUserWithNewPassword();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
 

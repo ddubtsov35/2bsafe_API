@@ -34,17 +34,22 @@ public class RegistrationUserStep2Class extends BaseClass {
         }
     }
 
-    public JSONObject registrationUserStep2AndroidPhone() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  jsonObject);
-        String getLkid = responseClass.getJsonResponse().body().string();
-        jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"),getLkid.indexOf("lkid",getLkid.indexOf("\""))));
+    public JSONObject registrationUserStep2AndroidPhone() throws Exception {
+        jsonObject = UserPool.getUserFromFile();
+        if (jsonObject == null) {
+            jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
+            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
+            String getLkid = responseClass.getJsonResponse().body().string();
+            jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));
 
-        if(responseClass.getJsonResponse().code() == 200 && responseClass.getJsonResponse().isSuccessful()) {
-            UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+            if (responseClass.getJsonResponse().code() == 200) {
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+            }
+
+            return jsonObject;
+        } else {
+            return jsonObject;
         }
-
-        return jsonObject;
     }
 
 }

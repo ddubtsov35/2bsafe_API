@@ -12,9 +12,10 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateDeleteChildrenCardContent extends BaseContent {
+public class GenerateDeleteChildrenCardContent {
 
     private static ChildrenCardClass childrenCardClass;
+    private static JSONObject jsonObj = new JSONObject();
 
     public GenerateDeleteChildrenCardContent() throws ParseException {}
 

@@ -26,4 +26,11 @@ public class DeleteUserClass extends BaseClass {
         responseClass.getJsonResponse();
         UserPool.clearFile();
     }
+
+    //To recoveryPassword test
+    public void deleteUserWithoutClearPool() throws Exception {
+        jsonObject = GenerateRegisteredUsersContent.deleteAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
+        responseClass.getJsonResponse();
+    }
 }

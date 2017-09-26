@@ -10,7 +10,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateTicketContent extends BaseContent{
+public class GenerateTicketContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject getSendTicketContent() throws Exception {
         jsonObj.put("subj", "TestSubject");

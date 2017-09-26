@@ -10,11 +10,13 @@ import java.io.IOException;
 /**
  * Created by user on 24.08.17.
  */
-public class GenerateNotifyChangeAppContent extends BaseContent{
+public class GenerateNotifyChangeAppContent{
 
     private static JSONObject jsonObject2;
     private static JSONObject jsonObject3;
     private static JSONArray jsonArray2;
+    private static JSONArray jsonArray;
+    private static JSONObject jsonObj;
 
 
     public static JSONObject appsNotifyContent() throws Exception {

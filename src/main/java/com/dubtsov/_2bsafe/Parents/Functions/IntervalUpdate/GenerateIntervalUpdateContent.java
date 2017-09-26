@@ -11,7 +11,9 @@ import java.io.IOException;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateIntervalUpdateContent extends BaseContent{
+public class GenerateIntervalUpdateContent {
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject setIntervalUpdateContent() throws Exception {
         GetIntervalUpdateClass getIntervalUpdateClass = new GetIntervalUpdateClass();

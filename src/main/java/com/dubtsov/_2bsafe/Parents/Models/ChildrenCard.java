@@ -51,6 +51,20 @@ public class ChildrenCard {
         if(jsonObj.get("device") != null) {setDeviceConnected(device.getDeviceList());} else{setDeviceConnected(new ArrayList<Device>());}
     }
 
+    @Override
+    public String toString() {
+        return "ChildrenCard{" +
+                "device=" + device +
+                ", age='" + age + '\'' +
+                ", profile_id=" + profile_id +
+                ", connected=" + connected +
+                ", name='" + name + '\'' +
+                ", unread_notif=" + unread_notif +
+                ", phone='" + phone + '\'' +
+                ", image='" + image + '\'' +
+                ", deviceConnected=" + deviceConnected +
+                '}';
+    }
 
     public static JSONParser getParser() {
         return parser;

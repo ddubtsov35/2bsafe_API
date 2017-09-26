@@ -9,7 +9,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateTariffContent extends BaseContent{
+public class GenerateTariffContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject setTariffContent() throws Exception {
         TariffsClass tariffsClass = new TariffsClass();

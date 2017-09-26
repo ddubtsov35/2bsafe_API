@@ -7,7 +7,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GeneratePollContent extends BaseContent{
+public class GeneratePollContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject getPollContent() throws Exception {
         PollClass pollClass = new PollClass();

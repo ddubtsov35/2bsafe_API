@@ -33,7 +33,7 @@ public class AuthorisationUserClass extends BaseClass {
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
-    public AuthorisationUser RegistrationAndAuthorisationAndroid() throws IOException, ParseException, java.text.ParseException {
+    public AuthorisationUser RegistrationAndAuthorisationAndroid() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
         registrationUserStep2Class.registrationUserStep2AndroidPhone();
         jsonObject = GenerateAuthContent.getAuthContent();
@@ -42,9 +42,13 @@ public class AuthorisationUserClass extends BaseClass {
     }
 
     public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
-        System.out.println("jsonObject " + jsonObject);
         jsonObject = GenerateAuthContent.getAuthContent();
-        System.out.println("jsonObject " + jsonObject);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+
+    public AuthorisationUser authorisationUserWithNewPassword() throws Exception {
+        jsonObject = GenerateAuthContent.getAuthContentWithNewPassword();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }

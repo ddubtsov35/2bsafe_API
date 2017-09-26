@@ -20,6 +20,7 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -60,9 +61,22 @@ public class ChildrenCardClass extends BaseClass {
         return GetChildrenCardList.getChildrenCardList(responseString);
     }
 
-    public Response changeChildrenCard(String type) throws IOException {
+    public Response changeChildrenCard(String type) throws Exception {
         jsonObject = GenerateChangeChildrenCardContent.getChangeChildrenCardContent(type);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
         return responseClass.getJsonResponse();
+    }
+
+    public ChildrenCard getChildrenCardByProfileId() throws Exception {
+
+        int profileId = Integer.parseInt(String.valueOf(GenerateProfileIdContent.getProfileId().get("profile_id")));
+
+        List<ChildrenCard> childrenCardList = getChildrenCardList();
+        for(int i=0; i<childrenCardList.size(); i++){
+            if(childrenCardList.get(i).getProfile_id() == profileId){
+                return childrenCardList.get(i);
+            }
+        }
+        return null;
     }
 }

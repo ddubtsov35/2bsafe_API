@@ -12,7 +12,10 @@ import java.util.HashMap;
 /**
  * Created by user on 31.08.17.
  */
-public class GenerateAddBlockIntervalContent extends BaseContent{
+public class GenerateAddBlockIntervalContent {
+
+    private static JSONObject jsonObj = new JSONObject();
+    private static JSONArray jsonArray = new JSONArray();
 
     public static JSONObject getListInterval() throws Exception {
         jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());

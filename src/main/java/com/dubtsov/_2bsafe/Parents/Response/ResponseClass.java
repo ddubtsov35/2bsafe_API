@@ -88,7 +88,7 @@ public class ResponseClass {
                 .addHeader("postman-token", postmanToken)
                 .addHeader("cookie", sessionId)
                 .build();
-        System.out.println(request.toString());
+        System.out.println("Request: " + request.toString());
         response = client.newCall(request).execute();
         System.out.println("Response: " + response);
         System.out.println();

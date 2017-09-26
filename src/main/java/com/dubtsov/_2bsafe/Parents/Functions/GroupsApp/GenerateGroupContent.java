@@ -10,8 +10,10 @@ import java.util.HashMap;
 /**
  * Created by user on 31.08.17.
  */
-public class GenerateGroupContent extends BaseContent{
+public class GenerateGroupContent{
 
+    private static JSONObject jsonObj = new JSONObject();
+    private static JSONArray jsonArray = new JSONArray();
 
     public static JSONObject generatedAddGroup() throws Exception {
         jsonObj.put("name", "TestName");

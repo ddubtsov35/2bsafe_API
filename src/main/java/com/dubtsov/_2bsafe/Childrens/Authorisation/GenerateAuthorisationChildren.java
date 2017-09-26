@@ -13,7 +13,9 @@ import java.io.IOException;
 /**
  * Created by user on 08.09.17.
  */
-public class GenerateAuthorisationChildren extends BaseContent {
+public class GenerateAuthorisationChildren{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public GenerateAuthorisationChildren() throws ParseException {}
 

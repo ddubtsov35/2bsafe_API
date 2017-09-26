@@ -10,7 +10,7 @@ import java.util.HashMap;
 /**
  * Created by user on 23.08.17.
  */
-public class GenerateConditionInformationContent extends BaseContent{
+public class GenerateConditionInformationContent{
 
     private static JSONObject jsonObject1;
     private static JSONObject jsonObject2_1;

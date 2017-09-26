@@ -17,8 +17,12 @@ public class GenerateProfileIdContent{
 
     public static JSONObject getProfileId() throws Exception {
         JSONObject jsonObj = new JSONObject();
-        ChildrenCardClass addChildrenCardClass = new ChildrenCardClass();
-        jsonObj.put("profile_id", addChildrenCardClass.addChildrenCard().getProfile_id());
+        ChildrenCardClass childrenCardClass = new ChildrenCardClass();
+        if(childrenCardClass.getChildrenCardList().isEmpty()) {
+            jsonObj.put("profile_id", childrenCardClass.addChildrenCard().getProfile_id());
+        } else{
+            jsonObj.put("profile_id", childrenCardClass.getChildrenCardList().get(0).getProfile_id());
+        }
         return jsonObj;
     }
 }

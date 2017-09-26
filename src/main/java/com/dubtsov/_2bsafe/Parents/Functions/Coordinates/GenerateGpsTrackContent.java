@@ -9,9 +9,10 @@ import org.json.simple.parser.ParseException;
 /**
  * Created by user on 11.09.17.
  */
-public class GenerateGpsTrackContent extends BaseContent {
+public class GenerateGpsTrackContent {
 
     public GenerateGpsTrackContent() throws ParseException {}
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject getGpsTrackContent() throws Exception {
         ChildrenCardClass addChildrenCardClass = new ChildrenCardClass();

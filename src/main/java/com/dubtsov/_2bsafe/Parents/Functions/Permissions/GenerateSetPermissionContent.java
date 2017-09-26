@@ -7,7 +7,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateSetPermissionContent extends BaseContent{
+public class GenerateSetPermissionContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
         public static JSONObject setPermission() throws Exception {
             jsonObj.put("geo", 0);

@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChangeEmailPhone.ChangeEmailClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChangeEmailPhone.Timeout;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
+import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,6 +14,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  * Created by user on 30.08.17.
@@ -28,12 +30,14 @@ public class ChangeEmailPhoneTest extends BaseClass{
     @Test
     public void changeEmail() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        String beforeEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
+        List<RegisteredUser> listRegisteredUserBefore = listRegisteredUsersClass.getListRegisteredUsers();
+        String beforeEmail = listRegisteredUserBefore.get(listRegisteredUserBefore.size()-10).getEm();
         String newEmail = GenerateEmailClass.getGeneratedEmail();
-        //authorisationUserClass.authorisationUser();
+        authorisationUserClass.authorisationUser();
         response = changeEmailClass.changeEmail();
-        Timeout.waitEmailVerification();
-        String afterEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
+        Timeout.waitEmailVerification(newEmail);
+        List<RegisteredUser> listRegisteredUserAfter = listRegisteredUsersClass.getListRegisteredUsers();
+        String afterEmail = listRegisteredUserAfter.get(listRegisteredUserAfter.size()-10).getEm();
         System.out.println("beforeEmail " + beforeEmail);
         System.out.println("afterEmail " + afterEmail);
         Assert.assertTrue(afterEmail.equals(newEmail) && !beforeEmail.equals(newEmail));
@@ -42,8 +46,9 @@ public class ChangeEmailPhoneTest extends BaseClass{
     @Test
     public void changeEmailError() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        String beforeEmail = listRegisteredUsersClass.getListRegisteredUsers().get(listRegisteredUsersClass.getListRegisteredUsers().size()-1).getEm();
-        //authorisationUserClass.authorisationUser();
+        List<RegisteredUser> listRegisteredUserBefore = listRegisteredUsersClass.getListRegisteredUsers();
+        String beforeEmail = listRegisteredUserBefore.get(listRegisteredUserBefore.size()-1).getEm();
+        authorisationUserClass.authorisationUser();
         response = changeEmailClass.changeEmail();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false") && response.code() == 409);

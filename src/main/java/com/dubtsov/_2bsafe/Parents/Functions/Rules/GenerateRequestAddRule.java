@@ -12,7 +12,7 @@ import java.util.HashMap;
 /**
  * Created by user on 29.08.17.
  */
-public class GenerateRequestAddRule extends BaseContent{
+public class GenerateRequestAddRule{
 
     private static JSONObject jsonObject;
     private static JSONObject jsonObject3;
@@ -20,6 +20,7 @@ public class GenerateRequestAddRule extends BaseContent{
     private static JSONArray jsonArray;
     private static JSONArray jsonArray2;
     private static RulesClass rulesClass;
+    private static JSONObject jsonObj = new JSONObject();
 
 
     public static JSONObject addRuleContent() throws Exception {

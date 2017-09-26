@@ -24,10 +24,7 @@ public class GenerateRegistrationContent {
     public static JSONObject getRegistrationStep2ContentWeb = new JSONObject();
     public static JSONObject getRegistrationStep2ContentAndroid = new JSONObject();
 
-    public GenerateRegistrationContent() throws Exception {
-        listRegisteredUsersClass = new ListRegisteredUsersClass();
-        registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
-    }
+    public GenerateRegistrationContent() throws Exception {}
 
     public static JSONObject getRegistrationStep1Content() throws IOException {
         JSONObject jsonObject = new JSONObject();
@@ -55,7 +52,10 @@ public class GenerateRegistrationContent {
         return jsonObject;
     }
 
-    public static JSONObject getRegistrationStep2ContentAndroid() throws IOException {
+    public static JSONObject getRegistrationStep2ContentAndroid() throws Exception {
+        listRegisteredUsersClass = new ListRegisteredUsersClass();
+        registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
+
         JSONObject jsonObject = getRegistrationStep1Content;
 
         RegisteredUser targetUser = new RegisteredUser();

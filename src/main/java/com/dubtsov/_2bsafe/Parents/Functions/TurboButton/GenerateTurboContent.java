@@ -8,7 +8,9 @@ import org.json.simple.JSONObject;
 /**
  * Created by user on 12.09.17.
  */
-public class GenerateTurboContent extends BaseContent{
+public class GenerateTurboContent{
+
+    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject getTurboContent() throws Exception {
         jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());

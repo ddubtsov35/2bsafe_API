@@ -19,8 +19,6 @@ import java.util.LinkedHashMap;
  */
 public class AccountSettingsTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public AccountSettingsTest() throws IOException, ParseException, java.text.ParseException {
         authorisationChildClass = new AuthorisationChildClass();
         authorisationUserClass = new AuthorisationUserClass();
@@ -43,11 +41,10 @@ public class AccountSettingsTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
+        AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
         response = setAccountSettingClass.setAccountSetting();
-        String res = response.body().string();
-        System.out.println("res " + res);
-        AccountSettings accountSettings = accountSettingClass.getAccountSetting();
-        Assert.assertTrue(accountSettings.getNbat() == 2);
+        AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
+        Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
 
     @Test
@@ -55,17 +52,19 @@ public class AccountSettingsTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
+        AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
         response = setAccountSettingClass.setAllAccountSetting();
-        AccountSettings accountSettings = accountSettingClass.getAccountSetting();
-        Assert.assertTrue(accountSettings.getLbat() == 2 &&
-                accountSettings.getNbat() == 2 &&
-                accountSettings.getLsig() == 2 &&
-                accountSettings.getNsig() == 2 &&
-                accountSettings.getLunav() == 2 &&
-                accountSettings.getNunav() == 2 &&
-                accountSettings.getNph() == 2 &&
-                accountSettings.getNsms() == 2 &&
-                accountSettings.getNgps() == 2 &&
-                accountSettings.getName().equals("Толян"));
+        AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
+        Assert.assertTrue(accountSettingsBefore != accountSettingsAfter &&
+                accountSettingsAfter.getLbat() == 1 &&
+                accountSettingsAfter.getNbat() == 1 &&
+                accountSettingsAfter.getLsig() == 1 &&
+                accountSettingsAfter.getNsig() == 1 &&
+                accountSettingsAfter.getLunav() == 1 &&
+                accountSettingsAfter.getNunav() == 1 &&
+                accountSettingsAfter.getNph() == 1 &&
+                accountSettingsAfter.getNsms() == 1 &&
+                accountSettingsAfter.getNgps() == 1 &&
+                accountSettingsAfter.getName().equals("Толян"));
     }
 }

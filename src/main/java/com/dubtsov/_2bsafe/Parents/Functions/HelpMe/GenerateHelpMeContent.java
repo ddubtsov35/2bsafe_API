@@ -13,7 +13,10 @@ import java.util.HashMap;
 /**
  * Created by user on 31.08.17.
  */
-public class GenerateHelpMeContent extends BaseContent{
+public class GenerateHelpMeContent{
+
+    private static JSONObject jsonObj = new JSONObject();
+    private static JSONArray jsonArray = new JSONArray();
 
     public static  JSONObject getHelpMe() throws Exception {
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();

@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
+import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -44,7 +45,7 @@ public class ChildrenCardsTests extends BaseClass {
         childrenCardClass.addChildrenCard();
         int countCardAfter = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardAfter  " + countCardAfter);
-        Assert.assertTrue(countCardAfter - countCardBefore == 1 && response.code() == 200);
+        Assert.assertTrue(countCardAfter - countCardBefore == 1);
     }
 
     @Test
@@ -62,7 +63,7 @@ public class ChildrenCardsTests extends BaseClass {
         childrenCardClass.deleteChildrenCard();
         int countCardAfter = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardAfter  " + countCardAfter);
-        Assert.assertTrue(countCardBefore - countCardAfter == 1 && response.code() == 200);
+        Assert.assertTrue(countCardBefore - countCardAfter == 1);
     }
 
     @Test
@@ -70,8 +71,10 @@ public class ChildrenCardsTests extends BaseClass {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("phone");
-        System.out.println(childrenCardClass.getChildrenCardList().get(0));
-        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && childrenCardClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
+        ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
+        System.out.println(childrenCard.toString());
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getPhone().equals("79189999999"));
     }
 
     @Test
@@ -79,18 +82,20 @@ public class ChildrenCardsTests extends BaseClass {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("age");
-        System.out.println(childrenCardClass.getChildrenCardList().get(0));
-        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && childrenCardClass.getChildrenCardList().get(0).getAge().equals("99"));
-    }
+        ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
+        System.out.println(childrenCard.toString());
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getAge().equals("99"));}
 
     @Test
     public void changeChildrenCardsAll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("all");
-        //Assert.assertTrue(getChildrenCardListClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
-        Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 && childrenCardClass.getChildrenCardList().get(0).getAge().equals("99") && childrenCardClass.getChildrenCardList().get(0).getPhone().equals("79189999999"));
-    }
+        ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
+        System.out.println(childrenCard.toString());
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getPhone().equals("79189999999") && childrenCard.getAge().equals("99"));}
 
 
 
