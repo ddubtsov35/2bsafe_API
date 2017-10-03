@@ -15,6 +15,4 @@ public class GeneratePhoneClass {
         }
         return phone;
     }
-
-
 }

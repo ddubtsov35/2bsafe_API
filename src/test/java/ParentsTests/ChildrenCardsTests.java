@@ -43,7 +43,7 @@ public class ChildrenCardsTests extends BaseClass {
 
     @Test
     public void addChildrenCardsAndroid() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        authorisationUserClass.RegistrationAndAuthorisationAndroid();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
         childrenCardClass.addChildrenCard();

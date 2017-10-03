@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
+import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -11,6 +12,15 @@ import org.json.simple.parser.ParseException;
  */
 public class GenerateAppsContent{
     public GenerateAppsContent() throws ParseException {}
+
+    private static String alias;
+
+    private static String getAlias() throws Exception {
+        NotifyChangeAppClass notifyChangeAppClass = new NotifyChangeAppClass();
+        notifyChangeAppClass.notifyChangeApp();
+        alias = "com.google.android.youtube";
+        return alias;
+    }
 
     public static JSONObject getAppsInfoContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
@@ -32,7 +42,7 @@ public class GenerateAppsContent{
     public static JSONObject getDetailInfoContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("alias",GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("alias",getAlias());
         return jsonObj;
     }
 
@@ -40,7 +50,7 @@ public class GenerateAppsContent{
     public static JSONObject getAppsBlockContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("alias",GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("alias",getAlias());
         jsonObj.put("block",0);
         return jsonObj;
     }
@@ -49,7 +59,7 @@ public class GenerateAppsContent{
     public static JSONObject getAppsBlockUpdateContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("alias",GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("alias",getAlias());
         jsonObj.put("block",0);
         return jsonObj;
     }
@@ -59,7 +69,7 @@ public class GenerateAppsContent{
         JSONArray jsonArray = new JSONArray();
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonArray.add("aliases");
+        jsonArray.add(getAlias());
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
     }
@@ -69,7 +79,7 @@ public class GenerateAppsContent{
         JSONArray jsonArray = new JSONArray();
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonArray.add("aliases");
+        jsonArray.add(getAlias());
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
     }

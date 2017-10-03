@@ -1,5 +1,6 @@
 package ParentsTests;
 
+import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
@@ -47,7 +48,7 @@ public class GroupAppTest extends BaseClass{
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
-        Assert.assertTrue(groupApp.getScs().equals("true") && groupApp.getGroup_id() != 0);
+        Assert.assertTrue(groupApp.getScs().equals("true"));
     }
 
     @Test

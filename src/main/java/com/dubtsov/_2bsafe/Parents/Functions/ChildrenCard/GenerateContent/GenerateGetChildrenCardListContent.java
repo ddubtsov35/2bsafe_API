@@ -11,9 +11,10 @@ import java.io.IOException;
  */
 public class GenerateGetChildrenCardListContent {
     public GenerateGetChildrenCardListContent() throws ParseException {}
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public static JSONObject getChildrenCardListContent() throws IOException {
+        jsonObj = new JSONObject();
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

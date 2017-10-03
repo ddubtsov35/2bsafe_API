@@ -26,9 +26,10 @@ public class GenerateNotifyChangeAppContent{
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
         jsonObject2.put("name", "TestName");
-        jsonObject2.put("alias", "alias");
+        jsonObject2.put("alias", "com.google.android.youtube");
         jsonObject2.put("version", "0.0.1");
-        jsonObject2.put("flags", "[new]");
+        jsonObject2.put("flags", jsonArray2);
+        jsonArray2.add("new");
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 

@@ -25,12 +25,4 @@ public class AddAndSelectChildrenCardClass extends BaseClass{
         System.out.println("selectProfileCard " + response.body().string());
     }
 
-    public Response AddAndSelectChildrenCardMock() throws Exception {
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
-        response = profileClass.selectProfileCardResponse();
-        System.out.println("selectProfileCard " + response.body().string());
-        return response;
-    }
-
 }

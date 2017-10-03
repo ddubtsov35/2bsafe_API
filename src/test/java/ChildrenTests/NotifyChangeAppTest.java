@@ -20,8 +20,6 @@ import java.util.LinkedHashMap;
  */
 public class NotifyChangeAppTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
-
     public NotifyChangeAppTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GenerateNotifyChangeAppContent();
         authorisationUserClass = new AuthorisationUserClass();

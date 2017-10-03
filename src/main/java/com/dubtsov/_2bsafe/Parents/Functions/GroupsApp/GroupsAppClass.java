@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.GroupsApp;
 
+import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GetConditionInformation;
+import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Parse.GetGroupApp;
@@ -31,6 +33,12 @@ public class GroupsAppClass extends BaseClass{
 
     public GroupApp addGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedAddGroup();
+
+        GetConditionInformation getConditionInformation = new GetConditionInformation();
+        ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.getConditionInformation();
+        System.out.println(conditionInformationFromDevice.toString());
+
+
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/add", jsonObject);
         return GetGroupApp.getGroup(responseClass.getJsonResponse().body().string());
     }

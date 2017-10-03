@@ -21,7 +21,7 @@ public class GenerateProfileIdContent{
         if(childrenCardClass.getChildrenCardList().isEmpty()) {
             jsonObj.put("profile_id", childrenCardClass.addChildrenCard().getProfile_id());
         } else{
-            jsonObj.put("profile_id", childrenCardClass.getChildrenCardList().get(0).getProfile_id());
+            jsonObj.put("profile_id", childrenCardClass.getChildrenCardList().get(childrenCardClass.getChildrenCardList().size()-1).getProfile_id());
         }
         return jsonObj;
     }

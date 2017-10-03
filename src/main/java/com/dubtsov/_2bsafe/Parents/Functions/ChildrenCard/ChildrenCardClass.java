@@ -29,8 +29,6 @@ import java.util.List;
 public class ChildrenCardClass extends BaseClass {
 
     JSONObject jsonObject;
-    String responseString;
-    AddChildrenCard addChildrenCard;
 
     public ChildrenCardClass() throws IOException {}
 
@@ -49,15 +47,13 @@ public class ChildrenCardClass extends BaseClass {
     public DeviceShortInfo getShortInfo() throws Exception {
         jsonObject = GenerateProfileIdContent.getProfileId();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/short_info", jsonObject);
-        String responseString = responseClass.getJsonResponse().body().string();
-        return GetDeviceShortInfo.getDeviceShortInfo(responseString);
+        return GetDeviceShortInfo.getDeviceShortInfo(responseClass.getJsonResponse().body().string());
     }
 
     public List<ChildrenCard> getChildrenCardList() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateGetChildrenCardListContent.getChildrenCardListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
-        responseString = responseClass.getJsonResponse().body().string();
-        return GetChildrenCardList.getChildrenCardList(responseString);
+        return GetChildrenCardList.getChildrenCardList(responseClass.getJsonResponse().body().string());
     }
 
     public Response changeChildrenCard(String type) throws Exception {

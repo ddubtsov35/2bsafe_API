@@ -24,23 +24,24 @@ public class IntervalBlockTest extends BaseClass{
     List<IntervalBlock> intervalBlock;
     GroupApp groupApp;
     AddIntervalBlock addIntervalBlock;
+    IntervalBlockClass intervalBlockClass;
 
     public IntervalBlockTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         intervalBlockClass = new IntervalBlockClass();
         groupsAppClass = new GroupsAppClass();
+        intervalBlockClass = new IntervalBlockClass();
     }
 
     @Test
     public void getIntervalBlockList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
-        groupApp = groupsAppClass.addGroupApp();
-        System.out.println(groupApp.toString());
+        intervalBlockClass.addIntervalBlockList();
         intervalBlock = intervalBlockClass.getIntervalBlockList();
         System.out.println(intervalBlock.toString());
-        Assert.assertTrue(intervalBlock.get(0).getScs().equals("true"));
+        Assert.assertTrue(intervalBlock.size() > 0);
     }
 
     @Test

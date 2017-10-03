@@ -98,7 +98,7 @@ public class AppsTest extends BaseClass{
         response = appsClass.getAppsDelete();
         String result = response.body().string();
         System.out.println("result " + result);
-        Assert.assertTrue(result.contains("\"scs\": false") && response.code() == 200);
+        Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
 

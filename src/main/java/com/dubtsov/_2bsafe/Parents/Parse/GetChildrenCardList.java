@@ -31,6 +31,7 @@ public class GetChildrenCardList {
             jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
                 childrenCardList.add(new ChildrenCard(jsonArray.get(i).toString()));
+                //System.out.println(i + " " + childrenCardList.get(i).getProfile_id());
             }
         } catch (ParseException e){}
         finally {

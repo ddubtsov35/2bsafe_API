@@ -13,40 +13,46 @@ import java.util.List;
  */
 public class Device {
 
-    private String jsonObjectString;
-    private List<Device> deviceList;
+    private JSONObject jsonObj;
 
-    private int cid;
+    private Integer cid;
     private String date;
-    private int bat;
-    private int sig;
-    private List<Float> geo;
+    private Integer bat;
+    private Integer sig;
+    private Geo geo;
 
     private static JSONParser parser;
     private static Object obj;
-    private static JSONArray jsonArray;
-    private static JSONObject jsonObject;
 
-    public Device(String jsonObjectString){
-        this.jsonObjectString = jsonObjectString;
+    private static JSONParser parser2;
+    private static Object obj2;
+    private static JSONObject jsonObj2;
+
+    public Device(String jsonObjectString) throws ParseException, java.text.ParseException {
+        setObject(jsonObjectString);
     }
 
-    public List<Device> getDeviceList() throws ParseException {
-        deviceList = new ArrayList();
+    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
-        jsonArray = (JSONArray) jsonObject.get("device");
-        for (int i = 0; i < jsonArray.size(); i++) {
-            deviceList.add(new Device(jsonArray.get(i).toString()));
+        jsonObj = (JSONObject) obj;
+
+        if(jsonObj.get("cid") != null) {setCid(Integer.parseInt(jsonObj.get("cid").toString()));} else {setCid(null);}
+        if(jsonObj.get("date") != null) {setDate(jsonObj.get("date").toString());} else {setDate(null);}
+        if(jsonObj.get("bat") != null) {setBat(Integer.parseInt(jsonObj.get("bat").toString()));} else {setBat(null);}
+        if(jsonObj.get("sig") != null) {setSig(Integer.parseInt(jsonObj.get("sig").toString()));} else {setSig(null);}
+
+        jsonObj = (JSONObject) jsonObj.get("geo");
+        if (!jsonObj.isEmpty()) {
+            geo = new Device.Geo(jsonObj.toString());
         }
-        return deviceList;
     }
 
-    public int getCid() {
+    public Integer getCid() {
         return cid;
     }
 
-    public void setCid(int cid) {
+    public void setCid(Integer cid) {
         this.cid = cid;
     }
 
@@ -58,28 +64,20 @@ public class Device {
         this.date = date;
     }
 
-    public int getBat() {
+    public Integer getBat() {
         return bat;
     }
 
-    public void setBat(int bat) {
+    public void setBat(Integer bat) {
         this.bat = bat;
     }
 
-    public int getSig() {
+    public Integer getSig() {
         return sig;
     }
 
-    public void setSig(int sig) {
+    public void setSig(Integer sig) {
         this.sig = sig;
-    }
-
-    public List<Float> getGeo() {
-        return geo;
-    }
-
-    public void setGeo(List<Float> geo) {
-        this.geo = geo;
     }
 
     public static JSONParser getParser() {
@@ -96,5 +94,49 @@ public class Device {
 
     public static void setObj(Object obj) {
         Device.obj = obj;
+    }
+
+
+    private class Geo{
+
+        private float lat;
+        private float lon;
+
+        public Geo(String jsonObjectString) throws ParseException, java.text.ParseException {
+            setObject(jsonObjectString);
+        }
+
+        private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+            parser2 = new JSONParser();
+            obj2 = parser2.parse(jsonObjectString);
+            jsonObj2 = (JSONObject) obj2;
+
+            if(jsonObj2.get("lat") != null) {setLat(Float.parseFloat(jsonObj2.get("lat").toString()));}
+            if(jsonObj2.get("lon") != null) {setLon(Float.parseFloat(jsonObj2.get("lon").toString()));}
+        }
+
+        @Override
+        public String toString() {
+            return "Geo{" +
+                    "lat=" + lat +
+                    ", lon=" + lon +
+                    '}';
+        }
+
+        public float getLat() {
+            return lat;
+        }
+
+        public void setLat(float lat) {
+            this.lat = lat;
+        }
+
+        public float getLon() {
+            return lon;
+        }
+
+        public void setLon(float lon) {
+            this.lon = lon;
+        }
     }
 }
