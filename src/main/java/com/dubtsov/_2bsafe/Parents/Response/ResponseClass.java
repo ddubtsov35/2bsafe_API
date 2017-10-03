@@ -3,6 +3,8 @@ package com.dubtsov._2bsafe.Parents.Response;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import okhttp3.*;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -28,7 +30,9 @@ public class ResponseClass {
         this.url = url;
     }
 
-    public ResponseClass(String url){
+    public ResponseClass(String url) throws ParseException {
+        JSONParser parse = new JSONParser();
+        this.jsonRequest = (JSONObject) parse.parse("{}");
         this.url = url;
     }
 

@@ -2,8 +2,6 @@ package com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword;
 
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 
@@ -12,9 +10,10 @@ import org.json.simple.JSONObject;
  */
 public class GenerateRecoveryPasswordContent{
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public static JSONObject startRecoveryPasswordContent() throws Exception {
+        jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
         } else{
@@ -24,6 +23,7 @@ public class GenerateRecoveryPasswordContent{
     }
 
     public static JSONObject confirmRecoveryPasswordContent() throws Exception {
+        jsonObj = new JSONObject();
         InputClass inputClass = new InputClass();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));

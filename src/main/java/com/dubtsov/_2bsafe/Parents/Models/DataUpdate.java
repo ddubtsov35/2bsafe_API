@@ -25,10 +25,21 @@ public class DataUpdate {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-        jsonObj = (JSONObject) jsonObj.get("data");
+        if(jsonObj.get("data") != null) {
+            jsonObj = (JSONObject) jsonObj.get("data");
+            if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
+            if (jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
+        } else{
+            return;
+        }
+    }
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
+    @Override
+    public String toString() {
+        return "DataUpdate{" +
+                "scs='" + scs + '\'' +
+                ", ito=" + ito +
+                '}';
     }
 
     public int getIto() {

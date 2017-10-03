@@ -49,9 +49,8 @@ public class IntervalBlockTest extends BaseClass{
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         addIntervalBlock = intervalBlockClass.addIntervalBlockList();
-        String result = response.body().string();
-        System.out.println("result " + result);
-        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+        System.out.println("result " + addIntervalBlock.toString());
+        Assert.assertTrue(addIntervalBlock.getScs().equals("true"));
     }
 
     @Test

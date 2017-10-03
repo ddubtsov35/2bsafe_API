@@ -52,6 +52,7 @@ public class TariffsTest extends BaseClass{
     public void getChangeTariff() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+        authorisationUserClass.authorisationUser();
         response = tariffsClass.setTariff();
         System.out.println("response " + response);
         Assert.assertTrue(response.code() == 200);

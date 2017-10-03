@@ -1,8 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.Tickets;
 
-import com.dubtsov._2bsafe.Parents.Functions.Rules.RulesClass;
-import com.dubtsov._2bsafe.Parents.Functions.Tariffs.GenerateTariffContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
@@ -12,9 +9,10 @@ import org.json.simple.JSONObject;
  */
 public class GenerateTicketContent{
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public static JSONObject getSendTicketContent() throws Exception {
+        jsonObj = new JSONObject();
         jsonObj.put("subj", "TestSubject");
         jsonObj.put("msg", "TestMessage");
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
@@ -22,6 +20,7 @@ public class GenerateTicketContent{
     }
 
     public static JSONObject getSendTicketLandingContent() throws Exception {
+        jsonObj = new JSONObject();
         jsonObj.put("subj", "TestSubject");
         jsonObj.put("msg", "TestMessage");
         jsonObj.put("em", GenerateEmailClass.getGeneratedEmail());

@@ -1,13 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Functions.Account;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
-import javax.jws.soap.SOAPBinding;
 import java.io.IOException;
 
 /**

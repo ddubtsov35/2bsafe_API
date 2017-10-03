@@ -8,9 +8,11 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateIntervalUpdateContent;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import com.dubtsov._2bsafe.Parents.Models.DataUpdate;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,7 +26,6 @@ import java.util.LinkedHashMap;
  */
 public class IntervalTest extends BaseClass{
 
-    HashMap content = new LinkedHashMap();
 
     public IntervalTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
@@ -52,12 +53,12 @@ public class IntervalTest extends BaseClass{
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
         setIntervalUpdateClass.setIntervalUpdate();
-        getIntervalUpdateClass.getIntervalUpdateResponse();
-        String resultResponse = response.body().string();
+        DataUpdate getDataUpdate = getIntervalUpdateClass.getIntervalUpdateResponse();
+        String resultResponse = getDataUpdate.toString();
         System.out.println("resultResponse " + resultResponse);
-        int resultData = getIntervalUpdateClass.getIntervalUpdateResponse().getIto();
+        int resultData = getDataUpdate.getIto();
         System.out.println("result " + resultData);
-        Assert.assertTrue(resultResponse.contains("\"scs\": true") && response.code() == 200 && resultData == 888);
+        Assert.assertTrue(/*resultResponse.contains("\"scs\": true") &&*/ resultData == GenerateIntervalUpdateContent.itoRandom);
     }
 
 

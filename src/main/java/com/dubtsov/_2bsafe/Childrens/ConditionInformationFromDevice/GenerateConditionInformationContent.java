@@ -1,11 +1,8 @@
 package com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.util.HashMap;
 
 /**
  * Created by user on 23.08.17.

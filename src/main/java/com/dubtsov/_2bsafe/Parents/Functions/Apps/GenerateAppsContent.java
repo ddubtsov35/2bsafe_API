@@ -1,13 +1,10 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
-
-import java.io.IOException;
 
 /**
  * Created by user on 08.09.17.
@@ -62,9 +59,7 @@ public class GenerateAppsContent{
         JSONArray jsonArray = new JSONArray();
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        JSONObject jsonObject2 = new JSONObject();
-        jsonObject2.put("alias",GenerateTokenClass.getGeneratedToken());
-        jsonArray.add(jsonObject2);
+        jsonArray.add("aliases");
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
     }
@@ -74,9 +69,7 @@ public class GenerateAppsContent{
         JSONArray jsonArray = new JSONArray();
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        JSONObject jsonObject2 = new JSONObject();
-        jsonObject2.put("alias",GenerateTokenClass.getGeneratedToken());
-        jsonArray.add(jsonObject2);
+        jsonArray.add("aliases");
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
     }

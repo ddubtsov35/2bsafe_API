@@ -1,11 +1,8 @@
 package com.dubtsov._2bsafe.Childrens.RulesTrigger;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.util.HashMap;
 
 /**
  * Created by user on 24.08.17.

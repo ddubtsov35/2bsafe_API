@@ -37,8 +37,7 @@ public class ChildrenCardClass extends BaseClass {
     public AddChildrenCard addChildrenCard() throws Exception {
         jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
-        addChildrenCard = GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
-        return addChildrenCard;
+        return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
     }
 
     public void deleteChildrenCard() throws IOException, ParseException, java.text.ParseException {

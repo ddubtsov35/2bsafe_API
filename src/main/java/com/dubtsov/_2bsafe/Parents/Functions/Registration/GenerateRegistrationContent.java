@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Registration;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
@@ -79,6 +80,53 @@ public class GenerateRegistrationContent {
         jsonObject.put("type", 1);
 
         getRegistrationStep2ContentAndroid = jsonObject;
+        return jsonObject;
+    }
+
+    public static JSONObject getCheckEmail() throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("em", GenerateEmailClass.getGeneratedEmail());
+        return jsonObject;
+    }
+
+    public static JSONObject getCheckPhone() throws IOException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        return jsonObject;
+    }
+
+    public static JSONObject getExistEmail() throws IOException, ParseException {
+        JSONObject jsonObject = new JSONObject();
+        if(UserPool.getUserFromFile() == null) {
+            RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+            registrationUserStep1Class.registrationUserStep1();
+            jsonObject.put("em", getRegistrationStep1Content.get("em"));
+        } else{
+            jsonObject.put("em", UserPool.getUserFromFile().get("em"));
+        }
+        return jsonObject;
+    }
+
+    public static JSONObject getExistPhone() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        if(UserPool.getUserFromFile() == null){
+            listRegisteredUsersClass = new ListRegisteredUsersClass();
+            registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
+            for (int i = 0; i < registeredUserList.size(); i++){
+                if(!registeredUserList.get(i).getPh().isEmpty()){
+                    jsonObject.put("phone", registeredUserList.get(i).getPh());
+                    break;
+                }
+            }
+        } else{
+            for (int i = 0; i < registeredUserList.size(); i++){
+                if(registeredUserList.get(i).getEm().equals(UserPool.getUserFromFile().get("em"))){
+                    jsonObject.put("phone", registeredUserList.get(i).getPh());
+                    break;
+                }
+            }
+        }
+
         return jsonObject;
     }
 }

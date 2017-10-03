@@ -1,11 +1,8 @@
 package com.dubtsov._2bsafe.Childrens.NotifyChangeApp;
 
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.io.IOException;
 
 /**
  * Created by user on 24.08.17.

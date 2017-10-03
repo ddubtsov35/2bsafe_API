@@ -27,7 +27,7 @@ public class RulesClass extends BaseClass{
         return GetRules.getSetRules(responseClass.getJsonResponse().body().string());
     }
 
-    public Response getRulesListResponse() throws IOException {
+    public Response getRulesListResponse() throws IOException, ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/list");
         return responseClass.getJsonResponse();
     }

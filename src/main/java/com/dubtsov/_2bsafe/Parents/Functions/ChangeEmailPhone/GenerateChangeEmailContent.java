@@ -1,7 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChangeEmailPhone;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;

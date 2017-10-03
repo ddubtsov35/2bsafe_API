@@ -17,10 +17,7 @@ public class GenerateProcessingCommandContent {
     private static JSONObject jsonObject;
     private static JSONObject jsonObject2;
     private static JSONObject jsonObject3;
-    private static JSONObject jsonObject4;
     private static JSONArray jsonArray;
-    private static JSONArray jsonArray2;
-    private static ResponseClass responseClass;
     private static String lastRequest;
     private static String result;
     private static String result2;
@@ -28,13 +25,10 @@ public class GenerateProcessingCommandContent {
 
 
     public static JSONObject getProcessingCommandsContent() throws Exception {
-        responseClass = new ResponseClass();
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
         jsonObject3 = new JSONObject();
-        jsonObject4 = new JSONObject();
         jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
         lastRequest = GenerateNotifyChangeAppContent.appsNotifyContent().toJSONString();
 
         jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();

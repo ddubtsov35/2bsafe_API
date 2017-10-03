@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import okhttp3.Response;
 
 import java.io.IOException;
 
@@ -19,9 +20,17 @@ public class AddAndSelectChildrenCardClass extends BaseClass{
 
     public void AddAndSelectChildrenCard() throws Exception {
         childrenCardClass.addChildrenCard();
-        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         response = profileClass.selectProfileCardResponse();
         System.out.println("selectProfileCard " + response.body().string());
+    }
+
+    public Response AddAndSelectChildrenCardMock() throws Exception {
+        childrenCardClass.addChildrenCard();
+        authorisationChildClass.authorisationChildren();
+        response = profileClass.selectProfileCardResponse();
+        System.out.println("selectProfileCard " + response.body().string());
+        return response;
     }
 
 }

@@ -1,9 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Tariffs;
 
-import com.dubtsov._2bsafe.Parents.Functions.Rules.RulesClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
-import com.dubtsov._2bsafe.Parents.Models.Tariff;
 import org.json.simple.JSONObject;
 
 /**
@@ -24,7 +21,7 @@ public class GenerateTariffContent{
             }
         }
         jsonObj.put("tariff_id", tariffId);
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         return jsonObj;
     }
 

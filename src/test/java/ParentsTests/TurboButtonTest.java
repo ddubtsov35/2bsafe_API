@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GenerateTurboContent;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.TurboButtonClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.TurboButton;
@@ -54,6 +55,6 @@ public class TurboButtonTest extends BaseClass{
         profileClass.selectProfileCardResponse();
         turboButtonClass.setTurbo();
         TurboButton turboButton = turboButtonClass.getTurboButton();
-        Assert.assertTrue(turboButton.getScs().equals("true") && turboButton.getTurbo() == 777);
+        Assert.assertTrue(turboButton.getScs().equals("true") && turboButton.getTurbo() == GenerateTurboContent.turboStatic);
     }
 }

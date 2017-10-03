@@ -1,7 +1,6 @@
 package com.dubtsov._2bsafe.Childrens.Authorisation;
 
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;

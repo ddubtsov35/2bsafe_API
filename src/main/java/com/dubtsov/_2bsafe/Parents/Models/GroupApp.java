@@ -16,7 +16,6 @@ public class GroupApp {
     private static JSONParser parser;
     private static Object obj;
     private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
 
 
     public GroupApp(String jsonObjectString) throws ParseException, java.text.ParseException {

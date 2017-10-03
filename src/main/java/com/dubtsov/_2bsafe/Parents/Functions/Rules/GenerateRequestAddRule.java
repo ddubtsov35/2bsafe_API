@@ -1,13 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
-import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 29.08.17.
@@ -20,10 +15,11 @@ public class GenerateRequestAddRule{
     private static JSONArray jsonArray;
     private static JSONArray jsonArray2;
     private static RulesClass rulesClass;
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
 
     public static JSONObject addRuleContent() throws Exception {
+        jsonObj = new JSONObject();
         jsonObject = new JSONObject();
         jsonObject3 = new JSONObject();
         jsonObject5 = new JSONObject();
@@ -49,12 +45,14 @@ public class GenerateRequestAddRule{
     }
 
     public static JSONObject getDel_Get_Content() throws Exception {
+        jsonObj = new JSONObject();
         rulesClass = new RulesClass();
         jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
         return jsonObj;
     }
 
     public static JSONObject getSwitchContent() throws Exception {
+        jsonObj = new JSONObject();
         rulesClass = new RulesClass();
         jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
         jsonObj.put("enabled", 0);

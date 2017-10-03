@@ -41,8 +41,8 @@ public class GroupsAppClass extends BaseClass{
         return responseClass.getJsonResponse();
     }
 
-    public Response deleteGroupApp() throws Exception {
-        jsonObject = GenerateGroupContent.generatedDeleteGroup();
+    public Response deleteGroupApp(GroupApp groupApp) throws Exception {
+        jsonObject = GenerateGroupContent.generatedDeleteGroup(groupApp);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
         return responseClass.getJsonResponse();
     }

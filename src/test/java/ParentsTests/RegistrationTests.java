@@ -11,6 +11,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -29,22 +30,31 @@ public class RegistrationTests extends BaseClass {
         deleteUserClass = new DeleteUserClass();
     }
 
-    ResponseClass response;
-
     @Test
-    public void checkEmailPhoneExist() throws IOException, ParseException {
-        //ContentClearFlag.setContentClearFlag(false);
-        HashMap email = registrationUserStep1Class.registrationUserStep1();
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check");
-        Assert.assertEquals(response.getJsonResponse().code(), 409);
+    public void checkEmailExist() throws IOException, ParseException {
+        response = registrationUserStep1Class.checkExistEmail();
+        Assert.assertEquals(response.code(), 409);
     }
 
     @Test
-    public void checkEmailPhoneNewEmail() throws IOException {
-        response = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check");
-        Assert.assertEquals(response.getJsonResponse().code(), 200);
+    public void checkPhoneExist() throws Exception {
+        response = registrationUserStep1Class.checkExistPhone();
+        Assert.assertEquals(response.code(), 409);
     }
 
+    @Test
+    public void checkEmail() throws IOException, ParseException {
+        response = registrationUserStep1Class.checkEmail();
+        Assert.assertEquals(response.code(), 200);
+    }
+
+    @Test
+    public void checkPhone() throws IOException, ParseException {
+        response = registrationUserStep1Class.checkPhone();
+        Assert.assertEquals(response.code(), 200);
+    }
+
+    @Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -52,7 +62,6 @@ public class RegistrationTests extends BaseClass {
         authorisationUserClass.authorisationUser();
         deleteUserClass.deleteUser();
         String success = authorisationUserClass.authorisationUser().getScs();
-
         Assert.assertTrue(success.equals("false"));
     }
 

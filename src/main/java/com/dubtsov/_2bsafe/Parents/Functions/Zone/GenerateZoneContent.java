@@ -1,7 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.Zone;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 
@@ -10,9 +8,10 @@ import org.json.simple.JSONObject;
  */
 public class GenerateZoneContent{
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public static JSONObject addZoneContent() throws Exception {
+        jsonObj = new JSONObject();
         jsonObj.put("lat", 0);
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         jsonObj.put("long", 0);
@@ -24,6 +23,7 @@ public class GenerateZoneContent{
     }
 
     public static JSONObject editZoneContent() throws Exception {
+        jsonObj = new JSONObject();
         ZoneClass zoneClass = new ZoneClass();
         jsonObj.put("lat", 0);
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
@@ -39,7 +39,9 @@ public class GenerateZoneContent{
 
     public static JSONObject delZoneContent() throws Exception {
         ZoneClass zoneClass = new ZoneClass();
-        jsonObj.put("zone_id", zoneClass.addZone().getZone_id());
+        int zoneId = zoneClass.addZone().getZone_id();
+        jsonObj = new JSONObject();
+        jsonObj.put("zone_id", zoneId);
         jsonObj.put("confirm", true);
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
@@ -47,8 +49,10 @@ public class GenerateZoneContent{
 
     public static JSONObject getZoneListContent() throws Exception {
         ZoneClass zoneClass = new ZoneClass();
-        jsonObj.put("zone_id", zoneClass.addZone().getZone_id());
-        jsonObj.put("type", 0);
+        int zoneId = zoneClass.addZone().getZone_id();
+        jsonObj = new JSONObject();
+        //jsonObj.put("zone_id", zoneId);
+        //jsonObj.put("type", 0);
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

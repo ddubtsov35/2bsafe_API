@@ -1,8 +1,6 @@
 package com.dubtsov._2bsafe.Childrens.StatisticsInformation;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /**

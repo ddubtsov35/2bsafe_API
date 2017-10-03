@@ -1,12 +1,9 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
 
-import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
-import java.io.IOException;
+import java.util.Random;
 
 /**
  * Created by user on 12.09.17.
@@ -14,12 +11,20 @@ import java.io.IOException;
 public class GenerateIntervalUpdateContent {
 
     private static JSONObject jsonObj = new JSONObject();
+    public static int itoRandom;
+    private static Random random;
 
     public static JSONObject setIntervalUpdateContent() throws Exception {
+        random = new Random();
         GetIntervalUpdateClass getIntervalUpdateClass = new GetIntervalUpdateClass();
-        jsonObj.put("ito", getIntervalUpdateClass.getIntervalUpdateResponse().getIto());
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(getIntervalUpdateClass.getIntervalUpdateResponse() != null) {
+            //jsonObj.put("ito", getIntervalUpdateClass.getIntervalUpdateResponse().getIto());
+            itoRandom = random.nextInt((90 - 0) + 1) + 0;
+            jsonObj.put("ito", itoRandom);
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        }
         return jsonObj;
+
     }
 
 }

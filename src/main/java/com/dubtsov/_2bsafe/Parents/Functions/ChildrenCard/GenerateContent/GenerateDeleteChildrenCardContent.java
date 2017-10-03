@@ -1,7 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;

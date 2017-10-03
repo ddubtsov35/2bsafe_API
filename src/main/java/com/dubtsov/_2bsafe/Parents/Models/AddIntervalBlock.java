@@ -32,6 +32,14 @@ public class AddIntervalBlock {
         if(jsonObj.get("intervals") != null) {setIntervals(Integer.parseInt(jsonObj.get("intervals").toString()));}
     }
 
+    @Override
+    public String toString() {
+        return "AddIntervalBlock{" +
+                "scs='" + scs + '\'' +
+                ", intervals=" + intervals +
+                '}';
+    }
+
     public String getScs() {
         return scs;
     }

@@ -1,7 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;

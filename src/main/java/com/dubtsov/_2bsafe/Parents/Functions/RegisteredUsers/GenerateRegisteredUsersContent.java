@@ -1,15 +1,9 @@
 package com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers;
 
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
-
-import javax.jws.soap.SOAPBinding;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 /**
  * Created by user on 12.09.17.

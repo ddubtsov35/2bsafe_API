@@ -1,6 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.Poll;
 
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 
@@ -9,9 +8,10 @@ import org.json.simple.JSONObject;
  */
 public class GeneratePollContent{
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public static JSONObject getPollContent() throws Exception {
+        jsonObj = new JSONObject();
         PollClass pollClass = new PollClass();
         jsonObj.put("pid", pollClass.getPoll().getPid());
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
@@ -19,6 +19,7 @@ public class GeneratePollContent{
     }
 
     public static JSONObject setPollContent() throws Exception {
+        jsonObj = new JSONObject();
         PollClass pollClass = new PollClass();
         jsonObj.put("pid", pollClass.getPoll().getPid());
         jsonObj.put("vid", pollClass.getPollById().getVid());

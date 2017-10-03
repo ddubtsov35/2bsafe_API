@@ -7,6 +7,7 @@ import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import org.json.simple.parser.ParseException;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -21,6 +22,7 @@ public class test extends BaseClass{
 
     }
 
+    @Ignore
     @Test
     public void test() throws Exception {
         AppsClass appsClass = new AppsClass();

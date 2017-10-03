@@ -8,6 +8,7 @@ import java.io.*;
 public class GenerateEmailClass {
 
     private static String pathToFile = "./src/main/resources/iterator";
+    public static String emailStatic;
 
     public static int getCountFromFile() throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(pathToFile));
@@ -32,6 +33,7 @@ public class GenerateEmailClass {
         int count = getCountFromFile();
         String generatedEmail = "www" + count + "@p33.org";
         setCountFromFile(++count);
+        emailStatic = generatedEmail;
         return generatedEmail;
     }
 

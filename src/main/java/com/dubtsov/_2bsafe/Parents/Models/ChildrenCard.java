@@ -18,7 +18,7 @@ public class ChildrenCard {
     private static Object obj;
     private static JSONObject jsonObj;
 
-    private String age;
+    private int age;
     private int profile_id;
     private int connected;
     private String name;
@@ -40,7 +40,7 @@ public class ChildrenCard {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        setAge(jsonObj.get("age").toString());
+        setAge(Integer.parseInt(jsonObj.get("age").toString()));
         setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));
         setConnected(Integer.parseInt(jsonObj.get("connected").toString()));
         if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName("");}
@@ -90,11 +90,11 @@ public class ChildrenCard {
         ChildrenCard.jsonObj = jsonObj;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 

@@ -65,7 +65,7 @@ public class GroupAppTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
-        response = groupsAppClass.deleteGroupApp();
+        response = groupsAppClass.deleteGroupApp(groupApp);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }

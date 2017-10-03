@@ -20,7 +20,7 @@ public class PermissionsClass extends BaseClass{
     public PermissionsClass() throws IOException {}
 
     public Permission getPermission() throws Exception {
-        jsonObject = GenerateCidCkeyContent.jsonObjectCidCkey;
+        jsonObject = GenerateSetPermissionContent.getPermission();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/permissions/get", jsonObject);
         return GetPermission.getPermission(responseClass.getJsonResponse().body().string());
     }

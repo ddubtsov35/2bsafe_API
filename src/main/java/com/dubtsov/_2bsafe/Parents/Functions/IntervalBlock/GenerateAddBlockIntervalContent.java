@@ -1,24 +1,20 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalBlock;
 
-import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-
-import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 31.08.17.
  */
 public class GenerateAddBlockIntervalContent {
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
     private static JSONArray jsonArray = new JSONArray();
 
     public static JSONObject getListInterval() throws Exception {
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());
+        jsonObj = new JSONObject();
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObj.put("group_id", 1);
         jsonObj.put("alias", "alias");
 
@@ -27,8 +23,9 @@ public class GenerateAddBlockIntervalContent {
     }
 
     public static JSONObject addInterval() throws Exception {
+        jsonObj = new JSONObject();
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObj.put("group_id", 1);
         jsonObj.put("alias", "alias");
 
@@ -44,7 +41,8 @@ public class GenerateAddBlockIntervalContent {
     }
 
     public static JSONObject editInterval() throws Exception {
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());
+        jsonObj = new JSONObject();
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObj.put("group_id", 1);
         jsonObj.put("alias", "alias");
 

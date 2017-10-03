@@ -1,13 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.PasswordChange;
 
-import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
-import okhttp3.internal.tls.BasicCertificateChainCleaner;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 /**

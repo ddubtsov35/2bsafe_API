@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class GetIntervalUpdateClass extends BaseClass{
 
-    JSONObject jsonObject;
+    JSONObject jsonObject = new JSONObject();
 
     public GetIntervalUpdateClass() throws IOException {}
 

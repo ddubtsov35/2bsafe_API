@@ -19,18 +19,20 @@ import java.util.LinkedHashMap;
  */
 public class PollTittleTest extends BaseClass{
 
-    PollTittle pollTittle;
+    //PollTittle pollTittle;
     Poll poll;
 
     public PollTittleTest() throws IOException, ParseException, java.text.ParseException {
         pollClass = new PollClass();
+        //pollTittle = new PollTittle();
+        //poll = new Poll();
         authorisationUserClass = new AuthorisationUserClass();
     }
 
     @Test
     public void getPollTittle() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        pollTittle = pollClass.getPoll();
+        PollTittle pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
         Assert.assertTrue(pollTittle.getScs().equals("true"));
     }
@@ -38,7 +40,7 @@ public class PollTittleTest extends BaseClass{
     @Test
     public void getPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        pollTittle = pollClass.getPoll();
+        PollTittle pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
         poll = pollClass.getPollById();
         System.out.println(poll.toString());
@@ -48,7 +50,7 @@ public class PollTittleTest extends BaseClass{
     @Test
     public void setPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        pollTittle = pollClass.getPoll();
+        PollTittle pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());
         poll = pollClass.getPollById();
         response = pollClass.setPoll();
