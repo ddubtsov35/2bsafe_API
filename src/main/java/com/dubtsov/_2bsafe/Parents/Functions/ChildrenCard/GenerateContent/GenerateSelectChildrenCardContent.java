@@ -14,12 +14,12 @@ import java.util.List;
  */
 public class GenerateSelectChildrenCardContent {
 
-    private static ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
     private static ProfileClass profileListClass;
 
     public static JSONObject getGenerateSelectChildrenCardContent() throws Exception {
         profileListClass = new ProfileClass();
         List<ProfileCard> profileCardList = profileListClass.getProfileList();
+        System.out.println("profileCardList " + profileCardList.toString());
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());
         return jsonObject;

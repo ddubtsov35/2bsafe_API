@@ -32,7 +32,7 @@ public class GetProfileList {
             obj = parser.parse(profileCardString);
             jsonObj = (JSONObject) obj;
 
-            System.out.println("jsonObj " + jsonObj);
+            //System.out.println("jsonObj " + jsonObj);
             String scs = jsonObj.get("scs").toString();
             jsonArray = (JSONArray) jsonObj.get("data");
 

@@ -34,9 +34,9 @@ public class GroupsAppClass extends BaseClass{
     public GroupApp addGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedAddGroup();
 
-        GetConditionInformation getConditionInformation = new GetConditionInformation();
+        /*GetConditionInformation getConditionInformation = new GetConditionInformation();
         ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.getConditionInformation();
-        System.out.println(conditionInformationFromDevice.toString());
+        System.out.println(conditionInformationFromDevice.toString());*/
 
 
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/add", jsonObject);

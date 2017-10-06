@@ -1,9 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,7 +14,7 @@ import java.util.List;
 public class AddIntervalBlock {
 
     private String scs;
-    private Integer intervals;
+    private List<Integer> intervals;
 
     private static JSONParser parser;
     private static Object obj;
@@ -24,12 +26,21 @@ public class AddIntervalBlock {
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+        intervals = new ArrayList<>();
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("intervals") != null) {setIntervals(Integer.parseInt(jsonObj.get("intervals").toString()));}
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
+
+        JSONArray jsonArray = (JSONArray) jsonObj.get("intervals");
+        for(int i = 0; i < jsonArray.size(); i++) {
+            if (jsonArray.get(i) != null) {
+                intervals.add(Integer.parseInt(jsonArray.get(i).toString()));
+            } else {
+                intervals.add(null);
+            }
+        }
     }
 
     @Override
@@ -48,11 +59,8 @@ public class AddIntervalBlock {
         this.scs = scs;
     }
 
-    public Integer getIntervals() {
+    public List<Integer> getIntervals() {
         return intervals;
     }
 
-    public void setIntervals(Integer intervals) {
-        this.intervals = intervals;
-    }
 }

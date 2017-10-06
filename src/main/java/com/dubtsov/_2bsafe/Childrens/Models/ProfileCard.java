@@ -35,6 +35,17 @@ public class ProfileCard {
         if(jsonObj.get("busy") != null) {setBusy(Integer.parseInt(jsonObj.get("busy").toString()));}
     }
 
+    @Override
+    public String toString() {
+        return "ProfileCard{" +
+                "scs='" + scs + '\'' +
+                ", profile_id=" + profile_id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", busy=" + busy +
+                '}';
+    }
+
     public int getProfile_id() {
         return profile_id;
     }
