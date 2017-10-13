@@ -18,6 +18,7 @@ public class GenerateHelpMeContent{
         jsonObj = new JSONObject();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         return jsonObj;
     }
 

@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -47,6 +48,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
 
+    @Ignore
     @Test
     public void setAllAccountSettings() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

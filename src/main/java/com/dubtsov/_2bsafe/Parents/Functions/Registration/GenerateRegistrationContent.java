@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsers
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
@@ -12,6 +13,7 @@ import org.json.simple.parser.ParseException;
 
 import javax.jws.soap.SOAPBinding;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -41,7 +43,8 @@ public class GenerateRegistrationContent {
         if(UserPool.getUserFromFile() == null) {
             jsonObject.put("em", getRegistrationStep1Content.get("em"));
             jsonObject.put("dtype", 0);
-            jsonObject.put("code", inputClass.code(getRegistrationStep1Content.get("em").toString()));
+            //jsonObject.put("code", inputClass.code(getRegistrationStep1Content.get("em").toString()));
+            jsonObject.put("code", inputClass.code("qqq60@p33.org"));
             jsonObject.put("pwd", getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObject.put("em", UserPool.getUserFromFile().get("em"));
@@ -91,7 +94,7 @@ public class GenerateRegistrationContent {
 
     public static JSONObject getCheckPhone() throws IOException {
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObject.put("ph", GeneratePhoneClass.getGeneratedPhone());
         return jsonObject;
     }
 
@@ -109,24 +112,16 @@ public class GenerateRegistrationContent {
 
     public static JSONObject getExistPhone() throws Exception {
         JSONObject jsonObject = new JSONObject();
-        if(UserPool.getUserFromFile() == null){
-            listRegisteredUsersClass = new ListRegisteredUsersClass();
-            registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
-            for (int i = 0; i < registeredUserList.size(); i++){
-                if(!registeredUserList.get(i).getPh().isEmpty()){
-                    jsonObject.put("phone", registeredUserList.get(i).getPh());
-                    break;
-                }
-            }
-        } else{
-            for (int i = 0; i < registeredUserList.size(); i++){
-                if(registeredUserList.get(i).getEm().equals(UserPool.getUserFromFile().get("em"))){
-                    jsonObject.put("phone", registeredUserList.get(i).getPh());
-                    break;
-                }
+        registeredUserList = new ArrayList<>();
+        listRegisteredUsersClass = new ListRegisteredUsersClass();
+        registeredUserList = listRegisteredUsersClass.getListRegisteredUsers();
+
+        for (int i = 0; i < registeredUserList.size(); i++){
+            if(!registeredUserList.get(i).getPh().isEmpty()){
+                jsonObject.put("ph", registeredUserList.get(i).getPh());
+                break;
             }
         }
-
         return jsonObject;
     }
 }

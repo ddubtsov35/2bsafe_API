@@ -22,7 +22,6 @@ import java.util.LinkedHashMap;
  */
 public class PushTest extends BaseClass {
 
-    HashMap content = new LinkedHashMap();
     NotifyList notifyList;
     AddSession addSession;
 
@@ -34,6 +33,8 @@ public class PushTest extends BaseClass {
 
     }
 
+    //Не используется
+    @Ignore
     @Test
     public void initSession() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -85,6 +86,7 @@ public class PushTest extends BaseClass {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         notifyList = pushClass.getNotifyList();
-        Assert.assertTrue(notifyList.getScs().contains("\"scs\": true"));
+        System.out.println(notifyList.toString());
+        Assert.assertTrue(notifyList.getScs().contains("true"));
     }
 }

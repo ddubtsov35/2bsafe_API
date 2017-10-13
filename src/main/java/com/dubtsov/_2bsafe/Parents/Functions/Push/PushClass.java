@@ -26,7 +26,8 @@ public class PushClass extends BaseClass{
         return GetSession.addSession(responseClass.getJsonResponse().body().string());
     }
 
-    public Response lockScreen() throws IOException {
+    public Response lockScreen() throws Exception {
+        jsonObject = GenerateNotifyListContent.blockScreen();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/block", jsonObject);
         return responseClass.getJsonResponse();
     }

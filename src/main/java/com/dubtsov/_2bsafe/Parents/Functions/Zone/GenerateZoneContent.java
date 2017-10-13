@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Zone;
 
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
 
@@ -53,6 +54,7 @@ public class GenerateZoneContent{
         jsonObj = new JSONObject();
         //jsonObj.put("zone_id", zoneId);
         //jsonObj.put("type", 0);
+        //jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }

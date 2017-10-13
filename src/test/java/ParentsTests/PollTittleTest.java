@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Models.Poll;
 import com.dubtsov._2bsafe.Parents.Models.PollTittle;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -19,16 +20,14 @@ import java.util.LinkedHashMap;
  */
 public class PollTittleTest extends BaseClass{
 
-    //PollTittle pollTittle;
     Poll poll;
 
     public PollTittleTest() throws IOException, ParseException, java.text.ParseException {
         pollClass = new PollClass();
-        //pollTittle = new PollTittle();
-        //poll = new Poll();
         authorisationUserClass = new AuthorisationUserClass();
     }
 
+    @Ignore
     @Test
     public void getPollTittle() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -37,6 +36,7 @@ public class PollTittleTest extends BaseClass{
         Assert.assertTrue(pollTittle.getScs().equals("true"));
     }
 
+    @Ignore
     @Test
     public void getPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -47,6 +47,7 @@ public class PollTittleTest extends BaseClass{
         Assert.assertTrue(poll.getScs().equals("true"));
     }
 
+    @Ignore
     @Test
     public void setPoll() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

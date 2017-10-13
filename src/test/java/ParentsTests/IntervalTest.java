@@ -7,6 +7,7 @@ import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateIntervalUpdateContent;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
@@ -34,13 +35,13 @@ public class IntervalTest extends BaseClass{
         profileClass = new ProfileClass();
         getIntervalUpdateClass = new GetIntervalUpdateClass();
         setIntervalUpdateClass = new SetIntervalUpdateClass();
+        addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
     @Test
     public void setInterval() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         profileClass.selectProfileCardResponse();
         response = setIntervalUpdateClass.setIntervalUpdate();
         String result = response.body().string();
@@ -50,8 +51,7 @@ public class IntervalTest extends BaseClass{
     @Test
     public void getInterval() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         setIntervalUpdateClass.setIntervalUpdate();
         DataUpdate getDataUpdate = getIntervalUpdateClass.getIntervalUpdateResponse();
         String resultResponse = getDataUpdate.toString();

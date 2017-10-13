@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
 
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import org.json.simple.JSONObject;
 
@@ -21,7 +22,7 @@ public class GenerateIntervalUpdateContent {
             //jsonObj.put("ito", getIntervalUpdateClass.getIntervalUpdateResponse().getIto());
             itoRandom = random.nextInt((90 - 0) + 1) + 0;
             jsonObj.put("ito", itoRandom);
-            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+            jsonObj.put("profile_id", GenerateSelectChildrenCardContent.profileId);
         }
         return jsonObj;
 

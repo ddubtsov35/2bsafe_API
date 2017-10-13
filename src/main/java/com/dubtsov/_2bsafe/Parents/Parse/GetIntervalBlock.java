@@ -30,9 +30,10 @@ public class GetIntervalBlock {
         try {
             obj = parser.parse(intervalBlockString);
             jsonObj = (JSONObject) obj;
+            String scs = jsonObj.get("scs").toString();
             jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
-                intervalBlockList.add(new IntervalBlock(jsonArray.get(i).toString(), jsonObj.get("scs").toString()));
+                intervalBlockList.add(new IntervalBlock(jsonArray.get(i).toString(), scs));
             }
         } catch (ParseException e){}
         finally {

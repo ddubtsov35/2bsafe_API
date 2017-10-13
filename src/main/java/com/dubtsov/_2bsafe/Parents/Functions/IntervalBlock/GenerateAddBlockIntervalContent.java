@@ -1,12 +1,14 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalBlock;
 
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -79,7 +81,9 @@ public class GenerateAddBlockIntervalContent {
     public static JSONObject deleteInterval() throws Exception {
         IntervalBlockClass intervalBlockClass = new IntervalBlockClass();
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put("interval_id", intervalBlockClass.getIntervalBlockList().get(0).getId());
+        List<IntervalBlock> intervalBlockList = intervalBlockClass.getIntervalBlockList();
+        jsonObj.put("interval_id", intervalBlockList.get(0).getId());
+        jsonObj.put("profile_id", GenerateSelectChildrenCardContent.profileId);
         System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }

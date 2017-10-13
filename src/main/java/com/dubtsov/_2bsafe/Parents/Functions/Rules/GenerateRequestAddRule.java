@@ -28,7 +28,7 @@ public class GenerateRequestAddRule{
 
         jsonObject.put("name", "TestName");
         jsonObject.put("profiles",jsonArray);
-        jsonArray.add(GenerateProfileIdContent.getProfileId());
+        jsonArray.add(GenerateProfileIdContent.getProfileId().get("profile_id"));
 
         jsonObject3.put(10,"Выключить");
         jsonObject.put("triggers",jsonObject3);
@@ -47,15 +47,17 @@ public class GenerateRequestAddRule{
     public static JSONObject getDel_Get_Content() throws Exception {
         jsonObj = new JSONObject();
         rulesClass = new RulesClass();
-        jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
+        int rule_id = rulesClass.addRule().getRule_id();
+        jsonObj.put("rule_id", rule_id);
         return jsonObj;
     }
 
     public static JSONObject getSwitchContent() throws Exception {
         jsonObj = new JSONObject();
         rulesClass = new RulesClass();
-        jsonObj.put("rule_id", rulesClass.addRule().getRule_id());
-        jsonObj.put("enabled", 0);
+        int rule_id = rulesClass.addRule().getRule_id();
+        jsonObj.put("rule_id", rule_id);
+        jsonObj.put("enabled", 1);
         return jsonObj;
     }
 

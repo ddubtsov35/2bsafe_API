@@ -23,5 +23,4 @@ public class GeneratePasswordChangeContent{
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
-
 }

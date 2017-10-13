@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Parents.Functions.FAQ.GetFaqListClass;
 import com.dubtsov._2bsafe.Parents.Models.Faq;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -33,6 +34,7 @@ public class FaqTest  extends BaseClass{
         Assert.assertTrue(list.size() != 0);
     }
 
+    @Ignore
     @Test
     public void getFaqVis() throws ParseException, java.text.ParseException, IOException {
         list = getFaqListClass.getFaqListVis();
@@ -48,6 +50,7 @@ public class FaqTest  extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
 
+    @Ignore
     @Test
     public void getFaqByIdVis() throws ParseException, java.text.ParseException, IOException {
         list = getFaqListClass.getFaqListVis();

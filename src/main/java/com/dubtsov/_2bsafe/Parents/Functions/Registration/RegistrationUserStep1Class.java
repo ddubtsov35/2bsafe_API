@@ -31,6 +31,12 @@ public class RegistrationUserStep1Class extends BaseClass {
         }
     }
 
+    /*public Response registrationForRecoveryPassword() throws IOException {
+        jsonObject = GenerateRegistrationContent.getRegistrationStep1Content();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step1", jsonObject);
+        return responseClass.getJsonResponse();
+    }*/
+
     public Response sendCodeRegistration() throws IOException, ParseException {
         registrationUserStep1();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/resend_email");

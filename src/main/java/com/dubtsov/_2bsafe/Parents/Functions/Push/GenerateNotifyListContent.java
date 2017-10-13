@@ -1,5 +1,10 @@
 package com.dubtsov._2bsafe.Parents.Functions.Push;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Childrens.Models.ProfileCard;
+import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -39,7 +44,8 @@ public class GenerateNotifyListContent{
 
     public static JSONObject createSession_alarm_update_updateLong() throws Exception {
         jsonObj = new JSONObject();
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        int profile_id = GenerateSelectChildrenCardContent.profileId;
+        jsonObj.put("profile_id", profile_id);
         return jsonObj;
     }
 

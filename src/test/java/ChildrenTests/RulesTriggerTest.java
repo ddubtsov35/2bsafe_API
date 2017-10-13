@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedRulesTriggerContent;
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.RulesTriggerClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
@@ -23,13 +24,13 @@ public class RulesTriggerTest extends BaseClass{
         authorisationChildClass = new AuthorisationChildClass();
         rulesTriggerClass = new RulesTriggerClass();
         generatedJsonRulesTriggerClass = new GeneratedRulesTriggerContent();
+        addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
     @Test
     public void rulesTrigger() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = rulesTriggerClass.rulesTrigger();
         String result = response.body().string();
         System.out.println("RESULT " + result);

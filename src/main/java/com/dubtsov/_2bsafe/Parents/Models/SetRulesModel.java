@@ -11,7 +11,7 @@ import org.json.simple.parser.ParseException;
 public class SetRulesModel {
 
     private String scs;
-    private int rule_id;
+    private Integer rule_id;
 
     private static JSONParser parser;
     private static Object obj;
@@ -28,7 +28,7 @@ public class SetRulesModel {
         jsonObj = (JSONObject) obj;
 
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("rule_id") != null) {setRule_id(Integer.parseInt(jsonObj.get("rule_id").toString()));}
+        if(jsonObj.get("rule_id") != null) {setRule_id(Integer.parseInt(jsonObj.get("rule_id").toString()));} else {setRule_id(null);}
 
     }
 
@@ -48,11 +48,11 @@ public class SetRulesModel {
         this.scs = scs;
     }
 
-    public int getRule_id() {
+    public Integer getRule_id() {
         return rule_id;
     }
 
-    public void setRule_id(int rule_id) {
+    public void setRule_id(Integer rule_id) {
         this.rule_id = rule_id;
     }
 }

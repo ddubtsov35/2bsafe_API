@@ -39,16 +39,29 @@ public class NotifyList {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
+
+        if(jsonObj.get("scs") != null) {setScs(jsonObj2.get("scs").toString());}
+
         jsonArray = (JSONArray) jsonObj.get("warning");
         System.out.println(jsonArray.toJSONString());
-
-
         for (int i = 0; i < jsonArray.size(); i++) {
             warningList.add(new NotifyList.Warning(jsonArray.get(i).toString()));
         }
+
+        jsonArray = (JSONArray) jsonObj.get("notif");
+        System.out.println(jsonArray.toJSONString());
         for (int i = 0; i < jsonArray.size(); i++) {
             notifList.add(new NotifyList.Notif(jsonArray.get(i).toString()));
         }
+    }
+
+    @Override
+    public String toString() {
+        return "NotifyList{" +
+                "scs='" + scs + '\'' +
+                ", warningList=" + warningList +
+                ", notifList=" + notifList +
+                '}';
     }
 
     public String getScs() {
@@ -81,6 +94,16 @@ public class NotifyList {
             if(jsonObj2.get("msg_type") != null) {setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString()));}
             if(jsonObj2.get("param") != null) {setParam(Integer.parseInt(jsonObj2.get("param").toString()));}
             if(jsonObj2.get("date") != null) {setDate(jsonObj2.get("date").toString());}
+        }
+
+        @Override
+        public String toString() {
+            return "Warning{" +
+                    "evid=" + evid +
+                    ", msg_type=" + msg_type +
+                    ", param=" + param +
+                    ", date='" + date + '\'' +
+                    '}';
         }
 
         public int getEvid() {
@@ -136,6 +159,16 @@ public class NotifyList {
             if(jsonObj2.get("msg_type") != null) {setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString()));}
             if(jsonObj2.get("param") != null) {setParam(Integer.parseInt(jsonObj2.get("param").toString()));}
             if(jsonObj2.get("date") != null) {setDate(jsonObj2.get("date").toString());}
+        }
+
+        @Override
+        public String toString() {
+            return "Notif{" +
+                    "evid=" + evid +
+                    ", msg_type=" + msg_type +
+                    ", param=" + param +
+                    ", date='" + date + '\'' +
+                    '}';
         }
 
         public int getEvid() {

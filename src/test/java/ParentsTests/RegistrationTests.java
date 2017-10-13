@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1C
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
@@ -67,6 +68,7 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void createNewUser() throws Exception {
+        UserPool.clearFile();
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();

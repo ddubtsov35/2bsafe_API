@@ -1,7 +1,10 @@
 package com.dubtsov._2bsafe.Parents.Functions.Tariffs;
 
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
+import com.dubtsov._2bsafe.Parents.Models.TariffList;
 import org.json.simple.JSONObject;
+
+import java.util.List;
 
 /**
  * Created by user on 12.09.17.
@@ -12,11 +15,12 @@ public class GenerateTariffContent{
 
     public static JSONObject setTariffContent() throws Exception {
         TariffsClass tariffsClass = new TariffsClass();
+        List<TariffList> tariffList = tariffsClass.getTariffsList();
         int tariffId = 0;
         int currentTariffId = tariffsClass.getCurrentTariff().getTariff();
-        for(int i=0; i<tariffsClass.getTariffsList().size(); i++){
-            if (tariffsClass.getTariffsList().get(i).getId() != currentTariffId){
-                tariffId = tariffsClass.getTariffsList().get(i).getId();
+        for(int i=0; i<tariffList.size(); i++){
+            if (tariffList.get(i).getId() != currentTariffId){
+                tariffId = tariffList.get(i).getId();
                 break;
             }
         }

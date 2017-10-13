@@ -7,6 +7,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Functions.Tickets.SendTicketClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -17,8 +18,6 @@ import java.util.LinkedHashMap;
  * Created by user on 30.08.17.
  */
 public class SendTicketTest extends BaseClass{
-
-    HashMap content = new LinkedHashMap();
 
     public SendTicketTest() throws IOException, ParseException, java.text.ParseException {
         sendTicketClass = new SendTicketClass();
@@ -32,6 +31,7 @@ public class SendTicketTest extends BaseClass{
         Assert.assertTrue(sendTicketClass.sendTicket()!= 0);
     }
 
+    @Ignore
     @Test
     public void sendTicketWithoutAuthorisation() throws Exception {
         response = sendTicketClass.sendTicketWithoutAuthorisation();

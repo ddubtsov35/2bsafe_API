@@ -40,7 +40,8 @@ public class IntervalBlockTest extends BaseClass{
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         intervalBlockClass.addIntervalBlockList();
         intervalBlock = intervalBlockClass.getIntervalBlockList();
-        System.out.println(intervalBlock.toString());
+        System.out.println("result " +
+                intervalBlock.toString());
         Assert.assertTrue(intervalBlock.size() > 0);
     }
 

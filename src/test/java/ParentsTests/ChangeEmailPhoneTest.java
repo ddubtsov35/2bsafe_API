@@ -9,6 +9,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -27,6 +28,7 @@ public class ChangeEmailPhoneTest extends BaseClass{
         listRegisteredUsersClass = new ListRegisteredUsersClass();
     }
 
+    @Ignore
     @Test
     public void changeEmail() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -43,6 +45,7 @@ public class ChangeEmailPhoneTest extends BaseClass{
         Assert.assertTrue(afterEmail.equals(newEmail) && !beforeEmail.equals(newEmail));
     }
 
+    @Ignore
     @Test
     public void changeEmailError() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

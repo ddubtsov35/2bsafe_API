@@ -49,7 +49,6 @@ public class AuthorisationTests extends BaseClass {
     public void recoveryPassword() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
         response = recoveryPasswordClass.recoveryPasswordStart();
-        deleteUserClass.deleteUser();
         response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
@@ -58,6 +57,7 @@ public class AuthorisationTests extends BaseClass {
     public void successPasswordChange() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
+        logoutClass.logout();
         authorisationUser = authorisationUserClass.authorisationUserWithNewPassword();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }

@@ -25,8 +25,6 @@ import java.util.LinkedHashMap;
  * Created by user on 29.08.17.
  */
 public class RulesTest extends BaseClass{
-    HashMap content = new LinkedHashMap();
-    GetRulesModel rulesModel;
 
     public RulesTest() throws IOException, ParseException, java.text.ParseException {
         generatedRequestJsonClass = new GenerateNotifyChangeAppContent();
