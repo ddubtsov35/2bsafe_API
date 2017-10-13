@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Childrens.Parse.GetChildrenResponseAuthorisation;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
+import okhttp3.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
@@ -22,10 +23,17 @@ public class AuthorisationChildClass extends BaseClass{
     public AuthorisationChildClass() throws IOException {}
 
     public ChildrenResponseAuthorisationModel authorisationChildren() throws Exception {
-        jsonObject = GenerateAuthorisationChildren.getAuthorisationChildrenContent();
+        jsonObject = GenerateAuthorisationChildren.PositiveGetAuthorisationChildrenContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         generateCidCkeyContent.getCidCkey(childrenResponseAuthorisationModel);
+        return childrenResponseAuthorisationModel;
+    }
+
+    public ChildrenResponseAuthorisationModel NegativeAuthorisationChildren() throws Exception {
+        jsonObject = GenerateAuthorisationChildren.NegativeGetAuthorisationChildrenContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
+        childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         return childrenResponseAuthorisationModel;
     }
 }

@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Models.AddZone;
 import com.dubtsov._2bsafe.Parents.Models.Zone;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -22,15 +23,18 @@ public class ZoneTest extends BaseClass{
     List<Zone> zone;
     AddZone addZone;
 
-
     public ZoneTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
         zoneClass = new ZoneClass();
     }
 
+    @Before
+    public void before() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+    }
+
     @Test
     public void getZoneList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         zone = zoneClass.getZoneList();
         System.out.println("Test zone " + zone.toString());
         Assert.assertTrue(zone.size() > 0);
@@ -38,7 +42,6 @@ public class ZoneTest extends BaseClass{
 
     @Test
     public void addZone() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         addZone = zoneClass.addZone();
         System.out.println(addZone);
         Assert.assertTrue(addZone.getScs().equals("true") && addZone.getZone_id() != 0);
@@ -46,7 +49,6 @@ public class ZoneTest extends BaseClass{
 
     @Test
     public void deleteZone() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = zoneClass.deleteZone();
         String result = response.body().string();
         System.out.println(result);

@@ -10,6 +10,7 @@ import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -34,10 +35,14 @@ public class IntervalBlockTest extends BaseClass{
         intervalBlockClass = new IntervalBlockClass();
     }
 
-    @Test
-    public void getIntervalBlockList() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+    }
+
+    @Test
+    public void getIntervalBlockList() throws Exception {
         intervalBlockClass.addIntervalBlockList();
         intervalBlock = intervalBlockClass.getIntervalBlockList();
         System.out.println("result " +
@@ -47,8 +52,6 @@ public class IntervalBlockTest extends BaseClass{
 
     @Test
     public void addIntervalBlockList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         addIntervalBlock = intervalBlockClass.addIntervalBlockList();
         System.out.println("result " + addIntervalBlock.toString());
@@ -57,8 +60,6 @@ public class IntervalBlockTest extends BaseClass{
 
     @Test
     public void editIntervalBlockList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
         response = intervalBlockClass.editIntervalBlockList();
@@ -69,8 +70,6 @@ public class IntervalBlockTest extends BaseClass{
 
     @Test
     public void deleteIntervalBlockList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         addIntervalBlock = intervalBlockClass.addIntervalBlockList();
         response = intervalBlockClass.deleteIntervalBlockList();

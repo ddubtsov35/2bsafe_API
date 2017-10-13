@@ -5,40 +5,40 @@ package com.dubtsov._2bsafe.Childrens.Models;
  */
 public class Zones {
 
-    private int id;
-    private int lat;
-    private int lon;
-    private int rad;
+    private Integer id;
+    private Integer lat;
+    private Integer lon;
+    private Integer rad;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getLat() {
+    public Integer getLat() {
         return lat;
     }
 
-    public void setLat(int lat) {
+    public void setLat(Integer lat) {
         this.lat = lat;
     }
 
-    public int getLon() {
+    public Integer getLon() {
         return lon;
     }
 
-    public void setLon(int lon) {
+    public void setLon(Integer lon) {
         this.lon = lon;
     }
 
-    public int getRad() {
+    public Integer getRad() {
         return rad;
     }
 
-    public void setRad(int rad) {
+    public void setRad(Integer rad) {
         this.rad = rad;
     }
 }

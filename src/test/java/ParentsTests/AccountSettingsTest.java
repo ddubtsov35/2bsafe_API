@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -28,20 +29,21 @@ public class AccountSettingsTest extends BaseClass{
         accountSettingClass = new AccountSettingClass();
     }
 
-    @Test
-    public void getAccountSettings() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
+    }
+
+    @Test
+    public void getAccountSettings() throws Exception {
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
 
     @Test
     public void setAccountSettings() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
         response = setAccountSettingClass.setAccountSetting();
         AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
@@ -51,9 +53,6 @@ public class AccountSettingsTest extends BaseClass{
     @Ignore
     @Test
     public void setAllAccountSettings() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
         response = setAccountSettingClass.setAllAccountSetting();
         AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();

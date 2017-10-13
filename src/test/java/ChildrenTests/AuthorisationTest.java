@@ -24,11 +24,21 @@ public class AuthorisationTest extends BaseClass{
     }
 
     @Test
-    public void authorisation() throws Exception {
+    public void PositiveAuthorisation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        System.out.println(childrenResponseAuthorisationModel.toString());
         Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("true"));
+    }
+
+    @Test
+    public void NegativeAuthorisation() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        childrenCardClass.addChildrenCard();
+        childrenResponseAuthorisationModel = authorisationChildClass.NegativeAuthorisationChildren();
+        System.out.println(childrenResponseAuthorisationModel.getScs().toString());
+        Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("false"));
     }
 
 

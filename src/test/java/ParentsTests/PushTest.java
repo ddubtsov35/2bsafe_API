@@ -10,6 +10,7 @@ import com.dubtsov._2bsafe.Parents.Models.AddSession;
 import com.dubtsov._2bsafe.Parents.Models.NotifyList;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -30,7 +31,12 @@ public class PushTest extends BaseClass {
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         pushClass = new PushClass();
+    }
 
+    @Before
+    public void before() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
     }
 
     //Не используется

@@ -18,7 +18,8 @@ public class GenerateAuthorisationChildren{
 
     public GenerateAuthorisationChildren() throws ParseException {}
 
-    public static JSONObject getAuthorisationChildrenContent() throws IOException, ParseException {
+
+    public static JSONObject PositiveGetAuthorisationChildrenContent() throws IOException, ParseException {
         if(UserPool.getUserFromFile() == null) {
             jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
@@ -33,6 +34,21 @@ public class GenerateAuthorisationChildren{
         }
 
         jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return jsonObj;
+    }
+
+    public static JSONObject NegativeGetAuthorisationChildrenContent() throws IOException, ParseException {
+        jsonObj.put("em", "failEmail");
+        jsonObj.put("pwd", "failPassword");
+        jsonObj.put("cid", "fakeCid");
+        jsonObj.put("token", "fakeToken");
         jsonObj.put("sname","TestDevice");
         jsonObj.put("os","Android");
         jsonObj.put("osv","10");

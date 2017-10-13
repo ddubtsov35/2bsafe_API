@@ -9,6 +9,7 @@ import com.dubtsov._2bsafe.Parents.Models.Permission;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -28,10 +29,14 @@ public class PermissionTest extends BaseClass{
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
-    @Test
-    public void getPermission() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+    }
+
+    @Test
+    public void getPermission() throws Exception {
         permission = permissionsClass.getPermission();
         System.out.println(permission.toString());
         Assert.assertTrue(permission.getScs().equals("true"));
@@ -39,8 +44,6 @@ public class PermissionTest extends BaseClass{
 
     @Test
     public void setPermission() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = permissionsClass.setPermission();
         String result = response.body().string();
         System.out.println("result " + result);

@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -25,10 +26,14 @@ public class ChildrenCardTest extends BaseClass{
         childrenCardClass = new ChildrenCardClass();
     }
 
+    @Before
+    public void before() throws ParseException, java.text.ParseException, IOException {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+    }
+
 
     @Test
     public void getChildrenCardList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         authorisationChildClass.authorisationChildren();
         int before = profileClass.getProfileList().size();
         childrenCardClass.addChildrenCard();
@@ -38,7 +43,6 @@ public class ChildrenCardTest extends BaseClass{
 
     @Test
     public void selectChildrenCard() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
         String result = profileClass.selectProfileCardResponse().body().string();

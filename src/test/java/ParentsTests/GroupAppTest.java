@@ -9,6 +9,7 @@ import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -29,13 +30,16 @@ public class GroupAppTest extends BaseClass{
         authorisationUserClass = new AuthorisationUserClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         groupsAppClass = new GroupsAppClass();
+    }
 
+    @Before
+    public void before() throws Exception {
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
     }
 
     @Test
     public void setGroupApp() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = groupsAppClass.setGroupApp();
         String result = response.body().string();
         System.out.println("result " + result);
@@ -44,8 +48,6 @@ public class GroupAppTest extends BaseClass{
 
     @Test
     public void addGroupApp() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
         Assert.assertTrue(groupApp.getScs().equals("true"));
@@ -53,8 +55,6 @@ public class GroupAppTest extends BaseClass{
 
     @Test
     public void editGroupApp() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.editGroupApp();
         String result = response.body().string();
@@ -63,8 +63,6 @@ public class GroupAppTest extends BaseClass{
 
     @Test
     public void deleteGroupApp() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.deleteGroupApp(groupApp);
         String result = response.body().string();

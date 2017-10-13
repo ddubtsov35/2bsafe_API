@@ -15,6 +15,7 @@ import com.dubtsov._2bsafe.Parents.Models.GetRulesModel;
 import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -38,11 +39,15 @@ public class RulesTest extends BaseClass{
         rulesClass = new RulesClass();
     }
 
-    @Test
-    public void getRules() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
+    }
+
+    @Test
+    public void getRules() throws Exception {
         profileClass.selectProfileCardResponse();
         response = rulesClass.getRulesListResponse();
         String result = response.body().string();
@@ -52,9 +57,6 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void getRulesByProfile() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         profileClass.selectProfileCardResponse();
         response = rulesClass.getRulesByProfileResponse();
         String result = response.body().string();
@@ -63,9 +65,6 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void addRule() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         int beforeRulesCount = rulesClass.getRulesList().size();
         SetRulesModel setRulesModel = rulesClass.addRule();
         System.out.println("setRulesModel " + setRulesModel.toString());
@@ -75,9 +74,6 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void switchRule() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         response = rulesClass.switchRules();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
@@ -85,9 +81,6 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void deleteRule() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         response = rulesClass.deleteRules();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);

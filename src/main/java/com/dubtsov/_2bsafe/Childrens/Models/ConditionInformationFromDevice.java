@@ -19,8 +19,8 @@ public class ConditionInformationFromDevice {
     String jsonObjectString;
 
     private String scs;
-    private int bto;
-    private int ito;
+    private Integer bto;
+    private Integer ito;
     private List<Integer> params;
     private List<Rules> rules;
     private List<Zones> zones;
@@ -65,9 +65,9 @@ public class ConditionInformationFromDevice {
 
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));}
-        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
+        if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));} else{setBto(null);}
+        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIntervals(null);}
         if(jsonObj.get("params") != null) {setParams(getListParams(jsonObjectString));} else{setParams(null);}
         if(jsonObj.get("rules") != null) {setRules(getListRules(jsonObjectString));} else{setRules(null);}
         if(jsonObj.get("zones") != null) {setZones(getListZones(jsonObjectString));} else{setZones(null);}
@@ -89,19 +89,19 @@ public class ConditionInformationFromDevice {
                 '}';
     }
 
-    public int getBto() {
+    public Integer getBto() {
         return bto;
     }
 
-    public void setBto(int bto) {
+    public void setBto(Integer bto) {
         this.bto = bto;
     }
 
-    public int getIto() {
+    public Integer getIto() {
         return ito;
     }
 
-    public void setIto(int ito) {
+    public void setIto(Integer ito) {
         this.ito = ito;
     }
 

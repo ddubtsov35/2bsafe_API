@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Models.AppsDetailInfo;
 import com.dubtsov._2bsafe.Parents.Models.AppsInGroup;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -34,10 +35,14 @@ public class AppsTest extends BaseClass{
         appsClass = new AppsClass();
     }
 
-    @Test
-    public void getMainInfoApps() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+    }
+
+    @Test
+    public void getMainInfoApps() throws Exception {
         app = appsClass.getAppsInfo();
         System.out.println(app);
         Assert.assertTrue(app.getScs().contains("true"));
@@ -45,8 +50,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getAppsInGroup() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         appsInGroup = appsClass.getAppsInGroup();
         System.out.println(appsInGroup.toString());
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
@@ -54,8 +57,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getDetailInfo() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         appsDetailInfo = appsClass.getDetailInfo();
         System.out.println(appsDetailInfo.toString());
         Assert.assertTrue(appsDetailInfo.getScs().contains("true"));
@@ -63,8 +64,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getAppsBlock() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = appsClass.getAppsBlock();
         String result = response.body().string();
         System.out.println("result " + result);
@@ -73,8 +72,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getAppsBlockUpdate() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = appsClass.getAppsBlockUpdate();
         String result = response.body().string();
         System.out.println("result " + result);
@@ -83,8 +80,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getAppsUpdate() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = appsClass.getAppsUpdate();
         String result = response.body().string();
         System.out.println("result " + result);
@@ -93,8 +88,6 @@ public class AppsTest extends BaseClass{
 
     @Test
     public void getAppsDelete() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = appsClass.getAppsDelete();
         String result = response.body().string();
         System.out.println("result " + result);

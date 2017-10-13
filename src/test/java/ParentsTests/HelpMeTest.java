@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.HelpMe.HelpMeParentClass;
 import com.dubtsov._2bsafe.Parents.Models.HelpMe;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -27,10 +28,14 @@ public class HelpMeTest extends BaseClass {
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
-    @Test
-    public void getHelpMe() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+    }
+
+    @Test
+    public void getHelpMe() throws Exception {
         helpMe = helpMeParentClass.getHelpMe();
         System.out.println(helpMe.toString());
         Assert.assertTrue(helpMe.getScs().equals("true"));
@@ -38,8 +43,6 @@ public class HelpMeTest extends BaseClass {
 
     @Test
     public void setHelpMe() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = helpMeParentClass.setHelpMe();
         String result = response.body().string();
         System.out.println("result " + result);

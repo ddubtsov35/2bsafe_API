@@ -7,18 +7,18 @@ import java.util.List;
  */
 public class Intervals {
 
-    private int id;
+    private Integer id;
     private String interval_start;
     private String interval_end;
     private List<Integer> repeat;
-    private int group_id;
+    private Integer group_id;
     private String alias;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -46,11 +46,11 @@ public class Intervals {
         this.repeat = repeat;
     }
 
-    public int getGroup_id() {
+    public Integer getGroup_id() {
         return group_id;
     }
 
-    public void setGroup_id(int group_id) {
+    public void setGroup_id(Integer group_id) {
         this.group_id = group_id;
     }
 

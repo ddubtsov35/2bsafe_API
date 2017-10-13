@@ -14,6 +14,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.TurboButton;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -36,11 +37,15 @@ public class TurboButtonTest extends BaseClass{
         turboButtonClass = new TurboButtonClass();
     }
 
-    @Test
-    public void setTurbo() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
+    }
+
+    @Test
+    public void setTurbo() throws Exception {
         profileClass.selectProfileCardResponse();
         response = turboButtonClass.setTurbo();
         String result = response.body().string();
@@ -49,9 +54,6 @@ public class TurboButtonTest extends BaseClass{
 
     @Test
     public void getInterval() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
         profileClass.selectProfileCardResponse();
         turboButtonClass.setTurbo();
         TurboButton turboButton = turboButtonClass.getTurboButton();

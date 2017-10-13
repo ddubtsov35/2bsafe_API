@@ -16,6 +16,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.DataUpdate;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -38,10 +39,14 @@ public class IntervalTest extends BaseClass{
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
-    @Test
-    public void setInterval() throws Exception {
+    @Before
+    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+    }
+
+    @Test
+    public void setInterval() throws Exception {
         profileClass.selectProfileCardResponse();
         response = setIntervalUpdateClass.setIntervalUpdate();
         String result = response.body().string();
@@ -50,8 +55,6 @@ public class IntervalTest extends BaseClass{
 
     @Test
     public void getInterval() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         setIntervalUpdateClass.setIntervalUpdate();
         DataUpdate getDataUpdate = getIntervalUpdateClass.getIntervalUpdateResponse();
         String resultResponse = getDataUpdate.toString();
