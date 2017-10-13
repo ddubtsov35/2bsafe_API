@@ -68,7 +68,7 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void createNewUser() throws Exception {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();

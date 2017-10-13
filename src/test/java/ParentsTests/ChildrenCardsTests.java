@@ -55,7 +55,7 @@ public class ChildrenCardsTests extends BaseClass {
     @Ignore
     @Test
     public void getChildrenCardsList() throws IOException, ParseException, java.text.ParseException {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(childrenCardClass.getChildrenCardList().size() == 0);
     }
