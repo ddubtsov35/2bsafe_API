@@ -66,6 +66,8 @@ public class RegistrationTests extends BaseClass {
         Assert.assertTrue(success.equals("false"));
     }
 
+    //Need code
+    @Ignore
     @Test
     public void createNewUser() throws Exception {
         //UserPool.clearFile();
@@ -75,18 +77,12 @@ public class RegistrationTests extends BaseClass {
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }
 
+    //Need code
+    @Ignore
     @Test
     public void sendCodeActivation() throws IOException, ParseException {
         String result = registrationUserStep1Class.sendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
-
-   /* @Test
-    public void sendCodeActivationDuring3Minutes() throws IOException {
-        String result = registrationUserStep1Class.sendCodeRegistrationDuring3Minutes();
-        System.out.println(result);
-        Assert.assertTrue(result.contains("\"scs\": true"));
-    }*/
-
 }

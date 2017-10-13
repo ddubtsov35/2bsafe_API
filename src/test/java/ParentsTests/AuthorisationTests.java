@@ -11,6 +11,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1C
 import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -45,6 +46,8 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
 
+    //Need code
+    @Ignore
     @Test
     public void recoveryPassword() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -53,6 +56,8 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
 
+    //Need code
+    @Ignore
     @Test
     public void successPasswordChange() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
