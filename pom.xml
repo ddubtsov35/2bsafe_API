@@ -72,7 +72,7 @@
                         </property>
                     </properties>
                     <includes>
-                        <include>**/*Test*.java</include>
+                        <include>**/LogoutTest*.java</include>
                     </includes>
                 </configuration>
                 <dependencies>
