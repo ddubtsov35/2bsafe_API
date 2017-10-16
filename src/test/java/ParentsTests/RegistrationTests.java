@@ -67,7 +67,7 @@ public class RegistrationTests extends BaseClass {
     }
 
     //Need code
-    @Ignore
+    //@Ignore
     @Test
     public void createNewUser() throws Exception {
         //UserPool.clearFile();
