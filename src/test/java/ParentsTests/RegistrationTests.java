@@ -66,8 +66,6 @@ public class RegistrationTests extends BaseClass {
         Assert.assertTrue(success.equals("false"));
     }
 
-    //Need code
-    //@Ignore
     @Test
     public void createNewUser() throws Exception {
         //UserPool.clearFile();
@@ -78,7 +76,7 @@ public class RegistrationTests extends BaseClass {
     }
 
     //Need code
-    @Ignore
+    //@Ignore
     @Test
     public void sendCodeActivation() throws IOException, ParseException {
         String result = registrationUserStep1Class.sendCodeRegistration().body().string();
