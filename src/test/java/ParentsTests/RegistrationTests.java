@@ -72,7 +72,7 @@ public class RegistrationTests extends BaseClass {
     public void createNewUser() throws Exception {
         //UserPool.clearFile();
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
-        registrationUserStep1Class.registrationUserStep1();
+        registrationUserStep1Class.registrationForCreateNewUser();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }

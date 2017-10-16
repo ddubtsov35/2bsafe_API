@@ -43,14 +43,14 @@ public class GroupAppTest extends BaseClass{
         response = groupsAppClass.setGroupApp();
         String result = response.body().string();
         System.out.println("result " + result);
-        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+        Assert.assertTrue(result.contains("\"scs\": true"));
     }
 
     @Test
     public void addGroupApp() throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
-        Assert.assertTrue(groupApp.getScs().equals("true"));
+        Assert.assertTrue(groupApp.getScs().equals("true") && groupApp.getGroup_id() != null);
     }
 
     @Test
@@ -58,7 +58,7 @@ public class GroupAppTest extends BaseClass{
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.editGroupApp();
         String result = response.body().string();
-        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+        Assert.assertTrue(result.contains("\"scs\": true"));
     }
 
     @Test
@@ -66,6 +66,6 @@ public class GroupAppTest extends BaseClass{
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.deleteGroupApp(groupApp);
         String result = response.body().string();
-        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+        Assert.assertTrue(result.contains("\"scs\": true"));
     }
 }
