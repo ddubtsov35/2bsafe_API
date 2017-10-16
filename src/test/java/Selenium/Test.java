@@ -10,7 +10,7 @@ public class Test {
     @org.junit.Test
     public void test(){
         FirefoxDriver driver = new FirefoxDriver();
-        driver.get("http://google.ru");
+        driver.get("http://www.jabong.com/");
     }
 
 }
