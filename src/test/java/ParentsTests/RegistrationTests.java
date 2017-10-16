@@ -55,7 +55,7 @@ public class RegistrationTests extends BaseClass {
         Assert.assertEquals(response.code(), 200);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -68,9 +68,9 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void createNewUser() throws Exception {
-        //UserPool.clearFile();
+        UserPool.clearFile();
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
-        registrationUserStep1Class.registrationForCreateNewUser();
+        registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }
@@ -79,6 +79,7 @@ public class RegistrationTests extends BaseClass {
     //@Ignore
     @Test
     public void sendCodeActivation() throws IOException, ParseException {
+        UserPool.clearFile();
         String result = registrationUserStep1Class.sendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
