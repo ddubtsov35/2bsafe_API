@@ -14,12 +14,12 @@ import java.io.IOException;
  */
 public class GenerateAuthorisationChildren{
 
-    private static JSONObject jsonObj = new JSONObject();
+    private static JSONObject jsonObj;
 
     public GenerateAuthorisationChildren() throws ParseException {}
 
-
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws IOException, ParseException {
+        jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
@@ -44,7 +44,8 @@ public class GenerateAuthorisationChildren{
         return jsonObj;
     }
 
-    public static JSONObject NegativeGetAuthorisationChildrenContent() throws IOException, ParseException {
+    public static Object[] provideFailAll() throws IOException, ParseException {
+        jsonObj = new JSONObject();
         jsonObj.put("em", "failEmail");
         jsonObj.put("pwd", "failPassword");
         jsonObj.put("cid", "fakeCid");
@@ -56,6 +57,136 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return jsonObj;
+        return new Object[]{new Object[]{jsonObj}};
+    }
+
+    public static Object[] provideFailEmail() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        if(UserPool.getUserFromFile() == null) {
+            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj.put("em", "failEmail");
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+        } else{
+            jsonObj = UserPool.getUserFromFile();
+            jsonObj.remove("em");
+            jsonObj.put("em", "failEmail");
+        }
+        if(CidCkeyPool.getCidFromFile() == null) {
+            jsonObj.put("cid", "");
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        }
+
+        jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return new Object[]{new Object[]{jsonObj}};
+    }
+
+    public static Object[] provideFailPassword() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        if(UserPool.getUserFromFile() == null) {
+            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("pwd", "failPwd");
+        } else{
+            jsonObj = UserPool.getUserFromFile();
+            jsonObj.remove("pwd");
+            jsonObj.put("pwd", "failPwd");
+        }
+        if(CidCkeyPool.getCidFromFile() == null) {
+            jsonObj.put("cid", "");
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        }
+
+        jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return new Object[]{new Object[]{jsonObj}};
+    }
+
+    public static Object[] provideEmptyAll() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        if(CidCkeyPool.getCidFromFile() == null) {
+            jsonObj.put("cid", "");
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        }
+        jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return new Object[]{new Object[]{jsonObj}};
+    }
+
+    public static Object[] provideEmptyEmail() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        if(UserPool.getUserFromFile() == null) {
+            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj.put("em", null);
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+        } else{
+            jsonObj = UserPool.getUserFromFile();
+            jsonObj.remove("em");
+            jsonObj.put("em", null);
+        }
+        if(CidCkeyPool.getCidFromFile() == null) {
+            jsonObj.put("cid", "");
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        }
+
+        jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return new Object[]{new Object[]{jsonObj}};
+    }
+
+    public static Object[] provideEmptyPassword() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        if(UserPool.getUserFromFile() == null) {
+            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("pwd", null);
+        } else{
+            jsonObj = UserPool.getUserFromFile();
+            jsonObj.remove("pwd");
+            jsonObj.put("pwd", null);
+        }
+        if(CidCkeyPool.getCidFromFile() == null) {
+            jsonObj.put("cid", "");
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        }
+
+        jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
+        jsonObj.put("sname","TestDevice");
+        jsonObj.put("os","Android");
+        jsonObj.put("osv","10");
+        jsonObj.put("scr","Doxya");
+        jsonObj.put("man","TestMan");
+        jsonObj.put("mod","TestMod");
+        jsonObj.put("type",1);
+        return new Object[]{new Object[]{jsonObj}};
     }
 }

@@ -28,4 +28,8 @@ public class RecoveryPasswordClass extends BaseClass {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeRecoveryPasswordConfirm(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }

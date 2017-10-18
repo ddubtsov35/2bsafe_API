@@ -26,4 +26,93 @@ public class GeneratedRulesTriggerContent{
         System.out.println("jsonObject " + jsonObject2);
         return jsonObject2;
     }
+
+    public static Object[] provideNegativeGetRulesTriggerContent1() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
+        JSONObject jsonObject2 = new JSONObject();
+        jsonObject.put("cid", null);
+        jsonObject.put("ckey", null);
+
+        jsonArray.add(10);
+        jsonObject2.put("rules", jsonArray);
+
+        jsonObject.put("lat", 1);
+        jsonObject.put("long", 1);
+        jsonObject.put("gtype", 1);
+        jsonObject2.put("geo", jsonObject);
+
+
+        System.out.println("jsonObject " + jsonObject2);
+        return new Object[]{new Object[]{jsonObject}};
+    }
+
+    public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
+        JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        jsonObject.remove("cid");
+        jsonObject.put("cid", null);
+
+        jsonArray.add(10);
+        jsonObject2.put("rules", jsonArray);
+
+        jsonObject.put("lat", 1);
+        jsonObject.put("long", 1);
+        jsonObject.put("gtype", 1);
+        jsonObject2.put("geo", jsonObject);
+
+        System.out.println("jsonObject " + jsonObject2);
+        return new Object[]{new Object[]{jsonObject}};
+    }
+
+    public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
+        JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        jsonObject.remove("ckey");
+        jsonObject.put("ckey", null);
+
+        jsonArray.add(10);
+        jsonObject2.put("rules", jsonArray);
+
+        jsonObject.put("lat", 1);
+        jsonObject.put("long", 1);
+        jsonObject.put("gtype", 1);
+        jsonObject2.put("geo", jsonObject);
+
+
+        System.out.println("jsonObject " + jsonObject2);
+        return new Object[]{new Object[]{jsonObject}};
+    }
+
+    public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+
+        System.out.println("jsonObject " + jsonObject2);
+        return new Object[]{new Object[]{jsonObject}};
+    }
+
+    public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        JSONArray jsonArray = new JSONArray();
+
+        jsonArray.add(10);
+        jsonObject2.put("rules", null);
+
+        jsonObject.put("lat", null);
+        jsonObject.put("long", null);
+        jsonObject.put("gtype", null);
+        jsonObject2.put("geo", null);
+
+        System.out.println("jsonObject " + jsonObject2);
+        return new Object[]{new Object[]{jsonObject}};
+    }
+
+
 }

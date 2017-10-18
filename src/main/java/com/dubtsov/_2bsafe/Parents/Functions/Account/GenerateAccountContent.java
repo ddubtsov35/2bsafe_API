@@ -24,6 +24,39 @@ public class GenerateAccountContent {
         return jsonObj;
     }
 
+    public static Object[] provideGetSetAccountContent1() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        jsonObj.put("rnd", null);
+        jsonObj.put("nbat", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("rnd", GenerateTokenClass.getGeneratedToken());
+        jsonObj2.put("nbat", null);
+
+        JSONObject jsonObj3 = new JSONObject();
+        jsonObj3.put("nbat", 1);
+
+        JSONObject jsonObj4 = new JSONObject();
+        jsonObj4.put("rnd", GenerateTokenClass.getGeneratedToken());
+
+        JSONObject jsonObj5 = new JSONObject();
+
+        JSONObject jsonObj6 = new JSONObject();
+        jsonObj6.put("rnd", GenerateTokenClass.getGeneratedToken());
+        jsonObj6.put("nbat", 146);
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3},
+                new JSONObject[]{jsonObj4},
+                new JSONObject[]{jsonObj5},
+                new JSONObject[]{jsonObj6}
+        };
+    }
+
+
+
 
     public static JSONObject getSetAllAccountContent() throws IOException, ParseException {
         jsonObj = new JSONObject();
@@ -51,6 +84,22 @@ public class GenerateAccountContent {
         jsonObj = new JSONObject();
         jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
+    }
+
+    public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        jsonObj.put("rnd", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("rnd", "failRnd");
+
+        JSONObject jsonObj3 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
     }
 
 }

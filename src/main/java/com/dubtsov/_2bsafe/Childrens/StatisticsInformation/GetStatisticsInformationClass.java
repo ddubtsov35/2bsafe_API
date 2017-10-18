@@ -22,4 +22,9 @@ public class GetStatisticsInformationClass extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
         return responseClass.getJsonResponse();
     }
+
+    public Response NegativeGetStatisticsInformation(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }

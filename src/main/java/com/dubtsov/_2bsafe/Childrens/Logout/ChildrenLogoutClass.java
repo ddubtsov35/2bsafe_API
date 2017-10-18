@@ -24,8 +24,19 @@ public class ChildrenLogoutClass extends BaseClass{
         return responseClass.getJsonResponse();
     }
 
+    public Response NegativeLogout(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
     public Response logoutWithoutPassword() throws Exception {
         jsonObject = GenerateLogoutContent.getLogoutWithoutPasswordContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout_nopassword", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+    public Response NegativeLogoutWithoutPassword(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout_nopassword", jsonObject);
         return responseClass.getJsonResponse();
     }

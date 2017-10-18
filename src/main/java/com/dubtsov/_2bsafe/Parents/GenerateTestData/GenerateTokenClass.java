@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.GenerateTestData;
 
+import org.json.simple.JSONObject;
+
 import java.util.Random;
 
 /**
@@ -13,5 +15,17 @@ public class GenerateTokenClass {
             token = token + (random.nextInt((9 - 0) + 1) + 0);
         }
         return token;
+    }
+
+    public static Object[] NegativeGetGeneratedToken(){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("rnd", null);
+
+        JSONObject jsonObject1 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObject},
+                new JSONObject[]{jsonObject1}
+        };
     }
 }

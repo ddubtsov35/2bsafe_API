@@ -23,4 +23,9 @@ public class NotifyChangeAppClass extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/apps_modified", jsonObject);
         return responseClass.getJsonResponse();
     }
+
+    public Response NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/apps_modified", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }

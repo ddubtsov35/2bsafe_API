@@ -14,6 +14,7 @@ import com.dubtsov._2bsafe.Parents.Parse.GetAddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Parse.GetChildrenCardList;
 import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
+import jdk.internal.org.objectweb.asm.commons.JSRInlinerAdapter;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -37,12 +38,26 @@ public class ChildrenCardClass extends BaseClass {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
         return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
     }
+    public AddChildrenCard NegativeAddChildrenCard(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+        return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
+    }
+
+
+
 
     public void deleteChildrenCard() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateDeleteChildrenCardContent.getDeleteChildrenCardContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
         responseClass.getJsonResponse();
     }
+    public void NegativeDeleteChildrenCard(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
+        responseClass.getJsonResponse();
+    }
+
+
+
 
     public DeviceShortInfo getShortInfo() throws Exception {
         jsonObject = GenerateProfileIdContent.getProfileId();
@@ -50,17 +65,36 @@ public class ChildrenCardClass extends BaseClass {
         return GetDeviceShortInfo.getDeviceShortInfo(responseClass.getJsonResponse().body().string());
     }
 
+
+
+
+
     public List<ChildrenCard> getChildrenCardList() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateGetChildrenCardListContent.getChildrenCardListContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
         return GetChildrenCardList.getChildrenCardList(responseClass.getJsonResponse().body().string());
     }
+    public List<ChildrenCard> NegativeGetChildrenCardList(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
+        return GetChildrenCardList.getChildrenCardList(responseClass.getJsonResponse().body().string());
+    }
+
+
+
 
     public Response changeChildrenCard(String type) throws Exception {
         jsonObject = GenerateChangeChildrenCardContent.getChangeChildrenCardContent(type);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeChangeChildrenCard(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
+
+
 
     public ChildrenCard getChildrenCardByProfileId() throws Exception {
 

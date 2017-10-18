@@ -25,9 +25,18 @@ public class HelpMeParentClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/get", jsonObject);
         return GetHelpMe.getHelpMe(responseClass.getJsonResponse().body().string());
     }
+    public HelpMe NegativeGetHelpMe(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/get", jsonObject);
+        return GetHelpMe.getHelpMe(responseClass.getJsonResponse().body().string());
+    }
+
 
     public Response setHelpMe() throws Exception {
         jsonObject = GenerateHelpMeContent.setHelpMe();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/set", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegatibeSetHelpMe(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/help_me/set", jsonObject);
         return responseClass.getJsonResponse();
     }

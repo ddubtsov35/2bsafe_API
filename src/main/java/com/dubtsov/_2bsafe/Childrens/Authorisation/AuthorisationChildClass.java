@@ -30,10 +30,10 @@ public class AuthorisationChildClass extends BaseClass{
         return childrenResponseAuthorisationModel;
     }
 
-    public ChildrenResponseAuthorisationModel NegativeAuthorisationChildren() throws Exception {
-        jsonObject = GenerateAuthorisationChildren.NegativeGetAuthorisationChildrenContent();
+    public ChildrenResponseAuthorisationModel NegativeAuthorisationChildren(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         return childrenResponseAuthorisationModel;
     }
+
 }

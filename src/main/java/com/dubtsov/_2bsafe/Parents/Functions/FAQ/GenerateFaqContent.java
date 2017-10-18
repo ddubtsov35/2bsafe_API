@@ -18,4 +18,20 @@ public class GenerateFaqContent {
         return jsonObj;
     }
 
+    public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        jsonObj.put("fid", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("fid", "failFid");
+
+        JSONObject jsonObj3 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
+    }
+
 }

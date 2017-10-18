@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.Random;
 
 /**
@@ -38,6 +39,26 @@ public class GenerateChangeChildrenCardContent{
         jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         return jsonObj;
     }
+
+    public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
+        jsonObj = new JSONObject();
+        jsonObj.put("profile_id", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("profile_id", "failRnd");
+
+        JSONObject jsonObj3 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
+    }
+
+
+
+
 
     private static int getGeneratedAge(){
         Random random = new Random();

@@ -32,6 +32,12 @@ public class AuthorisationUserClass extends BaseClass {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
+    public AuthorisationUser NegativeRegistrationAndAuthorisationWeb(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+
+
 
     public AuthorisationUser RegistrationAndAuthorisationAndroid() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -41,6 +47,10 @@ public class AuthorisationUserClass extends BaseClass {
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
+
+
+
+
     public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateAuthContent.getAuthContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
@@ -49,6 +59,10 @@ public class AuthorisationUserClass extends BaseClass {
 
     public AuthorisationUser authorisationUserWithNewPassword() throws Exception {
         jsonObject = GenerateAuthContent.getAuthContentWithNewPassword();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+    public AuthorisationUser NegativeAuthorisationUserWithNewPassword(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }

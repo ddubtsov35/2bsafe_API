@@ -12,10 +12,10 @@ public class AppsDetailInfo {
     private String scs;
     private String install_date;
     private String group_name;
-    private int group_id;
+    private Integer group_id;
     private String name;
     private String alias;
-    private boolean blocked;
+    private Boolean blocked;
 
     private static JSONParser parser;
     private static Object obj;
@@ -31,13 +31,23 @@ public class AppsDetailInfo {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("install_date") != null) {setInstall_date(jsonObj.get("install_date").toString());}
-        if(jsonObj.get("group_name") != null) {setGroup_name(jsonObj.get("group_name").toString());}
-        if(jsonObj.get("group_id") != null) {setGroup_id(Integer.parseInt(jsonObj.get("group_id").toString()));}
-        if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());}
-        if(jsonObj.get("alias") != null) {setAlias(jsonObj.get("alias").toString());}
-        if(jsonObj.get("blocked") != null) {setBlocked(Boolean.parseBoolean(jsonObj.get("blocked").toString()));}
+        try {
+            if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else {setScs(null);}
+            if (jsonObj.get("install_date") != null) {setInstall_date(jsonObj.get("install_date").toString());} else {setInstall_date(null);}
+            if (jsonObj.get("group_name") != null) {setGroup_name(jsonObj.get("group_name").toString());} else {setGroup_name(null);}
+            if (jsonObj.get("group_id") != null) {setGroup_id(Integer.parseInt(jsonObj.get("group_id").toString()));} else {setGroup_id(null);}
+            if (jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else {setName(null);}
+            if (jsonObj.get("alias") != null) {setAlias(jsonObj.get("alias").toString());} else {setAlias(null);}
+            if (jsonObj.get("blocked") != null) {setBlocked(Boolean.parseBoolean(jsonObj.get("blocked").toString()));} else {setBlocked(null);}
+        } catch (Exception e){
+            setScs(null);
+            setInstall_date(null);
+            setGroup_name(null);
+            setGroup_id(null);
+            setName(null);
+            setAlias(null);
+            setBlocked(null);
+        }
 
     }
 
@@ -78,11 +88,11 @@ public class AppsDetailInfo {
         this.group_name = group_name;
     }
 
-    public int getGroup_id() {
+    public Integer getGroup_id() {
         return group_id;
     }
 
-    public void setGroup_id(int group_id) {
+    public void setGroup_id(Integer group_id) {
         this.group_id = group_id;
     }
 
@@ -102,11 +112,11 @@ public class AppsDetailInfo {
         this.alias = alias;
     }
 
-    public boolean isBlocked() {
+    public Boolean isBlocked() {
         return blocked;
     }
 
-    public void setBlocked(boolean blocked) {
+    public void setBlocked(Boolean blocked) {
         this.blocked = blocked;
     }
 }

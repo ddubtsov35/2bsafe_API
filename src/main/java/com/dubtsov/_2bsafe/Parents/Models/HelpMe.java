@@ -16,8 +16,8 @@ import java.util.List;
 public class HelpMe {
 
     private String scs;
-    private int state;
-    private int push;
+    private Integer state;
+    private Integer push;
     private String phone;
     private List<Sms> smsList;
 
@@ -44,12 +44,20 @@ public class HelpMe {
         jsonArray = (JSONArray) jsonObj.get("sms");
         System.out.println(jsonArray.toJSONString());
 
-        if(jsonObj.get("state") != null) {setState(Integer.parseInt(jsonObj.get("state").toString()));}
-        if(jsonObj.get("push") != null) {setPush(Integer.parseInt(jsonObj.get("push").toString()));}
-        if(jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());}
+        try {
+            if (jsonObj.get("state") != null) {setState(Integer.parseInt(jsonObj.get("state").toString()));} else {setState(null);}
+            if (jsonObj.get("push") != null) {setPush(Integer.parseInt(jsonObj.get("push").toString()));} else {setPush(null);}
+            if (jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());} else {setPhone(null);}
+        } catch (Exception e){
+            setState(null);
+            setPhone(null);
+            setPush(null);
+        }
 
-        for(int i=0; i < jsonArray.size();i++){
-            smsList.add(new Sms(jsonArray.get(i).toString()));
+        if(jsonArray != null && !jsonArray.isEmpty()) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                smsList.add(new Sms(jsonArray.get(i).toString()));
+            }
         }
         System.out.println(smsList.size());
     }
@@ -73,19 +81,19 @@ public class HelpMe {
         this.scs = scs;
     }
 
-    public int getState() {
+    public Integer getState() {
         return state;
     }
 
-    public void setState(int state) {
+    public void setState(Integer state) {
         this.state = state;
     }
 
-    public int getPush() {
+    public Integer getPush() {
         return push;
     }
 
-    public void setPush(int push) {
+    public void setPush(Integer push) {
         this.push = push;
     }
 
@@ -110,7 +118,7 @@ public class HelpMe {
 
 
     private class Sms{
-        private boolean defaul;
+        private Boolean defaul;
         private String phone;
 
         public Sms(String jsonObjectString) throws ParseException, java.text.ParseException {
@@ -122,8 +130,13 @@ public class HelpMe {
             obj2 = parser2.parse(jsonObjectString);
             jsonObj2 = (JSONObject) obj;
 
-            if(jsonObj2.get("defaul") != null) {setDefaul(Boolean.parseBoolean(jsonObj2.get("defaul").toString()));}
-            if(jsonObj2.get("phone") != null) {setPhone(jsonObj2.get("phone").toString());} else{setPhone("0");}
+            try {
+                if (jsonObj2.get("defaul") != null) {setDefaul(Boolean.parseBoolean(jsonObj2.get("defaul").toString()));} else {setDefaul(null);}
+                if (jsonObj2.get("phone") != null) {setPhone(jsonObj2.get("phone").toString());} else {setPhone(null);}
+            } catch (Exception e){
+                setDefaul(null);
+                setPhone(null);
+            }
         }
 
         @Override
@@ -134,11 +147,11 @@ public class HelpMe {
                     '}';
         }
 
-        public boolean isDefaul() {
+        public Boolean isDefaul() {
             return defaul;
         }
 
-        public void setDefaul(boolean defaul) {
+        public void setDefaul(Boolean defaul) {
             this.defaul = defaul;
         }
 

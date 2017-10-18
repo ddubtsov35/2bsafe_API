@@ -7,6 +7,7 @@ import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Parse.GetGroupApp;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;
@@ -30,6 +31,12 @@ public class GroupsAppClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/set_app", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeSetGroupApp(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/set_app", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
 
     public GroupApp addGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedAddGroup();
@@ -37,14 +44,27 @@ public class GroupsAppClass extends BaseClass{
         return GetGroupApp.getGroup(responseClass.getJsonResponse().body().string());
     }
 
+
+
     public Response editGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedEditGroup();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeEditGroupApp(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/edit", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
+
 
     public Response deleteGroupApp(GroupApp groupApp) throws Exception {
         jsonObject = GenerateGroupContent.generatedDeleteGroup(groupApp);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeDeleteGroupApp(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
         return responseClass.getJsonResponse();
     }
