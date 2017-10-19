@@ -24,9 +24,19 @@ public class PermissionsClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/permissions/get", jsonObject);
         return GetPermission.getPermission(responseClass.getJsonResponse().body().string());
     }
+    public Permission NegativeGetPermission(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/permissions/get", jsonObject);
+        return GetPermission.getPermission(responseClass.getJsonResponse().body().string());
+    }
+
+
 
     public Response setPermission() throws Exception {
         jsonObject = GenerateSetPermissionContent.setPermission();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/permissions/set", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeSetPermission(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/permissions/set", jsonObject);
         return responseClass.getJsonResponse();
     }

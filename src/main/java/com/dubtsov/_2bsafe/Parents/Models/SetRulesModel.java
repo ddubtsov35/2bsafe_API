@@ -27,9 +27,13 @@ public class SetRulesModel {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("rule_id") != null) {setRule_id(Integer.parseInt(jsonObj.get("rule_id").toString()));} else {setRule_id(null);}
-
+        try {
+            if (jsonObj.get("scs") != null) { setScs(jsonObj.get("scs").toString()); } else {setScs(null);}
+            if (jsonObj.get("rule_id") != null) { setRule_id(Integer.parseInt(jsonObj.get("rule_id").toString())); } else { setRule_id(null); }
+        } catch (Exception e){
+            setScs(null);
+            setRule_id(null);
+        }
     }
 
     @Override

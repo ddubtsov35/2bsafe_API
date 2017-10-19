@@ -31,78 +31,79 @@ public class GenerateAddChildrenCardContent{
 
     public static Object[] provideGetSetAccountContent1() throws IOException, ParseException {
         jsonObj = new JSONObject();
+        random = new Random();
         jsonObj.put("name", null);
         jsonObj.put("phone", null);
         jsonObj.put("age", null);
         jsonObj.put("send_sms", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj.put("name", "fakeName");
-        jsonObj.put("phone", "fakePhone");
-        jsonObj.put("age", "23213");
-        jsonObj.put("send_sms", "123");
+        jsonObj2.put("name", "fakeName");
+        jsonObj2.put("phone", "fakePhone");
+        jsonObj2.put("age", "23213");
+        jsonObj2.put("send_sms", "123");
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj.put("name", null);
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj3.put("name", null);
+        jsonObj3.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj3.put("age", String.valueOf(random.nextInt((90 - 0 + 1) + 0)));
+        jsonObj3.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", null);
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj4.put("name", GenerateNameClass.getGenerateName());
+        jsonObj4.put("phone", null);
+        jsonObj4.put("age", String.valueOf(random.nextInt((90 - 0 + 1) + 0)));
+        jsonObj4.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj5 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", null);
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj5.put("name", GenerateNameClass.getGenerateName());
+        jsonObj5.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj5.put("age", null);
+        jsonObj5.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj6 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", null);
+        jsonObj6.put("name", GenerateNameClass.getGenerateName());
+        jsonObj6.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj6.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj6.put("send_sms", null);
 
         JSONObject jsonObj7 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
+        jsonObj7.put("name", GenerateNameClass.getGenerateName());
 
         JSONObject jsonObj8 = new JSONObject();
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj8.put("phone", GeneratePhoneClass.getGeneratedPhone());
 
         JSONObject jsonObj9 = new JSONObject();
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj9.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
 
         JSONObject jsonObj10 = new JSONObject();
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj10.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj11 = new JSONObject();
 
         JSONObject jsonObj12 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", "214234");
+        jsonObj12.put("name", GenerateNameClass.getGenerateName());
+        jsonObj12.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj12.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj12.put("send_sms", "214234");
 
         JSONObject jsonObj13 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", "54234234");
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj13.put("name", GenerateNameClass.getGenerateName());
+        jsonObj13.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj13.put("age", "54234234");
+        jsonObj13.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj14 = new JSONObject();
-        jsonObj.put("name", GenerateNameClass.getGenerateName());
-        jsonObj.put("phone", "fakePhone");
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj14.put("name", GenerateNameClass.getGenerateName());
+        jsonObj14.put("phone", "fakePhone");
+        jsonObj14.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj14.put("send_sms", String.valueOf(0));
 
         JSONObject jsonObj15 = new JSONObject();
-        jsonObj.put("name", "fakeName");
-        jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj.put("send_sms", String.valueOf(0));
+        jsonObj15.put("name", "fakeName");
+        jsonObj15.put("phone", GeneratePhoneClass.getGeneratedPhone());
+        jsonObj15.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj15.put("send_sms", String.valueOf(0));
 
 
         return new Object[]{
@@ -111,7 +112,16 @@ public class GenerateAddChildrenCardContent{
                 new JSONObject[]{jsonObj3},
                 new JSONObject[]{jsonObj4},
                 new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
+                new JSONObject[]{jsonObj6},
+                new JSONObject[]{jsonObj7},
+                new JSONObject[]{jsonObj8},
+                new JSONObject[]{jsonObj9},
+                new JSONObject[]{jsonObj10},
+                new JSONObject[]{jsonObj11},
+                new JSONObject[]{jsonObj12},
+                new JSONObject[]{jsonObj13},
+                new JSONObject[]{jsonObj14},
+                new JSONObject[]{jsonObj15}
         };
     }
 }

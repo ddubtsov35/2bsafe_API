@@ -28,8 +28,7 @@ public class NotifyList {
     private static JSONObject jsonObj2;
 
 
-    public NotifyList(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
-        setScs(scs);
+    public NotifyList(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
 
@@ -40,18 +39,43 @@ public class NotifyList {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj2.get("scs").toString());}
 
-        jsonArray = (JSONArray) jsonObj.get("warning");
-        System.out.println(jsonArray.toJSONString());
-        for (int i = 0; i < jsonArray.size(); i++) {
-            warningList.add(new NotifyList.Warning(jsonArray.get(i).toString()));
+        try {
+            if (jsonObj.get("scs") != null)
+            { setScs(jsonObj.get("scs").toString()); }
+            else { setScs(null); }
+        } catch (Exception e){
+            setScs(null);
         }
 
-        jsonArray = (JSONArray) jsonObj.get("notif");
-        System.out.println(jsonArray.toJSONString());
-        for (int i = 0; i < jsonArray.size(); i++) {
-            notifList.add(new NotifyList.Notif(jsonArray.get(i).toString()));
+        jsonObj = (JSONObject) jsonObj.get("data");
+
+        try {
+            jsonArray = (JSONArray) jsonObj.get("warning");
+            System.out.println(jsonArray.toJSONString());
+            if (jsonArray != null && !jsonArray.isEmpty()) {
+                for (int i = 0; i < jsonArray.size(); i++) {
+                    warningList.add(new NotifyList.Warning(jsonArray.get(i).toString()));
+                }
+            } else {
+                warningList = null;
+            }
+        } catch (Exception e){
+            warningList = null;
+        }
+
+        try {
+            jsonArray = (JSONArray) jsonObj.get("notif");
+            System.out.println(jsonArray.toJSONString());
+            if (jsonArray != null && !jsonArray.isEmpty()) {
+                for (int i = 0; i < jsonArray.size(); i++) {
+                    notifList.add(new NotifyList.Notif(jsonArray.get(i).toString()));
+                }
+            } else {
+                notifList = null;
+            }
+        } catch (Exception e){
+            notifList = null;
         }
     }
 
@@ -75,9 +99,9 @@ public class NotifyList {
 
 
     private class Warning{
-        private int evid;
-        private int msg_type;
-        private int param;
+        private Integer evid;
+        private Integer msg_type;
+        private Integer param;
         private String date;
 
         public Warning(String jsonObjectString) throws ParseException, java.text.ParseException {
@@ -90,10 +114,17 @@ public class NotifyList {
             jsonObj2 = (JSONObject) obj;
             jsonObj2 = (JSONObject) jsonObj2.get("warning");
 
-            if(jsonObj2.get("evid") != null) {setEvid(Integer.parseInt(jsonObj2.get("evid").toString()));}
-            if(jsonObj2.get("msg_type") != null) {setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString()));}
-            if(jsonObj2.get("param") != null) {setParam(Integer.parseInt(jsonObj2.get("param").toString()));}
-            if(jsonObj2.get("date") != null) {setDate(jsonObj2.get("date").toString());}
+            try {
+                if (jsonObj2.get("evid") != null) { setEvid(Integer.parseInt(jsonObj2.get("evid").toString())); } else { setEvid(null); }
+                if (jsonObj2.get("msg_type") != null) { setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString())); } else { setMsg_type(null); }
+                if (jsonObj2.get("param") != null) { setParam(Integer.parseInt(jsonObj2.get("param").toString())); } else { setParam(null); }
+                if (jsonObj2.get("date") != null) { setDate(jsonObj2.get("date").toString()); } else { setDate(null); }
+            } catch (Exception e){
+                setEvid(null);
+                setMsg_type(null);
+                setParam(null);
+                setDate(null);
+            }
         }
 
         @Override
@@ -106,27 +137,27 @@ public class NotifyList {
                     '}';
         }
 
-        public int getEvid() {
+        public Integer getEvid() {
             return evid;
         }
 
-        public void setEvid(int evid) {
+        public void setEvid(Integer evid) {
             this.evid = evid;
         }
 
-        public int getMsg_type() {
+        public Integer getMsg_type() {
             return msg_type;
         }
 
-        public void setMsg_type(int msg_type) {
+        public void setMsg_type(Integer msg_type) {
             this.msg_type = msg_type;
         }
 
-        public int getParam() {
+        public Integer getParam() {
             return param;
         }
 
-        public void setParam(int param) {
+        public void setParam(Integer param) {
             this.param = param;
         }
 
@@ -140,9 +171,9 @@ public class NotifyList {
     }
 
     private class Notif{
-        private int evid;
-        private int msg_type;
-        private int param;
+        private Integer evid;
+        private Integer msg_type;
+        private Integer param;
         private String date;
 
         public Notif(String jsonObjectString) throws ParseException, java.text.ParseException {
@@ -155,10 +186,17 @@ public class NotifyList {
             jsonObj2 = (JSONObject) obj;
             jsonObj2 = (JSONObject) jsonObj2.get("notif");
 
-            if(jsonObj2.get("evid") != null) {setEvid(Integer.parseInt(jsonObj2.get("evid").toString()));}
-            if(jsonObj2.get("msg_type") != null) {setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString()));}
-            if(jsonObj2.get("param") != null) {setParam(Integer.parseInt(jsonObj2.get("param").toString()));}
-            if(jsonObj2.get("date") != null) {setDate(jsonObj2.get("date").toString());}
+            try {
+                if (jsonObj2.get("evid") != null) { setEvid(Integer.parseInt(jsonObj2.get("evid").toString())); } else { setEvid(null); }
+                if (jsonObj2.get("msg_type") != null) { setMsg_type(Integer.parseInt(jsonObj2.get("msg_type").toString())); } else { setMsg_type(null); }
+                if (jsonObj2.get("param") != null) { setParam(Integer.parseInt(jsonObj2.get("param").toString())); } else { setParam(null); }
+                if (jsonObj2.get("date") != null) { setDate(jsonObj2.get("date").toString()); } else { setDate(null); }
+            } catch (Exception e){
+                setEvid(null);
+                setMsg_type(null);
+                setParam(null);
+                setDate(null);
+            }
         }
 
         @Override
@@ -171,27 +209,27 @@ public class NotifyList {
                     '}';
         }
 
-        public int getEvid() {
+        public Integer getEvid() {
             return evid;
         }
 
-        public void setEvid(int evid) {
+        public void setEvid(Integer evid) {
             this.evid = evid;
         }
 
-        public int getMsg_type() {
+        public Integer getMsg_type() {
             return msg_type;
         }
 
-        public void setMsg_type(int msg_type) {
+        public void setMsg_type(Integer msg_type) {
             this.msg_type = msg_type;
         }
 
-        public int getParam() {
+        public Integer getParam() {
             return param;
         }
 
-        public void setParam(int param) {
+        public void setParam(Integer param) {
             this.param = param;
         }
 

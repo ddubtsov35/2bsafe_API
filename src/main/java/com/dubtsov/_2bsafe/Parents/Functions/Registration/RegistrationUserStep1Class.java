@@ -31,27 +31,41 @@ public class RegistrationUserStep1Class extends BaseClass {
         }
     }
 
-    public JSONObject registrationForCreateNewUser() throws IOException, ParseException {
-        jsonObject = GenerateRegistrationContent.getRegistrationStep1Content();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step1", jsonObject);
-        responseClass.getJsonResponse();
-        return jsonObject;
-    }
 
     public Response sendCodeRegistration() throws IOException, ParseException {
         registrationUserStep1();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/resend_email");
         return responseClass.getJsonResponse();
     }
+    public Response NegativeSendCodeRegistration() throws IOException, ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/resend_email");
+        return responseClass.getJsonResponse();
+    }
+
+
+
+
 
     public Response checkEmail() throws IOException, ParseException {
         jsonObject = GenerateRegistrationContent.getCheckEmail();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeCheckEmail(JSONObject jsonObject) throws IOException, ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
+
+
 
     public Response checkPhone() throws IOException, ParseException {
         jsonObject = GenerateRegistrationContent.getCheckPhone();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeCheckPhone(JSONObject jsonObject) throws IOException, ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/check", jsonObject);
         return responseClass.getJsonResponse();
     }

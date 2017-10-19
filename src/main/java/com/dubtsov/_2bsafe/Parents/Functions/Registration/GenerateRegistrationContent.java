@@ -86,17 +86,60 @@ public class GenerateRegistrationContent {
         return jsonObject;
     }
 
+
+
+
+
     public static JSONObject getCheckEmail() throws IOException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("em", GenerateEmailClass.getGeneratedEmail());
         return jsonObject;
     }
+    public static Object[] provideNegativeGetCheckEmail() throws IOException, ParseException {
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("em", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("em", "failEm");
+
+        JSONObject jsonObj3 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
+    }
+
+
+
+
 
     public static JSONObject getCheckPhone() throws IOException {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("ph", GeneratePhoneClass.getGeneratedPhone());
         return jsonObject;
     }
+    public static Object[] provideNegativeGetCheckPhone() throws IOException, ParseException {
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("ph", null);
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("ph", "failPh");
+
+        JSONObject jsonObj3 = new JSONObject();
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
+    }
+
+
+
+
+
 
     public static JSONObject getExistEmail() throws IOException, ParseException {
         JSONObject jsonObject = new JSONObject();

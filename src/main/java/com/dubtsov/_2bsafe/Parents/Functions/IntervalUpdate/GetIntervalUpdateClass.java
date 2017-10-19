@@ -24,4 +24,9 @@ public class GetIntervalUpdateClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObject);
         return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
     }
+
+    public DataUpdate NegativeGetIntervalUpdateResponse(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObject);
+        return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
+    }
 }

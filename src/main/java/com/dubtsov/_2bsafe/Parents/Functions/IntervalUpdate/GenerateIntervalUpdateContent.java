@@ -60,4 +60,26 @@ public class GenerateIntervalUpdateContent {
         };
     }
 
+
+
+
+    public static Object[] provideNegativeGetInterval() throws IOException, ParseException {
+        Random random = new Random();
+
+        JSONObject jsonObj = new JSONObject();
+
+        JSONObject jsonObj2 = new JSONObject();
+        jsonObj2.put("profile_id", null);
+
+        JSONObject jsonObj3 = new JSONObject();
+        jsonObj3.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+
+
+        return new Object[]{
+                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj2},
+                new JSONObject[]{jsonObj3}
+        };
+    }
+
 }

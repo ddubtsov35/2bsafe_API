@@ -8,15 +8,21 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.*;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.TurboButtonClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.GetRulesModel;
 import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import junitparams.naming.TestCaseName;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -25,9 +31,13 @@ import java.util.LinkedHashMap;
 /**
  * Created by user on 29.08.17.
  */
+@RunWith(JUnitParamsRunner.class)
 public class RulesTest extends BaseClass{
 
-    public RulesTest() throws IOException, ParseException, java.text.ParseException {
+    public RulesTest() throws IOException, ParseException, java.text.ParseException {}
+
+    @Before
+    public void before() throws Exception {
         generatedRequestJsonClass = new GenerateNotifyChangeAppContent();
         authorisationUserClass = new AuthorisationUserClass();
         childrenCardClass = new ChildrenCardClass();
@@ -37,10 +47,7 @@ public class RulesTest extends BaseClass{
         profileClass = new ProfileClass();
         turboButtonClass = new TurboButtonClass();
         rulesClass = new RulesClass();
-    }
 
-    @Before
-    public void before() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
@@ -51,9 +58,17 @@ public class RulesTest extends BaseClass{
         profileClass.selectProfileCardResponse();
         response = rulesClass.getRulesListResponse();
         String result = response.body().string();
-
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+    @Test
+    public void NegativeGetRules() throws Exception {
+        response = rulesClass.getRulesListResponse();
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": false"));
+    }
+
+
+
 
     @Test
     public void getRulesByProfile() throws Exception {
@@ -62,6 +77,20 @@ public class RulesTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+    @Test
+    @TestCaseName("{0}")
+    @Parameters(source = GenerateRequestAddRule.class)
+    public void NegativeGetRulesByProfile(JSONObject jsonObject) throws Exception {
+        profileClass.selectProfileCardResponse();
+        response = rulesClass.NegativeGetRulesByProfileResponse(jsonObject);
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": false"));
+    }
+
+
+
+
+
 
     @Test
     public void addRule() throws Exception {
@@ -73,16 +102,53 @@ public class RulesTest extends BaseClass{
     }
 
     @Test
+    public void addRule2() throws Exception {
+        SetRulesModel setRulesModel = rulesClass.addRule();
+        Assert.assertTrue(setRulesModel.getScs().equals("true"));
+    }
+    @Test
+    @TestCaseName("{0}")
+    @Parameters(source = GenerateRequestAddRule.class)
+    public void NegativeAddRule(JSONObject jsonObject) throws Exception {
+        SetRulesModel setRulesModel = rulesClass.NegativeAddRule(jsonObject);
+        Assert.assertTrue(setRulesModel.getScs().equals("false"));
+    }
+
+
+
+
+
+    @Test
     public void switchRule() throws Exception {
         response = rulesClass.switchRules();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+    @Test
+    @TestCaseName("{0}")
+    @Parameters(source = GenerateRequestAddRule.class)
+    public void NegativeSwitchRule(JSONObject jsonObject) throws Exception {
+        response = rulesClass.NegativeSwitchRules(jsonObject);
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": false"));
+    }
+
+
+
+
 
     @Test
     public void deleteRule() throws Exception {
         response = rulesClass.deleteRules();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
+    }
+    @Test
+    @TestCaseName("{0}")
+    @Parameters(source = GenerateRequestAddRule.class)
+    public void NegativeDeleteRule(JSONObject jsonObject) throws Exception {
+        response = rulesClass.NegativeDeleteRules(jsonObject);
+        String result = response.body().string();
+        Assert.assertTrue(result.contains("\"scs\": false"));
     }
 }

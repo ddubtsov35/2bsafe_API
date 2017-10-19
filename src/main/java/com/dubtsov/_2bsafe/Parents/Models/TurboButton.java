@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 public class TurboButton {
 
     private String scs;
-    private int turbo;
+    private Integer turbo;
 
     private static JSONParser parser;
     private static Object obj;
@@ -27,7 +27,11 @@ public class TurboButton {
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
 
         jsonObj = (JSONObject) jsonObj.get("data");
-        if(jsonObj.get("turbo") != null) {setTurbo(Integer.parseInt(jsonObj.get("turbo").toString()));}
+        try {
+            if (jsonObj.get("turbo") != null) { setTurbo(Integer.parseInt(jsonObj.get("turbo").toString())); }
+        } catch (Exception e){
+            setTurbo(null);
+        }
     }
 
     @Override
@@ -46,11 +50,11 @@ public class TurboButton {
         this.scs = scs;
     }
 
-    public int getTurbo() {
+    public Integer getTurbo() {
         return turbo;
     }
 
-    public void setTurbo(int turbo) {
+    public void setTurbo(Integer turbo) {
         this.turbo = turbo;
     }
 }

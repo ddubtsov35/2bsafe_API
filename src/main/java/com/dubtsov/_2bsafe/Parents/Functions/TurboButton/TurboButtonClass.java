@@ -26,9 +26,19 @@ public class TurboButtonClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_turbo", jsonObject);
         return GetTurboButton.getTurboButton(responseClass.getJsonResponse().body().string());
     }
+    public TurboButton NegativeGetTurboButton(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_turbo", jsonObject);
+        return GetTurboButton.getTurboButton(responseClass.getJsonResponse().body().string());
+    }
+
+
 
     public Response setTurbo() throws Exception {
         jsonObject = GenerateTurboContent.setTurboContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/set_turbo", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeSetTurbo(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/set_turbo", jsonObject);
         return responseClass.getJsonResponse();
     }

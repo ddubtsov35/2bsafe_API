@@ -63,7 +63,7 @@ public class ChildrenCardsTests extends BaseClass {
         childrenCardClass.NegativeAddChildrenCard(jsonObject);
         int countCardAfter = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardAfter  " + countCardAfter);
-        Assert.assertTrue(countCardAfter - countCardBefore == 1);
+        Assert.assertTrue(countCardAfter - countCardBefore == 0);
     }
 
 
@@ -122,7 +122,7 @@ public class ChildrenCardsTests extends BaseClass {
         childrenCardClass.NegativeDeleteChildrenCard(jsonObject);
         int countCardAfter = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardAfter  " + countCardAfter);
-        Assert.assertTrue(countCardBefore - countCardAfter == 1);
+        Assert.assertTrue(countCardBefore - countCardAfter == 0);
     }
 
 
