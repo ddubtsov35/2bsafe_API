@@ -36,7 +36,7 @@ public class AuthorisationTest extends BaseClass{
     }
 
     //Need code
-    @Ignore
+    //@Ignore
     @Test
     public void PositiveAuthorisation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

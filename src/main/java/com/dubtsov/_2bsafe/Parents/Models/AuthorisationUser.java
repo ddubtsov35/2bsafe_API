@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 public class AuthorisationUser {
 
     private String scs;
-    private int emsg;
+    private Integer emsg;
     private String lkid;
 
 
@@ -25,12 +25,17 @@ public class AuthorisationUser {
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
-
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("emsg") != null) {setEmsg(Integer.parseInt(jsonObj.get("emsg").toString()));}
-        if(jsonObj.get("lkid") != null) {setLkid(jsonObj.get("lkid").toString());}
+        try {
+            obj = parser.parse(jsonObjectString);
+            jsonObj = (JSONObject) obj;
+            if (jsonObj.get("scs") != null) { setScs(jsonObj.get("scs").toString()); } else{setScs(null);}
+            if (jsonObj.get("emsg") != null) { setEmsg(Integer.parseInt(jsonObj.get("emsg").toString()));} else {setEmsg(null);}
+            if (jsonObj.get("lkid") != null) { setLkid(jsonObj.get("lkid").toString()); } else{setLkid(null);}
+        } catch (Exception e){
+            setScs(null);
+            setEmsg(null);
+            setLkid(null);
+        }
 
 
     }
@@ -52,11 +57,11 @@ public class AuthorisationUser {
         this.scs = scs;
     }
 
-    public int getEmsg() {
+    public Integer getEmsg() {
         return emsg;
     }
 
-    public void setEmsg(int emsg) {
+    public void setEmsg(Integer emsg) {
         this.emsg = emsg;
     }
 

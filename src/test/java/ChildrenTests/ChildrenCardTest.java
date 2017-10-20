@@ -2,12 +2,14 @@ package ChildrenTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
+import com.dubtsov._2bsafe.Childrens.Models.ProfileCard;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import junitparams.naming.TestCaseName;
@@ -19,6 +21,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * Created by user on 23.08.17.
@@ -42,10 +45,8 @@ public class ChildrenCardTest extends BaseClass{
     @Test
     public void getChildrenCardList() throws Exception {
         authorisationChildClass.authorisationChildren();
-        int before = profileClass.getProfileList().size();
-        childrenCardClass.addChildrenCard();
-        int after = profileClass.getProfileList().size();
-        Assert.assertTrue(after - before == 1);
+        List<ProfileCard> profileCardList = profileClass.getProfileList();
+        Assert.assertTrue(profileCardList != null);
     }
 
     @Test

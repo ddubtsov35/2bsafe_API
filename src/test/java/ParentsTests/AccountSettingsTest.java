@@ -1,5 +1,6 @@
 package ParentsTests;
 
+import ChildrenTests.LogoutTest;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedRulesTriggerContent;
 import com.dubtsov._2bsafe.Parents.Functions.Account.AccountSettingClass;
@@ -7,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Account.GenerateAccountContent;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
 import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;

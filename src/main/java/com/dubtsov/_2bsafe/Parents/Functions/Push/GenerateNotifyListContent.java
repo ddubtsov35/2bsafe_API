@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Childrens.Models.ProfileCard;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -127,7 +128,8 @@ public class GenerateNotifyListContent{
     }
     public static Object[] provideBlockScreen() throws Exception {
         Random random = new Random();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
 
         jsonObj = new JSONObject();
         jsonObj.put("pin", null);

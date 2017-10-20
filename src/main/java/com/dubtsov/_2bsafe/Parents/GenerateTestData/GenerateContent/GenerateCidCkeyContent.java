@@ -26,7 +26,6 @@ public class GenerateCidCkeyContent{
                 jsonObj.put("cid", childrenResponseAuthorisationModel.getCid());
                 jsonObj.put("ckey", childrenResponseAuthorisationModel.getCkey());
                 CidCkeyPool.setCidCkey(jsonObj);
-
             }
         }
         jsonObjectCidCkey = jsonObj;

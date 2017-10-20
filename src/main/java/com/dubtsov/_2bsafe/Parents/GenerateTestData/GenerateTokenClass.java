@@ -17,7 +17,7 @@ public class GenerateTokenClass {
         return token;
     }
 
-    public static Object[] NegativeGetGeneratedToken(){
+    public static Object[] provideNegativeGetGeneratedToken(){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("rnd", null);
 

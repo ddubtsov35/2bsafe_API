@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword;
 
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -45,6 +46,10 @@ public class GenerateRecoveryPasswordContent{
 
     public static Object[] provideNegativeGetAuthContent() throws IOException, ParseException {
         jsonObj = new JSONObject();
+
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+
         InputClass inputClass = new InputClass();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));

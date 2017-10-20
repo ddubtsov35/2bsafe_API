@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.TurboButton;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
@@ -14,7 +16,7 @@ import java.util.Random;
 public class GenerateTurboContent{
 
     private static JSONObject jsonObj;
-    public static int turboStatic;
+    public static Integer turboStatic;
 
     public static JSONObject getTurboContent() throws Exception {
         jsonObj = new JSONObject();
@@ -48,6 +50,8 @@ public class GenerateTurboContent{
         return jsonObj;
     }
     public static Object[] provideSetTurboContent() throws Exception {
+        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
+        authorisationUserClass.authorisationUser();
         jsonObj = new JSONObject();
         Random random = new Random();
         jsonObj.put("profile_id", null);
@@ -81,7 +85,7 @@ public class GenerateTurboContent{
 
 
 
-    private static int setTurboStatic(){
+    private static Integer setTurboStatic(){
         Random random = new Random();
         turboStatic = random.nextInt((90 - 0) + 1) + 0;
         return turboStatic;

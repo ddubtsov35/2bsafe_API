@@ -95,7 +95,7 @@ public class RegistrationTests extends BaseClass {
 
 
 
-    //@Ignore
+    @Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -123,7 +123,7 @@ public class RegistrationTests extends BaseClass {
 
     @Test
     public void createNewUser() throws Exception {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
@@ -132,19 +132,21 @@ public class RegistrationTests extends BaseClass {
 
 
     //Need code
-    //@Ignore
+    @Ignore
     @Test
     public void sendCodeActivation() throws IOException, ParseException {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         String result = registrationUserStep1Class.sendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
+    //Need code
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
     public void NegativeSendCodeActivation(JSONObject jsonObject) throws Exception {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         String result = registrationUserStep1Class.NegativeSendCodeRegistration().body().string();
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": false"));

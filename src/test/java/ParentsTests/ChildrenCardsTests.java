@@ -84,7 +84,7 @@ public class ChildrenCardsTests extends BaseClass {
     @Ignore
     @Test
     public void getChildrenCardsList() throws IOException, ParseException, java.text.ParseException {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(childrenCardClass.getChildrenCardList().size() == 0);
     }
@@ -92,7 +92,7 @@ public class ChildrenCardsTests extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetChildrenCardListContent.class)
     public void NegativeGetChildrenCardsList(JSONObject jsonObject) throws Exception {
-        UserPool.clearFile();
+        //UserPool.clearFile();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(childrenCardClass.NegativeGetChildrenCardList(jsonObject).size() == 0);
     }

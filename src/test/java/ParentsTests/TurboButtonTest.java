@@ -84,6 +84,9 @@ public class TurboButtonTest extends BaseClass{
         profileClass.selectProfileCardResponse();
         turboButtonClass.setTurbo();
         TurboButton turboButton = turboButtonClass.NegativeGetTurboButton(jsonObject);
+        System.out.println("turboButton " + turboButton);
+        System.out.println("turbo " + turboButton.getTurbo());
+        System.out.println(GenerateTurboContent.turboStatic);
         Assert.assertTrue(turboButton.getScs().equals("false") && turboButton.getTurbo() != GenerateTurboContent.turboStatic);
     }
 }

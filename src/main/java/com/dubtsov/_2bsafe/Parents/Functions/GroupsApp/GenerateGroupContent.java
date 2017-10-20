@@ -50,7 +50,6 @@ public class GenerateGroupContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGeneratedEditGroup() throws Exception {
-        JSONArray jsonArray = new JSONArray();
 
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("profile_id", null);
@@ -122,7 +121,7 @@ public class GenerateGroupContent{
         JSONObject jsonObj14 = new JSONObject();
 
         return new Object[]{
-                new JSONObject[] {jsonObj},
+                new JSONObject[] {jsonObj1},
                 new JSONObject[]{jsonObj2},
                 new JSONObject[]{jsonObj3},
                 new JSONObject[]{jsonObj4},

@@ -11,6 +11,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.GenerateRecoveryPa
 import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -55,9 +56,9 @@ public class AuthorisationTests extends BaseClass {
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthContent.class)
-    public void NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
+    public void NegativeAuthorisationWeb(JSONObject jsonObject) throws Exception {
         authorisationUser = authorisationUserClass.NegativeRegistrationAndAuthorisationWeb(jsonObject);
-        Assert.assertTrue(authorisationUser.getScs().contains("false"));
+        Assert.assertTrue(authorisationUser.getScs() == null || authorisationUser.getScs().equals("false"));
     }
 
 
@@ -103,7 +104,7 @@ public class AuthorisationTests extends BaseClass {
     }
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRecoveryPasswordContent.class)
+    @Parameters(source = GenerateAuthContent.class)
     public void NegativeSuccessPasswordChange(JSONObject jsonObject) throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();
@@ -123,7 +124,7 @@ public class AuthorisationTests extends BaseClass {
     }
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRecoveryPasswordContent.class)
+    @Parameters(source = GenerateTokenClass.class)
     public void NegativeLogout(JSONObject jsonObject) throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = logoutClass.NegativeLogout(jsonObject);
