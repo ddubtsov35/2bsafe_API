@@ -40,7 +40,6 @@ public class GenerateNotifyListContent{
         jsonObj.put("from_date", "20-12-2007");
         jsonObj.put("to_date", "20-12-2007");
 
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
 
 
         System.out.println("jsonObject " + jsonObj);
@@ -59,14 +58,13 @@ public class GenerateNotifyListContent{
         jsonObj.put("type", jsonArray);
         jsonObj.put("from_date", null);
         jsonObj.put("to_date", null);
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
 
         JSONObject jsonObj2 = new JSONObject();
         jsonObj = new JSONObject();
         jsonArray = new JSONArray();
         Random random = new Random();
         jsonObj.put("start", 0);
-        jsonObj.put("profile_id", random.nextInt(10000 -1 +1 ) + 1);
+        jsonObj.put("profile_id", random.nextInt(1000000 -1 +1 ) + 1);
         jsonObj.put("limit", 1001111);
         jsonArray.add("fail");
         jsonArray.add("fail");
@@ -75,7 +73,6 @@ public class GenerateNotifyListContent{
         jsonObj.put("type", jsonArray);
         jsonObj.put("from_date", "201-121-20071111");
         jsonObj.put("to_date", "201-121-2007111");
-        jsonObj.put("rnd", "fail");
 
         JSONObject jsonObj3 = new JSONObject();
 
@@ -149,15 +146,15 @@ public class GenerateNotifyListContent{
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj6.put("pin", "1");
-        jsonObj6.put("profile_id", random.nextInt(100000 -1 +1) +1);
+        jsonObj6.put("profile_id", random.nextInt(10000000 -1 +1) +1);
 
         JSONObject jsonObj7 = new JSONObject();
         jsonObj6.put("pin", "11111111111");
-        jsonObj6.put("profile_id", random.nextInt(100000 -1 +1) +1);
+        jsonObj6.put("profile_id", random.nextInt(10000000 -1 +1) +1);
 
         JSONObject jsonObj8 = new JSONObject();
         jsonObj6.put("pin", null);
-        jsonObj6.put("profile_id", random.nextInt(100000 -1 +1) +1);
+        jsonObj6.put("profile_id", random.nextInt(10000000 -1 +1) +1);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},

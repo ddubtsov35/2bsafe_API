@@ -99,8 +99,8 @@ public class ResponseClass {
         return response;
     }
 
-    private String getRequestBody(JSONObject jsonObject){
-        String body = "------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"rnd\"\r\n\r\nrnd1";
+    private String getRequestBody(JSONObject jsonRequest){
+        String body = "";
         try{
            body = body + ("\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"name\"\r\n\r\n" + jsonRequest.get("name"));
         } catch (Exception e){}
@@ -113,6 +113,7 @@ public class ResponseClass {
         try{
             body = body + ("\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW\r\nContent-Disposition: form-data; name=\"send_sms\"\r\n\r\n" + 0);
         } catch (Exception e){}
+        body = body + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
         return body;
     }
 

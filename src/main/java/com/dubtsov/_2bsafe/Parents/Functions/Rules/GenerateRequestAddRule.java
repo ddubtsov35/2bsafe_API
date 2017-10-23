@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -55,6 +56,9 @@ public class GenerateRequestAddRule{
         jsonObject5 = new JSONObject();
         jsonArray = new JSONArray();
         jsonArray2 = new JSONArray();
+
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
 
         jsonObject.put("name", null);
         jsonObject.put("profiles",null);
@@ -158,7 +162,7 @@ public class GenerateRequestAddRule{
         jsonObj2.put("rule_id", null);
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("rule_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj3.put("rule_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{
@@ -197,7 +201,7 @@ public class GenerateRequestAddRule{
         JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("rule_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("rule_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("enabled", 1);
 
         JSONObject jsonObj5 = new JSONObject();

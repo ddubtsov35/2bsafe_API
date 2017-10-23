@@ -28,29 +28,23 @@ public class GenerateAppsContent{
     public static JSONObject getAppsInfoContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("rnd",GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 
     public static Object[] provideNegativeGetAppsInfoContent1() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("rnd",null);
-
         JSONObject jsonObj2 = new JSONObject();
         jsonObj2.put("profile_id", null);
-        jsonObj2.put("rnd",GenerateTokenClass.getGeneratedToken());
 
         JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
-        jsonObj4.put("rnd",GenerateTokenClass.getGeneratedToken());
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj5 = new JSONObject();
         jsonObj5.put("profile_id", null);
-        jsonObj5.put("rnd",null);
 
 
         return new Object[]{
@@ -68,7 +62,6 @@ public class GenerateAppsContent{
     public static JSONObject getAppsInGroupContent() throws Exception {
         JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj.put("rnd",GenerateTokenClass.getGeneratedToken());
         jsonObj.put("group_id", 0);
         return jsonObj;
     }
@@ -76,57 +69,46 @@ public class GenerateAppsContent{
     public static Object[] provideNegativeGetAppsInGroupContent() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
-        jsonObj.put("rnd",null);
         jsonObj.put("group_id", null);
 
         JSONObject jsonObj2 = new JSONObject();
         Random random = new Random();
         jsonObj2.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj2.put("rnd",null);
-        jsonObj2.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj2.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj3 = new JSONObject();
         jsonObj3.put("profile_id", jsonObj.get("profile_id"));
         jsonObj3.put("group_id", 0);
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
-        jsonObj4.put("rnd",GenerateTokenClass.getGeneratedToken());
-        jsonObj4.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
+        jsonObj4.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj5 = new JSONObject();
-        jsonObj5.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
-        jsonObj5.put("rnd",null);
-        jsonObj5.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj5.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
+        jsonObj5.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
-        jsonObj6.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj6.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
+        jsonObj6.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj7 = new JSONObject();
         jsonObj7.put("profile_id", null);
-        jsonObj7.put("rnd",GenerateTokenClass.getGeneratedToken());
         jsonObj7.put("group_id", 0);
 
         JSONObject jsonObj8 = new JSONObject();
         jsonObj8.put("profile_id", null);
-        jsonObj8.put("rnd",null);
-        jsonObj8.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj8.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj9 = new JSONObject();
         jsonObj9.put("profile_id", null);
         jsonObj9.put("group_id", 0);
 
         JSONObject jsonObj10 = new JSONObject();
-        jsonObj10.put("rnd",GenerateTokenClass.getGeneratedToken());
-        jsonObj10.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj10.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj11 = new JSONObject();
-        jsonObj11.put("rnd",null);
         jsonObj11.put("group_id", 0);
-
-        JSONObject jsonObj12 = new JSONObject();
-        jsonObj12.put("group_id", random.nextInt(10000 - 1 + 1)+1);
 
 
         return new Object[]{
@@ -140,8 +122,7 @@ public class GenerateAppsContent{
                 new JSONObject[]{jsonObj8},
                 new JSONObject[]{jsonObj9},
                 new JSONObject[]{jsonObj10},
-                new JSONObject[]{jsonObj11},
-                new JSONObject[]{jsonObj12}
+                new JSONObject[]{jsonObj11}
         };
     }
 
@@ -170,7 +151,7 @@ public class GenerateAppsContent{
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("alias", getAlias());
 
         JSONObject jsonObj5 = new JSONObject();
@@ -179,7 +160,7 @@ public class GenerateAppsContent{
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj6.put("profile_id", jsonObj.get("profile_id"));
-        jsonObj6.put("alias", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj6.put("alias", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{
@@ -215,25 +196,25 @@ public class GenerateAppsContent{
         Random random = new Random();
         jsonObj2.put("profile_id", jsonObj.get("profile_id"));
         jsonObj2.put("alias",null);
-        jsonObj2.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj2.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj3 = new JSONObject();
         jsonObj3.put("profile_id", jsonObj.get("profile_id"));
         jsonObj3.put("block", 0);
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("alias",getAlias());
-        jsonObj4.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj5 = new JSONObject();
-        jsonObj5.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj5.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj5.put("alias",null);
-        jsonObj5.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj5.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
-        jsonObj6.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj6.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
+        jsonObj6.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj7 = new JSONObject();
         jsonObj7.put("profile_id", null);
@@ -243,7 +224,7 @@ public class GenerateAppsContent{
         JSONObject jsonObj8 = new JSONObject();
         jsonObj8.put("profile_id", null);
         jsonObj8.put("alias",null);
-        jsonObj8.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj8.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj9 = new JSONObject();
         jsonObj9.put("profile_id", null);
@@ -251,14 +232,14 @@ public class GenerateAppsContent{
 
         JSONObject jsonObj10 = new JSONObject();
         jsonObj10.put("alias",getAlias());
-        jsonObj10.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj10.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj11 = new JSONObject();
         jsonObj11.put("alias",null);
         jsonObj11.put("block", 0);
 
         JSONObject jsonObj12 = new JSONObject();
-        jsonObj12.put("block", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj12.put("block", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{
@@ -321,7 +302,7 @@ public class GenerateAppsContent{
         JSONObject jsonObj4 = new JSONObject();
         JSONArray jsonArray4 = new JSONArray();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonArray4.add(getAlias());
         jsonObj4.put("aliases",jsonArray4);
 

@@ -53,7 +53,9 @@ public class GetInformationTests  extends BaseClass{
         childrenCardClass.addChildrenCard();
         response = setIntervalUpdateClass.NegativeSetIntervalUpdate(jsonObject);
         //465 == success, потому что карточка не привязана к устройству
-        Assert.assertTrue(response.body().string().contains("\"scs\": true"));
+        String result = response.body().string();
+        System.out.println("Result " + result);
+        Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
 

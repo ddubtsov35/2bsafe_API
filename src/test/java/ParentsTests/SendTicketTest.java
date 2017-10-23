@@ -46,7 +46,7 @@ public class SendTicketTest extends BaseClass{
     @Parameters(source = GenerateTicketContent.class)
     public void NegativeSendTicketWithAuthorisation(JSONObject jsonObject) throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        Assert.assertTrue(sendTicketClass.NegativeSendTicket(jsonObject)== 0);
+        Assert.assertTrue(sendTicketClass.NegativeSendTicket(jsonObject)== null);
     }
 
 

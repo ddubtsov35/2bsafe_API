@@ -20,7 +20,6 @@ public class LogoutClass extends BaseClass {
     public LogoutClass() throws IOException {}
 
     public Response logout() throws IOException {
-        jsonObject.put("rnd", GenerateTokenClass.getGeneratedToken());
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/logout", jsonObject);
         return responseClass.getJsonResponse();
     }

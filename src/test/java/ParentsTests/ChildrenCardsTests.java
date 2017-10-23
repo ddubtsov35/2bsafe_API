@@ -94,6 +94,7 @@ public class ChildrenCardsTests extends BaseClass {
     public void NegativeGetChildrenCardsList(JSONObject jsonObject) throws Exception {
         //UserPool.clearFile();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
+        System.out.println("childrenCardClass.NegativeGetChildrenCardList(jsonObject).size() " + childrenCardClass.NegativeGetChildrenCardList(jsonObject).size());
         Assert.assertTrue(childrenCardClass.NegativeGetChildrenCardList(jsonObject).size() == 0);
     }
 

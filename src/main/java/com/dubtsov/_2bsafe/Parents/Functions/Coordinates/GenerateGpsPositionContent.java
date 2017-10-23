@@ -19,7 +19,6 @@ public class GenerateGpsPositionContent {
     public static JSONObject getGpsPositionContent() throws Exception {
         childrenCardClass = new ChildrenCardClass();
         jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 }

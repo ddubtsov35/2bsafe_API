@@ -57,7 +57,7 @@ public class GenerateTariffContent{
         JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("tariff_id", tariffId);
 
         JSONObject jsonObj5 = new JSONObject();

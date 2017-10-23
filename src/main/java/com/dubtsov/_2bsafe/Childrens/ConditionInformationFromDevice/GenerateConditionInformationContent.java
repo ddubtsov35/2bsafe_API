@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -112,6 +113,9 @@ public class GenerateConditionInformationContent{
         jsonArray1 = new JSONArray();
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
+
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
 
         jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -262,6 +266,9 @@ public class GenerateConditionInformationContent{
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
 
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject3.remove("cid");
         jsonObject3.put("cid", null);
@@ -337,6 +344,9 @@ public class GenerateConditionInformationContent{
         jsonArray1 = new JSONArray();
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
+
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
 
         jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject3.remove("ckey");

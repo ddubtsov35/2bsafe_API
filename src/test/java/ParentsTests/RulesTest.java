@@ -64,6 +64,7 @@ public class RulesTest extends BaseClass{
     public void NegativeGetRules() throws Exception {
         response = rulesClass.getRulesListResponse();
         String result = response.body().string();
+        System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
@@ -84,6 +85,7 @@ public class RulesTest extends BaseClass{
         profileClass.selectProfileCardResponse();
         response = rulesClass.NegativeGetRulesByProfileResponse(jsonObject);
         String result = response.body().string();
+        System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
@@ -122,6 +124,7 @@ public class RulesTest extends BaseClass{
     public void switchRule() throws Exception {
         response = rulesClass.switchRules();
         String result = response.body().string();
+        System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
     @Test

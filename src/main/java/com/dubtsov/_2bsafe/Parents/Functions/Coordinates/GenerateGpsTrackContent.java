@@ -19,7 +19,6 @@ public class GenerateGpsTrackContent {
         jsonObj.put("start_date", "20.10.2017");
         jsonObj.put("end_date", "22.10.2017");
         jsonObj.put("limit", 100);
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 

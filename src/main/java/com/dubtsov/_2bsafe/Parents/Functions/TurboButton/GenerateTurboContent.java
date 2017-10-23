@@ -29,7 +29,7 @@ public class GenerateTurboContent{
         jsonObj.put("profile_id", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("profile_id", random.nextInt(10000 -1 +1 ) + 1);
+        jsonObj2.put("profile_id", random.nextInt(1000000 -1 +1 ) + 1);
 
         JSONObject jsonObj3 = new JSONObject();
 
@@ -71,7 +71,7 @@ public class GenerateTurboContent{
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj6.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        jsonObj6.put("turbo", random.nextInt(10000 -1 +1 ) + 1);
+        jsonObj6.put("turbo", random.nextInt(1000000 -1 +1 ) + 1);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},

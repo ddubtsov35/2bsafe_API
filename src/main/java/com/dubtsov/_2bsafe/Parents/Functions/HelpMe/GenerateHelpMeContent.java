@@ -48,7 +48,7 @@ public class GenerateHelpMeContent{
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj6.put("cid", authorisationChildClass.authorisationChildren().getCid());
-        jsonObj6.put("profile_id", random.nextInt(10000 -1 +1) +1);
+        jsonObj6.put("profile_id", random.nextInt(1000000 -1 +1) +1);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},

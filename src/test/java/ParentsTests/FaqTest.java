@@ -73,7 +73,8 @@ public class FaqTest  extends BaseClass{
         content.put("fid", list.get(0).getFid());
         response = getFaqByIdClass.NegativeGetFaqListLk(jsonObject);
         String result = response.body().string();
-        Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
+        System.out.println("Result " + result);
+        Assert.assertTrue(result.contains("\"scs\": false") &&  response.code() != 200);
     }
 
 

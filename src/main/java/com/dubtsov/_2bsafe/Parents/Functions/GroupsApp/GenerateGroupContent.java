@@ -1,7 +1,9 @@
 package com.dubtsov._2bsafe.Parents.Functions.GroupsApp;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
@@ -50,6 +52,13 @@ public class GenerateGroupContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGeneratedEditGroup() throws Exception {
+
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+
+        /*AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();*/
+
 
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("profile_id", null);
@@ -219,7 +228,7 @@ public class GenerateGroupContent{
         JSONObject jsonObj13 = new JSONObject();
 
         return new Object[]{
-                new JSONObject[] {jsonObj},
+                new JSONObject[] {jsonObj1},
                 new JSONObject[]{jsonObj2},
                 new JSONObject[]{jsonObj3},
                 new JSONObject[]{jsonObj4},

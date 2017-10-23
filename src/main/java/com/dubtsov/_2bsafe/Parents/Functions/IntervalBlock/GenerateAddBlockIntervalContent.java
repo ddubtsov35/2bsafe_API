@@ -50,7 +50,7 @@ public class GenerateAddBlockIntervalContent {
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("group_id",186);
 
         JSONObject jsonObj5 = new JSONObject();
@@ -59,7 +59,7 @@ public class GenerateAddBlockIntervalContent {
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj4.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        jsonObj4.put("group_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{
@@ -127,10 +127,10 @@ public class GenerateAddBlockIntervalContent {
         JSONArray jsonArray5 = new JSONArray();
         JSONObject jsonObj5 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 -1 +1 ) +1 );
+        jsonObj4.put("profile_id", random.nextInt(1000000 -1 +1 ) +1 );
         //jsonObj.put("group_id", 186);
         jsonObj4.put("alias", "fakeAlias");
-        jsonObj5.put("type", random.nextInt(10000 -1 +1 ) +1 );
+        jsonObj5.put("type", random.nextInt(1000000 -1 +1 ) +1 );
         jsonObj5.put("name", "FailTest");
         jsonObj5.put("repeat", jsonArray4);
         jsonArray4.add(0);
@@ -199,10 +199,10 @@ public class GenerateAddBlockIntervalContent {
         JSONArray jsonArray5 = new JSONArray();
         JSONObject jsonObj5 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 -1 +1 ) +1 );
+        jsonObj4.put("profile_id", random.nextInt(1000000 -1 +1 ) +1 );
         //jsonObj.put("group_id", 186);
         jsonObj4.put("alias", "fakeAlias");
-        jsonObj5.put("type", random.nextInt(10000 -1 +1 ) +1 );
+        jsonObj5.put("type", random.nextInt(1000000 -1 +1 ) +1 );
         jsonObj5.put("name", "FailTest");
         jsonObj5.put("repeat", jsonArray4);
         jsonArray4.add(0);
@@ -253,7 +253,7 @@ public class GenerateAddBlockIntervalContent {
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(100000 - 1 + 1)+1);
         jsonObj4.put("interval_id",0);
 
         JSONObject jsonObj5 = new JSONObject();
@@ -262,7 +262,7 @@ public class GenerateAddBlockIntervalContent {
 
         JSONObject jsonObj6 = new JSONObject();
         jsonObj4.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        jsonObj4.put("interval_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("interval_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{

@@ -83,17 +83,7 @@ public class PermissionTest extends BaseClass{
             response = permissionsClass.NegativeSetPermission(jsonObject);
             String result = response.body().string();
             System.out.println("result " + result);
-            permission = permissionsClass.getPermission();
-            System.out.println("123 " + permission.toString());
-            JSONObject jsonObjectResult = GenerateSetPermissionContent.setPermissionObject;
-            Assert.assertTrue(
-                    permission.getScs().equals("true")
-                            && permission.getGeo() == Integer.parseInt(jsonObjectResult.get("geo").toString())
-                            && permission.getDatetime() == Integer.parseInt(jsonObjectResult.get("datetime").toString())
-                            && permission.getWifi() == Integer.parseInt(jsonObjectResult.get("wifi").toString())
-                            && permission.getGsm() == Integer.parseInt(jsonObjectResult.get("gsm").toString())
-                            && permission.getTether() == Integer.parseInt(jsonObjectResult.get("tether").toString())
-                            && permission.getBt() == Integer.parseInt(jsonObjectResult.get("bt").toString()));
+            Assert.assertTrue(result.contains("\"scs\": false"));
 
     }
 

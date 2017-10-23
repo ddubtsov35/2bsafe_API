@@ -14,7 +14,6 @@ public class GeneratePollContent{
         jsonObj = new JSONObject();
         PollClass pollClass = new PollClass();
         jsonObj.put("pid", pollClass.getPoll().getPid());
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 
@@ -24,7 +23,6 @@ public class GeneratePollContent{
         jsonObj.put("pid", pollClass.getPoll().getPid());
         jsonObj.put("vid", pollClass.getPollById().getVid());
         jsonObj.put("option", pollClass.getPollById().getOptions());
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 

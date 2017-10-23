@@ -110,7 +110,9 @@ public class AuthorisationTests extends BaseClass {
         response = passwordChangeClass.passwordChange();
         logoutClass.logout();
         authorisationUser = authorisationUserClass.NegativeAuthorisationUserWithNewPassword(jsonObject);
-        Assert.assertTrue(authorisationUser.getScs().contains("false"));
+        System.out.println("authorisationUser " + authorisationUser.toString());
+        System.out.println("authorisationUser " + authorisationUser.getScs());
+        Assert.assertTrue(authorisationUser.getScs() == null || authorisationUser.getScs().equals("false"));
     }
 
 
@@ -128,6 +130,8 @@ public class AuthorisationTests extends BaseClass {
     public void NegativeLogout(JSONObject jsonObject) throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = logoutClass.NegativeLogout(jsonObject);
-        Assert.assertTrue(response.body().string().contains("\"scs\": false"));
+        String result = response.body().string();
+        System.out.println("result " + result);
+        Assert.assertTrue(result.contains("\"scs\": false"));
     }
 }

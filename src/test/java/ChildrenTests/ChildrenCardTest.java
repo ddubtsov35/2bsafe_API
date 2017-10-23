@@ -17,6 +17,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -49,6 +50,7 @@ public class ChildrenCardTest extends BaseClass{
         Assert.assertTrue(profileCardList != null);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetProfileListContent.class)
@@ -72,6 +74,7 @@ public class ChildrenCardTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSelectChildrenCardContent.class)

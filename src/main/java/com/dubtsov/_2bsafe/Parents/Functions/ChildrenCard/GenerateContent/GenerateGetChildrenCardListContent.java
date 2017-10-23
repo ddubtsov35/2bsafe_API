@@ -15,7 +15,6 @@ public class GenerateGetChildrenCardListContent {
 
     public static JSONObject getChildrenCardListContent() throws IOException {
         jsonObj = new JSONObject();
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 

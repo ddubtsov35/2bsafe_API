@@ -25,7 +25,6 @@ public class PollClass extends BaseClass{
 
     public PollTittle getPoll() throws IOException, ParseException, java.text.ParseException {
         jsonObject = new JSONObject();
-        jsonObject.put("rnd", GenerateTokenClass.getGeneratedToken());
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/admins/v1.0/poll/check", jsonObject);
         return GetPollTittle.getPollTittle(responseClass.getJsonResponse().body().string());
     }

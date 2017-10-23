@@ -34,7 +34,7 @@ public class GenerateSelectChildrenCardContent {
     public static Object[] provideFailProfileId() throws Exception {
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         Random random = new Random();
-        jsonObject.put("profile_id", random.nextInt(10000 - 1 + 1) + 1);
+        jsonObject.put("profile_id", random.nextInt(1000000 - 1 + 1) + 1);
         return new Object[]{new Object[]{jsonObject}};
     }
 
@@ -45,6 +45,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
+
         profileListClass = new ProfileClass();
         List<ProfileCard> profileCardList = profileListClass.getProfileList();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();

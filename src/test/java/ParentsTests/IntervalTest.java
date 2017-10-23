@@ -85,14 +85,12 @@ public class IntervalTest extends BaseClass{
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)
-    public void NegativeGetHelpMe(JSONObject jsonObject) throws Exception {
-        setIntervalUpdateClass.setIntervalUpdate();
+    public void NegativeGetInterval(JSONObject jsonObject) throws Exception {
+        setIntervalUpdateClass.NegativeSetIntervalUpdate(jsonObject);
         DataUpdate getDataUpdate = getIntervalUpdateClass.NegativeGetIntervalUpdateResponse(jsonObject);
         String resultResponse = getDataUpdate.toString();
         System.out.println("resultResponse " + resultResponse);
-        int resultData = getDataUpdate.getIto();
-        System.out.println("result " + resultData);
-        Assert.assertTrue(resultResponse.contains("\"scs\": true") && resultData == GenerateIntervalUpdateContent.itoRandom);
+        Assert.assertTrue(getDataUpdate.getScs().equals("false"));
     }
 
 

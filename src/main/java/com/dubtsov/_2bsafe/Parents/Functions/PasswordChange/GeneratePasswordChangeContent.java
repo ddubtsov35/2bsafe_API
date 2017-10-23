@@ -20,7 +20,6 @@ public class GeneratePasswordChangeContent{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
             jsonObj.put("npwd", new StringBuilder((String) UserPool.getUserFromFile().get("pwd")).reverse().toString());
         }
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
 }

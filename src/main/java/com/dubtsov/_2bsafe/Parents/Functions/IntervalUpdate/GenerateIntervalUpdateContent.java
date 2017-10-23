@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
 
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
@@ -29,11 +30,15 @@ public class GenerateIntervalUpdateContent {
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAppsInfoContent1() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAppsInfoContent1() throws Exception {
+
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+
         Random random = new Random();
 
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profileId"));
         jsonObj.put("ito",null);
 
         JSONObject jsonObj2 = new JSONObject();
@@ -43,7 +48,7 @@ public class GenerateIntervalUpdateContent {
         JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj4.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
         jsonObj4.put("ito",GenerateTokenClass.getGeneratedToken());
 
         JSONObject jsonObj5 = new JSONObject();
@@ -65,6 +70,9 @@ public class GenerateIntervalUpdateContent {
 
     public static Object[] provideNegativeGetInterval() throws IOException, ParseException {
         Random random = new Random();
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+
 
         JSONObject jsonObj = new JSONObject();
 
@@ -72,7 +80,7 @@ public class GenerateIntervalUpdateContent {
         jsonObj2.put("profile_id", null);
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("profile_id", random.nextInt(10000 - 1 + 1)+1);
+        jsonObj3.put("profile_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
         return new Object[]{

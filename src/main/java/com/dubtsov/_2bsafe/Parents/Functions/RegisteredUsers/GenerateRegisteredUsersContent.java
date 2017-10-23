@@ -25,7 +25,6 @@ public class GenerateRegisteredUsersContent{
         } else{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
-        jsonObj.put("rnd", GenerateTokenClass.getGeneratedToken());
         return jsonObj;
     }
     public static Object[] provideNegativeDeleteAccountContent() throws Exception {
@@ -39,26 +38,20 @@ public class GenerateRegisteredUsersContent{
 
 
         jsonObj.put("pwd", jsonObj100.get("pwd"));
-        jsonObj.put("rnd", null);
 
         JSONObject jsonObj2 = new JSONObject();
         jsonObj2.put("pwd", null);
-        jsonObj2.put("rnd", GenerateTokenClass.getGeneratedToken());
 
         JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
-        jsonObj4.put("pwd", random.nextInt(10000 - 1 + 1) + 1);
-        jsonObj4.put("rnd", GenerateTokenClass.getGeneratedToken());
+        jsonObj4.put("pwd", random.nextInt(1000000 - 1 + 1) + 1);
 
         JSONObject jsonObj5 = new JSONObject();
         jsonObj5.put("pwd", null);
-        jsonObj5.put("rnd", null);
-
         JSONObject jsonObj6 = new JSONObject();
         jsonObj4.put("pwd", jsonObj100.get("pwd"));
-        jsonObj4.put("rnd", random.nextInt(10000 - 1 + 1) + 1);
 
 
         return new Object[]{
