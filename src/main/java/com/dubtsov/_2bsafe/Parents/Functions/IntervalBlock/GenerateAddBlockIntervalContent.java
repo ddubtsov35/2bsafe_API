@@ -38,6 +38,9 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeGetListInterval() throws Exception {
+
+
+
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObj.put("group_id",null);

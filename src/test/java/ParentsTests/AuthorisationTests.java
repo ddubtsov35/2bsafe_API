@@ -125,7 +125,7 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
     }
     @Test
-    public void NegativeLogout(JSONObject jsonObject) throws Exception {
+    public void NegativeLogout() throws Exception {
         response = logoutClass.logout();
         String result = response.body().string();
         System.out.println("result " + result);

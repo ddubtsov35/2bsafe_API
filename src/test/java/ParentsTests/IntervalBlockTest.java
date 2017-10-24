@@ -59,7 +59,7 @@ public class IntervalBlockTest extends BaseClass {
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddBlockIntervalContent.class)
-    public void NegativeGetHelpMe(JSONObject jsonObject) throws Exception {
+    public void NegativeGetIntervalBlockList(JSONObject jsonObject) throws Exception {
         intervalBlockClass.addIntervalBlockList();
         intervalBlock = intervalBlockClass.NegativeGetIntervalBlockList(jsonObject);
         System.out.println("result " + intervalBlock.toString());

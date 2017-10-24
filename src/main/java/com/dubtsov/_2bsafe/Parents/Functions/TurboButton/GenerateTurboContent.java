@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.TurboButton;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONObject;
@@ -50,8 +51,8 @@ public class GenerateTurboContent{
         return jsonObj;
     }
     public static Object[] provideSetTurboContent() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.authorisationUser();
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
         jsonObj = new JSONObject();
         Random random = new Random();
         jsonObj.put("profile_id", null);
