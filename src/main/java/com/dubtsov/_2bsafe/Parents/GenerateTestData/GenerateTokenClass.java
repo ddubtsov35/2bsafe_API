@@ -17,14 +17,4 @@ public class GenerateTokenClass {
         return token;
     }
 
-    public static Object[] provideNegativeGetGeneratedToken(){
-        JSONObject jsonObject = new JSONObject();
-
-        JSONObject jsonObject1 = new JSONObject();
-
-        return new Object[]{
-                new JSONObject[] {jsonObject},
-                new JSONObject[]{jsonObject1}
-        };
-    }
 }

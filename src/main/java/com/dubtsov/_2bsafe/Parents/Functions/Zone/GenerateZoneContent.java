@@ -44,12 +44,9 @@ public class GenerateZoneContent{
         jsonObj.put("type", 1234);
         jsonObj.put("confirm", null);
 
-        JSONObject jsonObj3 = new JSONObject();
-
         return new Object[]{
                 new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
+                new JSONObject[]{jsonObj2}
         };
     }
 

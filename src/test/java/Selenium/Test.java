@@ -1,5 +1,6 @@
 package Selenium;
 
+import org.junit.Ignore;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
@@ -7,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
  */
 public class Test {
 
+    @Ignore
     @org.junit.Test
     public void test(){
         FirefoxDriver driver = new FirefoxDriver();

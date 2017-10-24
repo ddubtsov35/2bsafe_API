@@ -125,11 +125,8 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
     }
     @Test
-    @TestCaseName("{0}")
-    @Parameters(source = GenerateTokenClass.class)
     public void NegativeLogout(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        response = logoutClass.NegativeLogout(jsonObject);
+        response = logoutClass.logout();
         String result = response.body().string();
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": false"));

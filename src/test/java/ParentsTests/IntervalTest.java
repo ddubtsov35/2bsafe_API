@@ -79,7 +79,7 @@ public class IntervalTest extends BaseClass{
         System.out.println("resultResponse " + resultResponse);
         int resultData = getDataUpdate.getIto();
         System.out.println("result " + resultData);
-        Assert.assertTrue(resultResponse.contains("\"scs\": true") && resultData == GenerateIntervalUpdateContent.itoRandom);
+        Assert.assertTrue(resultResponse.contains("\"scs\": \'true\'") && resultData == GenerateIntervalUpdateContent.itoRandom);
     }
 
     @Test

@@ -24,9 +24,4 @@ public class LogoutClass extends BaseClass {
         return responseClass.getJsonResponse();
     }
 
-    public Response NegativeLogout(JSONObject jsonObject) throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/logout", jsonObject);
-        return responseClass.getJsonResponse();
-    }
-
 }

@@ -29,6 +29,7 @@ public class GenerateTicketContent{
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("subj", null);
         jsonObj1.put("msg",null);
+
         JSONObject jsonObj2 = new JSONObject();
         jsonObj2.put("subj", "TestSubject");
         jsonObj2.put("msg",null);
@@ -48,19 +49,6 @@ public class GenerateTicketContent{
         jsonObj6.put("msg",null);
 
 
-        JSONObject jsonObj7 = new JSONObject();
-        jsonObj7.put("subj", "fakesubj");
-        jsonObj7.put("msg","TestMessage");
-
-        JSONObject jsonObj8 = new JSONObject();
-        jsonObj8.put("subj", "TestSubject");
-        jsonObj8.put("msg","fakemsg");
-
-        JSONObject jsonObj9 = new JSONObject();
-        jsonObj9.put("subj", "TestSubject");
-        jsonObj9.put("msg","TestMessage");
-
-
         JSONObject jsonObj11 = new JSONObject();
         jsonObj11.put("msg","TestMessage");
 
@@ -76,9 +64,6 @@ public class GenerateTicketContent{
                 new JSONObject[]{jsonObj4},
                 new JSONObject[]{jsonObj5},
                 new JSONObject[]{jsonObj6},
-                new JSONObject[]{jsonObj7},
-                new JSONObject[]{jsonObj8},
-                new JSONObject[]{jsonObj9},
                 new JSONObject[]{jsonObj11},
                 new JSONObject[]{jsonObj12},
                 new JSONObject[]{jsonObj13},

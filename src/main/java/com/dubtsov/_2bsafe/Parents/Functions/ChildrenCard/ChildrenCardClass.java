@@ -14,7 +14,6 @@ import com.dubtsov._2bsafe.Parents.Parse.GetAddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Parse.GetChildrenCardList;
 import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
-import jdk.internal.org.objectweb.asm.commons.JSRInlinerAdapter;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

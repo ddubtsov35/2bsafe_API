@@ -27,12 +27,6 @@ public class GenerateAccountContent {
         jsonObj = new JSONObject();
         jsonObj.put("nbat", null);
 
-        JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("nbat", null);
-
-        JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("nbat", 1);
-
         JSONObject jsonObj5 = new JSONObject();
 
         JSONObject jsonObj6 = new JSONObject();
@@ -40,8 +34,6 @@ public class GenerateAccountContent {
 
         return new Object[]{
                 new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
                 new JSONObject[]{jsonObj5},
                 new JSONObject[]{jsonObj6}
         };
