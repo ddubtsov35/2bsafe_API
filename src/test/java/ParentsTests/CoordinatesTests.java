@@ -7,6 +7,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
 import org.json.simple.parser.ParseException;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -23,6 +24,7 @@ public class CoordinatesTests extends BaseClass {
         deleteUserClass = new DeleteUserClass();
     }
 
+    @Ignore
     @Test
     public void qwer() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

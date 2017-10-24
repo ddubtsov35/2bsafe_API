@@ -1,26 +1,144 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.BaseContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONObject;
-
-import java.io.IOException;
 
 /**
  * Created by user on 11.09.17.
  */
-public class GenerateGetProfileListContent extends BaseContent {
+public class GenerateGetProfileListContent {
     private static ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
     private static ProfileClass profileListClass;
+    private static AuthorisationChildClass authorisationChildClass;
+    private static JSONObject jsonObj;
 
-    public static JSONObject getProfileListContent() throws IOException {
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
+    public static JSONObject getProfileListContent() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
         profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return jsonObj;
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return jsonObj;
+        }
+    }
 
-        jsonObj.put("cid",childrenResponseAuthorisationModel.getCid());
-        jsonObj.put("ckey",childrenResponseAuthorisationModel.getCkey());
-        return jsonObj;
+
+    public static Object[] provideFailCid() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            jsonObj.put("cid", "failCid");
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            jsonObj.put("cid", "failCid");
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return new Object[]{new Object[]{jsonObj}};
+        }
+    }
+
+
+    public static Object[] provideFailCkey() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", "failCkey");
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", "failCkey");
+            return new Object[]{new Object[]{jsonObj}};
+        }
+    }
+
+    public static Object[] provideEmptyCid() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", null);
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", null);
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            return new Object[]{new Object[]{jsonObj}};
+        }
+    }
+
+    public static Object[] provideEmptyCkey() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", null);
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", null);
+            return new Object[]{new Object[]{jsonObj}};
+        }
+    }
+
+    public static Object[] provideEmptyAll() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", null);
+            jsonObj.put("ckey", null);
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", null);
+            jsonObj.put("ckey", null);
+            return new Object[]{new Object[]{jsonObj}};
+        }
+    }
+
+    public static Object[] provideFailAll() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        profileListClass = new ProfileClass();
+        jsonObj = new JSONObject();
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", "failCid");
+            jsonObj.put("ckey", "failCkey");
+            return new Object[]{new Object[]{jsonObj}};
+        } else{
+            authorisationChildClass.authorisationChildren();
+            //GenerateCidCkeyContent.getJsonObjectCidCkey();
+            jsonObj.put("cid", "failCid");
+            jsonObj.put("ckey", "failCkey");
+            return new Object[]{new Object[]{jsonObj}};
+        }
     }
 
 }

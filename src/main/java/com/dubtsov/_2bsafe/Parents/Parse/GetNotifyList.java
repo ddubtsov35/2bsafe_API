@@ -18,13 +18,8 @@ public class GetNotifyList {
     private static JSONObject jsonObj;
 
     public static NotifyList getNotifyList(String getNotifyListString){
-        parser = new JSONParser();
         try {
-            obj = parser.parse(getNotifyListString);
-            jsonObj = (JSONObject) obj;
-            String scs = jsonObj.get("scs").toString();
-            jsonObj = (JSONObject) jsonObj.get("data");
-            notifyList = new NotifyList(jsonObj.toJSONString(), scs);
+            notifyList = new NotifyList(getNotifyListString);
         } catch (ParseException e){}
         finally {
             return notifyList;

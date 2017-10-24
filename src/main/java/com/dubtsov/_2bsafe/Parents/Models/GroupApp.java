@@ -11,13 +11,11 @@ import org.json.simple.parser.ParseException;
 public class GroupApp {
 
     private String scs;
-    private int group_id;
+    private Integer group_id;
 
     private static JSONParser parser;
     private static Object obj;
     private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
 
     public GroupApp(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
@@ -29,8 +27,7 @@ public class GroupApp {
         jsonObj = (JSONObject) obj;
 
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("group_id") != null) {setGroup_id(Integer.parseInt(jsonObj.get("group_id").toString()));}else{setGroup_id(0);}
-
+        if(jsonObj.get("group_id") != null) {setGroup_id(Integer.parseInt(jsonObj.get("group_id").toString()));}else{setGroup_id(null);}
     }
 
     @Override
@@ -49,11 +46,11 @@ public class GroupApp {
         this.scs = scs;
     }
 
-    public int getGroup_id() {
+    public Integer getGroup_id() {
         return group_id;
     }
 
-    public void setGroup_id(int group_id) {
+    public void setGroup_id(Integer group_id) {
         this.group_id = group_id;
     }
 }

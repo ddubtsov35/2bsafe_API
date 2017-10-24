@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.IOException;
@@ -37,6 +38,7 @@ public class PackageProcessingCommandsTest extends BaseClass{
         packageProcessingCommandsClass = new PackageProcessingCommandsClass();
     }
 
+    @Ignore
     @Test
     public void packageProcessingCommands() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

@@ -8,6 +8,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,18 +24,24 @@ public class GetProfileList {
 
     private static List<ProfileCard> profileCard;
 
-    public static List<ProfileCard> getProfileCard(String profileCardString) throws ParseException, java.text.ParseException {
+    public static List<ProfileCard> getProfileCard(String profileCardString) throws ParseException, java.text.ParseException, IOException {
         parser = new JSONParser();
         jsonObj = (JSONObject) obj;
+        profileCard = new ArrayList<>();
         try {
-            profileCard = new ArrayList<>();
             obj = parser.parse(profileCardString);
             jsonObj = (JSONObject) obj;
+
             System.out.println("jsonObj " + jsonObj);
             String scs = jsonObj.get("scs").toString();
             jsonArray = (JSONArray) jsonObj.get("data");
-            for (int i = 0; i < jsonArray.size(); i++) {
-                profileCard.add(new ProfileCard(jsonArray.get(i).toString(), scs));
+            try {
+                for (int i = 0; i < jsonArray.size(); i++) {
+
+                    profileCard.add(new ProfileCard(jsonArray.get(i).toString(), scs));
+                }
+            } catch (Exception e){
+                return null;
             }
             return profileCard;
         } catch (ParseException e) {

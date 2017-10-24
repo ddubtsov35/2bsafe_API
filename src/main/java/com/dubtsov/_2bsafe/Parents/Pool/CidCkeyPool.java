@@ -5,15 +5,19 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
- * Created by user on 11.09.17.
+ * Created by user on 14.09.17.
  */
-public class ChildrenCardPool {
+public class CidCkeyPool {
 
-    private static String pathToFile = "./src/main/resources/ChildrenCardPool";
+    private static String pathToFile = "./src/main/resources/CidCkeyPool";
 
-    public static JSONObject getChildrenCardFromFile() throws IOException, ParseException {
+    public static JSONObject getCidFromFile() throws IOException, ParseException {
         try {
             JSONParser parser = new JSONParser();
             JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(pathToFile));
@@ -23,7 +27,7 @@ public class ChildrenCardPool {
         }
     }
 
-    public static void setChildrenCard(JSONObject jsonObject) throws IOException {
+    public static void setCidCkey(JSONObject jsonObject) throws IOException {
         FileWriter fstream1 = new FileWriter(pathToFile);
         BufferedWriter out1 = new BufferedWriter(fstream1);
         out1.write("");

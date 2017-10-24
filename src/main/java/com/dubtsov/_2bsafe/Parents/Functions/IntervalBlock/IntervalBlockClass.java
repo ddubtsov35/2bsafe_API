@@ -27,21 +27,43 @@ public class IntervalBlockClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
         return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
     }
+    public List<IntervalBlock> NegativeGetIntervalBlockList(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
+        return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
+    }
+
+
 
     public AddIntervalBlock addIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.addInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
         return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
+    public AddIntervalBlock NegativeAddIntervalBlockList(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
+        return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
+    }
+
+
 
     public Response editIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.editInterval();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeEditIntervalBlockList(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
 
     public Response deleteIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.deleteInterval();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeDeleteIntervalBlockList(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
         return responseClass.getJsonResponse();
     }

@@ -21,44 +21,89 @@ public class AppsClass extends BaseClass{
 
     public AppsClass() throws IOException {}
 
-    public Apps getAppsInfo() throws IOException, ParseException, java.text.ParseException {
+    public Apps getAppsInfo() throws Exception {
         jsonObject = GenerateAppsContent.getAppsInfoContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/main", jsonObject);
         return GetApps.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
-    public AppsInGroup getAppsInGroup() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateAppsContent.getAppsInfoContent();
+    public Apps NegativeGetAppsInfo(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/main", jsonObject);
+        return GetApps.getAccountSettings(responseClass.getJsonResponse().body().string());
+    }
+
+
+
+    public AppsInGroup getAppsInGroup() throws Exception {
+        jsonObject = GenerateAppsContent.getAppsInGroupContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/group", jsonObject);
         return GetApps.getAppInGroup(responseClass.getJsonResponse().body().string());
     }
 
-    public AppsDetailInfo getDetailInfo() throws IOException, ParseException, java.text.ParseException {
+    public AppsInGroup NegativeGetAppsInGroup(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/group", jsonObject);
+        return GetApps.getAppInGroup(responseClass.getJsonResponse().body().string());
+    }
+
+
+
+
+    public AppsDetailInfo getDetailInfo() throws Exception {
         jsonObject = GenerateAppsContent.getDetailInfoContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/detail", jsonObject);
         return GetApps.getDetailInfo(responseClass.getJsonResponse().body().string());
     }
 
-    public Response getAppsBlock() throws IOException, ParseException, java.text.ParseException {
+    public AppsDetailInfo NegativeGetDetailInfo(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/detail", jsonObject);
+        return GetApps.getDetailInfo(responseClass.getJsonResponse().body().string());
+    }
+
+
+
+
+    public Response getAppsBlock() throws Exception {
         jsonObject = GenerateAppsContent.getAppsBlockContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/block", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeGetAppsBlock(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/block", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 
-    public Response getAppsBlockUpdate() throws IOException, ParseException, java.text.ParseException {
+
+
+
+    public Response getAppsBlockUpdate() throws Exception {
         jsonObject = GenerateAppsContent.getAppsBlockUpdateContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/block_update", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeGetAppsBlockUpdate(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/block_update", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 
-    public Response getAppsUpdate() throws IOException, ParseException, java.text.ParseException {
+
+
+    public Response getAppsUpdate() throws Exception {
         jsonObject = GenerateAppsContent.getAppsUpdateContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/update", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeGetAppsUpdate(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/update", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 
-    public Response getAppsDelete() throws IOException, ParseException, java.text.ParseException {
+
+    public Response getAppsDelete() throws Exception {
         jsonObject = GenerateAppsContent.getAppsDeleteContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/delete", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+    public Response NegativeGetAppsDelete(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/apps/delete", jsonObject);
         return responseClass.getJsonResponse();
     }

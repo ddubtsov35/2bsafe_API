@@ -5,6 +5,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ public class IntervalBlock {
     private int type;
     private String interval_start;
     private String interval_end;
-    private int repeat;
+    private List<Integer> repeat;
 
     private static JSONParser parser;
     private static Object obj;
@@ -26,22 +27,27 @@ public class IntervalBlock {
 
 
     public IntervalBlock(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
-        setObject(jsonObjectString);
         setScs(scs);
+        setObject(jsonObjectString);
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+        repeat = new ArrayList<>();
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("id") != null) {setId(Integer.parseInt(jsonObj.get("id").toString()));}
         if(jsonObj.get("type") != null) {setType(Integer.parseInt(jsonObj.get("type").toString()));}
         if(jsonObj.get("interval_start") != null) {setInterval_start(jsonObj.get("interval_start").toString());}
         if(jsonObj.get("interval_end") != null) {setInterval_end(jsonObj.get("interval_end").toString());}
-        if(jsonObj.get("repeat") != null) {setRepeat(Integer.parseInt(jsonObj.get("repeat").toString()));}
 
+        jsonArray = (JSONArray) jsonObj.get("repeat");
+        if(!jsonArray.isEmpty()) {
+            for (int i = 0; i < jsonArray.size(); i++) {
+                repeat.add(Integer.parseInt(jsonArray.get(i).toString()));
+                }
+        }
     }
 
 
@@ -97,11 +103,11 @@ public class IntervalBlock {
         this.interval_end = interval_end;
     }
 
-    public int getRepeat() {
+    public List<Integer> getRepeat() {
         return repeat;
     }
 
-    public void setRepeat(int repeat) {
+    public void setRepeat(List<Integer> repeat) {
         this.repeat = repeat;
     }
 }

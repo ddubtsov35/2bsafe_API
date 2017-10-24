@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 public class DataUpdate {
 
     private String scs;
-    private int ito;
+    private Integer ito;
 
     private static JSONParser parser;
     private static Object obj;
@@ -25,17 +25,40 @@ public class DataUpdate {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-        jsonObj = (JSONObject) jsonObj.get("data");
 
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
+        try {
+            if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else {setScs(null);}
+        } catch (Exception e){
+            setScs(null);
+        }
+
+
+        if(jsonObj.get("data") != null) {
+            jsonObj = (JSONObject) jsonObj.get("data");
+            try {
+                if (jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
+                else {setIto(null);}
+            } catch (Exception e){
+                setIto(null);
+            }
+        } else{
+            return;
+        }
     }
 
-    public int getIto() {
+    @Override
+    public String toString() {
+        return "DataUpdate{" +
+                "scs='" + scs + '\'' +
+                ", ito=" + ito +
+                '}';
+    }
+
+    public Integer getIto() {
         return ito;
     }
 
-    public void setIto(int ito) {
+    public void setIto(Integer ito) {
         this.ito = ito;
     }
 

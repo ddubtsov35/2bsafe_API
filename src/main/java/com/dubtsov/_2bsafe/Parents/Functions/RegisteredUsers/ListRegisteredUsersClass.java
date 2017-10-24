@@ -22,10 +22,9 @@ public class ListRegisteredUsersClass extends BaseClass {
     String headersString;
     String sessionId;
     String responseString;
-    JSONObject jsonObject;
 
     private String getHeadersString() throws Exception {
-        jsonObject = GenerateRegisteredUsersContent.getHeadersString();
+        JSONObject jsonObject = GenerateRegisteredUsersContent.getHeadersString();
         super.responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/login", jsonObject);
         headersString = responseClass.getJsonResponse().headers().toString();
         return headersString;
@@ -39,13 +38,11 @@ public class ListRegisteredUsersClass extends BaseClass {
     }
 
     public List<RegisteredUser> getListRegisteredUsers() throws Exception {
-        jsonObject = GenerateRegisteredUsersContent.getListRegisteredContent();
+        JSONObject jsonObject = GenerateRegisteredUsersContent.getListRegisteredContent();
         String getSessionId = getSessionId(getHeadersString());
-
         responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/accounts_list", jsonObject);
         responseClass.setSessionId(getSessionId);
         responseString = responseClass.getJsonResponse().body().string();
-        System.out.println("Response: " + responseString);
 
         return GetRegisteredUsers.getRegisteredUsersList(responseString);
     }

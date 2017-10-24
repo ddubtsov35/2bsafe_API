@@ -68,7 +68,6 @@ public class BaseClass {
     protected ChildrenCardClass childrenCardClass;
     protected SetIntervalUpdateClass setIntervalUpdateClass;
     protected Response response;
-    protected String rnd = "rnd1";
     protected AuthorisationChildClass authorisationChildClass;
     protected ProfileClass profileClass;
     protected ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;

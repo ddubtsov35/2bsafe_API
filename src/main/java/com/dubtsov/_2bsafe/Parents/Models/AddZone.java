@@ -11,7 +11,7 @@ import org.json.simple.parser.ParseException;
 public class AddZone {
 
     private String scs;
-    private int zone_id;
+    private Integer zone_id;
 
     private static JSONParser parser;
     private static Object obj;
@@ -28,7 +28,7 @@ public class AddZone {
         jsonObj = (JSONObject) obj;
 
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("zone_id") != null) {setZone_id(Integer.parseInt(jsonObj.get("zone_id").toString()));}else{setZone_id(0);}
+        if(jsonObj.get("zone_id") != null) {setZone_id(Integer.parseInt(jsonObj.get("zone_id").toString()));}else{setZone_id(null);}
 
     }
 
@@ -48,11 +48,11 @@ public class AddZone {
         this.scs = scs;
     }
 
-    public int getZone_id() {
+    public Integer getZone_id() {
         return zone_id;
     }
 
-    public void setZone_id(int zone_id) {
+    public void setZone_id(Integer zone_id) {
         this.zone_id = zone_id;
     }
 }

@@ -7,24 +7,24 @@ import java.util.List;
  */
 public class Rules {
 
-    public int id;
-    public int trigger_id;
+    public Integer id;
+    public Integer trigger_id;
     public List<Integer> actions;
     public List<Integer> options;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getTrigger_id() {
+    public Integer getTrigger_id() {
         return trigger_id;
     }
 
-    public void setTrigger_id(int trigger_id) {
+    public void setTrigger_id(Integer trigger_id) {
         this.trigger_id = trigger_id;
     }
 

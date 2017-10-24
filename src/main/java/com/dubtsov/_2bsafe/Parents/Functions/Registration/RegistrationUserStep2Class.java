@@ -18,21 +18,38 @@ public class RegistrationUserStep2Class extends BaseClass {
     public RegistrationUserStep2Class() throws IOException, ParseException, java.text.ParseException {}
 
     public JSONObject registrationUserStep2Web() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
-        responseClass.getJsonResponse();
-        //UserPool.setUserFromFile(jsonObject);
-        return jsonObject;
+        jsonObject = UserPool.getUserFromFile();
+        if(jsonObject == null) {
+            jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
+            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
+            response = responseClass.getJsonResponse();
+
+            if(response.code() == 200) {
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+            }
+
+            return jsonObject;
+        } else {
+            return jsonObject;
+        }
     }
 
-    public JSONObject registrationUserStep2AndroidPhone() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2",  jsonObject);
-        String getLkid = responseClass.getJsonResponse().body().string();
-        jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"),getLkid.indexOf("lkid",getLkid.indexOf("\""))));
+    public JSONObject registrationUserStep2AndroidPhone() throws Exception {
+        jsonObject = UserPool.getUserFromFile();
+        if (jsonObject == null) {
+            jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
+            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
+            String getLkid = responseClass.getJsonResponse().body().string();
+            jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));
 
-        //UserPool.setUserFromFile(jsonObject);
-        return jsonObject;
+            if (responseClass.getJsonResponse().code() == 200) {
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+            }
+
+            return jsonObject;
+        } else {
+            return jsonObject;
+        }
     }
 
 }

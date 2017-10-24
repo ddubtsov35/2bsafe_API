@@ -1,8 +1,11 @@
 package com.dubtsov._2bsafe.Childrens.Models;
 
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+
+import java.io.IOException;
 
 /**
  * Created by user on 16.08.17.
@@ -14,29 +17,37 @@ public class ChildrenResponseAuthorisationModel {
     private static JSONObject jsonObj;
 
     private String scs;
-    private int ito;
+    private Integer ito;
     private String cid;
     private String ckey;
     private String aid;
-    private int sto;
+    private Integer sto;
 
     public ChildrenResponseAuthorisationModel(){};
 
-    public ChildrenResponseAuthorisationModel(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public ChildrenResponseAuthorisationModel(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         setObject(jsonObjectString);
     }
 
-    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));}
-        jsonObj = (JSONObject) jsonObj.get("res");
-        if(jsonObj.get("cid") != null) {setCid(jsonObj.get("cid").toString());}
-        if(jsonObj.get("ckey") != null) {setCkey(jsonObj.get("ckey").toString());}
-        if(jsonObj.get("aid") != null) {setAid(jsonObj.get("aid").toString());}
-        if(jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));}
+        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
+        if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIto(null);}
+        try {
+            jsonObj = (JSONObject) jsonObj.get("res");
+            if (jsonObj.get("cid") != null) {setCid(jsonObj.get("cid").toString());} else {setCid(null);}
+            if (jsonObj.get("ckey") != null) {setCkey(jsonObj.get("ckey").toString());} else {setCkey(null);}
+            if (jsonObj.get("aid") != null) {setAid(jsonObj.get("aid").toString());} else {setAid(null);}
+            if (jsonObj.get("sto") != null) {setSto(Integer.parseInt(jsonObj.get("sto").toString()));} else {setSto(null);}
+            if(CidCkeyPool.getCidFromFile() == null){CidCkeyPool.setCidCkey(jsonObj);}
+        } catch (Exception e){
+            {setCid(null);}
+            {setCkey(null);}
+            {setAid(null);}
+            {setSto(null);}
+        }
     }
 
     @Override
@@ -50,11 +61,11 @@ public class ChildrenResponseAuthorisationModel {
                 '}';
     }
 
-    public int getIto() {
+    public Integer getIto() {
         return ito;
     }
 
-    public void setIto(int ito) {
+    public void setIto(Integer ito) {
         this.ito = ito;
     }
 
@@ -82,11 +93,11 @@ public class ChildrenResponseAuthorisationModel {
         this.aid = aid;
     }
 
-    public int getSto() {
+    public Integer getSto() {
         return sto;
     }
 
-    public void setSto(int sto) {
+    public void setSto(Integer sto) {
         this.sto = sto;
     }
 

@@ -19,8 +19,8 @@ public class Zone {
     private static JSONArray jsonArray;
 
     private String scs;
-    private Integer lat;
-    private Integer lon;
+    private Float lat;
+    private Float lon;
     private String name;
     private Float rad;
 
@@ -36,10 +36,10 @@ public class Zone {
         jsonObj = (JSONObject) obj;
         jsonArray = (JSONArray) jsonObj.get("data");
 
-        if(jsonObj.get("lat") != null) {setLat(Integer.parseInt(jsonObj.get("lat").toString()));}
-        if(jsonObj.get("lon") != null) {setLon(Integer.parseInt(jsonObj.get("lon").toString()));}
+        if(jsonObj.get("lat") != null) {setLat(Float.parseFloat(jsonObj.get("lat").toString()));} else {setLat(null);}
+        if(jsonObj.get("lon") != null) {setLon(Float.parseFloat(jsonObj.get("lon").toString()));} else {setLon(null);}
         if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());}
-        if(jsonObj.get("rad") != null) {setRad(Float.parseFloat(jsonObj.get("rad").toString()));}
+        if(jsonObj.get("rad") != null) {setRad(Float.parseFloat(jsonObj.get("rad").toString()));} else {setRad(null);}
 
     }
 
@@ -62,19 +62,19 @@ public class Zone {
         this.scs = scs;
     }
 
-    public Integer getLat() {
+    public Float getLat() {
         return lat;
     }
 
-    public void setLat(Integer lat) {
+    public void setLat(Float lat) {
         this.lat = lat;
     }
 
-    public Integer getLon() {
+    public Float getLon() {
         return lon;
     }
 
-    public void setLon(Integer lon) {
+    public void setLon(Float lon) {
         this.lon = lon;
     }
 
