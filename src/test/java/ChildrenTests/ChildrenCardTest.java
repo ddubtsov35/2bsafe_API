@@ -50,7 +50,7 @@ public class ChildrenCardTest extends BaseClass{
         Assert.assertTrue(profileCardList != null);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetProfileListContent.class)
@@ -74,7 +74,7 @@ public class ChildrenCardTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSelectChildrenCardContent.class)
