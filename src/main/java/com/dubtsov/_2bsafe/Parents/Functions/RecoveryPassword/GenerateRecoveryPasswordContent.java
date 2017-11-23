@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword;
 
+import com.dubtsov._2bsafe.Admin.GetActCode;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
@@ -28,15 +29,12 @@ public class GenerateRecoveryPasswordContent{
 
     public static JSONObject confirmRecoveryPasswordContent() throws Exception {
         jsonObj = new JSONObject();
-        InputClass inputClass = new InputClass();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString());
-            jsonObj.put("code", code);
+            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString()).getAct_code());
         } else{
             jsonObj.put("login", UserPool.getUserFromFile().get("em"));
-            int code = inputClass.code(UserPool.getUserFromFile().get("em").toString());
-            jsonObj.put("code", code);
+            jsonObj.put("code", new GetActCode().getCode(UserPool.getUserFromFile().get("em").toString()).getAct_code());
         }
 
         return jsonObj;
@@ -44,21 +42,21 @@ public class GenerateRecoveryPasswordContent{
 
 
 
-    public static Object[] provideNegativeGetAuthContent() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAuthContent() throws Exception {
         jsonObj = new JSONObject();
 
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
 
-        InputClass inputClass = new InputClass();
+        //InputClass inputClass = new InputClass();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString());
-            jsonObj.put("code", code);
+            //int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString());
+            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString()).getAct_code());
         } else{
             jsonObj.put("login", UserPool.getUserFromFile().get("em"));
-            int code = inputClass.code(UserPool.getUserFromFile().get("em").toString());
-            jsonObj.put("code", code);
+            //int code = inputClass.code(UserPool.getUserFromFile().get("em").toString());
+            jsonObj.put("code", new GetActCode().getCode(UserPool.getUserFromFile().get("em").toString()).getAct_code());
         }
 
         JSONObject jsonObj1 = new JSONObject();

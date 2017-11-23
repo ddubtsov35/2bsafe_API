@@ -16,6 +16,31 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>2.0rc2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>4.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -50,13 +75,6 @@
             <version>${allure.version}</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/pl.pragmatists/JUnitParams -->
-        <dependency>
-            <groupId>pl.pragmatists</groupId>
-            <artifactId>JUnitParams</artifactId>
-            <version>0.3.6</version>
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>pl.pragmatists</groupId>
             <artifactId>JUnitParams</artifactId>
@@ -72,6 +90,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
+                    <rerunFailingTestsCount>1</rerunFailingTestsCount>
                     <parallel>classes</parallel>
                     <threadCount>5</threadCount>
                     <testFailureIgnore>false</testFailureIgnore>
@@ -85,7 +104,7 @@
                         </property>
                     </properties>
                     <includes>
-                        <include>**/*Test*.java</include>
+                        <include>**/ChildrenTests/*.java</include>
                     </includes>
                 </configuration>
                 <dependencies>

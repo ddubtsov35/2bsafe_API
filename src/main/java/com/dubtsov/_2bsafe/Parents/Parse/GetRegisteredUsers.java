@@ -36,10 +36,9 @@ public class GetRegisteredUsers {
     public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
         registeredUsersList = new ArrayList();
         String resultJsonString = getResultJsonString(registeredUserListString);
-        //System.out.println("resultJsonString " + resultJsonString);
+        System.out.println("resultJsonString " + resultJsonString);
         obj = parser.parse(resultJsonString);
-        jsonObj = (JSONObject) obj;
-        jsonArray = (JSONArray) jsonObj.get("items");
+        jsonArray = (JSONArray) obj;
         itemsJsonString = jsonObj.get("num").toString();
         for(int i=0; i<jsonArray.size(); i++){
             registeredUsersList.add(new RegisteredUser(jsonArray.get(i).toString()));

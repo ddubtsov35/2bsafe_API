@@ -25,7 +25,7 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
-    public AuthorisationUser RegistrationAndAuthorisationWeb() throws IOException, ParseException, java.text.ParseException {
+    public AuthorisationUser RegistrationAndAuthorisationWeb() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
         registrationUserStep2Class.registrationUserStep2Web();
         jsonObject = GenerateAuthContent.getAuthContent();

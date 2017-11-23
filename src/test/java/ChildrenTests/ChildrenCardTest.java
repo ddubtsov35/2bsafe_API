@@ -33,7 +33,7 @@ public class ChildrenCardTest extends BaseClass{
     public ChildrenCardTest() throws IOException, ParseException, java.text.ParseException {}
 
     @Before
-    public void before() throws ParseException, java.text.ParseException, IOException {
+    public void before() throws Exception {
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();
         childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();

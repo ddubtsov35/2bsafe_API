@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
+import com.dubtsov._2bsafe.Admin.AdminAuthorisation;
+import com.dubtsov._2bsafe.Admin.GetActCode;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
@@ -37,14 +39,16 @@ public class GenerateRegistrationContent {
         return jsonObject;
     }
 
-    public static JSONObject getRegistrationStep2ContentWeb() throws IOException, ParseException {
+    public static JSONObject getRegistrationStep2ContentWeb() throws Exception {
         JSONObject jsonObject = new JSONObject();
-        InputClass inputClass = new InputClass();
+        //InputClass inputClass = new InputClass();
+        new AdminAuthorisation().adminAuthorisation();
         if(UserPool.getUserFromFile() == null) {
             jsonObject.put("em", getRegistrationStep1Content.get("em"));
             jsonObject.put("dtype", 0);
-            //jsonObject.put("code", inputClass.code(getRegistrationStep1Content.get("em").toString()));
-            jsonObject.put("code", inputClass.code("qqq60@p33.org"));
+            System.out.println(getRegistrationStep1Content.get("em").toString());
+            jsonObject.put("code", new GetActCode().getCode(getRegistrationStep1Content.get("em").toString()).getAct_code());
+            //jsonObject.put("code", new GetActCode().getCode());
             jsonObject.put("pwd", getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObject.put("em", UserPool.getUserFromFile().get("em"));

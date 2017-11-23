@@ -29,7 +29,7 @@ public class PollTittleTest extends BaseClass{
 
     @Ignore
     @Test
-    public void getPollTittle() throws ParseException, java.text.ParseException, IOException {
+    public void getPollTittle() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         PollTittle pollTittle = pollClass.getPoll();
         System.out.println(pollTittle.toString());

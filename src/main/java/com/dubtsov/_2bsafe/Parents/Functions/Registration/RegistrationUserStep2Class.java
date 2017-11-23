@@ -17,7 +17,7 @@ public class RegistrationUserStep2Class extends BaseClass {
 
     public RegistrationUserStep2Class() throws IOException, ParseException, java.text.ParseException {}
 
-    public JSONObject registrationUserStep2Web() throws IOException, ParseException, java.text.ParseException {
+    public JSONObject registrationUserStep2Web() throws Exception {
         jsonObject = UserPool.getUserFromFile();
         if(jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();

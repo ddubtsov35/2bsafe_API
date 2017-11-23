@@ -49,7 +49,7 @@ public class AuthorisationTests extends BaseClass {
     }
 
     @Test
-    public void authorisationWeb() throws IOException, ParseException, java.text.ParseException {
+    public void authorisationWeb() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
@@ -119,7 +119,7 @@ public class AuthorisationTests extends BaseClass {
 
 
     @Test
-    public void logout() throws ParseException, java.text.ParseException, IOException {
+    public void logout() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = logoutClass.logout();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );

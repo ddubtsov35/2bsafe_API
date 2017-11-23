@@ -43,7 +43,7 @@ public class TariffsTest extends BaseClass{
     }
 
     @Test
-    public void getTariffsList() throws ParseException, java.text.ParseException, IOException {
+    public void getTariffsList() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         tariffList = tariffsClass.getTariffsList();
         System.out.println("tariffList " + tariffList.toString());
@@ -51,7 +51,7 @@ public class TariffsTest extends BaseClass{
     }
 
     @Test
-    public void getCurrentTariff() throws ParseException, java.text.ParseException, IOException {
+    public void getCurrentTariff() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         tariff = tariffsClass.getCurrentTariff();
         System.out.println(tariff.toString());
