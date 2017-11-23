@@ -23,7 +23,7 @@ public class GenerateAddChildrenCardContent{
         random = new Random();
         jsonObj.put("name", GenerateNameClass.getGenerateName());
         jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
+        jsonObj.put("age", String.valueOf(random.nextInt((18 - 0) + 1) + 0));
         jsonObj.put("send_sms", String.valueOf(0));
         //content.put("file", "test.png");
         return jsonObj;
@@ -44,7 +44,7 @@ public class GenerateAddChildrenCardContent{
         jsonObj2.put("send_sms", "123");
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("name", null);
+        jsonObj3.put("name", "");
         jsonObj3.put("phone", GeneratePhoneClass.getGeneratedPhone());
         jsonObj3.put("age", String.valueOf(random.nextInt((90 - 0 + 1) + 0)));
         jsonObj3.put("send_sms", String.valueOf(0));
@@ -65,7 +65,7 @@ public class GenerateAddChildrenCardContent{
         jsonObj6.put("name", GenerateNameClass.getGenerateName());
         jsonObj6.put("phone", GeneratePhoneClass.getGeneratedPhone());
         jsonObj6.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj6.put("send_sms", null);
+        jsonObj6.put("send_sms", "");
 
         JSONObject jsonObj7 = new JSONObject();
         jsonObj7.put("name", GenerateNameClass.getGenerateName());
@@ -81,17 +81,17 @@ public class GenerateAddChildrenCardContent{
 
         JSONObject jsonObj11 = new JSONObject();
 
-        JSONObject jsonObj12 = new JSONObject();
+        /*JSONObject jsonObj12 = new JSONObject();
         jsonObj12.put("name", GenerateNameClass.getGenerateName());
         jsonObj12.put("phone", GeneratePhoneClass.getGeneratedPhone());
         jsonObj12.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj12.put("send_sms", "214234");
+        jsonObj12.put("send_sms", "214234");*/
 
-        JSONObject jsonObj13 = new JSONObject();
+        /*JSONObject jsonObj13 = new JSONObject();
         jsonObj13.put("name", GenerateNameClass.getGenerateName());
         jsonObj13.put("phone", GeneratePhoneClass.getGeneratedPhone());
         jsonObj13.put("age", "54234234");
-        jsonObj13.put("send_sms", String.valueOf(0));
+        jsonObj13.put("send_sms", String.valueOf(0));*/
 
         JSONObject jsonObj14 = new JSONObject();
         jsonObj14.put("name", GenerateNameClass.getGenerateName());
@@ -112,8 +112,8 @@ public class GenerateAddChildrenCardContent{
                 new JSONObject[]{jsonObj9},
                 new JSONObject[]{jsonObj10},
                 new JSONObject[]{jsonObj11},
-                new JSONObject[]{jsonObj12},
-                new JSONObject[]{jsonObj13},
+                /*new JSONObject[]{jsonObj12},
+                new JSONObject[]{jsonObj13},*/
                 new JSONObject[]{jsonObj14}
         };
     }

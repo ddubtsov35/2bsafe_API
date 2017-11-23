@@ -18,7 +18,7 @@ public class GenerateGetChildrenCardListContent {
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
+/*    public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
         jsonObj = new JSONObject();
         jsonObj.put("rnd", null);
 
@@ -32,5 +32,5 @@ public class GenerateGetChildrenCardListContent {
                 new JSONObject[]{jsonObj2},
                 new JSONObject[]{jsonObj3}
         };
-    }
+    }*/
 }

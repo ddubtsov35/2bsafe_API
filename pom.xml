@@ -90,7 +90,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
-                    <rerunFailingTestsCount>1</rerunFailingTestsCount>
+                    <rerunFailingTestsCount>2</rerunFailingTestsCount>
                     <parallel>classes</parallel>
                     <threadCount>5</threadCount>
                     <testFailureIgnore>false</testFailureIgnore>

@@ -44,7 +44,7 @@ public class ChildrenCard {
 
         if(jsonObj.get("age") != null) {setAge(Integer.parseInt(jsonObj.get("age").toString()));} else {setAge(null);}
         if(jsonObj.get("profile_id") != null)setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString())); else {setProfile_id(null);}
-        if(jsonObj.get("connected") != null)setConnected(Integer.parseInt(jsonObj.get("connected").toString())); else {setConnected(null);}
+        //if(jsonObj.get("connected") != null)setConnected(Integer.parseInt(jsonObj.get("connected").toString())); else {setConnected(null);}
         if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName(null);}
         if(jsonObj.get("unread_notif") != null) {setUnread_notif(Integer.parseInt(jsonObj.get("unread_notif").toString()));} else {setUnread_notif(null);}
         if(jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());} else{setPhone(null);}

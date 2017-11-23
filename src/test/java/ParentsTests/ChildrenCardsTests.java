@@ -81,13 +81,14 @@ public class ChildrenCardsTests extends BaseClass {
 
 
 
-    @Ignore
+    /*@Ignore
     @Test
     public void getChildrenCardsList() throws Exception {
         //UserPool.clearFile();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(childrenCardClass.getChildrenCardList().size() == 0);
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetChildrenCardListContent.class)
@@ -96,7 +97,7 @@ public class ChildrenCardsTests extends BaseClass {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         System.out.println("childrenCardClass.NegativeGetChildrenCardList(jsonObject).size() " + childrenCardClass.NegativeGetChildrenCardList(jsonObject).size());
         Assert.assertTrue(childrenCardClass.NegativeGetChildrenCardList(jsonObject).size() == 0);
-    }
+    }*/
 
 
 
@@ -112,7 +113,9 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println("countCardAfter  " + countCardAfter);
         Assert.assertTrue(countCardBefore - countCardAfter == 1);
     }
-    @Test
+
+    //@Ignore
+   /* @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetChildrenCardListContent.class)
     public void NegativeDeleteChildrenCards(JSONObject jsonObject) throws Exception {
@@ -124,7 +127,7 @@ public class ChildrenCardsTests extends BaseClass {
         int countCardAfter = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardAfter  " + countCardAfter);
         Assert.assertTrue(countCardBefore - countCardAfter == 0);
-    }
+    }*/
 
 
 

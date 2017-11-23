@@ -24,7 +24,7 @@ public class GetChildrenCardList {
     public static List<ChildrenCard> getChildrenCardList(String childrenCardListString) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         childrenCardList = new ArrayList();
-        //System.out.println("childrenCardListString " + childrenCardListString);
+        System.out.println("childrenCardListString " + childrenCardListString);
         try {
             obj = parser.parse(childrenCardListString);
             jsonObj = (JSONObject) obj;
