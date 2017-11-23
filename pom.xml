@@ -110,8 +110,8 @@
                         <include>**/ChildrenTests/HelpMeTest.java</include>
                         <include>**/ChildrenTests/LogoutTest.java</include>
                         <include>**/ParentsTests/AccountSettingsTest.java</include>
-                        <!--<include>**/ParentsTests/ChildrenCardsTests.java</include>
-                        <include>**/ParentsTests/GetInformationTests.java</include>
+                        <include>**/ParentsTests/ChildrenCardsTests.java</include>
+                        <!--<include>**/ParentsTests/GetInformationTests.java</include>
                         <include>**/ParentsTests/HelpMeTest.java</include>
                         <include>**/ParentsTests/RegistrationTests.java</include>
                         <include>**/ParentsTests/ZoneTest.java</include>-->
