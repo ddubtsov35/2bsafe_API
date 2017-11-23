@@ -104,7 +104,9 @@
                         </property>
                     </properties>
                     <includes>
-                        <include>**/ChildrenTests/*.java</include>
+                        <include>**/ChildrenTests/AuthorisationTest.java</include>
+                        <include>**/ChildrenTests/ChildrenCardTest.java</include>
+                        <include>**/ChildrenTests/GetConditionInformationTest.java</include>
                     </includes>
                 </configuration>
                 <dependencies>
