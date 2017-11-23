@@ -104,13 +104,13 @@
                         </property>
                     </properties>
                     <includes>
-                        <include>**/ChildrenTests/AuthorisationTest.java</include>
+                        <!--<include>**/ChildrenTests/AuthorisationTest.java</include>
                         <include>**/ChildrenTests/ChildrenCardTest.java</include>
                         <include>**/ChildrenTests/GetConditionInformationTest.java</include>
                         <include>**/ChildrenTests/HelpMeTest.java</include>
                         <include>**/ChildrenTests/LogoutTest.java</include>
                         <include>**/ParentsTests/AccountSettingsTest.java</include>
-                        <include>**/ParentsTests/ChildrenCardsTests.java</include>
+                        <include>**/ParentsTests/ChildrenCardsTests.java</include>-->
                         <include>**/ParentsTests/GetInformationTests.java</include>
                         <!--<include>**/ParentsTests/HelpMeTest.java</include>
                         <include>**/ParentsTests/RegistrationTests.java</include>
