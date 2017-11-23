@@ -112,9 +112,9 @@
                         <include>**/ParentsTests/AccountSettingsTest.java</include>
                         <include>**/ParentsTests/ChildrenCardsTests.java</include>
                         <include>**/ParentsTests/GetInformationTests.java</include>
-                        <include>**/ParentsTests/HelpMeTest.java</include>
+                        <!--<include>**/ParentsTests/HelpMeTest.java</include>
                         <include>**/ParentsTests/RegistrationTests.java</include>
-                        <include>**/ParentsTests/ZoneTest.java</include>
+                        <include>**/ParentsTests/ZoneTest.java</include>-->
                     </includes>
                 </configuration>
                 <dependencies>
