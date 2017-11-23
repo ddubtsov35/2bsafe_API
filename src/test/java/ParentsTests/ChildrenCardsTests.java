@@ -53,6 +53,7 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println("countCardAfter  " + countCardAfter);
         Assert.assertTrue(countCardAfter - countCardBefore == 1);
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddChildrenCardContent.class)
