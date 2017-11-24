@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Models.DeviceShortInfo;
 import com.dubtsov._2bsafe.Parents.Parse.GetAddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Parse.GetChildrenCardList;
 import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -33,9 +34,13 @@ public class ChildrenCardClass extends BaseClass {
     public ChildrenCardClass() throws IOException {}
 
     public AddChildrenCard addChildrenCard() throws Exception {
-        jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
-        return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
+        if(ChildrenCardPool.getChildrenCardFromFile() == null) {
+            jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
+            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+            return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
+        } else {
+            return ChildrenCardPool.getChildrenCardFromFile();
+        }
     }
     public AddChildrenCard NegativeAddChildrenCard(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);

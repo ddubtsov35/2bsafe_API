@@ -10,6 +10,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.Genera
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.sun.jna.platform.win32.Netapi32Util;
 import junitparams.JUnitParamsRunner;
@@ -46,6 +47,7 @@ public class ChildrenCardsTests extends BaseClass {
     @Test
     public void addChildrenCardsWeb() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
+        ChildrenCardPool.clearFile();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
         childrenCardClass.addChildrenCard();
