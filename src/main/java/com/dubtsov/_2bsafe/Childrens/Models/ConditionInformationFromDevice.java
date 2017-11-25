@@ -43,12 +43,12 @@ public class ConditionInformationFromDevice {
         return params;
     }
 
-    public List<Rules> getListRules(String jsonObjectString){
+    /*public List<Rules> getListRules(String jsonObjectString){
         JSONArray rules = (JSONArray) jsonObj.get("rules");
         return rules;
-    }
+    }*/
 
-    public List<Zones> getListZones(String jsonObjectString){
+    /*public List<Zones> getListZones(String jsonObjectString){
         JSONArray zones = (JSONArray) jsonObj.get("zones");
         return zones;
     }
@@ -61,7 +61,7 @@ public class ConditionInformationFromDevice {
     public List<Intervals> getListIntervals(String jsonObjectString){
         JSONArray intervals = (JSONArray) jsonObj.get("intervals");
         return intervals;
-    }
+    }*/
 
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
@@ -69,10 +69,10 @@ public class ConditionInformationFromDevice {
         if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));} else{setBto(null);}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIntervals(null);}
         if(jsonObj.get("params") != null) {setParams(getListParams(jsonObjectString));} else{setParams(null);}
-        if(jsonObj.get("rules") != null) {setRules(getListRules(jsonObjectString));} else{setRules(null);}
-        if(jsonObj.get("zones") != null) {setZones(getListZones(jsonObjectString));} else{setZones(null);}
-        if(jsonObj.get("apps") != null) {setApps(getListApps(jsonObjectString));} else{setApps(null);}
-        if(jsonObj.get("intervals") != null) {setIntervals(getListIntervals(jsonObjectString));} else{setIntervals(null);}
+        //if(jsonObj.get("rules") != null) {setRules(getListRules(jsonObjectString));} else{setRules(null);}
+        //if(jsonObj.get("zones") != null) {setZones(getListZones(jsonObjectString));} else{setZones(null);}
+        //if(jsonObj.get("apps") != null) {setApps(getListApps(jsonObjectString));} else{setApps(null);}
+        //if(jsonObj.get("intervals") != null) {setIntervals(getListIntervals(jsonObjectString));} else{setIntervals(null);}
     }
 
     @Override

@@ -10,7 +10,7 @@ import java.io.*;
 /**
  * Created by user on 24.11.17.
  */
-public class ChildrenCardPool {
+public class ChildrenCardPools {
 
     private static String pathToFile = "./src/main/resources/ChildrenCardPool";
 

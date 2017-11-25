@@ -1,6 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
-import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPool;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -29,7 +29,7 @@ public class AddChildrenCard {
         jsonObj = (JSONObject) obj;
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));}
-        ChildrenCardPool.setChildrenCard(jsonObj);
+        ChildrenCardPools.setChildrenCard(jsonObj);
     }
 
     @Override
