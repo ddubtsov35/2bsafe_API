@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Childrens.Logout;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -21,7 +22,11 @@ public class ChildrenLogoutClass extends BaseClass{
     public Response logout() throws Exception {
         jsonObject = GenerateLogoutContent.getLogoutContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
-        return responseClass.getJsonResponse();
+        response = responseClass.getJsonResponse();
+        if(response.code() == 200){
+            CidCkeyRegisteredPool.clearFile();
+        }
+        return response;
     }
 
     public Response NegativeLogout(JSONObject jsonObject) throws Exception {

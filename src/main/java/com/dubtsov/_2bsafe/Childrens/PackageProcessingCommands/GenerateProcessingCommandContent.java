@@ -22,16 +22,17 @@ public class GenerateProcessingCommandContent {
     private static String result;
     private static String result2;
     private static String result3;
+    private GenerateCidCkeyContent generateCidCkeyContent;
 
 
-    public static JSONObject getProcessingCommandsContent() throws Exception {
+    public JSONObject getProcessingCommandsContent() throws Exception {
         jsonObject = new JSONObject();
         jsonObject2 = new JSONObject();
         jsonObject3 = new JSONObject();
         jsonArray = new JSONArray();
         lastRequest = GenerateNotifyChangeAppContent.appsNotifyContent().toJSONString();
-
-        jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        generateCidCkeyContent = new GenerateCidCkeyContent();
+        jsonObject3 = generateCidCkeyContent.getJsonObjectCidCkey();
 
         jsonObject2.put("name", "update");
         jsonObject2.put("body", jsonObject);

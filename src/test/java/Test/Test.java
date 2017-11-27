@@ -52,7 +52,6 @@ public class Test {
         profileClass.setProfileCard();
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         System.out.println(profileCardList.size());
-
     }
 
 }

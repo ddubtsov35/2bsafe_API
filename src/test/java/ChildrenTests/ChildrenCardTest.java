@@ -49,7 +49,7 @@ public class ChildrenCardTest extends BaseClass{
         Assert.assertTrue(profileCardList != null);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGetProfileListContent.class)
@@ -68,12 +68,12 @@ public class ChildrenCardTest extends BaseClass{
     public void selectChildrenCard() throws Exception {
         childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
-        String result = profileClass.selectProfileCardResponse().body().string();
+        String result = profileClass.setProfileCard().getScs();
         System.out.println("selectChildrenCard " + result);
-        Assert.assertTrue(result.contains("\"scs\": true"));
+        Assert.assertTrue(result.contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSelectChildrenCardContent.class)

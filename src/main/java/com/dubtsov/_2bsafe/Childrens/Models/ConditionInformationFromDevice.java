@@ -1,10 +1,13 @@
 package com.dubtsov._2bsafe.Childrens.Models;
 
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -28,7 +31,7 @@ public class ConditionInformationFromDevice {
     private List<Integer> permissions;
     private List<Intervals> intervals;
 
-    public ConditionInformationFromDevice(String jsonObjectString) throws ParseException, java.text.ParseException {
+    public ConditionInformationFromDevice(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
@@ -64,7 +67,7 @@ public class ConditionInformationFromDevice {
     }*/
 
 
-    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
+    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
         if(jsonObj.get("bto") != null) {setBto(Integer.parseInt(jsonObj.get("bto").toString()));} else{setBto(null);}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIntervals(null);}
@@ -73,6 +76,12 @@ public class ConditionInformationFromDevice {
         //if(jsonObj.get("zones") != null) {setZones(getListZones(jsonObjectString));} else{setZones(null);}
         //if(jsonObj.get("apps") != null) {setApps(getListApps(jsonObjectString));} else{setApps(null);}
         //if(jsonObj.get("intervals") != null) {setIntervals(getListIntervals(jsonObjectString));} else{setIntervals(null);}
+        if(CidCkeyRegisteredPool.getCidFromFile() == null) {
+            CidCkeyRegisteredPool.setCidCkey(CidCkeyPool.getCidFromFile());
+        } else{
+            CidCkeyRegisteredPool.clearFile();
+            CidCkeyRegisteredPool.setCidCkey(CidCkeyPool.getCidFromFile());
+        }
     }
 
     @Override

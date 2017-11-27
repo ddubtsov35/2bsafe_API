@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Childrens.Logout.ChildrenLogoutClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
@@ -10,14 +11,13 @@ import org.json.simple.JSONObject;
  * Created by user on 11.09.17.
  */
 public class GenerateGetProfileListContent {
-    private static ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
-    private static ProfileClass profileListClass;
     private static AuthorisationChildClass authorisationChildClass;
     private static JSONObject jsonObj;
+    private static ChildrenLogoutClass childrenLogoutClass;
 
     public static JSONObject getProfileListContent() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
+        childrenLogoutClass = new ChildrenLogoutClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
@@ -36,7 +36,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailCid() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             jsonObj.put("cid", "failCid");
@@ -53,7 +52,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailCkey() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
@@ -71,7 +69,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyCid() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
@@ -89,7 +86,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyCkey() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
@@ -107,7 +103,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyAll() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
@@ -125,7 +120,6 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailAll() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        profileListClass = new ProfileClass();
         jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();

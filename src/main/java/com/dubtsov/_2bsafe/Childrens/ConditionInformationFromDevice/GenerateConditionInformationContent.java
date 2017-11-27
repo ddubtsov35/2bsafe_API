@@ -23,8 +23,9 @@ public class GenerateConditionInformationContent{
     private static JSONArray jsonArray1;
     private static JSONArray jsonArray2;
     private static JSONArray jsonArray3;
+    private GenerateCidCkeyContent generateCidCkeyContent = new GenerateCidCkeyContent();
 
-    public static JSONObject getConditionInformationContent() throws Exception {
+    public JSONObject getConditionInformationContent() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -39,8 +40,8 @@ public class GenerateConditionInformationContent{
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
 
-        jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        jsonObject3.put("cid", generateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObject3.put("ckey", generateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
 
         jsonObject1.put("op", "TestOperator");
         jsonObject1.put("sig", 50);
@@ -99,7 +100,7 @@ public class GenerateConditionInformationContent{
         return jsonObject3;
     }
 
-    public static Object[] provideGetConditionInformationContentEmptyData() throws Exception {
+    public Object[] provideGetConditionInformationContentEmptyData() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -117,7 +118,7 @@ public class GenerateConditionInformationContent{
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
 
-        jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        jsonObject3 = generateCidCkeyContent.getJsonObjectCidCkey();
 
         jsonObject1.put("op", null);
         jsonObject1.put("sig", null);
@@ -176,7 +177,7 @@ public class GenerateConditionInformationContent{
         return new Object[]{new Object[]{jsonObject3}};
     }
 
-    public static Object[] provideGetConditionInformationContentEmptyAll() throws Exception {
+    public Object[] provideGetConditionInformationContentEmptyAll() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -251,7 +252,7 @@ public class GenerateConditionInformationContent{
         return new Object[]{new Object[]{jsonObject3}};
     }
 
-    public static Object[] provideGetConditionInformationContentEmptyCid() throws Exception {
+    public Object[] provideGetConditionInformationContentEmptyCid() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -269,7 +270,7 @@ public class GenerateConditionInformationContent{
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
 
-        jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        jsonObject3 = generateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject3.remove("cid");
         jsonObject3.put("cid", null);
 
@@ -330,7 +331,7 @@ public class GenerateConditionInformationContent{
         return new Object[]{new Object[]{jsonObject3}};
     }
 
-    public static Object[] provideGetConditionInformationContentEmptyCkey() throws Exception {
+    public Object[] provideGetConditionInformationContentEmptyCkey() throws Exception {
         jsonObject1 = new JSONObject();
         jsonObject2_1 = new JSONObject();
         jsonObject2_2 = new JSONObject();
@@ -348,7 +349,7 @@ public class GenerateConditionInformationContent{
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
 
-        jsonObject3 = GenerateCidCkeyContent.getJsonObjectCidCkey();
+        jsonObject3 = generateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject3.remove("ckey");
         jsonObject3.put("ckey", null);
 
