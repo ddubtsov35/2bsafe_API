@@ -55,7 +55,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void getRules() throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = rulesClass.getRulesListResponse();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
@@ -73,7 +73,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     public void getRulesByProfile() throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = rulesClass.getRulesByProfileResponse();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
@@ -82,7 +82,7 @@ public class RulesTest extends BaseClass{
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
     public void NegativeGetRulesByProfile(JSONObject jsonObject) throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = rulesClass.NegativeGetRulesByProfileResponse(jsonObject);
         String result = response.body().string();
         System.out.println("result " + result);

@@ -67,9 +67,9 @@ public class ChildrenCardTest extends BaseClass{
     @Test
     public void selectChildrenCard() throws Exception {
         childrenCardClass.addChildrenCard();
-        childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
+        authorisationChildClass.authorisationChildren();
         String result = profileClass.setProfileCard().getScs();
-        System.out.println("selectChildrenCard " + result);
+        //System.out.println("selectChildrenCard " + result);
         Assert.assertTrue(result.contains("true"));
     }
 
@@ -81,7 +81,7 @@ public class ChildrenCardTest extends BaseClass{
         childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
         String result = profileClass.NegativeSelectProfileCardResponse(jsonObj).body().string();
-        System.out.println("selectChildrenCard " + result);
+        //System.out.println("selectChildrenCard " + result);
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 

@@ -20,7 +20,7 @@ public class GetIntervalUpdateClass extends BaseClass{
     public GetIntervalUpdateClass() throws IOException {}
 
     public DataUpdate getIntervalUpdateResponse() throws Exception {
-        jsonObject.put("profile_id", GenerateSelectChildrenCardContent.profileId);
+        jsonObject.put("profile_id", GenerateProfileIdContent.profileId);
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObject);
         return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
     }

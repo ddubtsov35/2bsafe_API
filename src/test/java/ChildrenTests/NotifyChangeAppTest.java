@@ -45,7 +45,7 @@ public class NotifyChangeAppTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = notifyChangeAppClass.notifyChangeApp();
         String result = response.body().string();
         System.out.println("RESULT " + result);
@@ -59,7 +59,7 @@ public class NotifyChangeAppTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = notifyChangeAppClass.NegativeNotifyChangeApp(jsonObject);
         String result = response.body().string();
         System.out.println("RESULT " + result);

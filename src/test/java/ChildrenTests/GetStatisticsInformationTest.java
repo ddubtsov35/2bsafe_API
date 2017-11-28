@@ -17,6 +17,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -41,12 +42,13 @@ public class GetStatisticsInformationTest extends BaseClass{
         profileClass = new ProfileClass();
     }
 
+    //@Ignore
     @Test
     public void getStatisticsInformation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = getStatisticsInformationClass.getStatisticsInformation();
         String result = response.body().string();
         System.out.println("Result string " + result);
@@ -60,7 +62,7 @@ public class GetStatisticsInformationTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = getStatisticsInformationClass.NegativeGetStatisticsInformation(jsonObject);
         String result = response.body().string();
         System.out.println("Result string " + result);

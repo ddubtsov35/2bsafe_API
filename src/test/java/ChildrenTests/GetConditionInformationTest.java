@@ -49,7 +49,7 @@ public class GetConditionInformationTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.getConditionInformation();
         Assert.assertTrue(conditionInformationFromDevice.getScs().equals("true"));
     }
@@ -62,7 +62,7 @@ public class GetConditionInformationTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.NegativeGetConditionInformation(jsonObject);
         Assert.assertTrue(conditionInformationFromDevice.getScs().equals("false"));
     }

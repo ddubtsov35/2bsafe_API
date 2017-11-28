@@ -12,10 +12,10 @@ import java.io.IOException;
  * Created by user on 12.09.17.
  */
 public class GenerateCidCkeyContent{
-    public JSONObject jsonObjectCidCkey = null;
-    private JSONObject jsonObj;
+    public static JSONObject jsonObjectCidCkey = null;
+    private static JSONObject jsonObj;
 
-    public JSONObject getCidCkey(ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel) throws Exception {
+    public static JSONObject getCidCkey(ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel) throws Exception {
         jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", childrenResponseAuthorisationModel.getCid());
@@ -36,15 +36,14 @@ public class GenerateCidCkeyContent{
         } else{
             jsonObjectCidCkey = CidCkeyPool.getCidFromFile();
         }
-
         return jsonObj;
     }
 
-    public JSONObject getJsonObjectCidCkey() throws IOException, ParseException {
+    public static JSONObject getJsonObjectCidCkey() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
-            jsonObj.put("cid", jsonObjectCidCkey.get("cid"));
-            jsonObj.put("ckey", jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
         } else {
             jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
             jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
@@ -52,15 +51,10 @@ public class GenerateCidCkeyContent{
         return jsonObj;
     }
 
-    public JSONObject getJsonObjectCidCkeyForLogout() throws IOException, ParseException {
+    public static JSONObject getJsonObjectCidCkeyForLogout() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
-        /*if(CidCkeyRegisteredPool.getCidFromFile() == null) {
-            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
-            jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
-        } else {*/
-            jsonObj.put("cid", CidCkeyRegisteredPool.getCidFromFile().get("cid"));
-            jsonObj.put("ckey", CidCkeyRegisteredPool.getCidFromFile().get("ckey"));
-        //}
+        jsonObj.put("cid", CidCkeyRegisteredPool.getCidFromFile().get("cid"));
+        jsonObj.put("ckey", CidCkeyRegisteredPool.getCidFromFile().get("ckey"));
         return jsonObj;
     }
 }

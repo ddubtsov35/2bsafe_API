@@ -53,7 +53,7 @@ public class TurboButtonTest extends BaseClass{
 
     @Test
     public void setTurbo() throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = turboButtonClass.setTurbo();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
@@ -62,7 +62,7 @@ public class TurboButtonTest extends BaseClass{
     @TestCaseName("{0}")
     @Parameters(source = GenerateTurboContent.class)
     public void NegativeSetTurbo(JSONObject jsonObject) throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = turboButtonClass.NegativeSetTurbo(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false") && response.code() != 200);
@@ -72,7 +72,7 @@ public class TurboButtonTest extends BaseClass{
 
     @Test
     public void getInterval() throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         turboButtonClass.setTurbo();
         TurboButton turboButton = turboButtonClass.getTurboButton();
         Assert.assertTrue(turboButton.getScs().equals("true") && turboButton.getTurbo() == GenerateTurboContent.turboStatic);
@@ -81,7 +81,7 @@ public class TurboButtonTest extends BaseClass{
     @TestCaseName("{0}")
     @Parameters(source = GenerateTurboContent.class)
     public void NegativeSendTicketWithAuthorisation(JSONObject jsonObject) throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         turboButtonClass.setTurbo();
         TurboButton turboButton = turboButtonClass.NegativeGetTurboButton(jsonObject);
         System.out.println("turboButton " + turboButton);

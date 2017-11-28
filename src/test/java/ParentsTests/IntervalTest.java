@@ -54,7 +54,7 @@ public class IntervalTest extends BaseClass{
 
     @Test
     public void setInterval() throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = setIntervalUpdateClass.setIntervalUpdate();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
@@ -63,7 +63,7 @@ public class IntervalTest extends BaseClass{
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)
     public void NegativeSetInterval(JSONObject jsonObject) throws Exception {
-        profileClass.selectProfileCardResponse();
+        profileClass.setProfileCard();
         response = setIntervalUpdateClass.NegativeSetIntervalUpdate(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false"));

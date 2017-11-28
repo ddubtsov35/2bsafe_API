@@ -22,8 +22,9 @@ import java.util.List;
  */
 public class GenerateProfileIdContent {
 
-    public GenerateProfileIdContent() throws ParseException {
-    }
+    public static Integer profileId = null;
+
+    public GenerateProfileIdContent() throws ParseException {}
 
     public static JSONObject getProfileId() throws Exception {
         JSONObject jsonObj = new JSONObject();
@@ -37,14 +38,15 @@ public class GenerateProfileIdContent {
                 jsonObj.put("profile_id", childrenCardClass.addChildrenCard().getProfile_id());
             } else {
                 childrenLogoutClass.logout();
-                CidCkeyRegisteredPool.clearFile();
                 authorisationChildClass.authorisationChildren();
                 profileCardList = profileClass.getProfileList();
+                jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
                 jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());
             }
         } else{
             jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());
         }
+        profileId = (Integer) jsonObj.get("profile_id");
         return jsonObj;
     }
 }

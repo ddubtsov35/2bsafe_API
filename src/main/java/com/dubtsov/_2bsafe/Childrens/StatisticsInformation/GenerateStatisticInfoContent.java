@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Childrens.StatisticsInformation;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONObject;
 
@@ -16,6 +17,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("osv", null);
         System.out.println("jsonObject " + jsonObj);
@@ -23,6 +26,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", null);
         jsonObj.put("ckey", null);
@@ -32,6 +37,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
@@ -41,6 +48,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
@@ -50,6 +59,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", "failCkey");
@@ -59,6 +70,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent6() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", "failCid");
@@ -68,6 +81,9 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent7() throws Exception {
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", "failCid");
         jsonObj.put("ckey", "failCkey");

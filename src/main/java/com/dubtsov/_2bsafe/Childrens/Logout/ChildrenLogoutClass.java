@@ -16,14 +16,16 @@ import java.util.HashMap;
 public class ChildrenLogoutClass extends BaseClass{
 
     JSONObject jsonObject;
+    GenerateLogoutContent generateLogoutContent = new GenerateLogoutContent();
 
     public ChildrenLogoutClass() throws IOException {}
 
     public Response logout() throws Exception {
-        jsonObject = GenerateLogoutContent.getLogoutContent();
+        jsonObject = generateLogoutContent.getLogoutContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
+            System.out.println("Удалил CidCkeyRegisteredPool.clearFile()");
             CidCkeyRegisteredPool.clearFile();
         }
         return response;
@@ -36,7 +38,7 @@ public class ChildrenLogoutClass extends BaseClass{
 
 
     public Response logoutWithoutPassword() throws Exception {
-        jsonObject = GenerateLogoutContent.getLogoutWithoutPasswordContent();
+        jsonObject = generateLogoutContent.getLogoutWithoutPasswordContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout_nopassword", jsonObject);
         return responseClass.getJsonResponse();
     }

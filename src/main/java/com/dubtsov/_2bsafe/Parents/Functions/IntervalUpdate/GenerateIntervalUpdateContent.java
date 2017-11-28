@@ -25,7 +25,7 @@ public class GenerateIntervalUpdateContent {
         if(getIntervalUpdateClass.getIntervalUpdateResponse() != null) {
             itoRandom = random.nextInt((90 - 0) + 1) + 0;
             jsonObj.put("ito", itoRandom);
-            jsonObj.put("profile_id", GenerateSelectChildrenCardContent.profileId);
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
         }
         return jsonObj;
     }

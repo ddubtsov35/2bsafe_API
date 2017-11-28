@@ -132,8 +132,13 @@ public class GenerateAppsContent{
 
 
     public static JSONObject getDetailInfoContent() throws Exception {
-        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        JSONObject jsonObj = new JSONObject();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("alias",getAlias());
         return jsonObj;
     }
@@ -179,8 +184,13 @@ public class GenerateAppsContent{
 
 
     public static JSONObject getAppsBlockContent() throws Exception {
-        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        JSONObject jsonObj = new JSONObject();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("alias",getAlias());
         jsonObj.put("block",0);
         return jsonObj;
@@ -265,8 +275,13 @@ public class GenerateAppsContent{
 
 
     public static JSONObject getAppsBlockUpdateContent() throws Exception {
-        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        JSONObject jsonObj = new JSONObject();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("alias",getAlias());
         jsonObj.put("block",0);
         return jsonObj;
@@ -278,8 +293,13 @@ public class GenerateAppsContent{
 
     public static JSONObject getAppsUpdateContent() throws Exception {
         JSONArray jsonArray = new JSONArray();
-        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        JSONObject jsonObj = new JSONObject();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonArray.add(getAlias());
         jsonObj.put("aliases",jsonArray);
         return jsonObj;
@@ -325,8 +345,13 @@ public class GenerateAppsContent{
 
     public static JSONObject getAppsDeleteContent() throws Exception {
         JSONArray jsonArray = new JSONArray();
-        JSONObject jsonObj = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        JSONObject jsonObj = new JSONObject();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonArray.add(getAlias());
         jsonObj.put("aliases",jsonArray);
         return jsonObj;

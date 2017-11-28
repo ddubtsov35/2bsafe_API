@@ -13,6 +13,7 @@ import com.dubtsov._2bsafe.Parents.Models.AddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
+import org.json.simple.JSONObject;
 import org.junit.Assert;
 
 import java.io.IOException;
@@ -52,6 +53,14 @@ public class Test {
         profileClass.setProfileCard();
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         System.out.println(profileCardList.size());
+    }
+
+    @org.junit.Test
+    public void test3() throws Exception {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("1", 1);
+        jsonObject.put("2", 2);
+        System.out.println(jsonObject.size());
     }
 
 }

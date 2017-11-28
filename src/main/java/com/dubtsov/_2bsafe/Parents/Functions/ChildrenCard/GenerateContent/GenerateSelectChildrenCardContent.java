@@ -9,6 +9,7 @@ import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProf
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
 import org.json.simple.JSONObject;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -17,17 +18,27 @@ import java.util.Random;
  * Created by user on 11.09.17.
  */
 public class GenerateSelectChildrenCardContent {
-    public static Integer profileId = null;
+    public static AuthorisationChildClass authorisationChildClass;
+
+
+    public GenerateSelectChildrenCardContent() throws IOException {
+    }
 
     public static JSONObject getGenerateSelectChildrenCardContent() throws Exception {
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
-        jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        System.out.println("profile_id " + jsonObject.get("profile_id"));
-        profileId = (Integer) jsonObject.get("profile_id");
+        JSONObject jsonObject1 = GenerateProfileIdContent.getProfileId();
+        if(jsonObject1.size()>1) {
+            jsonObject = jsonObject1;
+        } else{
+            jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        }
+
         return jsonObject;
     }
 
     public static Object[] provideFailProfileId() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         Random random = new Random();
         jsonObject.put("profile_id", random.nextInt(1000000 - 1 + 1) + 1);
@@ -35,12 +46,16 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyProfileId() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", null);
         return new Object[]{new Object[]{jsonObject}};
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("ckey");
@@ -49,6 +64,8 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideFailCkey() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("ckey");
@@ -57,6 +74,8 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideFailCid() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("cid");
@@ -65,6 +84,8 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyCid() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("cid");

@@ -67,12 +67,16 @@ public class GenerateHelpMeContent{
     public static JSONObject setHelpMe() throws Exception {
         jsonObj = new JSONObject();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
         jsonObj.put("state", 0);
         jsonObj.put("push", 0);
         jsonObj.put("phone", "+79111111111");
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-
         jsonObj.put("sms",jsonArray);
         jsonObj2.put("default", true);
         jsonObj2.put("phone", "+792222222222");

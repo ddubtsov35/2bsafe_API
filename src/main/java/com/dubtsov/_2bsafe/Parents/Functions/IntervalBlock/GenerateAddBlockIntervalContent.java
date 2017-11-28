@@ -237,7 +237,7 @@ public class GenerateAddBlockIntervalContent {
         JSONObject jsonObj = new JSONObject();
         List<IntervalBlock> intervalBlockList = intervalBlockClass.getIntervalBlockList();
         jsonObj.put("interval_id", intervalBlockList.get(0).getId());
-        jsonObj.put("profile_id", GenerateSelectChildrenCardContent.profileId);
+        jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
         System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }

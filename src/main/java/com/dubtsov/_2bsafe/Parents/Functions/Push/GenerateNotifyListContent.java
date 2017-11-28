@@ -91,7 +91,7 @@ public class GenerateNotifyListContent{
 
     public static JSONObject createSession_alarm_update_updateLong() throws Exception {
         jsonObj = new JSONObject();
-        int profile_id = GenerateSelectChildrenCardContent.profileId;
+        int profile_id = GenerateProfileIdContent.profileId;
         jsonObj.put("profile_id", profile_id);
         return jsonObj;
     }
