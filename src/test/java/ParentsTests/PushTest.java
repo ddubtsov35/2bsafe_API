@@ -59,8 +59,6 @@ public class PushTest extends BaseClass {
 
     @Test
     public void lockScreen() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.lockScreen();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -69,8 +67,6 @@ public class PushTest extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
     public void NegativeChangeChildrenCardsPhone(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.NegativeLockScreen(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false"));
@@ -81,8 +77,6 @@ public class PushTest extends BaseClass {
 
     @Test
     public void onSound() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.onSound();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -91,8 +85,6 @@ public class PushTest extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
     public void NegativeOnSound(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.NegativeOnSound(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false"));
@@ -105,8 +97,6 @@ public class PushTest extends BaseClass {
 
     @Test
     public void update() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.update();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -115,8 +105,6 @@ public class PushTest extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
     public void NegativeUpdate(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.NegativeUpdate(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false"));
@@ -130,8 +118,6 @@ public class PushTest extends BaseClass {
     @Ignore
     @Test
     public void updateLong() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.updateLong();
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
@@ -140,8 +126,6 @@ public class PushTest extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
     public void NegativeUpdateLong(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         response = pushClass.NegativeUpdateLong(jsonObject);
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": false"));
@@ -153,8 +137,6 @@ public class PushTest extends BaseClass {
 
     @Test
     public void getNotifyList() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
         notifyList = pushClass.getNotifyList();
         System.out.println(notifyList.toString());
         Assert.assertTrue(notifyList.getScs().contains("true"));
@@ -163,8 +145,6 @@ public class PushTest extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
     public void NegativeGetNotifyList(JSONObject jsonObject) throws Exception {
-            authorisationUserClass.RegistrationAndAuthorisationWeb();
-            addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
             notifyList = pushClass.NegativeGetNotifyList(jsonObject);
             System.out.println(notifyList.toString());
             Assert.assertTrue(notifyList.getScs().contains("false"));

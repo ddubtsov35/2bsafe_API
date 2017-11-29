@@ -4,7 +4,6 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import sun.misc.BASE64Decoder;
 
 import java.io.IOException;
 

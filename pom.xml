@@ -90,9 +90,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
-                    <rerunFailingTestsCount>2</rerunFailingTestsCount>
-                    <parallel>classes</parallel>
-                    <threadCount>5</threadCount>
+                    <rerunFailingTestsCount>3</rerunFailingTestsCount>
+                    <!--<parallel>classes</parallel>
+                    <threadCount>1</threadCount>-->
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
@@ -106,15 +106,15 @@
                     <includes>
                         <include>**/ChildrenTests/AuthorisationTest.java</include>
                         <include>**/ChildrenTests/ChildrenCardTest.java</include>
-                        <include>**/ChildrenTests/GetConditionInformationTest.java</include>
-                        <include>**/ChildrenTests/HelpMeTest.java</include>
+                        <!--<include>**/ChildrenTests/GetConditionInformationTest.java</include>-->
+                        <!--<include>**/ChildrenTests/HelpMeTest.java</include>-->
                         <include>**/ChildrenTests/LogoutTest.java</include>
-                        <include>**/ParentsTests/AccountSettingsTest.java</include>
+                        <!--<include>**/ParentsTests/AccountSettingsTest.java</include>
                         <include>**/ParentsTests/ChildrenCardsTests.java</include>
-                        <include>**/ParentsTests/GetInformationTests.java</include>
-                        <!--<include>**/ParentsTests/HelpMeTest.java</include>
-                        <include>**/ParentsTests/RegistrationTests.java</include>
-                        <include>**/ParentsTests/ZoneTest.java</include>-->
+                        <include>**/ParentsTests/GetInformationTests.java</include>-->
+                        <!--<include>**/ParentsTests/HelpMeTest.java</include>-->
+                        <!--<include>**/ParentsTests/RegistrationTests.java</include>
+                        <include>**/ParentsTests/AuthorisationTests.java</include>-->
                     </includes>
                 </configuration>
                 <dependencies>

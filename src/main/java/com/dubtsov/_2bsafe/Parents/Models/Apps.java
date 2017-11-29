@@ -1,6 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

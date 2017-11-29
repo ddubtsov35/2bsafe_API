@@ -8,7 +8,9 @@ import com.dubtsov._2bsafe.Childrens.Parse.GetProfileList;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -29,6 +31,9 @@ public class ProfileClass extends BaseClass{
     public List<ProfileCard> getProfileList() throws Exception {
         jsonObject = GenerateGetProfileListContent.getProfileListContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
+        System.out.println("ChildrenCardPools.getChildrenCardFromFile() " + ChildrenCardPools.getChildrenCardFromFile());
+        System.out.println("CidCkeyRegisteredPool.getCidFromFile() " + CidCkeyRegisteredPool.getCidFromFile());
+        System.out.println("CidCkeyPool.getCidFromFile() " + CidCkeyPool.getCidFromFile());
         return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());
     }
 

@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONObject;
@@ -26,6 +27,7 @@ public class RegistrationUserStep2Class extends BaseClass {
 
             if(response.code() == 200) {
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+                //GenerateProfileIdContent.profileId = null;
             }
 
             return jsonObject;
@@ -44,6 +46,7 @@ public class RegistrationUserStep2Class extends BaseClass {
 
             if (responseClass.getJsonResponse().code() == 200) {
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
+                //GenerateProfileIdContent.profileId = null;
             }
 
             return jsonObject;

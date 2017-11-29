@@ -32,6 +32,9 @@ public class GenerateProfileIdContent {
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         ChildrenCardClass childrenCardClass = new ChildrenCardClass();
         ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
+
+        authorisationChildClass.authorisationChildren();
+
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         if (profileCardList.isEmpty()) {
             if (CidCkeyRegisteredPool.getCidFromFile() == null) {

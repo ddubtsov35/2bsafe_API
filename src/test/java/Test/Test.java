@@ -57,10 +57,11 @@ public class Test {
 
     @org.junit.Test
     public void test3() throws Exception {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("1", 1);
-        jsonObject.put("2", 2);
-        System.out.println(jsonObject.size());
+        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
+        authorisationUserClass.authorisationUser();
+
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
     }
 
 }

@@ -1,7 +1,9 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -19,25 +21,59 @@ public class GenerateDeleteChildrenCardContent {
 
     public GenerateDeleteChildrenCardContent() throws ParseException {}
 
-    public static JSONObject getDeleteChildrenCardContent() throws IOException, ParseException, java.text.ParseException {
+    public static JSONObject getDeleteChildrenCardContent() throws Exception {
+        /*childrenCardClass = new ChildrenCardClass();
+        if(childrenCardClass.getChildrenCardList().size() > 0) {
+            if (GenerateProfileIdContent.profileId == null) {
+                jsonObj = GenerateProfileIdContent.getProfileId();
+                jsonObj.put("profile_id", jsonObj.get("profile_id"));
+            } else {
+                jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+            }
+        } else{
+            childrenCardClass.addChildrenCard();
+            if (GenerateProfileIdContent.profileId == null) {
+                jsonObj = GenerateProfileIdContent.getProfileId();
+                jsonObj.put("profile_id", jsonObj.get("profile_id"));
+            } else {
+                jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+            }
+        }
+        jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
+        return jsonObj;*/
+
         childrenCardClass = new ChildrenCardClass();
-        jsonObj.put("profile_id", childrenCardClass.getChildrenCardList().get(0).getProfile_id());
+        if(ChildrenCardPools.getChildrenCardFromFile() == null) {
+            childrenCardClass.addChildrenCard();
+        }
+        int profileId = ChildrenCardPools.getChildrenCardFromFile().getProfile_id();
+        jsonObj.put("profile_id", profileId);
         jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAppsInGroupContent() throws IOException, ParseException, java.text.ParseException {
+    public static Object[] provideNegativeGetAppsInGroupContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
         jsonObj.put("pwd", null);
 
         JSONObject jsonObj2 = new JSONObject();
         Random random = new Random();
-        jsonObj2.put("profile_id", childrenCardClass.getChildrenCardList().get(0).getProfile_id());
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj2  = GenerateProfileIdContent.getProfileId();
+            jsonObj2.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj2.put("pwd", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("profile_id", childrenCardClass.getChildrenCardList().get(0).getProfile_id());
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj3  = GenerateProfileIdContent.getProfileId();
+            jsonObj3.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj3.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj3.put("pwd", UserPool.getUserFromFile().get("pwd"));
 
         JSONObject jsonObj4 = new JSONObject();

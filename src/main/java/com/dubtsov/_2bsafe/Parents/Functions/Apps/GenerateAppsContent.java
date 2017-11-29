@@ -31,7 +31,7 @@ public class GenerateAppsContent{
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAppsInfoContent1() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAppsInfoContent2() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
         JSONObject jsonObj2 = new JSONObject();

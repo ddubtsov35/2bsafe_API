@@ -14,6 +14,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -40,12 +41,14 @@ public class HelpMeTest extends BaseClass {
         addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
     }
 
+    @Ignore
     @Test
     public void getHelpMe() throws Exception {
         helpMe = helpMeParentClass.getHelpMe();
         System.out.println(helpMe.toString());
         Assert.assertTrue(helpMe.getScs().equals("true"));
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateHelpMeContent.class)
@@ -56,7 +59,7 @@ public class HelpMeTest extends BaseClass {
     }
 
 
-
+    @Ignore
     @Test
     public void setHelpMe() throws Exception {
         response = helpMeParentClass.setHelpMe();
@@ -64,6 +67,7 @@ public class HelpMeTest extends BaseClass {
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateHelpMeContent.class)

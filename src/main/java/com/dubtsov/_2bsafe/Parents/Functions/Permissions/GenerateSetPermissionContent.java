@@ -36,7 +36,12 @@ public class GenerateSetPermissionContent{
                 jsonObj.put("gsm", 0);
             }
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+            if(GenerateProfileIdContent.profileId == null){
+                jsonObj  = GenerateProfileIdContent.getProfileId();
+                jsonObj.put("profile_id", jsonObj.get("profile_id"));
+            } else{
+                jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+            }
             setPermissionObject = jsonObj;
             return jsonObj;
         }
@@ -72,7 +77,12 @@ public class GenerateSetPermissionContent{
     public static JSONObject getPermission() throws Exception {
         jsonObj = new JSONObject();
         jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         return jsonObj;
     }
     public static Object[] provideGetPermission() throws Exception {

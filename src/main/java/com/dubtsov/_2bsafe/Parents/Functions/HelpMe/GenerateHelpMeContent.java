@@ -23,7 +23,12 @@ public class GenerateHelpMeContent{
         jsonObj = new JSONObject();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         return jsonObj;
     }
     public static Object[] provideGetHelpMe() throws Exception {
@@ -39,7 +44,12 @@ public class GenerateHelpMeContent{
         jsonObj2.put("profile_id", null);
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
 
         JSONObject jsonObj4 = new JSONObject();
         jsonObj4.put("cid", authorisationChildClass.authorisationChildren().getCid());

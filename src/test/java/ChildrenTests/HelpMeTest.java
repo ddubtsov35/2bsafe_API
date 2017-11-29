@@ -17,6 +17,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -40,6 +41,7 @@ public class HelpMeTest extends BaseClass{
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
+    @Ignore
     @Test
     public void helpMe() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -50,6 +52,7 @@ public class HelpMeTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateHelpMeContent.class)

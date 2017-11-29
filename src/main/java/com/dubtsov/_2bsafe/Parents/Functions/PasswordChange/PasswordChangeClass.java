@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.PasswordChange;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
@@ -25,6 +26,7 @@ public class PasswordChangeClass extends BaseClass {
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             UserPool.setNewPassword(jsonObject.get("npwd").toString());
+            //GenerateProfileIdContent.profileId = null;
         }
         return response;
     }

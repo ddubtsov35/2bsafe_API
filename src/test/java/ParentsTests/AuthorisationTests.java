@@ -124,6 +124,7 @@ public class AuthorisationTests extends BaseClass {
         response = logoutClass.logout();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
     }
+    @Ignore
     @Test
     public void NegativeLogout() throws Exception {
         response = logoutClass.logout();

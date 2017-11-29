@@ -9,8 +9,12 @@ import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsers
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateEmailClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import junitparams.JUnitParamsRunner;
@@ -124,6 +128,13 @@ public class RegistrationTests extends BaseClass {
     @Test
     public void createNewUser() throws Exception {
         UserPool.clearFile();
+        CidCkeyRegisteredPool.clearFile();
+        CidCkeyPool.clearFile();
+        ChildrenCardPools.clearFile();
+        System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
+        GenerateProfileIdContent.profileId = null;
+        System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
+
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();

@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Childrens.Logout;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
@@ -25,8 +26,10 @@ public class ChildrenLogoutClass extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
-            System.out.println("Удалил CidCkeyRegisteredPool.clearFile()");
             CidCkeyRegisteredPool.clearFile();
+            //System.out.println("Удалил CidCkeyRegisteredPool.clearFile()");
+            CidCkeyPool.clearFile();
+            //System.out.println("Удалил CidCkeyPool.clearFile()");
         }
         return response;
     }

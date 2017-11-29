@@ -1,14 +1,18 @@
 package com.dubtsov._2bsafe.Childrens.Logout;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
+import org.apache.http.auth.AUTH;
 import org.json.simple.JSONObject;
 
 /**
  * Created by user on 12.09.17.
  */
 public class GenerateLogoutContent{
+
+    private static AuthorisationChildClass authorisationChildClass;
 
     public JSONObject getLogoutContent() throws Exception {
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkeyForLogout();
@@ -42,6 +46,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent2() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", "failCid");
@@ -52,6 +59,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent3() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
@@ -62,6 +72,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent4() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", "failCkey");
@@ -72,6 +85,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent5() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
@@ -82,6 +98,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent6() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("reason", null);
 
@@ -90,6 +109,9 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent7() throws Exception {
+        authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         System.out.println("jsonObject " + jsonObj);

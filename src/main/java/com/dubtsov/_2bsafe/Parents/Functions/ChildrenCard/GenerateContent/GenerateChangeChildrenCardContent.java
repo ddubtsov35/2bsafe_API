@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GeneratePhoneClass;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
@@ -36,7 +37,12 @@ public class GenerateChangeChildrenCardContent{
 
     public static JSONObject getChangeChildrenCardContent(String type) throws Exception {
         jsonObj = generateContent(type);
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
+        //jsonObj.put("profile_id", ChildrenCardPools.getChildrenCardFromFile().getProfile_id());
         return jsonObj;
     }
 

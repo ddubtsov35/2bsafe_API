@@ -37,17 +37,20 @@ public class ChildrenCardsTests extends BaseClass {
     public ChildrenCardsTests() throws IOException, ParseException, java.text.ParseException {}
 
     @Before
-    public void before() throws IOException, ParseException, java.text.ParseException {
+    public void before() throws Exception {
         childrenCardClass = new ChildrenCardClass();
         authorisationUserClass = new AuthorisationUserClass();
         listRegisteredUsersClass = new ListRegisteredUsersClass();
         deleteUserClass = new DeleteUserClass();
+
+        authorisationUserClass.RegistrationAndAuthorisationWeb();
     }
 
+    //@Ignore
     @Test
     public void addChildrenCardsWeb() throws Exception {
+        childrenCardClass.deleteChildrenCard();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        ChildrenCardPools.clearFile();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
         childrenCardClass.addChildrenCard();
@@ -60,7 +63,6 @@ public class ChildrenCardsTests extends BaseClass {
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddChildrenCardContent.class)
     public void NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
         childrenCardClass.NegativeAddChildrenCard(jsonObject);
@@ -70,9 +72,10 @@ public class ChildrenCardsTests extends BaseClass {
     }
 
 
-
+    //@Ignore
     @Test
     public void addChildrenCardsAndroid() throws Exception {
+        childrenCardClass.deleteChildrenCard();
         authorisationUserClass.RegistrationAndAuthorisationAndroid();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
@@ -104,10 +107,9 @@ public class ChildrenCardsTests extends BaseClass {
 
 
 
-
+    //@Ignore
     @Test
     public void deleteChildrenCards() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         int countCardBefore = childrenCardClass.getChildrenCardList().size();
         System.out.println("countCardBefore  " + countCardBefore);
@@ -139,19 +141,19 @@ public class ChildrenCardsTests extends BaseClass {
 
     @Test
     public void changeChildrenCardsPhone() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("phone");
         ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
         System.out.println(childrenCard.toString());
         String result = response.body().string();
+        System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getPhone().equals(GenerateChangeChildrenCardContent.generatedPhone));
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateChangeChildrenCardContent.class)
     public void NegativeChangeChildrenCardsPhone(JSONObject jsonObject) throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.NegativeChangeChildrenCard(jsonObject);
         ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
@@ -166,7 +168,6 @@ public class ChildrenCardsTests extends BaseClass {
 
     @Test
     public void changeChildrenCardsAge() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("age");
         ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
@@ -178,7 +179,6 @@ public class ChildrenCardsTests extends BaseClass {
     }
     @Test
     public void changeChildrenCardsAll() throws Exception {
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         response = childrenCardClass.changeChildrenCard("all");
         ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();

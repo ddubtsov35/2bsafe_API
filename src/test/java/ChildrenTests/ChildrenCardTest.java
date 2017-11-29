@@ -69,7 +69,7 @@ public class ChildrenCardTest extends BaseClass{
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
         String result = profileClass.setProfileCard().getScs();
-        //System.out.println("selectChildrenCard " + result);
+        System.out.println("selectChildrenCard " + result);
         Assert.assertTrue(result.contains("true"));
     }
 

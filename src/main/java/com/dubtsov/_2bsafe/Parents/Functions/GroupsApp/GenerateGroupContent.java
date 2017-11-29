@@ -33,7 +33,12 @@ public class GenerateGroupContent{
         jsonObj = new JSONObject();
         jsonArray = new JSONArray();
         jsonObj.put("name", "TestName");
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("aliases", jsonArray);
         jsonArray.add(getAlias());
         return jsonObj;
@@ -46,7 +51,12 @@ public class GenerateGroupContent{
         jsonObj = new JSONObject();
         jsonArray = new JSONArray();
         jsonObj.put("group_id", 1);
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("blocked",false);
         jsonObj.put("name", "TestName");
         return jsonObj;
@@ -56,8 +66,8 @@ public class GenerateGroupContent{
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
 
-        /*AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();*/
+        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
+        authorisationChildClass.authorisationChildren();
 
 
         JSONObject jsonObj1 = new JSONObject();
@@ -67,7 +77,12 @@ public class GenerateGroupContent{
         jsonObj1.put("name", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj2  = GenerateProfileIdContent.getProfileId();
+            jsonObj2.put("profile_id", jsonObj2.get("profile_id"));
+        } else{
+            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj2.put("blocked",null);
         jsonObj2.put("group_id", null);
         jsonObj2.put("name", null);
@@ -102,14 +117,24 @@ public class GenerateGroupContent{
 
 
         JSONObject jsonObj8 = new JSONObject();
-        jsonObj8.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj8  = GenerateProfileIdContent.getProfileId();
+            jsonObj8.put("profile_id", jsonObj8.get("profile_id"));
+        } else{
+            jsonObj8.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj8.put("blocked","fakeBlocked");
         jsonObj8.put("group_id", 0);
         jsonObj8.put("name", "TestName");
 
 
         JSONObject jsonObj9 = new JSONObject();
-        jsonObj9.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj9  = GenerateProfileIdContent.getProfileId();
+            jsonObj9.put("profile_id", jsonObj9.get("profile_id"));
+        } else{
+            jsonObj9.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj9.put("blocked", false);
         jsonObj9.put("group_id", 456);
         jsonObj9.put("name", "TestName");
@@ -122,7 +147,12 @@ public class GenerateGroupContent{
         jsonObj11.put("blocked", true);
 
         JSONObject jsonObj12 = new JSONObject();
-        jsonObj12.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj12  = GenerateProfileIdContent.getProfileId();
+            jsonObj12.put("profile_id", jsonObj12.get("profile_id"));
+        } else{
+            jsonObj12.put("profile_id", GenerateProfileIdContent.profileId);
+        }
 
         JSONObject jsonObj13 = new JSONObject();
         jsonObj13.put("name", "TestName");
@@ -157,7 +187,12 @@ public class GenerateGroupContent{
     public static JSONObject generatedSetGroup() throws Exception {
         jsonObj = new JSONObject();
         jsonArray = new JSONArray();
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj  = GenerateProfileIdContent.getProfileId();
+            jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("aliases", jsonArray);
         jsonArray.add(getAlias());
         jsonObj.put("group_id", 0);
@@ -172,7 +207,12 @@ public class GenerateGroupContent{
         jsonObj1.put("group_id", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj2  = GenerateProfileIdContent.getProfileId();
+            jsonObj2.put("profile_id", jsonObj2.get("profile_id"));
+        } else{
+            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj2.put("aliases",null);
         jsonObj2.put("group_id", null);
 
@@ -203,13 +243,23 @@ public class GenerateGroupContent{
 
 
         JSONObject jsonObj8 = new JSONObject();
-        jsonObj8.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj8  = GenerateProfileIdContent.getProfileId();
+            jsonObj8.put("profile_id", jsonObj8.get("profile_id"));
+        } else{
+            jsonObj8.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj8.put("aliases","fakePwd");
         jsonObj8.put("group_id", 0);
 
 
         JSONObject jsonObj9 = new JSONObject();
-        jsonObj9.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj9  = GenerateProfileIdContent.getProfileId();
+            jsonObj9.put("profile_id", jsonObj9.get("profile_id"));
+        } else{
+            jsonObj9.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj9.put("aliases", jsonArray);
         jsonArray.add(getAlias());
         jsonObj9.put("group_id", 456);
@@ -223,7 +273,12 @@ public class GenerateGroupContent{
         jsonArray.add(getAlias());
 
         JSONObject jsonObj12 = new JSONObject();
-        jsonObj12.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj12  = GenerateProfileIdContent.getProfileId();
+            jsonObj12.put("profile_id", jsonObj12.get("profile_id"));
+        } else{
+            jsonObj12.put("profile_id", GenerateProfileIdContent.profileId);
+        }
 
         JSONObject jsonObj13 = new JSONObject();
 
