@@ -21,12 +21,12 @@ public class GenerateTurboContent{
 
     public static JSONObject getTurboContent() throws Exception {
         jsonObj = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        } else{
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj  = GenerateProfileIdContent.getProfileId();
+        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         return jsonObj;
     }
     public static Object[] provideNegativeGetTurboContent() throws IOException, ParseException {

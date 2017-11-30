@@ -132,7 +132,7 @@ public class RegistrationTests extends BaseClass {
         CidCkeyPool.clearFile();
         ChildrenCardPools.clearFile();
         System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
-        GenerateProfileIdContent.profileId = null;
+        //GenerateProfileIdContent.profileId = null;
         System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
 
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();

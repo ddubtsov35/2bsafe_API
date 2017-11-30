@@ -33,7 +33,7 @@ public class GenerateProfileIdContent {
         ChildrenCardClass childrenCardClass = new ChildrenCardClass();
         ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
 
-        authorisationChildClass.authorisationChildren();
+        //authorisationChildClass.authorisationChildren();
 
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         if (profileCardList.isEmpty()) {

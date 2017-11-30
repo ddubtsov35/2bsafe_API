@@ -31,7 +31,7 @@ public class AddChildrenCard {
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));}
         ChildrenCardPools.setChildrenCard(jsonObj);
-        GenerateProfileIdContent.profileId = null;
+        //GenerateProfileIdContent.profileId = null;
     }
 
     @Override

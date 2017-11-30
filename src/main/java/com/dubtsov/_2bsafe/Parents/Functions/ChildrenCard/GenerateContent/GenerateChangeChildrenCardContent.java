@@ -37,11 +37,11 @@ public class GenerateChangeChildrenCardContent{
 
     public static JSONObject getChangeChildrenCardContent(String type) throws Exception {
         jsonObj = generateContent(type);
-        if(GenerateProfileIdContent.profileId == null){
+        /*if(GenerateProfileIdContent.profileId == null){*/
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        } else{
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         //jsonObj.put("profile_id", ChildrenCardPools.getChildrenCardFromFile().getProfile_id());
         return jsonObj;
     }

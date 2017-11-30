@@ -58,7 +58,7 @@ public class ChildrenCardClass extends BaseClass {
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
-            GenerateProfileIdContent.profileId = null;
+            //GenerateProfileIdContent.profileId = null;
             System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
             ChildrenCardPools.clearFile();
             CidCkeyPool.clearFile();

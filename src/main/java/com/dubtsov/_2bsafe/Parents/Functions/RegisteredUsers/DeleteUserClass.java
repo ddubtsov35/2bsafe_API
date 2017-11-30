@@ -30,7 +30,7 @@ public class DeleteUserClass extends BaseClass {
         responseClass.getJsonResponse();
         if(responseClass.getJsonResponse().code() == 200){
             System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
-            GenerateProfileIdContent.profileId = null;
+            //GenerateProfileIdContent.profileId = null;
             System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
             ChildrenCardPools.clearFile();
             CidCkeyPool.clearFile();

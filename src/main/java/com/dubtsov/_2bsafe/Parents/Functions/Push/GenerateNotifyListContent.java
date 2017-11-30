@@ -28,12 +28,12 @@ public class GenerateNotifyListContent{
         jsonArray = new JSONArray();
 
         jsonObj.put("start", 0);
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        } else{
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj  = GenerateProfileIdContent.getProfileId();
+        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         jsonObj.put("limit", 100);
 
         jsonArray.add("geo");
@@ -96,8 +96,8 @@ public class GenerateNotifyListContent{
 
     public static JSONObject createSession_alarm_update_updateLong() throws Exception {
         jsonObj = new JSONObject();
-        int profile_id = GenerateProfileIdContent.profileId;
-        jsonObj.put("profile_id", profile_id);
+        //int profile_id = GenerateProfileIdContent.profileId;
+        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profileId"));
         return jsonObj;
     }
     public static Object[] provideNegativeCreateSession_alarm_update_updateLong() throws IOException, ParseException {
@@ -123,12 +123,12 @@ public class GenerateNotifyListContent{
 
     public static JSONObject blockScreen() throws Exception {
         jsonObj = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
+//        if(GenerateProfileIdContent.profileId == null){
             jsonObj  = GenerateProfileIdContent.getProfileId();
             jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        } else{
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         jsonObj.put("pin", "111111");
         jsonObj.put("text", "TestText");
         return jsonObj;

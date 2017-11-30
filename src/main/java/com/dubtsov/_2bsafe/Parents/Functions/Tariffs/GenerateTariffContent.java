@@ -29,12 +29,12 @@ public class GenerateTariffContent{
             }
         }
         jsonObj.put("tariff_id", tariffId);
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        } else{
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj  = GenerateProfileIdContent.getProfileId();
+        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         return jsonObj;
     }
 
@@ -52,12 +52,12 @@ public class GenerateTariffContent{
         }
 
         JSONObject jsonObj = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        } else{
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj  = GenerateProfileIdContent.getProfileId();
+        jsonObj.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        }*/
         jsonObj.put("tariff_id",null);
 
         JSONObject jsonObj2 = new JSONObject();

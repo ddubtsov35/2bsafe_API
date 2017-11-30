@@ -59,21 +59,21 @@ public class GenerateDeleteChildrenCardContent {
 
         JSONObject jsonObj2 = new JSONObject();
         Random random = new Random();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj2  = GenerateProfileIdContent.getProfileId();
-            jsonObj2.put("profile_id", jsonObj.get("profile_id"));
-        } else{
-            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj2  = GenerateProfileIdContent.getProfileId();
+        jsonObj2.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }*/
         jsonObj2.put("pwd", random.nextInt(1000000 - 1 + 1)+1);
 
         JSONObject jsonObj3 = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj3  = GenerateProfileIdContent.getProfileId();
-            jsonObj3.put("profile_id", jsonObj.get("profile_id"));
-        } else{
-            jsonObj3.put("profile_id", GenerateProfileIdContent.profileId);
-        }
+        //if(GenerateProfileIdContent.profileId == null){
+        jsonObj3  = GenerateProfileIdContent.getProfileId();
+        jsonObj3.put("profile_id", jsonObj.get("profile_id"));
+        /*} else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }*/
         jsonObj3.put("pwd", UserPool.getUserFromFile().get("pwd"));
 
         JSONObject jsonObj4 = new JSONObject();

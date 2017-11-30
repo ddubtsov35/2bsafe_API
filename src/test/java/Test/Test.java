@@ -18,6 +18,8 @@ import org.junit.Assert;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Created by user on 23.11.17.
@@ -62,6 +64,14 @@ public class Test {
 
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
+    }
+
+    @org.junit.Test
+    public void test4() throws Exception {
+        Logger log = Logger.getLogger(Test.class.getName());
+        /*log.info("Test");
+        log.log(Level.WARNING, "Test2");*/
+        log.log(Level.FINEST, "Fine");
     }
 
 }
