@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class UserPool {
 
-    private static String pathToFile = "./src/main/resources/UserPool";
+    private static String pathToFile = "2bsafe_API/src/main/resources/UserPool";
 
     public static JSONObject getUserFromFile() throws IOException, ParseException {
         try {

@@ -68,10 +68,7 @@ public class Test {
 
     @org.junit.Test
     public void test4() throws Exception {
-        Logger log = Logger.getLogger(Test.class.getName());
-        /*log.info("Test");
-        log.log(Level.WARNING, "Test2");*/
-        log.log(Level.FINEST, "Fine");
+        System.out.println(FilePa);
     }
 
 }

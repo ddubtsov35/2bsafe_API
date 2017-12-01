@@ -15,7 +15,7 @@ import java.nio.file.Paths;
  */
 public class CidCkeyPool {
 
-    private static String pathToFile = "./src/main/resources/CidCkeyPool";
+    private static String pathToFile = "2bsafe_API/src/main/resources/CidCkeyPool";
 
     public static JSONObject getCidFromFile() throws IOException, ParseException {
         try {

@@ -11,7 +11,7 @@ import java.io.*;
  */
 public class CidCkeyRegisteredPool {
 
-    private static String pathToFile = "./src/main/resources/CidCkeyRegisteredPool";
+    private static String pathToFile = "2bsafe_API/src/main/resources/CidCkeyRegisteredPool";
 
     public static JSONObject getCidFromFile() throws IOException, ParseException {
         try {
