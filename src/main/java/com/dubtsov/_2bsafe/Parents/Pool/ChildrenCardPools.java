@@ -12,36 +12,24 @@ import java.io.*;
  */
 public class ChildrenCardPools {
 
-    private static String pathToFile = "./src/main/resources/ChildrenCardPool";
+    private static JSONObject childrenCardJson;
 
     public static AddChildrenCard getChildrenCardFromFile() throws IOException, ParseException, java.text.ParseException {
+        System.out.println("childrenCardJson " + childrenCardJson);
         try {
-            JSONParser parser = new JSONParser();
-            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(pathToFile));
-            AddChildrenCard childrenCard = new AddChildrenCard(jsonObject.toString());
+            AddChildrenCard childrenCard = new AddChildrenCard(childrenCardJson.toString());
             return childrenCard;
-        }catch (ParseException e){
+        }catch (NullPointerException e){
             return null;
         }
     }
 
     public static void setChildrenCard(JSONObject jsonObject) throws IOException {
-        FileWriter fstream1 = new FileWriter(pathToFile);
-        BufferedWriter out1 = new BufferedWriter(fstream1);
-        out1.write("");
-        out1.close();
-
-        File file = new File(pathToFile);
-        PrintWriter out = new PrintWriter(file.getAbsoluteFile());
-        out.println(jsonObject);
-        out.close();
+        childrenCardJson = jsonObject;
     }
 
     public static void clearFile() throws IOException {
-        FileWriter fstream1 = new FileWriter(pathToFile);
-        BufferedWriter out1 = new BufferedWriter(fstream1);
-        out1.write("");
-        out1.close();
+        childrenCardJson = null;
     }
 
 }
