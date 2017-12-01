@@ -16,7 +16,13 @@ public class UserPool {
     public static JSONObject getUserFromFile() throws IOException, ParseException {
         System.out.println("resultJsonObject " + resultJsonObject);
         if(!(resultJsonObject == null)){
-            return resultJsonObject;
+            try{
+                resultJsonObject.remove("dtype");
+            } catch (Exception e){}
+            finally {
+                return resultJsonObject;
+            }
+
         } else {
             return null;
         }
