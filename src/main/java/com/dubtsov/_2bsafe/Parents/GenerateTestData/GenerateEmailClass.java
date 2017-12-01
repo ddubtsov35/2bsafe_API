@@ -32,7 +32,7 @@ public class GenerateEmailClass {
 
     public static String getGeneratedEmail() throws IOException {
         int count = getCountFromFile();
-        String generatedEmail = "dev_CI_" + count + "@p33.org";
+        String generatedEmail = "eee" + count + "@p33.org";
         setCountFromFile(++count);
         emailStatic = generatedEmail;
         return generatedEmail;
