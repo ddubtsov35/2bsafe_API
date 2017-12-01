@@ -68,7 +68,7 @@ public class Test {
 
     @org.junit.Test
     public void test4() throws Exception {
-        System.out.println(FilePa);
+        //System.out.println(FilePa);
     }
 
 }
