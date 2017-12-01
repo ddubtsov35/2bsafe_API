@@ -12,7 +12,7 @@ import java.io.*;
  */
 public class ChildrenCardPools {
 
-    private static String pathToFile = "2bsafe_API/src/main/resources/ChildrenCardPool";
+    private static String pathToFile = "./src/main/resources/ChildrenCardPool";
 
     public static AddChildrenCard getChildrenCardFromFile() throws IOException, ParseException, java.text.ParseException {
         try {
