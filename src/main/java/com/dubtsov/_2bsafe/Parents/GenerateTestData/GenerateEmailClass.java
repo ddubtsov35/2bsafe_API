@@ -7,6 +7,7 @@ import java.io.*;
  */
 public class GenerateEmailClass {
 
+
     private static String pathToFile = "./src/main/resources/iterator";
     public static String emailStatic;
 
