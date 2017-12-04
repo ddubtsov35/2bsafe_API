@@ -10,6 +10,11 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
 import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
+import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import junitparams.naming.TestCaseName;
@@ -40,6 +45,11 @@ public class AccountSettingsTest extends BaseClass{
         childrenCardClass = new ChildrenCardClass();
         setAccountSettingClass = new AccountSettingClass();
         accountSettingClass = new AccountSettingClass();
+
+        System.out.println("CidCkeyPool.get " + CidCkeyPool.getCidFromFile());
+        System.out.println("CidCkeyRegisteredPoolPools.get " + CidCkeyRegisteredPool.getCidFromFile());
+        System.out.println("ChildrenCardPools.get " + ChildrenCardPools.getChildrenCardFromFile());
+        System.out.println("UserPool.get " + UserPool.getUserFromFile());
 
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();

@@ -46,7 +46,7 @@ public class AuthorisationTest extends BaseClass{
         Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthorisationChildren.class)

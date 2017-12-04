@@ -68,7 +68,14 @@ public class Test {
 
     @org.junit.Test
     public void test4() throws Exception {
-        //System.out.println(FilePa);
+        int a = 10;
+        int b = 100;
+
+        a = b;
+
+        b = 1000;
+
+        System.out.println("a = " + a);
     }
 
 }

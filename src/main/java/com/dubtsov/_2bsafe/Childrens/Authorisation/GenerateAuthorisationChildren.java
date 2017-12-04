@@ -14,14 +14,14 @@ import java.io.IOException;
  */
 public class GenerateAuthorisationChildren{
 
-    private static JSONObject jsonObj;
+    //private static JSONObject jsonObj;
 
     public GenerateAuthorisationChildren() throws ParseException {}
 
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
@@ -41,13 +41,14 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
+        jsonObj.put("TEST", "TEST");
         return jsonObj;
     }
 
     public static Object[] provideFailAll() throws IOException, ParseException {
-        jsonObj = new JSONObject();
-        jsonObj.put("em", "failEmail");
-        jsonObj.put("pwd", "failPassword");
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("em", "1failEmail");
+        jsonObj.put("pwd", "1failPassword");
         jsonObj.put("cid", "fakeCid");
         jsonObj.put("token", "fakeToken");
         jsonObj.put("sname","TestDevice");
@@ -61,15 +62,15 @@ public class GenerateAuthorisationChildren{
     }
 
     public static Object[] provideFailEmail() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
-            jsonObj.put("em", "failEmail");
+            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj.put("em", "11failEmail");
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
             jsonObj.remove("em");
-            jsonObj.put("em", "failEmail");
+            jsonObj.put("em", "11failEmail");
         }
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
@@ -79,7 +80,7 @@ public class GenerateAuthorisationChildren{
 
         jsonObj.put("token", GenerateTokenClass.getGeneratedToken());
         jsonObj.put("sname","TestDevice");
-        jsonObj.put("os","Android");
+        jsonObj.put("os","Android1");
         jsonObj.put("osv","10");
         jsonObj.put("scr","Doxya");
         jsonObj.put("man","TestMan");
@@ -89,15 +90,15 @@ public class GenerateAuthorisationChildren{
     }
 
     public static Object[] provideFailPassword() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            jsonObj.put("pwd", "failPwd");
+            jsonObj.put("pwd", "111failPwd");
         } else{
             jsonObj = UserPool.getUserFromFile();
-            jsonObj.remove("pwd");
-            jsonObj.put("pwd", "failPwd");
+            //jsonObj.remove("111pwd");
+            jsonObj.put("pwd", "111failPwd");
         }
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
@@ -117,7 +118,7 @@ public class GenerateAuthorisationChildren{
     }
 
     public static Object[] provideEmptyAll() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
         } else{
@@ -135,9 +136,9 @@ public class GenerateAuthorisationChildren{
     }
 
     public static Object[] provideEmptyEmail() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", null);
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
@@ -163,9 +164,9 @@ public class GenerateAuthorisationChildren{
     }
 
     public static Object[] provideEmptyPassword() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", null);
         } else{
