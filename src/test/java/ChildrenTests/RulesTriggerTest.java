@@ -14,6 +14,7 @@ import junitparams.naming.TestCaseName;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -27,10 +28,7 @@ public class RulesTriggerTest extends BaseClass{
 
     public RulesTriggerTest() throws IOException, ParseException, java.text.ParseException {
         authorisationUserClass = new AuthorisationUserClass();
-        childrenCardClass = new ChildrenCardClass();
-        authorisationChildClass = new AuthorisationChildClass();
         rulesTriggerClass = new RulesTriggerClass();
-        generatedJsonRulesTriggerClass = new GeneratedRulesTriggerContent();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
@@ -44,6 +42,7 @@ public class RulesTriggerTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GeneratedRulesTriggerContent.class)

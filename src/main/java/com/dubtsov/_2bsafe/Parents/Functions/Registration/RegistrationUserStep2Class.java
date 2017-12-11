@@ -2,10 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Registration;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
-import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
-import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
-import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
-import com.dubtsov._2bsafe.Parents.Pool.UserPool;
+import com.dubtsov._2bsafe.Parents.Pool.*;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -33,10 +30,7 @@ public class RegistrationUserStep2Class extends BaseClass {
                 //GenerateProfileIdContent.profileId = null;
             }
 
-            System.out.println("CidCkeyPool.get " + CidCkeyPool.getCidFromFile());
-            System.out.println("CidCkeyRegisteredPoolPools.get " + CidCkeyRegisteredPool.getCidFromFile());
-            System.out.println("ChildrenCardPools.get " + ChildrenCardPools.getChildrenCardFromFile());
-            System.out.println("UserPool.get " + UserPool.getUserFromFile());
+            LogPools.getLog();
 
             return jsonObject;
         } else {

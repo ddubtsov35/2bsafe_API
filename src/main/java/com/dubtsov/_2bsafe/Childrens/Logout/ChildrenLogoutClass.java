@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Childrens.Logout;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -27,10 +28,11 @@ public class ChildrenLogoutClass extends BaseClass{
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             CidCkeyRegisteredPool.clearFile();
-            //System.out.println("Удалил CidCkeyRegisteredPool.clearFile()");
             CidCkeyPool.clearFile();
-            //System.out.println("Удалил CidCkeyPool.clearFile()");
         }
+
+        LogPools.getLog();
+
         return response;
     }
 

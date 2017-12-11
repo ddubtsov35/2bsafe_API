@@ -34,14 +34,11 @@ public class HelpMeTest extends BaseClass{
     @Before
     public void before() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass = new AuthorisationUserClass();
-        childrenCardClass = new ChildrenCardClass();
-        authorisationChildClass = new AuthorisationChildClass();
-        profileClass = new ProfileClass();
         helpMeClass = new HelpMeClass();
         addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void helpMe() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();

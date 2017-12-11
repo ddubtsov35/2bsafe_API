@@ -26,15 +26,9 @@ import java.util.LinkedHashMap;
 public class PackageProcessingCommandsTest extends BaseClass{
 
     public PackageProcessingCommandsTest() throws IOException, ParseException, java.text.ParseException {
-        generatedRequestJsonClass = new GenerateNotifyChangeAppContent();
         authorisationUserClass = new AuthorisationUserClass();
         childrenCardClass = new ChildrenCardClass();
         authorisationChildClass = new AuthorisationChildClass();
-        childrenResponseAuthorisationModel = new ChildrenResponseAuthorisationModel();
-        notifyChangeAppClass = new NotifyChangeAppClass();
-        profileClass = new ProfileClass();
-        rulesTriggerClass = new RulesTriggerClass();
-        generatedJsonRulesTriggerClass = new GeneratedRulesTriggerContent();
         packageProcessingCommandsClass = new PackageProcessingCommandsClass();
     }
 

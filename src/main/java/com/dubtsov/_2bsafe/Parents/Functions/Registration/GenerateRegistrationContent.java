@@ -66,18 +66,18 @@ public class GenerateRegistrationContent {
 
         JSONObject jsonObject = getRegistrationStep1Content;
 
-        RegisteredUser targetUser = new RegisteredUser();
+        /*RegisteredUser targetUser = new RegisteredUser();
         for(int i=0; i<registeredUserList.size();i++){
             if(registeredUserList.get(i).getEm().equals(jsonObject.get("em"))){
                 targetUser = registeredUserList.get(i);
                 break;
             }
-        }
+        }*/
         String generatedToken = GenerateTokenClass.getGeneratedToken();
 
         jsonObject.put("dtype", 1);
         jsonObject.put("was_restored", false);
-        jsonObject.put("code", targetUser.getAct_code());
+        jsonObject.put("code", new GetActCode().getCode(getRegistrationStep1Content.get("em").toString()).getAct_code());
         jsonObject.put("token", generatedToken);
         jsonObject.put("os", "testOS");
         jsonObject.put("osv", "testVersion");

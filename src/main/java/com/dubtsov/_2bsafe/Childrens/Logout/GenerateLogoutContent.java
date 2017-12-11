@@ -22,7 +22,7 @@ public class GenerateLogoutContent{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
 
@@ -30,7 +30,7 @@ public class GenerateLogoutContent{
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
 
@@ -41,7 +41,7 @@ public class GenerateLogoutContent{
         jsonObj.put("ckey", null);
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -54,7 +54,7 @@ public class GenerateLogoutContent{
         jsonObj.put("cid", "failCid");
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -67,7 +67,7 @@ public class GenerateLogoutContent{
         jsonObj.put("cid", null);
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -80,7 +80,7 @@ public class GenerateLogoutContent{
         jsonObj.put("ckey", "failCkey");
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -93,7 +93,7 @@ public class GenerateLogoutContent{
         jsonObj.put("ckey", null);
         jsonObj.put("reason", "Mne pysos!");
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -104,7 +104,7 @@ public class GenerateLogoutContent{
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("reason", null);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -114,7 +114,7 @@ public class GenerateLogoutContent{
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -135,7 +135,7 @@ public class GenerateLogoutContent{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -149,7 +149,7 @@ public class GenerateLogoutContent{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -163,21 +163,21 @@ public class GenerateLogoutContent{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
     public static Object[] provideNegativeGetLogoutContent4() throws Exception {
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", null);
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
     public static Object[] provideNegativeGetLogoutContent5() throws Exception {
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", "failPwd");
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 

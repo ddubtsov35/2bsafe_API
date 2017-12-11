@@ -15,6 +15,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -67,6 +68,8 @@ public class TariffsTest extends BaseClass{
         System.out.println("response " + response);
         Assert.assertTrue(response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)

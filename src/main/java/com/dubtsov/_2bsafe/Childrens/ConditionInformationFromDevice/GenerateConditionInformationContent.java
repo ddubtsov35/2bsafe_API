@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
+import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -39,8 +40,11 @@ public class GenerateConditionInformationContent{
         jsonArray2 = new JSONArray();
         jsonArray3 = new JSONArray();
 
-        jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        //jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        //jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+
+        jsonObject3.put("cid", CidCkeyRegisteredPool.getCidFromFile().get("cid"));
+        jsonObject3.put("ckey", CidCkeyRegisteredPool.getCidFromFile().get("ckey"));
 
         jsonObject1.put("op", "TestOperator");
         jsonObject1.put("sig", 50);

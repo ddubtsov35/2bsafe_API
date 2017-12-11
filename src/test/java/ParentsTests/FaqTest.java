@@ -65,6 +65,8 @@ public class FaqTest  extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateFaqContent.class)

@@ -15,14 +15,17 @@ import java.io.IOException;
  */
 public class GetIntervalUpdateClass extends BaseClass{
 
-    JSONObject jsonObject = new JSONObject();
+    JSONObject jsonObj = new JSONObject();
 
     public GetIntervalUpdateClass() throws IOException {}
 
     public DataUpdate getIntervalUpdateResponse() throws Exception {
-        //jsonObject.put("profile_id", GenerateProfileIdContent.profileId);
-        jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profileId"));
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObject);
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObj);
         return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
     }
 

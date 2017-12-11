@@ -69,6 +69,8 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkEmail();
         Assert.assertEquals(response.code(), 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -86,6 +88,8 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkPhone();
         Assert.assertEquals(response.code(), 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -131,12 +135,11 @@ public class RegistrationTests extends BaseClass {
         CidCkeyRegisteredPool.clearFile();
         CidCkeyPool.clearFile();
         ChildrenCardPools.clearFile();
-        System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
-        //GenerateProfileIdContent.profileId = null;
-        System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
+        GenerateProfileIdContent.profileId = null;
 
         int countUsersBefore = listRegisteredUsersClass.getListRegisteredUsers().size();
         registrationUserStep1Class.registrationUserStep1();
+        registrationUserStep2Class.registrationUserStep2Web();
         int countUsersAfter = listRegisteredUsersClass.getListRegisteredUsers().size();
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }

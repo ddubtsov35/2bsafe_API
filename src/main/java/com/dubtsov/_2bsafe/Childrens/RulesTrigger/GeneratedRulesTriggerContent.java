@@ -23,7 +23,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject2.put("geo", jsonObject);
 
 
-        System.out.println("jsonObject " + jsonObject2);
+        //System.out.println("jsonObject " + jsonObject2);
         return jsonObject2;
     }
 
@@ -44,7 +44,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject2.put("geo", jsonObject);
 
 
-        System.out.println("jsonObject " + jsonObject2);
+        //System.out.println("jsonObject " + jsonObject2);
         return new Object[]{new Object[]{jsonObject}};
     }
 
@@ -64,7 +64,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject.put("gtype", 1);
         jsonObject2.put("geo", jsonObject);
 
-        System.out.println("jsonObject " + jsonObject2);
+        //System.out.println("jsonObject " + jsonObject2);
         return new Object[]{new Object[]{jsonObject}};
     }
 
@@ -85,7 +85,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject2.put("geo", jsonObject);
 
 
-        System.out.println("jsonObject " + jsonObject2);
+        //System.out.println("jsonObject " + jsonObject2);
         return new Object[]{new Object[]{jsonObject}};
     }
 
@@ -110,7 +110,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject.put("gtype", null);
         jsonObject2.put("geo", null);
 
-        System.out.println("jsonObject " + jsonObject2);
+       //System.out.println("jsonObject " + jsonObject2);
         return new Object[]{new Object[]{jsonObject}};
     }
 

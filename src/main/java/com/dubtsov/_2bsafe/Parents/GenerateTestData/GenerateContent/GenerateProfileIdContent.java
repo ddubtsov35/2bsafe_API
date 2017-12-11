@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.Models.AddChildrenCard;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import org.json.simple.JSONObject;
@@ -33,18 +34,17 @@ public class GenerateProfileIdContent {
         ChildrenCardClass childrenCardClass = new ChildrenCardClass();
         ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
 
-        //authorisationChildClass.authorisationChildren();
-
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         if (profileCardList.isEmpty()) {
             if (CidCkeyRegisteredPool.getCidFromFile() == null) {
                 jsonObj.put("profile_id", childrenCardClass.addChildrenCard().getProfile_id());
             } else {
-                childrenLogoutClass.logout();
+                /*childrenLogoutClass.logout();
                 authorisationChildClass.authorisationChildren();
                 profileCardList = profileClass.getProfileList();
                 jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
-                jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());
+                jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());*/
+                jsonObj.put("profile_id", ChildrenCardPools.getChildrenCardFromFile().getProfile_id());
             }
         } else{
             jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());

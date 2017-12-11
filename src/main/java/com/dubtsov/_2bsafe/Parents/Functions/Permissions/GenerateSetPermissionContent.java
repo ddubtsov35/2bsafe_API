@@ -36,12 +36,13 @@ public class GenerateSetPermissionContent{
                 jsonObj.put("gsm", 0);
             }
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            //if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
-            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+
+            if(GenerateProfileIdContent.profileId == null){
+                jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+            } else{
+                jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+            }
+
             setPermissionObject = jsonObj;
             return jsonObj;
         }
@@ -77,12 +78,12 @@ public class GenerateSetPermissionContent{
     public static JSONObject getPermission() throws Exception {
         jsonObj = new JSONObject();
         jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         return jsonObj;
     }
     public static Object[] provideGetPermission() throws Exception {
@@ -98,7 +99,11 @@ public class GenerateSetPermissionContent{
         jsonObj2.put("profile_id", null);
 
         JSONObject jsonObj3 = new JSONObject();
-        jsonObj3.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj3.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj3.put("profile_id", GenerateProfileIdContent.profileId);
+        }
 
         JSONObject jsonObj4 = new JSONObject();
         jsonObj4.put("cid", authorisationChildClass.authorisationChildren().getCid());

@@ -32,7 +32,6 @@ public class GenerateSelectChildrenCardContent {
         } else{
             jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         }
-        //GenerateProfileIdContent.profileId = null;
         return jsonObject;
     }
 

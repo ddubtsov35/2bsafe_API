@@ -21,6 +21,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -56,6 +57,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(app.getScs().contains("true"));
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -72,6 +74,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -89,6 +92,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(appsDetailInfo.getScs().equals("true"));
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -107,6 +111,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(result.contains("true"));
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -125,6 +130,8 @@ public class AppsTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -143,6 +150,8 @@ public class AppsTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -162,6 +171,8 @@ public class AppsTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)

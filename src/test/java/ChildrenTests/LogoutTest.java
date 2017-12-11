@@ -14,6 +14,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -49,6 +50,7 @@ public class LogoutTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateLogoutContent.class)
@@ -67,6 +69,7 @@ public class LogoutTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateLogoutContent.class)

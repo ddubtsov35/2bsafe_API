@@ -33,7 +33,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
 
@@ -56,7 +56,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -79,7 +79,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -102,7 +102,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -125,7 +125,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -148,7 +148,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -157,7 +157,7 @@ public class GenerateNotifyChangeAppContent{
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -178,7 +178,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -199,7 +199,7 @@ public class GenerateNotifyChangeAppContent{
         jsonArray.add(jsonObject2);
         jsonObj.put("apps", jsonArray);
 
-        System.out.println("jsonObject " + jsonObj);
+        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 

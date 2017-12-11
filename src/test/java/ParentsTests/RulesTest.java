@@ -21,8 +21,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.remote.Augmentable;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -60,6 +62,8 @@ public class RulesTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     public void NegativeGetRules() throws Exception {
         response = rulesClass.getRulesListResponse();
@@ -78,6 +82,8 @@ public class RulesTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -108,6 +114,8 @@ public class RulesTest extends BaseClass{
         SetRulesModel setRulesModel = rulesClass.addRule();
         Assert.assertTrue(setRulesModel.getScs().equals("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -127,6 +135,8 @@ public class RulesTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -146,6 +156,8 @@ public class RulesTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)

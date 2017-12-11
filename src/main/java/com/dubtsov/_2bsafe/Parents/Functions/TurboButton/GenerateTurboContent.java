@@ -21,12 +21,11 @@ public class GenerateTurboContent{
 
     public static JSONObject getTurboContent() throws Exception {
         jsonObj = new JSONObject();
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         return jsonObj;
     }
     public static Object[] provideNegativeGetTurboContent() throws IOException, ParseException {
@@ -51,7 +50,11 @@ public class GenerateTurboContent{
 
     public static JSONObject setTurboContent() throws Exception {
         jsonObj = new JSONObject();
-        jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj.put("turbo", setTurboStatic());
         return jsonObj;
     }
@@ -64,14 +67,22 @@ public class GenerateTurboContent{
         jsonObj.put("turbo", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj2.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj2.put("turbo", null);
 
         JSONObject jsonObj3 = new JSONObject();
         jsonObj3.put("turbo", setTurboStatic());
 
         JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj4.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj4.put("profile_id", GenerateProfileIdContent.profileId);
+        }
 
         JSONObject jsonObj5 = new JSONObject();
 

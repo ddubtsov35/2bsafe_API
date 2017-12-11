@@ -53,6 +53,8 @@ public class AuthorisationTests extends BaseClass {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthContent.class)
@@ -80,6 +82,8 @@ public class AuthorisationTests extends BaseClass {
         response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRecoveryPasswordContent.class)
@@ -102,6 +106,8 @@ public class AuthorisationTests extends BaseClass {
         authorisationUser = authorisationUserClass.authorisationUserWithNewPassword();
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthContent.class)

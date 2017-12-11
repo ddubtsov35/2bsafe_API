@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
 import junitparams.JUnitParamsRunner;
@@ -37,9 +38,9 @@ public class GetConditionInformationTest extends BaseClass{
     public void before() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass = new AuthorisationUserClass();
         authorisationChildClass = new AuthorisationChildClass();
+        addAndSelectChildrenCardClass = new AddAndSelectChildrenCardClass();
         childrenCardClass = new ChildrenCardClass();
         profileClass = new ProfileClass();
-        generationRequestJsonClass = new GenerateConditionInformationContent();
         getConditionInformation = new GetConditionInformation();
     }
 
@@ -47,14 +48,13 @@ public class GetConditionInformationTest extends BaseClass{
     @Test
     public void getConditionInformation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
-        childrenCardClass.addChildrenCard();
-        authorisationChildClass.authorisationChildren();
-        profileClass.setProfileCard();
+        addAndSelectChildrenCardClass.AddAndSelectChildrenCard();
+
         ConditionInformationFromDevice conditionInformationFromDevice = getConditionInformation.getConditionInformation();
         Assert.assertTrue(conditionInformationFromDevice.getScs().equals("true"));
     }
 
-
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateConditionInformationContent.class)

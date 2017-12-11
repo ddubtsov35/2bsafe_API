@@ -22,6 +22,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -59,6 +60,8 @@ public class IntervalTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)
@@ -75,13 +78,14 @@ public class IntervalTest extends BaseClass{
     public void getInterval() throws Exception {
         setIntervalUpdateClass.setIntervalUpdate();
         DataUpdate getDataUpdate = getIntervalUpdateClass.getIntervalUpdateResponse();
-        String resultResponse = getDataUpdate.toString();
-        System.out.println("resultResponse " + resultResponse);
+        System.out.println("resultResponse " + getDataUpdate.toString());
         int resultData = getDataUpdate.getIto();
         System.out.println("result " + resultData);
-        Assert.assertTrue(resultResponse.contains("\"scs\": \'true\'") && resultData == GenerateIntervalUpdateContent.itoRandom);
+        System.out.println("GenerateIntervalUpdateContent.itoRandom " + GenerateIntervalUpdateContent.itoRandom);
+        Assert.assertTrue(getDataUpdate.getScs().equals("true") && resultData == GenerateIntervalUpdateContent.itoRandom);
     }
 
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)

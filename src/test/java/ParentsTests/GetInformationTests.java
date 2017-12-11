@@ -45,6 +45,8 @@ public class GetInformationTests  extends BaseClass{
         //465 == success, потому что карточка не привязана к устройству
         Assert.assertTrue(response.body().string().contains("\"scs\": false") &&  response.code() == 465);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)

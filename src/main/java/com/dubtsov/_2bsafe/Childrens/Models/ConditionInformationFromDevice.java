@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Childrens.Models;
 
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -80,11 +81,9 @@ public class ConditionInformationFromDevice {
             CidCkeyRegisteredPool.setCidCkey(CidCkeyPool.getCidFromFile());
         } else{
             CidCkeyRegisteredPool.clearFile();
-            //System.out.println("Удалил CidCkeyRegisteredPool.clearFile()");
             CidCkeyRegisteredPool.setCidCkey(CidCkeyPool.getCidFromFile());
-            //System.out.println("Записал CidCkeyRegisteredPool.clearFile()");
-            //System.out.println("Вот что записал: " + CidCkeyRegisteredPool.getCidFromFile());
         }
+        LogPools.getLog();
     }
 
     @Override

@@ -63,6 +63,8 @@ public class PushTest extends BaseClass {
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
@@ -81,6 +83,8 @@ public class PushTest extends BaseClass {
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
@@ -101,6 +105,8 @@ public class PushTest extends BaseClass {
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
@@ -122,6 +128,8 @@ public class PushTest extends BaseClass {
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)
@@ -141,6 +149,8 @@ public class PushTest extends BaseClass {
         System.out.println(notifyList.toString());
         Assert.assertTrue(notifyList.getScs().contains("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateNotifyListContent.class)

@@ -16,6 +16,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -52,6 +53,8 @@ public class GroupAppTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)
@@ -80,6 +83,8 @@ public class GroupAppTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)
@@ -100,6 +105,8 @@ public class GroupAppTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)

@@ -27,8 +27,11 @@ public class GenerateIntervalUpdateContent {
         if(getIntervalUpdateClass.getIntervalUpdateResponse() != null) {
             itoRandom = random.nextInt((90 - 0) + 1) + 0;
             jsonObj.put("ito", itoRandom);
-            //jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId());
+            if(GenerateProfileIdContent.profileId == null){
+                jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+            } else{
+                jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
+            }
         }
         return jsonObj;
     }
@@ -45,12 +48,11 @@ public class GenerateIntervalUpdateContent {
         Random random = new Random();
 
         JSONObject jsonObj = new JSONObject();
-        //if(GenerateProfileIdContent.profileId == null){
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj.put("ito",null);
 
         JSONObject jsonObj2 = new JSONObject();

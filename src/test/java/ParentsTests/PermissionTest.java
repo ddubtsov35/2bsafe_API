@@ -14,6 +14,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -47,6 +48,8 @@ public class PermissionTest extends BaseClass{
         System.out.println(permission.toString());
         Assert.assertTrue(permission.getScs().equals("true"));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSetPermissionContent.class)
@@ -58,14 +61,11 @@ public class PermissionTest extends BaseClass{
 
 
 
-
+    @Ignore
     @Test
     public void setPermission() throws Exception {
         response = permissionsClass.setPermission();
-        String result = response.body().string();
-        System.out.println("result " + result);
         permission = permissionsClass.getPermission();
-        System.out.println("123 " + permission.toString());
         JSONObject jsonObjectResult = GenerateSetPermissionContent.setPermissionObject;
         Assert.assertTrue(
                 permission.getScs().equals("true")
@@ -76,6 +76,8 @@ public class PermissionTest extends BaseClass{
                 && permission.getTether() == Integer.parseInt(jsonObjectResult.get("tether").toString())
                 && permission.getBt() == Integer.parseInt(jsonObjectResult.get("bt").toString()));
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSetPermissionContent.class)

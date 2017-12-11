@@ -1,8 +1,10 @@
 package com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent;
 
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
+import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
@@ -51,10 +53,22 @@ public class GenerateCidCkeyContent{
         return jsonObj;
     }
 
-    public static JSONObject getJsonObjectCidCkeyForLogout() throws IOException, ParseException {
+    public static JSONObject getJsonObjectCidCkeyForLogout() throws IOException, ParseException, java.text.ParseException {
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put("cid", CidCkeyRegisteredPool.getCidFromFile().get("cid"));
-        jsonObj.put("ckey", CidCkeyRegisteredPool.getCidFromFile().get("ckey"));
+        if(!(CidCkeyRegisteredPool.getCidFromFile() == null)) {
+            jsonObj.put("cid", CidCkeyRegisteredPool.getCidFromFile().get("cid"));
+            jsonObj.put("ckey", CidCkeyRegisteredPool.getCidFromFile().get("ckey"));
+        } else{
+            jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+            jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
+        }
         return jsonObj;
     }
+
+    /*public static JSONObject getCidCkeyPoolForLogout() throws IOException, ParseException, java.text.ParseException {
+        JSONObject jsonObj = new JSONObject();
+        jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
+        jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
+        return jsonObj;
+    }*/
 }

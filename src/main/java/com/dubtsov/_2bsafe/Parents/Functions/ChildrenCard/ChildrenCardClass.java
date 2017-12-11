@@ -16,6 +16,7 @@ import com.dubtsov._2bsafe.Parents.Parse.GetDeviceShortInfo;
 import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -61,9 +62,11 @@ public class ChildrenCardClass extends BaseClass {
             //GenerateProfileIdContent.profileId = null;
             System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
             ChildrenCardPools.clearFile();
+            GenerateProfileIdContent.profileId = null;
             CidCkeyPool.clearFile();
             CidCkeyRegisteredPool.clearFile();
         }
+        LogPools.getLog();
     }
     public void NegativeDeleteChildrenCard(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);

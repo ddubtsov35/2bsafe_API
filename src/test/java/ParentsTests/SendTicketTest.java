@@ -41,6 +41,8 @@ public class SendTicketTest extends BaseClass{
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         Assert.assertTrue(sendTicketClass.sendTicket()!= 0);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)
@@ -59,6 +61,8 @@ public class SendTicketTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)

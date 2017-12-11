@@ -33,12 +33,11 @@ public class GenerateAddBlockIntervalContent {
     public static JSONObject getListInterval() throws Exception {
         JSONObject jsonObj = new JSONObject();
 
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj.put("group_id", 186);
         System.out.println("jsonObject " + jsonObj);
         return jsonObj;
@@ -48,12 +47,11 @@ public class GenerateAddBlockIntervalContent {
         authorisationChildClass.authorisationChildren();
 
         JSONObject jsonObj = new JSONObject();
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj.put("group_id",null);
 
         JSONObject jsonObj2 = new JSONObject();
@@ -72,7 +70,11 @@ public class GenerateAddBlockIntervalContent {
         jsonObj5.put("group_id",null);
 
         JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj6.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
+            jsonObj6.put("profile_id", GenerateProfileIdContent.profileId);
+        }
         jsonObj6.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
@@ -102,12 +104,11 @@ public class GenerateAddBlockIntervalContent {
         JSONArray jsonArray3 = new JSONArray();
         JSONObject jsonObj2 = new JSONObject();
 
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         //jsonObj.put("group_id", 186);
         jsonObj.put("alias", getAlias());
         jsonObj2.put("type", 1);
@@ -184,12 +185,11 @@ public class GenerateAddBlockIntervalContent {
         JSONObject jsonObj = new JSONObject();
         JSONArray jsonArray = new JSONArray();
 
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj.put("interval_id", intervalId.get(0));
         jsonObj.put("type", 1);
         jsonObj.put("name", "TestName");
@@ -260,12 +260,11 @@ public class GenerateAddBlockIntervalContent {
         JSONObject jsonObj = new JSONObject();
         List<IntervalBlock> intervalBlockList = intervalBlockClass.getIntervalBlockList();
         jsonObj.put("interval_id", intervalBlockList.get(0).getId());
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
@@ -276,12 +275,11 @@ public class GenerateAddBlockIntervalContent {
         IntervalBlockClass intervalBlockClass = new IntervalBlockClass();
         List<IntervalBlock> intervalBlockList = intervalBlockClass.getIntervalBlockList();
         JSONObject jsonObj = new JSONObject();
-        /*if(GenerateProfileIdContent.profileId == null){*/
-            jsonObj  = GenerateProfileIdContent.getProfileId();
-            jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj.put("interval_id",null);
 
         JSONObject jsonObj2 = new JSONObject();
@@ -300,12 +298,11 @@ public class GenerateAddBlockIntervalContent {
         jsonObj5.put("interval_id",null);
 
         JSONObject jsonObj6 = new JSONObject();
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj6  = GenerateProfileIdContent.getProfileId();
-        jsonObj6.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         jsonObj4.put("interval_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
