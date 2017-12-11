@@ -11,34 +11,37 @@ import java.io.*;
  */
 public class UserPool {
 
-    private static String pathToFile = "./src/main/resources/UserPool";
+    private static JSONObject resultJsonObject;
 
     public static JSONObject getUserFromFile() throws IOException, ParseException {
-        try {
-            JSONParser parser = new JSONParser();
-            JSONObject jsonObject = (JSONObject) parser.parse(new FileReader(pathToFile));
-            return jsonObject;
-        }catch (ParseException e){
+        if(!(resultJsonObject == null)){
+            try{
+                String em = resultJsonObject.get("login").toString();
+                resultJsonObject.remove("login");
+                resultJsonObject.put("em", em);
+                resultJsonObject.remove("dtype");
+            } catch (Exception e){}
+            finally {
+                return resultJsonObject;
+            }
+
+        } else {
             return null;
         }
     }
 
-    public static void setUserFromFile(JSONObject jsonObject) throws IOException {
-        FileWriter fstream1 = new FileWriter(pathToFile);
-        BufferedWriter out1 = new BufferedWriter(fstream1);
-        out1.write("");
-        out1.close();
+    public static void setNewPassword(String npwd) throws IOException, ParseException {
+        JSONObject jsonObject = resultJsonObject;
+        jsonObject.remove("pwd");
+        jsonObject.put("pwd", npwd);
+        resultJsonObject = jsonObject;
+    }
 
-        File file = new File(pathToFile);
-        PrintWriter out = new PrintWriter(file.getAbsoluteFile());
-        out.println(jsonObject);
-        out.close();
+    public static void setUserFromFile(JSONObject jsonObject) throws IOException {
+        resultJsonObject = jsonObject;
     }
 
     public static void clearFile() throws IOException {
-        FileWriter fstream1 = new FileWriter(pathToFile);
-        BufferedWriter out1 = new BufferedWriter(fstream1);
-        out1.write("");
-        out1.close();
+        resultJsonObject = null;
     }
 }

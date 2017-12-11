@@ -23,6 +23,13 @@ public class GetFaqByIdClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/faq/get", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeGetFaqListLk(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/faq/get", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+
+
 
     public Response getFaqListVis() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateFaqContent.getChildrenCardListContent();

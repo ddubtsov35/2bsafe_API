@@ -18,8 +18,13 @@ public class NotifyChangeAppClass extends BaseClass{
 
     public NotifyChangeAppClass() throws IOException {}
 
-    public Response notifyChangeApp() throws IOException {
+    public Response notifyChangeApp() throws Exception {
         jsonObject = GenerateNotifyChangeAppContent.appsNotifyContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/apps_modified", jsonObject);
+        return responseClass.getJsonResponse();
+    }
+
+    public Response NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/apps_modified", jsonObject);
         return responseClass.getJsonResponse();
     }

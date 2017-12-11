@@ -9,7 +9,7 @@ import org.json.simple.parser.ParseException;
  */
 public class GetDataUpdate {
 
-    private static DataUpdate dataUpdate;
+    private static DataUpdate dataUpdate = null;
 
     public static DataUpdate dataUpdate(String dataUpdateString){
         try {

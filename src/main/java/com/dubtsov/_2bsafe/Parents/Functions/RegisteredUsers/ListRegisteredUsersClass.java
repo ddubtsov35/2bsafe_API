@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers;
 
+import com.dubtsov._2bsafe.Admin.AdminAuthorisation;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Parents.Parse.GetRegisteredUsers;
@@ -19,17 +20,8 @@ public class ListRegisteredUsersClass extends BaseClass {
     public ListRegisteredUsersClass() throws IOException {
     }
 
-    String headersString;
     String sessionId;
     String responseString;
-    JSONObject jsonObject;
-
-    private String getHeadersString() throws Exception {
-        jsonObject = GenerateRegisteredUsersContent.getHeadersString();
-        super.responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/login", jsonObject);
-        headersString = responseClass.getJsonResponse().headers().toString();
-        return headersString;
-    }
 
     public String getSessionId(String headersString){
         int sessionIdPositionStart = headersString.indexOf("session_id=");
@@ -39,13 +31,11 @@ public class ListRegisteredUsersClass extends BaseClass {
     }
 
     public List<RegisteredUser> getListRegisteredUsers() throws Exception {
-        jsonObject = GenerateRegisteredUsersContent.getListRegisteredContent();
-        String getSessionId = getSessionId(getHeadersString());
-
+        JSONObject jsonObject = GenerateRegisteredUsersContent.getListRegisteredContent();
+        String getSessionId = getSessionId(new AdminAuthorisation().adminAuthorisation());
         responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/accounts_list", jsonObject);
         responseClass.setSessionId(getSessionId);
         responseString = responseClass.getJsonResponse().body().string();
-        System.out.println("Response: " + responseString);
 
         return GetRegisteredUsers.getRegisteredUsersList(responseString);
     }

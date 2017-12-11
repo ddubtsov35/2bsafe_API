@@ -4,7 +4,6 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import sun.misc.BASE64Decoder;
 
 import java.io.IOException;
 
@@ -14,11 +13,12 @@ import java.io.IOException;
 public class PackageProcessingCommandsClass extends BaseClass{
 
     JSONObject jsonObject;
+    GenerateProcessingCommandContent generateProcessingCommandContent = new GenerateProcessingCommandContent();
 
     public PackageProcessingCommandsClass() throws IOException {}
 
     public Response packageProcessingCommands() throws Exception {
-        jsonObject = GenerateProcessingCommandContent.getProcessingCommandsContent();
+        jsonObject = generateProcessingCommandContent.getProcessingCommandsContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/batch_process", jsonObject);
         return responseClass.getJsonResponse();
     }

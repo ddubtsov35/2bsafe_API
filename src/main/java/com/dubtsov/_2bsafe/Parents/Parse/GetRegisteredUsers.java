@@ -38,8 +38,7 @@ public class GetRegisteredUsers {
         String resultJsonString = getResultJsonString(registeredUserListString);
         System.out.println("resultJsonString " + resultJsonString);
         obj = parser.parse(resultJsonString);
-        jsonObj = (JSONObject) obj;
-        jsonArray = (JSONArray) jsonObj.get("items");
+        jsonArray = (JSONArray) obj;
         itemsJsonString = jsonObj.get("num").toString();
         for(int i=0; i<jsonArray.size(); i++){
             registeredUsersList.add(new RegisteredUser(jsonArray.get(i).toString()));

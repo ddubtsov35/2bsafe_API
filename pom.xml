@@ -16,6 +16,31 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-api -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>2.0rc2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>4.7</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
@@ -50,9 +75,13 @@
             <version>${allure.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>pl.pragmatists</groupId>
+            <artifactId>JUnitParams</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
     </dependencies>
-
-
 
     <build>
         <plugins>
@@ -61,6 +90,9 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
+                    <rerunFailingTestsCount>3</rerunFailingTestsCount>
+                    <!--<parallel>classes</parallel>
+                    <threadCount>1</threadCount>-->
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
@@ -72,8 +104,23 @@
                         </property>
                     </properties>
                     <includes>
-                        <include>**/*Test*.java</include>
+                        <!--<include>**/ChildrenTests/AuthorisationTest.java</include>
+                        <include>**/ChildrenTests/ChildrenCardTest.java</include>
+                        <include>**/ChildrenTests/GetConditionInformationTest.java</include>
+                        &lt;!&ndash;Test&ndash;&gt;&lt;!&ndash;<include>**/ChildrenTests/HelpMeTest.java</include>
+                        <include>**/ChildrenTests/LogoutTest.java</include>&ndash;&gt;
+                        <include>**/ParentsTests/GetInformationTests.java</include>
+                        <include>**/ParentsTests/AccountSettingsTest.java</include>
+                        <include>**/ParentsTests/ChildrenCardsTests.java</include>
+                        &lt;!&ndash;<include>**/ParentsTests/HelpMeTest.java</include>&ndash;&gt;
+                        <include>**/ParentsTests/RegistrationTests.java</include>
+                        <include>**/ParentsTests/AuthorisationTests.java</include>-->
+                        <include>**/*.java</include>
                     </includes>
+                    <excludes>
+                        <exclude>**/ParentsTests/TariffsTest.java</exclude>
+                        <exclude>**/ParentsTests/test.java</exclude>
+                    </excludes>
                 </configuration>
                 <dependencies>
                     <dependency>

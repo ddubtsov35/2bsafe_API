@@ -18,12 +18,19 @@ public class GetTicket {
     private static Object obj;
     private static JSONObject jsonObj;
 
-    public static int getTicketId(String getFaqListResponse) throws ParseException, java.text.ParseException {
+    public static Integer getTicketId(String getFaqListResponse) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         System.out.println("getFaqListResponse " + getFaqListResponse);
         obj = parser.parse(getFaqListResponse);
         jsonObj = (JSONObject) obj;
+        Integer tid;
 
-        return Integer.parseInt(jsonObj.get("tid").toString());
+        try {
+            tid = Integer.parseInt(jsonObj.get("tid").toString());
+        } catch (Exception e){
+            return tid = null;
+        }
+
+        return tid;
     }
 }

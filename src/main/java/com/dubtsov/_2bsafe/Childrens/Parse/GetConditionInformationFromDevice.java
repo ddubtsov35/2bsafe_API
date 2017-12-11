@@ -7,6 +7,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,16 +16,9 @@ import java.util.List;
  */
 public class GetConditionInformationFromDevice {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
-    String jsonObjectString;
-
     private static ConditionInformationFromDevice conditionInformationFromDevice;
 
-    public static ConditionInformationFromDevice getConditionInformationFromDevice(String conditionInformationString) throws ParseException, java.text.ParseException {
+    public static ConditionInformationFromDevice getConditionInformationFromDevice(String conditionInformationString) throws ParseException, java.text.ParseException, IOException {
         System.out.println("conditionInformationString " + conditionInformationString);
         try {
             return conditionInformationFromDevice = new ConditionInformationFromDevice(conditionInformationString);

@@ -37,4 +37,8 @@ public class TariffsClass extends BaseClass{
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/set", jsonObject);
         return responseClass.getJsonResponse();
     }
+    public Response NegativeSetTariff(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/set", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }

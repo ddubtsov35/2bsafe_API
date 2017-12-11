@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.GenerateTestData;
 
+import org.json.simple.JSONObject;
+
 import java.util.Random;
 
 /**
@@ -14,4 +16,5 @@ public class GenerateTokenClass {
         }
         return token;
     }
+
 }

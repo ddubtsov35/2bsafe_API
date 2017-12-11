@@ -16,11 +16,17 @@ import java.io.IOException;
 public class GetConditionInformation extends BaseClass{
 
     JSONObject jsonObject;
+    GenerateConditionInformationContent generateConditionInformationContent = new GenerateConditionInformationContent();
 
     public GetConditionInformation() throws IOException {}
 
     public ConditionInformationFromDevice getConditionInformation() throws Exception {
-        jsonObject = GenerateConditionInformationContent.getConditionInformationContent();
+        jsonObject = generateConditionInformationContent.getConditionInformationContent();
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/update", jsonObject);
+        return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
+    }
+
+    public ConditionInformationFromDevice NegativeGetConditionInformation(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/update", jsonObject);
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }

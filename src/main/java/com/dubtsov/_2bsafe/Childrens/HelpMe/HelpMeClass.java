@@ -21,4 +21,9 @@ public class HelpMeClass extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
         return responseClass.getJsonResponse();
     }
+
+    public Response NegativeHelpMe(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }

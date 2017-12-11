@@ -41,8 +41,11 @@ public class RegisteredUser {
 
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date actDate;
-        if(!jsonObj.get("act_date").toString().equals("None")) {actDate =format.parse(jsonObj.get("act_date").toString());} else {actDate = null;}
-        Date regDate = format.parse(jsonObj.get("reg_date").toString());
+        if(!jsonObj.get("act_date").toString().equals("None"))
+        {actDate =format.parse(jsonObj.get("act_date").toString());} else {actDate = null;}
+
+        Date regDate = null;
+        if(!jsonObj.get("reg_date").toString().equals("None")) {regDate = format.parse(jsonObj.get("reg_date").toString());}
 
 
         if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName("");}

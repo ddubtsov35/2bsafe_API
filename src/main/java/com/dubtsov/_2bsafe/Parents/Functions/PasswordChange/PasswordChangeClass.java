@@ -1,6 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.PasswordChange;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
+import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
@@ -21,6 +23,11 @@ public class PasswordChangeClass extends BaseClass {
     public Response passwordChange() throws Exception {
         jsonObject = GeneratePasswordChangeContent.getPasswordChangeContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/pwd_change", jsonObject);
-        return responseClass.getJsonResponse();
+        response = responseClass.getJsonResponse();
+        if(response.code() == 200){
+            UserPool.setNewPassword(jsonObject.get("npwd").toString());
+            //GenerateProfileIdContent.profileId = null;
+        }
+        return response;
     }
 }

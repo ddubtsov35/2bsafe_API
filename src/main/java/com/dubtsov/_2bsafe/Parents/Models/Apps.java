@@ -1,6 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -15,7 +14,7 @@ import java.util.List;
 public class Apps {
 
     private String scs;
-    private int emsg;
+    private Integer emsg;
 
     private List<Apps.Groups> groups;
     private List<Apps.Unsorted_apps> unsorted_apps;
@@ -29,7 +28,6 @@ public class Apps {
     private static Object obj2;
     private static JSONObject jsonObj2;
 
-
     public Apps(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
@@ -41,23 +39,31 @@ public class Apps {
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
 
-
-        if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
-        if(jsonObj.get("emsg") != null) {setEmsg(Integer.parseInt(jsonObj.get("emsg").toString()));}
+        try {
+            if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else {setScs(null);}
+            if (jsonObj.get("emsg") != null) {setEmsg(Integer.parseInt(jsonObj.get("emsg").toString()));} else {setEmsg(null);}
+        } catch (Exception e){
+            setScs(null);
+            setEmsg(null);
+        }
 
 
         jsonArray = (JSONArray) jsonObj.get("unsorted_apps");
-        if (!jsonArray.isEmpty()) {
+        if (jsonArray != null && !jsonArray.isEmpty()) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 unsorted_apps.add(new Apps.Unsorted_apps(jsonArray.get(i).toString()));
             }
+        } else{
+            jsonArray = null;
         }
 
         jsonArray = (JSONArray) jsonObj.get("groups");
-        if(!jsonArray.isEmpty()) {
+        if(jsonArray != null && !jsonArray.isEmpty()) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 groups.add(new Apps.Groups(jsonArray.get(i).toString()));
             }
+        } else{
+            jsonArray = null;
         }
     }
 
@@ -79,19 +85,19 @@ public class Apps {
         this.scs = scs;
     }
 
-    public int getEmsg() {
+    public Integer getEmsg() {
         return emsg;
     }
 
-    public void setEmsg(int emsg) {
+    public void setEmsg(Integer emsg) {
         this.emsg = emsg;
     }
 
     private class Groups{
-        private int id;
+        private Integer id;
         private String name;
-        private boolean defaul;
-        private int count;
+        private Boolean defaul;
+        private Integer count;
 
         public Groups(String jsonObjectString) throws ParseException, java.text.ParseException {
             setObject(jsonObjectString);
@@ -103,10 +109,17 @@ public class Apps {
             jsonObj2 = (JSONObject) obj2;
             //jsonObj2 = (JSONObject) jsonObj2.get("warning");
 
-            if(jsonObj2.get("id") != null) {setId(Integer.parseInt(jsonObj2.get("id").toString()));}
-            if(jsonObj2.get("name") != null) {setName(jsonObj2.get("name").toString());}
-            if(jsonObj2.get("defaul") != null) {setDefaul(Boolean.parseBoolean(jsonObj2.get("defaul").toString()));}
-            if(jsonObj2.get("count") != null) {setCount(Integer.parseInt(jsonObj2.get("count").toString()));}
+            try {
+                if (jsonObj2.get("id") != null) {setId(Integer.parseInt(jsonObj2.get("id").toString()));} else {setId(null);}
+                if (jsonObj2.get("name") != null) {setName(jsonObj2.get("name").toString());} else {setName(null);}
+                if (jsonObj2.get("defaul") != null) {setDefaul(Boolean.parseBoolean(jsonObj2.get("defaul").toString()));} else {setDefaul(null);}
+                if (jsonObj2.get("count") != null) {setCount(Integer.parseInt(jsonObj2.get("count").toString()));} else {setCount(null);}
+            } catch (Exception e){
+                setId(null);
+                setName(null);
+                setDefaul(null);
+                setCount(null);
+            }
         }
 
         @Override
@@ -119,11 +132,11 @@ public class Apps {
                     '}';
         }
 
-        public int getId() {
+        public Integer getId() {
             return id;
         }
 
-        public void setId(int id) {
+        public void setId(Integer id) {
             this.id = id;
         }
 
@@ -135,19 +148,19 @@ public class Apps {
             this.name = name;
         }
 
-        public boolean isDefaul() {
+        public Boolean isDefaul() {
             return defaul;
         }
 
-        public void setDefaul(boolean defaul) {
+        public void setDefaul(Boolean defaul) {
             this.defaul = defaul;
         }
 
-        public int getCount() {
+        public Integer getCount() {
             return count;
         }
 
-        public void setCount(int count) {
+        public void setCount(Integer count) {
             this.count = count;
         }
     }
@@ -155,8 +168,8 @@ public class Apps {
     private class Unsorted_apps{
         private String alias;
         private String name;
-        private boolean blocked;
-        private boolean delete_pending;
+        private Boolean blocked;
+        private Boolean delete_pending;
 
         public Unsorted_apps(String jsonObjectString) throws ParseException, java.text.ParseException {
             setObject(jsonObjectString);
@@ -167,10 +180,17 @@ public class Apps {
             obj2 = parser2.parse(jsonObjectString);
             jsonObj2 = (JSONObject) obj2;
 
-            if(jsonObj2.get("alias") != null) {setAlias(jsonObj2.get("alias").toString());}
-            if(jsonObj2.get("name") != null) {setName(jsonObj2.get("name").toString());}
-            if(jsonObj2.get("blocked") != null) {setBlocked(Boolean.parseBoolean(jsonObj2.get("blocked").toString()));}
-            if(jsonObj2.get("delete_pending") != null) {setDelete_pending(Boolean.parseBoolean(jsonObj2.get("delete_pending").toString()));}
+            try {
+                if (jsonObj2.get("alias") != null) {setAlias(jsonObj2.get("alias").toString());} else{setAlias(null);}
+                if (jsonObj2.get("name") != null) {setName(jsonObj2.get("name").toString());} else{setName(null);}
+                if (jsonObj2.get("blocked") != null) {setBlocked(Boolean.parseBoolean(jsonObj2.get("blocked").toString()));} else{setBlocked(null);}
+                if (jsonObj2.get("delete_pending") != null) {setDelete_pending(Boolean.parseBoolean(jsonObj2.get("delete_pending").toString()));} else{setDelete_pending(null);}
+            } catch (Exception e){
+                setAlias(null);
+                setName(null);
+                setBlocked(null);
+                setDelete_pending(null);
+            }
         }
 
         @Override
@@ -199,19 +219,19 @@ public class Apps {
             this.name = name;
         }
 
-        public boolean isBlocked() {
+        public Boolean isBlocked() {
             return blocked;
         }
 
-        public void setBlocked(boolean blocked) {
+        public void setBlocked(Boolean blocked) {
             this.blocked = blocked;
         }
 
-        public boolean isDelete_pending() {
+        public Boolean isDelete_pending() {
             return delete_pending;
         }
 
-        public void setDelete_pending(boolean delete_pending) {
+        public void setDelete_pending(Boolean delete_pending) {
             this.delete_pending = delete_pending;
         }
     }

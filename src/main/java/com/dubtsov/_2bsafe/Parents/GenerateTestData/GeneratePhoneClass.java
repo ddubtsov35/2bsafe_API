@@ -15,9 +15,4 @@ public class GeneratePhoneClass {
         }
         return phone;
     }
-
-    public static String getStaticPhone(){
-        return "79189999999";
-    }
-
 }

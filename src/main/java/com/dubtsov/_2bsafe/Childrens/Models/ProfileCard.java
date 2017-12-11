@@ -14,12 +14,10 @@ public class ProfileCard {
     private static JSONObject jsonObj;
 
     private String scs;
-    private int profile_id;
+    private Integer profile_id;
     private String name;
-    private int age;
-    private int busy;
-
-    public ProfileCard(){};
+    private Integer age;
+    private Integer busy;
 
     public ProfileCard(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
@@ -27,22 +25,32 @@ public class ProfileCard {
         jsonObj = (JSONObject) obj;
 
         setScs(scs);
-
-        setObject(jsonObjectString);
+        setObject();
     }
 
-    private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-        if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));}
+    private void setObject() throws ParseException, java.text.ParseException {
+        if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));} else {setProfile_id(null);}
         if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName(null);}
-        if(jsonObj.get("age") != null) {setAge(Integer.parseInt(jsonObj.get("age").toString()));}
-        if(jsonObj.get("busy") != null) {setBusy(Integer.parseInt(jsonObj.get("busy").toString()));}
+        if(jsonObj.get("age") != null) {setAge(Integer.parseInt(jsonObj.get("age").toString()));} else {setAge(null);}
+        if(jsonObj.get("busy") != null) {setBusy(Integer.parseInt(jsonObj.get("busy").toString()));} else {setBusy(null);}
     }
 
-    public int getProfile_id() {
+    @Override
+    public String toString() {
+        return "ProfileCard{" +
+                "scs='" + scs + '\'' +
+                ", profile_id=" + profile_id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", busy=" + busy +
+                '}';
+    }
+
+    public Integer getProfile_id() {
         return profile_id;
     }
 
-    public void setProfile_id(int profile_id) {
+    public void setProfile_id(Integer profile_id) {
         this.profile_id = profile_id;
     }
 
@@ -54,19 +62,19 @@ public class ProfileCard {
         this.name = name;
     }
 
-    public int getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public int getBusy() {
+    public Integer getBusy() {
         return busy;
     }
 
-    public void setBusy(int busy) {
+    public void setBusy(Integer busy) {
         this.busy = busy;
     }
 

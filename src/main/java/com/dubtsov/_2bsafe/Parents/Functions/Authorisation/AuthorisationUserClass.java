@@ -25,35 +25,44 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep2Class = new RegistrationUserStep2Class();
     }
 
-    public JSONObject preparationContent(JSONObject jsonObject){
-        if(jsonObject.containsKey("em")) {
-            Object obj = jsonObject.remove("em");
-            jsonObject.remove("em");
-            jsonObject.put("login", obj);
-        }
-        return jsonObject;
-    }
-
-    public AuthorisationUser RegistrationAndAuthorisationWeb() throws IOException, ParseException, java.text.ParseException {
+    public AuthorisationUser RegistrationAndAuthorisationWeb() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
-        jsonObject = registrationUserStep2Class.registrationUserStep2Web();
-        jsonObject = preparationContent(jsonObject);
+        registrationUserStep2Class.registrationUserStep2Web();
+        jsonObject = GenerateAuthContent.getAuthContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+    public AuthorisationUser NegativeRegistrationAndAuthorisationWeb(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
-    public AuthorisationUser RegistrationAndAuthorisationAndroid() throws IOException, ParseException, java.text.ParseException {
+
+
+    public AuthorisationUser RegistrationAndAuthorisationAndroid() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
-        jsonObject = registrationUserStep2Class.registrationUserStep2AndroidPhone();
-        jsonObject = preparationContent(jsonObject);
+        registrationUserStep2Class.registrationUserStep2AndroidPhone();
+        jsonObject = GenerateAuthContent.getAuthContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
+
+
+
+
 
     public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
-        System.out.println("jsonObject " + jsonObject);
         jsonObject = GenerateAuthContent.getAuthContent();
-        System.out.println("jsonObject " + jsonObject);
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+
+    public AuthorisationUser authorisationUserWithNewPassword() throws Exception {
+        jsonObject = GenerateAuthContent.getAuthContentWithNewPassword();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
+    }
+    public AuthorisationUser NegativeAuthorisationUserWithNewPassword(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }

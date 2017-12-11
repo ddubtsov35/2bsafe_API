@@ -3,7 +3,8 @@ package com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateDeleteChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.Pool.UserPool;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
+import com.dubtsov._2bsafe.Parents.Pool.*;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONObject;
 
@@ -24,6 +25,29 @@ public class DeleteUserClass extends BaseClass {
         jsonObject = GenerateRegisteredUsersContent.deleteAccountContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
         responseClass.getJsonResponse();
-        UserPool.clearFile();
+        if(responseClass.getJsonResponse().code() == 200){
+            System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
+            //GenerateProfileIdContent.profileId = null;
+            System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
+            ChildrenCardPools.clearFile();
+            GenerateProfileIdContent.profileId = null;
+            CidCkeyPool.clearFile();
+            CidCkeyRegisteredPool.clearFile();
+            UserPool.clearFile();
+        }
+        LogPools.getLog();
+    }
+    public void NegativeDeleteUser(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
+        responseClass.getJsonResponse();
+        //UserPool.clearFile();
+    }
+
+
+    //To recoveryPassword test
+    public void deleteUserWithoutClearPool() throws Exception {
+        jsonObject = GenerateRegisteredUsersContent.deleteAccountContent();
+        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
+        responseClass.getJsonResponse();
     }
 }

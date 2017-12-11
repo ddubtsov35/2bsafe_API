@@ -24,18 +24,20 @@ public class PollClass extends BaseClass{
     public PollClass() throws IOException {}
 
     public PollTittle getPoll() throws IOException, ParseException, java.text.ParseException {
-        jsonObject.put("rnd", GenerateTokenClass.getGeneratedToken());
+        jsonObject = new JSONObject();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/admins/v1.0/poll/check", jsonObject);
         return GetPollTittle.getPollTittle(responseClass.getJsonResponse().body().string());
     }
 
     public Poll getPollById() throws Exception {
+        jsonObject = new JSONObject();
         jsonObject = GeneratePollContent.getPollContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/admins/v1.0/poll/get", jsonObject);
         return GetPoll.getPoll(responseClass.getJsonResponse().body().string());
     }
 
     public Response setPoll() throws Exception {
+        jsonObject = new JSONObject();
         jsonObject = GeneratePollContent.setPollContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/admins/v1.0/poll/set_result", jsonObject);
         return responseClass.getJsonResponse();

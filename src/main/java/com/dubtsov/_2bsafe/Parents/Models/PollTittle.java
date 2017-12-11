@@ -10,7 +10,7 @@ import org.json.simple.parser.ParseException;
 public class PollTittle {
 
     private String scs;
-    private int pid;
+    private Integer pid;
     private String title;
 
     private static JSONParser parser;
@@ -29,9 +29,10 @@ public class PollTittle {
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
 
         jsonObj = (JSONObject) jsonObj.get("data");
-        jsonObj = (JSONObject) jsonObj.get("poll");
-        if(jsonObj.get("pid") != null) {setPid(Integer.parseInt(jsonObj.get("pid").toString()));}
-        if(jsonObj.get("title") != null) {setTitle(jsonObj.get("title").toString());}
+        if(jsonObj.get("poll") != null) {jsonObj = (JSONObject) jsonObj.get("poll");} else{setPid(null); setTitle(null);}
+        System.out.println("111111111111 " + jsonObj.get("pid"));
+        if(jsonObj.get("pid") != null) {setPid(Integer.parseInt(jsonObj.get("pid").toString()));}  else{setPid(null);}
+        if(jsonObj.get("title") != null) {setTitle(jsonObj.get("title").toString());} else{setTitle(null);}
     }
 
     @Override
@@ -51,11 +52,11 @@ public class PollTittle {
         this.scs = scs;
     }
 
-    public int getPid() {
+    public Integer getPid() {
         return pid;
     }
 
-    public void setPid(int pid) {
+    public void setPid(Integer pid) {
         this.pid = pid;
     }
 

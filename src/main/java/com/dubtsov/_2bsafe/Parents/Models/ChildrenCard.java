@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Models;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -12,17 +13,17 @@ import java.util.List;
  */
 public class ChildrenCard {
 
-    Device device;
-
     private static JSONParser parser;
     private static Object obj;
     private static JSONObject jsonObj;
+    private static JSONArray jsonArray;
+    private static JSONObject jsonObjDevice;
 
-    private String age;
-    private int profile_id;
-    private int connected;
+    private Integer age;
+    private Integer profile_id;
+    private Integer connected;
     private String name;
-    private int unread_notif;
+    private Integer unread_notif;
     private String phone;
     private String image;
     private List<Device> deviceConnected;
@@ -35,22 +36,42 @@ public class ChildrenCard {
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-        device = new Device(jsonObjectString);
+        deviceConnected = new ArrayList<>();
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
+        jsonArray = new JSONArray();
 
-        setAge(jsonObj.get("age").toString());
-        setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));
-        setConnected(Integer.parseInt(jsonObj.get("connected").toString()));
-        if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName("");}
-        setUnread_notif(Integer.parseInt(jsonObj.get("unread_notif").toString()));
-        if(jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());} else{setPhone("");}
-        if(jsonObj.get("image") != null) {setImage(jsonObj.get("image").toString());} else{setImage("");}
+        if(jsonObj.get("age") != null) {setAge(Integer.parseInt(jsonObj.get("age").toString()));} else {setAge(null);}
+        if(jsonObj.get("profile_id") != null)setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString())); else {setProfile_id(null);}
+        //if(jsonObj.get("connected") != null)setConnected(Integer.parseInt(jsonObj.get("connected").toString())); else {setConnected(null);}
+        if(jsonObj.get("name") != null) {setName(jsonObj.get("name").toString());} else{setName(null);}
+        if(jsonObj.get("unread_notif") != null) {setUnread_notif(Integer.parseInt(jsonObj.get("unread_notif").toString()));} else {setUnread_notif(null);}
+        if(jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());} else{setPhone(null);}
+        if(jsonObj.get("image") != null) {setImage(jsonObj.get("image").toString());} else{setImage(null);}
 
-        if(jsonObj.get("device") != null) {setDeviceConnected(device.getDeviceList());} else{setDeviceConnected(new ArrayList<Device>());}
+        jsonObj = (JSONObject) jsonObj.get("device");
+        if(jsonObj != null) {
+            deviceConnected.add(new Device(jsonObj.toString()));
+            setDeviceConnected(deviceConnected);
+        } else{
+            setDeviceConnected(new ArrayList<Device>());
+        }
     }
 
+    @Override
+    public String toString() {
+        return "ChildrenCard{" +
+                ", age='" + age + '\'' +
+                ", profile_id=" + profile_id +
+                ", connected=" + connected +
+                ", name='" + name + '\'' +
+                ", unread_notif=" + unread_notif +
+                ", phone='" + phone + '\'' +
+                ", image='" + image + '\'' +
+                ", deviceConnected=" + deviceConnected +
+                '}';
+    }
 
     public static JSONParser getParser() {
         return parser;
@@ -76,27 +97,27 @@ public class ChildrenCard {
         ChildrenCard.jsonObj = jsonObj;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
-    public int getProfile_id() {
+    public Integer getProfile_id() {
         return profile_id;
     }
 
-    public void setProfile_id(int profile_id) {
+    public void setProfile_id(Integer profile_id) {
         this.profile_id = profile_id;
     }
 
-    public int getConnected() {
+    public Integer getConnected() {
         return connected;
     }
 
-    public void setConnected(int connected) {
+    public void setConnected(Integer connected) {
         this.connected = connected;
     }
 
@@ -108,11 +129,11 @@ public class ChildrenCard {
         this.name = name;
     }
 
-    public int getUnread_notif() {
+    public Integer getUnread_notif() {
         return unread_notif;
     }
 
-    public void setUnread_notif(int unread_notif) {
+    public void setUnread_notif(Integer unread_notif) {
         this.unread_notif = unread_notif;
     }
 

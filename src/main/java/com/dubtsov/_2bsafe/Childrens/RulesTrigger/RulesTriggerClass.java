@@ -22,4 +22,9 @@ public class RulesTriggerClass  extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/rules_trigger", jsonObject);
         return responseClass.getJsonResponse();
     }
+
+    public Response NegativeRulesTrigger(JSONObject jsonObject) throws Exception {
+        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/rules_trigger", jsonObject);
+        return responseClass.getJsonResponse();
+    }
 }
