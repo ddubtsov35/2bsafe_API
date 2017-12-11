@@ -120,6 +120,7 @@
                     <excludes>
                         <exclude>**/ParentsTests/TariffsTest.java</exclude>
                         <exclude>**/ParentsTests/test.java</exclude>
+                        <exclude>**/Test/Test.java</exclude>
                     </excludes>
                 </configuration>
                 <dependencies>

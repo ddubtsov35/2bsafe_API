@@ -68,14 +68,12 @@ public class Test {
 
     @org.junit.Test
     public void test4() throws Exception {
-        int a = 10;
-        int b = 100;
+        Integer a = 128;
+        Integer b = 128;
 
-        a = b;
+        boolean result = a == b;
 
-        b = 1000;
-
-        System.out.println("a = " + a);
+        System.out.println(result);
     }
 
 }
