@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import junitparams.naming.TestCaseName;
@@ -41,6 +42,7 @@ public class AuthorisationTest extends BaseClass{
     public void PositiveAuthorisation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
+        LogPools.getLog();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
         System.out.println(childrenResponseAuthorisationModel.toString());
         Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("true"));
