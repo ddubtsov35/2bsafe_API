@@ -19,6 +19,7 @@ public class GenerateAuthorisationChildren{
     public GenerateAuthorisationChildren() throws ParseException {}
 
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws Exception {
+        System.out.println("000000000000000");
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             System.out.println("1111111111111111");
