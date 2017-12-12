@@ -41,19 +41,16 @@ public class GenerateRegistrationContent {
 
     public static JSONObject getRegistrationStep2ContentWeb() throws Exception {
         JSONObject jsonObject = new JSONObject();
-        //InputClass inputClass = new InputClass();
         new AdminAuthorisation().adminAuthorisation();
         if(UserPool.getUserFromFile() == null) {
             jsonObject.put("em", getRegistrationStep1Content.get("em"));
             jsonObject.put("dtype", 0);
             System.out.println(getRegistrationStep1Content.get("em").toString());
             jsonObject.put("code", new GetActCode().getCode(getRegistrationStep1Content.get("em").toString()).getAct_code());
-            //jsonObject.put("code", new GetActCode().getCode());
             jsonObject.put("pwd", getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObject.put("em", UserPool.getUserFromFile().get("em"));
             jsonObject.put("dtype", 0);
-            //jsonObject.put("code", inputClass.code(UserPool.getUserFromFile().get("em")));
             jsonObject.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
         getRegistrationStep2ContentWeb = jsonObject;
@@ -66,13 +63,6 @@ public class GenerateRegistrationContent {
 
         JSONObject jsonObject = getRegistrationStep1Content;
 
-        /*RegisteredUser targetUser = new RegisteredUser();
-        for(int i=0; i<registeredUserList.size();i++){
-            if(registeredUserList.get(i).getEm().equals(jsonObject.get("em"))){
-                targetUser = registeredUserList.get(i);
-                break;
-            }
-        }*/
         String generatedToken = GenerateTokenClass.getGeneratedToken();
 
         jsonObject.put("dtype", 1);

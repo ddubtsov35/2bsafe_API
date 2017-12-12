@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Authorisation;
 import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.GeneratePasswordChangeContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -29,7 +30,10 @@ public class GenerateAuthContent{
     }
 
 
-    public static JSONObject getAuthContent() throws IOException, ParseException {
+    public static JSONObject getAuthContent() throws IOException, ParseException, java.text.ParseException {
+
+        LogPools.getLog();
+
         jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
