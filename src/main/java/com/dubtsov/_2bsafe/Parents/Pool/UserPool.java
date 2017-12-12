@@ -38,6 +38,10 @@ public class UserPool {
     }
 
     public static void setUserFromFile(JSONObject jsonObject) throws IOException {
+
+        System.out.println("qqqq " + jsonObject.toString());
+
+
         resultJsonObject = jsonObject;
     }
 

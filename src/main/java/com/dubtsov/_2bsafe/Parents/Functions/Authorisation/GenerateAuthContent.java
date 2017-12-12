@@ -16,11 +16,7 @@ import java.util.Random;
  */
 public class GenerateAuthContent{
 
-    private static JSONObject jsonObj;
-
-
     public static JSONObject preparationContent(JSONObject jsonObject){
-        jsonObj = new JSONObject();
         if(jsonObject.containsKey("em")) {
             Object obj = jsonObject.remove("em");
             jsonObject.remove("em");
@@ -35,7 +31,7 @@ public class GenerateAuthContent{
         System.out.println("8");
         LogPools.getLog();
 
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
@@ -48,7 +44,7 @@ public class GenerateAuthContent{
     }
 
     public static Object[] provideNegativeGetAuthContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
@@ -135,7 +131,7 @@ public class GenerateAuthContent{
 
 
     public static JSONObject getAuthContentWithNewPassword() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
