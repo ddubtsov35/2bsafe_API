@@ -10,6 +10,7 @@ import com.dubtsov._2bsafe.Childrens.StatisticsInformation.GetStatisticsInformat
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import junitparams.naming.TestCaseName;
@@ -51,6 +52,9 @@ public class GetStatisticsInformationTest extends BaseClass{
         response = getStatisticsInformationClass.getStatisticsInformation();
         String result = response.body().string();
         System.out.println("Result string " + result);
+
+        LogPools.getLog();
+
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
