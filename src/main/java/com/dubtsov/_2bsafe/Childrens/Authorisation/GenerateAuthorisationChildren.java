@@ -19,26 +19,21 @@ public class GenerateAuthorisationChildren{
     public GenerateAuthorisationChildren() throws ParseException {}
 
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws Exception {
-        System.out.println("000000000000000");
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            System.out.println("1111111111111111");
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
-            System.out.println("2222222222222222");
             jsonObj = UserPool.getUserFromFile();
         }
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
         } else{
             if(CidCkeyRegisteredPool.getCidFromFile() == null){
-                System.out.println("333333333333333");
                 jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
             } else {
                 if (CidCkeyPool.getCidFromFile().get("cid").equals(CidCkeyRegisteredPool.getCidFromFile().get("cid")) &&
                         CidCkeyPool.getCidFromFile().get("ckey").equals(CidCkeyRegisteredPool.getCidFromFile().get("ckey"))) {
-                    System.out.println("44444444444444444");
                     ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
                     childrenLogoutClass.logout();
                     jsonObj.put("cid", "");
@@ -77,12 +72,10 @@ public class GenerateAuthorisationChildren{
     public static Object[] provideFailEmail() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", "11failEmail");
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
-            jsonObj.remove("em");
             jsonObj.put("em", "11failEmail");
         }
         if(CidCkeyPool.getCidFromFile() == null) {
@@ -105,12 +98,10 @@ public class GenerateAuthorisationChildren{
     public static Object[] provideFailPassword() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", "111failPwd");
         } else{
             jsonObj = UserPool.getUserFromFile();
-            //jsonObj.remove("111pwd");
             jsonObj.put("pwd", "111failPwd");
         }
         if(CidCkeyPool.getCidFromFile() == null) {
@@ -151,12 +142,10 @@ public class GenerateAuthorisationChildren{
     public static Object[] provideEmptyEmail() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", null);
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
-            jsonObj.remove("em");
             jsonObj.put("em", null);
         }
         if(CidCkeyPool.getCidFromFile() == null) {
@@ -179,12 +168,10 @@ public class GenerateAuthorisationChildren{
     public static Object[] provideEmptyPassword() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            //jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", null);
         } else{
             jsonObj = UserPool.getUserFromFile();
-            jsonObj.remove("pwd");
             jsonObj.put("pwd", null);
         }
         if(CidCkeyPool.getCidFromFile() == null) {

@@ -26,7 +26,6 @@ public class RegistrationUserStep2Class extends BaseClass {
             response = responseClass.getJsonResponse();
 
             if(response.code() == 200) {
-                System.out.println("xxxxxxxxx " + response.body().string());
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
                 //GenerateProfileIdContent.profileId = null;
             }
@@ -48,7 +47,6 @@ public class RegistrationUserStep2Class extends BaseClass {
             jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));
 
             if (responseClass.getJsonResponse().code() == 200) {
-                System.out.println("xxxxxxxxx222222222 " + response.body().string());
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
                 //GenerateProfileIdContent.profileId = null;
             }

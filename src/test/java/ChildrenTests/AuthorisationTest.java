@@ -53,6 +53,9 @@ public class AuthorisationTest extends BaseClass{
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthorisationChildren.class)
     public void NegativeAuthorisation(JSONObject jsonObj) throws Exception {
+        System.out.println("xxxxxxxxxxxxxxxxxx");
+        LogPools.getLog();
+
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         childrenResponseAuthorisationModel = authorisationChildClass.NegativeAuthorisationChildren(jsonObj);
