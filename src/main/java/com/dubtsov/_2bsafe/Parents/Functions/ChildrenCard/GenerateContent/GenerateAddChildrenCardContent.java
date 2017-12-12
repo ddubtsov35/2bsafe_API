@@ -14,13 +14,13 @@ import java.util.Random;
  */
 public class GenerateAddChildrenCardContent{
 
-    private static JSONObject jsonObj = new JSONObject();
     private static Random random;
 
     public GenerateAddChildrenCardContent() throws ParseException {}
 
     public static JSONObject getAddChildrenCard() throws IOException {
         random = new Random();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("name", GenerateNameClass.getGenerateName());
         jsonObj.put("phone", GeneratePhoneClass.getGeneratedPhone());
         jsonObj.put("age", String.valueOf(random.nextInt((18 - 0) + 1) + 0));
@@ -30,7 +30,7 @@ public class GenerateAddChildrenCardContent{
     }
 
     public static Object[] provideGetSetAccountContent1() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         random = new Random();
         jsonObj.put("name", null);
         jsonObj.put("phone", null);

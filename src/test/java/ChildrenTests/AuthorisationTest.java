@@ -44,8 +44,6 @@ public class AuthorisationTest extends BaseClass{
         LogPools.getLog();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
-        System.out.println("7");
-        LogPools.getLog();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
         System.out.println(childrenResponseAuthorisationModel.toString());
         Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("true"));

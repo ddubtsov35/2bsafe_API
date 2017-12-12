@@ -14,12 +14,10 @@ import java.io.IOException;
  */
 public class RegistrationUserStep2Class extends BaseClass {
 
-    JSONObject jsonObject;
-
     public RegistrationUserStep2Class() throws IOException, ParseException, java.text.ParseException {}
 
     public JSONObject registrationUserStep2Web() throws Exception {
-        jsonObject = UserPool.getUserFromFile();
+        JSONObject jsonObject = UserPool.getUserFromFile();
         if(jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
@@ -39,7 +37,7 @@ public class RegistrationUserStep2Class extends BaseClass {
     }
 
     public JSONObject registrationUserStep2AndroidPhone() throws Exception {
-        jsonObject = UserPool.getUserFromFile();
+        JSONObject jsonObject = UserPool.getUserFromFile();
         if (jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
