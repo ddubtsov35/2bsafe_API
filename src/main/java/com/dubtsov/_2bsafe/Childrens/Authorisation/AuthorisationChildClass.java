@@ -29,6 +29,7 @@ public class AuthorisationChildClass extends BaseClass{
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         generateCidCkeyContent.getCidCkey(childrenResponseAuthorisationModel);
 
+        System.out.println("5");
         LogPools.getLog();
 
         return childrenResponseAuthorisationModel;

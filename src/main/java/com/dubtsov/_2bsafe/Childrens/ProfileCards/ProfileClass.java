@@ -33,6 +33,7 @@ public class ProfileClass extends BaseClass{
         jsonObject = GenerateGetProfileListContent.getProfileListContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
 
+        System.out.println("9");
         LogPools.getLog();
 
         return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());

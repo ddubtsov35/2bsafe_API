@@ -32,6 +32,7 @@ public class GenerateAuthContent{
 
     public static JSONObject getAuthContent() throws IOException, ParseException, java.text.ParseException {
 
+        System.out.println("8");
         LogPools.getLog();
 
         jsonObj = new JSONObject();

@@ -42,6 +42,7 @@ public class AuthorisationTest extends BaseClass{
     public void PositiveAuthorisation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
+        System.out.println("7");
         LogPools.getLog();
         childrenResponseAuthorisationModel = authorisationChildClass.authorisationChildren();
         System.out.println(childrenResponseAuthorisationModel.toString());

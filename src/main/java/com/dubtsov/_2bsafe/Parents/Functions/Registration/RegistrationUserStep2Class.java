@@ -29,7 +29,7 @@ public class RegistrationUserStep2Class extends BaseClass {
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
                 //GenerateProfileIdContent.profileId = null;
             }
-
+            System.out.println("1");
             LogPools.getLog();
 
             return jsonObject;

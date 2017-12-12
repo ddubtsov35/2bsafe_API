@@ -43,6 +43,7 @@ public class AccountSettingsTest extends BaseClass{
         setAccountSettingClass = new AccountSettingClass();
         accountSettingClass = new AccountSettingClass();
 
+        System.out.println("3");
         LogPools.getLog();
 
         authorisationUserClass.RegistrationAndAuthorisationWeb();

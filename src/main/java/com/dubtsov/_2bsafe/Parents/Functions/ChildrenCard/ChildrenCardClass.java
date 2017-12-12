@@ -66,6 +66,7 @@ public class ChildrenCardClass extends BaseClass {
             CidCkeyPool.clearFile();
             CidCkeyRegisteredPool.clearFile();
         }
+        System.out.println("4");
         LogPools.getLog();
     }
     public void NegativeDeleteChildrenCard(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {

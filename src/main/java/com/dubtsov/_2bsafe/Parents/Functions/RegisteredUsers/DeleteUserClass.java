@@ -35,6 +35,7 @@ public class DeleteUserClass extends BaseClass {
             CidCkeyRegisteredPool.clearFile();
             UserPool.clearFile();
         }
+        System.out.println("2");
         LogPools.getLog();
     }
     public void NegativeDeleteUser(JSONObject jsonObject) throws Exception {

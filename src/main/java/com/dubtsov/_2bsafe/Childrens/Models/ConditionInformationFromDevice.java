@@ -83,6 +83,7 @@ public class ConditionInformationFromDevice {
             CidCkeyRegisteredPool.clearFile();
             CidCkeyRegisteredPool.setCidCkey(CidCkeyPool.getCidFromFile());
         }
+        System.out.println("10");
         LogPools.getLog();
     }
 
