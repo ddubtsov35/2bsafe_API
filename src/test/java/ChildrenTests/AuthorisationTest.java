@@ -40,6 +40,8 @@ public class AuthorisationTest extends BaseClass{
     //@Ignore
     @Test
     public void PositiveAuthorisation() throws Exception {
+        System.out.println("xxxxxxxxxxxxxxxxxx222222222222");
+        LogPools.getLog();
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         System.out.println("7");
