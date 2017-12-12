@@ -26,6 +26,7 @@ public class RegistrationUserStep2Class extends BaseClass {
             response = responseClass.getJsonResponse();
 
             if(response.code() == 200) {
+                System.out.println("xxxxxxxxx " + response.body().string());
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
                 //GenerateProfileIdContent.profileId = null;
             }
