@@ -21,19 +21,23 @@ public class GenerateAuthorisationChildren{
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
+            System.out.println("1111111111111111");
             jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
+            System.out.println("2222222222222222");
             jsonObj = UserPool.getUserFromFile();
         }
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
         } else{
             if(CidCkeyRegisteredPool.getCidFromFile() == null){
+                System.out.println("333333333333333");
                 jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
             } else {
                 if (CidCkeyPool.getCidFromFile().get("cid").equals(CidCkeyRegisteredPool.getCidFromFile().get("cid")) &&
                         CidCkeyPool.getCidFromFile().get("ckey").equals(CidCkeyRegisteredPool.getCidFromFile().get("ckey"))) {
+                    System.out.println("44444444444444444");
                     ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
                     childrenLogoutClass.logout();
                     jsonObj.put("cid", "");

@@ -65,10 +65,4 @@ public class GenerateCidCkeyContent{
         return jsonObj;
     }
 
-    /*public static JSONObject getCidCkeyPoolForLogout() throws IOException, ParseException, java.text.ParseException {
-        JSONObject jsonObj = new JSONObject();
-        jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
-        jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));
-        return jsonObj;
-    }*/
 }
