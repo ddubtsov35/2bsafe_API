@@ -15,7 +15,7 @@ public class UserPool {
 
     public static JSONObject getUserFromFile() throws IOException, ParseException {
 
-        System.out.println("resultJsonObject " + resultJsonObject.toString());
+        System.out.println("resultJsonObject " + resultJsonObject);
 
         if(!(resultJsonObject == null)){
             try{
