@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Tariffs;
 
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.TariffList;
@@ -39,6 +41,11 @@ public class GenerateTariffContent{
     }
 
     public static Object[] provideNegativeSetTariffContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         Random random = new Random();
         TariffsClass tariffsClass = new TariffsClass();
         List<TariffList> tariffList = tariffsClass.getTariffsList();

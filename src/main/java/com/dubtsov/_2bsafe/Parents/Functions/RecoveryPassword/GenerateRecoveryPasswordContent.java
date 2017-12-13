@@ -4,6 +4,7 @@ import com.dubtsov._2bsafe.Admin.GetActCode;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -18,7 +19,7 @@ public class GenerateRecoveryPasswordContent{
     public static JSONObject startRecoveryPasswordContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
         } else{
             jsonObj.put("login", UserPool.getUserFromFile().get("em"));
         }
@@ -28,8 +29,8 @@ public class GenerateRecoveryPasswordContent{
     public static JSONObject confirmRecoveryPasswordContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString()).getAct_code());
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
+            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegStep1Content().get("em").toString()).getAct_code());
         } else{
             jsonObj.put("login", UserPool.getUserFromFile().get("em"));
             jsonObj.put("code", new GetActCode().getCode(UserPool.getUserFromFile().get("em").toString()).getAct_code());
@@ -45,12 +46,14 @@ public class GenerateRecoveryPasswordContent{
 
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
 
         //InputClass inputClass = new InputClass();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
             //int code = inputClass.code(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString());
-            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString()).getAct_code());
+            jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegStep1Content().get("em").toString()).getAct_code());
         } else{
             jsonObj.put("login", UserPool.getUserFromFile().get("em"));
             //int code = inputClass.code(UserPool.getUserFromFile().get("em").toString());

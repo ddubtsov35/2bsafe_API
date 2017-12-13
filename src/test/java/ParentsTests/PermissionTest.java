@@ -49,7 +49,7 @@ public class PermissionTest extends BaseClass{
         Assert.assertTrue(permission.getScs().equals("true"));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSetPermissionContent.class)
@@ -61,7 +61,7 @@ public class PermissionTest extends BaseClass{
 
 
 
-    @Ignore
+    //@Ignore
     @Test
     public void setPermission() throws Exception {
         response = permissionsClass.setPermission();
@@ -77,7 +77,7 @@ public class PermissionTest extends BaseClass{
                 && permission.getBt() == Integer.parseInt(jsonObjectResult.get("bt").toString()));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateSetPermissionContent.class)

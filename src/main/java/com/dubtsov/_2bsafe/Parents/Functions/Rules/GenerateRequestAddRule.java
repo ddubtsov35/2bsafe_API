@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
 import com.dubtsov._2bsafe.Childrens.Models.Rules;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -52,6 +53,8 @@ public class GenerateRequestAddRule{
 
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
 
         jsonObject.put("name", null);
         jsonObject.put("profiles",null);

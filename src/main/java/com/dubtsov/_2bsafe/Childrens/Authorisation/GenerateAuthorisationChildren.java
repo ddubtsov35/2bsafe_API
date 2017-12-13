@@ -2,9 +2,12 @@ package com.dubtsov._2bsafe.Childrens.Authorisation;
 
 import com.dubtsov._2bsafe.Childrens.Logout.ChildrenLogoutClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -19,12 +22,10 @@ public class GenerateAuthorisationChildren{
     public GenerateAuthorisationChildren() throws ParseException {}
 
     public static JSONObject PositiveGetAuthorisationChildrenContent() throws Exception {
-        System.out.println("1");
-
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("em", GenerateRegistrationContent.getRegStep1Content().get("em"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
         }
@@ -53,12 +54,12 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("type",1);
         jsonObj.put("TEST", "TEST");
 
-        System.out.println("11" + jsonObj.toString());
+        LogPools.getLog();
+
         return jsonObj;
     }
 
     public static Object[] provideFailAll() throws IOException, ParseException {
-        System.out.println("2");
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("em", "1failEmail");
         jsonObj.put("pwd", "1failPassword");
@@ -71,17 +72,18 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("22" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 
-    public static Object[] provideFailEmail() throws IOException, ParseException {
-        System.out.println("3");
-
+    public static Object[] provideFailEmail() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("em", "11failEmail");
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
             jsonObj.put("em", "11failEmail");
@@ -100,16 +102,17 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("33" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 
-    public static Object[] provideFailPassword() throws IOException, ParseException {
-        System.out.println("4");
-
+    public static Object[] provideFailPassword() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("em", GenerateRegistrationContent.getRegStep1Content().get("em"));
             jsonObj.put("pwd", "111failPwd");
         } else{
             jsonObj = UserPool.getUserFromFile();
@@ -129,13 +132,14 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("44" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 
-    public static Object[] provideEmptyAll() throws IOException, ParseException {
-        System.out.println("5");
-
+    public static Object[] provideEmptyAll() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", "");
@@ -150,17 +154,18 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("55" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 
-    public static Object[] provideEmptyEmail() throws IOException, ParseException {
-        System.out.println("6");
-
+    public static Object[] provideEmptyEmail() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("em", null);
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         } else{
             jsonObj = UserPool.getUserFromFile();
             jsonObj.put("em", null);
@@ -179,16 +184,17 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("66" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 
-    public static Object[] provideEmptyPassword() throws IOException, ParseException {
-        System.out.println("7");
-
+    public static Object[] provideEmptyPassword() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("em", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("em", GenerateRegistrationContent.getRegStep1Content().get("em"));
             jsonObj.put("pwd", null);
         } else{
             jsonObj = UserPool.getUserFromFile();
@@ -208,7 +214,6 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        System.out.println("77" + jsonObj.toString());
         return new Object[]{new Object[]{jsonObj}};
     }
 }

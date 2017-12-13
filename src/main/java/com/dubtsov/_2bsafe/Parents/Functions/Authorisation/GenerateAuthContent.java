@@ -2,6 +2,8 @@ package com.dubtsov._2bsafe.Parents.Functions.Authorisation;
 
 import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.GeneratePasswordChangeContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
@@ -27,30 +29,30 @@ public class GenerateAuthContent{
 
 
     public static JSONObject getAuthContent() throws IOException, ParseException, java.text.ParseException {
-
-        System.out.println("8");
-        LogPools.getLog();
-
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
         } else {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         }
         jsonObj.put("dtype", 0);
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAuthContent() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAuthContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() != null) {
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
         } else {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         }
 
         JSONObject jsonObj1 = new JSONObject();
@@ -136,7 +138,7 @@ public class GenerateAuthContent{
             jsonObj = UserPool.getUserFromFile();
             jsonObj = preparationContent(jsonObj);
         } else {
-            jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
+            jsonObj.put("login", GenerateRegistrationContent.getRegStep1Content().get("em"));
             jsonObj.put("pwd", GeneratePasswordChangeContent.getPasswordChangeContent().get("npwd"));
         }
         jsonObj.put("dtype", 0);

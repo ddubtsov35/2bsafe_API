@@ -43,9 +43,6 @@ public class AccountSettingsTest extends BaseClass{
         setAccountSettingClass = new AccountSettingClass();
         accountSettingClass = new AccountSettingClass();
 
-        System.out.println("3");
-        LogPools.getLog();
-
         authorisationUserClass.RegistrationAndAuthorisationWeb();
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
@@ -57,12 +54,13 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
     public void NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
         AccountSettings accountSettings = accountSettingClass.NegativeGetAccountSetting(jsonObject);
+        System.out.println("accountSettings " + accountSettings);
         Assert.assertTrue(accountSettings.getScs().equals("false"));
     }
 
@@ -74,7 +72,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
@@ -85,12 +83,14 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     public void setAllAccountSettings() throws Exception {
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
         response = setAccountSettingClass.setAllAccountSetting();
         AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
+        System.out.println("accountSettingsBefore " + accountSettingsBefore.toString());
+        System.out.println("accountSettingsAfter " + accountSettingsAfter.toString());
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter &&
                 accountSettingsAfter.getLbat() == 1 &&
                 accountSettingsAfter.getNbat() == 1 &&

@@ -121,6 +121,8 @@
                         <exclude>**/ParentsTests/TariffsTest.java</exclude>
                         <exclude>**/ParentsTests/test.java</exclude>
                         <exclude>**/Test/Test.java</exclude>
+                        <exclude>**/Test/qwe.java</exclude>
+                        <exclude>**/Test/test.java</exclude>
                     </excludes>
                 </configuration>
                 <dependencies>

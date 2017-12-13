@@ -1,6 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import org.json.simple.JSONArray;
@@ -31,7 +33,11 @@ public class GenerateAppsContent{
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAppsInfoContent2() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAppsInfoContent2() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
         JSONObject jsonObj2 = new JSONObject();
@@ -66,7 +72,11 @@ public class GenerateAppsContent{
         return jsonObj;
     }
 
-    public static Object[] provideNegativeGetAppsInGroupContent() throws IOException, ParseException {
+    public static Object[] provideNegativeGetAppsInGroupContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
         jsonObj.put("group_id", null);
@@ -144,6 +154,11 @@ public class GenerateAppsContent{
     }
 
     public static Object[] provideNegativeGetDetailInfoContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));
         jsonObj.put("alias",null);
@@ -197,6 +212,11 @@ public class GenerateAppsContent{
     }
 
     public static Object[] provideNegativeGetAppsBlockContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
         jsonObj.put("alias",null);
@@ -305,6 +325,11 @@ public class GenerateAppsContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGetAppsUpdateContent() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONArray jsonArray = new JSONArray();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));

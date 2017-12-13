@@ -60,7 +60,7 @@ public class TurboButtonTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTurboContent.class)
@@ -81,7 +81,7 @@ public class TurboButtonTest extends BaseClass{
         Assert.assertTrue(turboButton.getScs().equals("true") && turboButton.getTurbo() == GenerateTurboContent.turboStatic);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTurboContent.class)

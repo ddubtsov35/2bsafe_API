@@ -14,9 +14,6 @@ public class UserPool {
     private static JSONObject resultJsonObject;
 
     public static JSONObject getUserFromFile() throws IOException, ParseException {
-
-        System.out.println("resultJsonObject " + resultJsonObject);
-
         if(!(resultJsonObject == null)){
             try{
                 String em = resultJsonObject.get("login").toString();
@@ -25,7 +22,7 @@ public class UserPool {
                 resultJsonObject.remove("dtype");
             } catch (Exception e){}
             finally {
-                return resultJsonObject;
+                return new JSONObject(resultJsonObject);
             }
 
         } else {
@@ -40,11 +37,7 @@ public class UserPool {
         resultJsonObject = jsonObject;
     }
 
-    public static void setUserFromFile(JSONObject jsonObject) throws IOException {
-
-        System.out.println("qqqq " + jsonObject.toString());
-
-
+    public static void setUserFromFile(final JSONObject jsonObject) throws IOException {
         resultJsonObject = jsonObject;
     }
 

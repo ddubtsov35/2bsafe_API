@@ -42,7 +42,7 @@ public class RulesTriggerTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GeneratedRulesTriggerContent.class)

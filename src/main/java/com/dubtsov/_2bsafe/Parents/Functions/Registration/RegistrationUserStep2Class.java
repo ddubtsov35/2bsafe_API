@@ -24,11 +24,8 @@ public class RegistrationUserStep2Class extends BaseClass {
             response = responseClass.getJsonResponse();
 
             if(response.code() == 200) {
-                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
-                //GenerateProfileIdContent.profileId = null;
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegStep1Content());
             }
-            System.out.println("1");
-            LogPools.getLog();
 
             return jsonObject;
         } else {
@@ -45,8 +42,7 @@ public class RegistrationUserStep2Class extends BaseClass {
             jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));
 
             if (responseClass.getJsonResponse().code() == 200) {
-                UserPool.setUserFromFile(GenerateRegistrationContent.getRegistrationStep1Content);
-                //GenerateProfileIdContent.profileId = null;
+                UserPool.setUserFromFile(GenerateRegistrationContent.getRegStep1Content());
             }
 
             return jsonObject;

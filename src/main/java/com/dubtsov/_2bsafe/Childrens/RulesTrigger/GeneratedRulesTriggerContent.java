@@ -1,5 +1,7 @@
 package com.dubtsov._2bsafe.Childrens.RulesTrigger;
 
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -49,6 +51,11 @@ public class GeneratedRulesTriggerContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray = new JSONArray();
 
@@ -69,6 +76,11 @@ public class GeneratedRulesTriggerContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObject = new JSONObject();
         JSONArray jsonArray = new JSONArray();
 
@@ -90,6 +102,11 @@ public class GeneratedRulesTriggerContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -98,6 +115,11 @@ public class GeneratedRulesTriggerContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
         JSONArray jsonArray = new JSONArray();

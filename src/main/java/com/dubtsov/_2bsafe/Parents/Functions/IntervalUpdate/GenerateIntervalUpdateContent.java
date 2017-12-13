@@ -81,10 +81,12 @@ public class GenerateIntervalUpdateContent {
 
 
 
-    public static Object[] provideNegativeGetInterval() throws IOException, ParseException {
+    public static Object[] provideNegativeGetInterval() throws Exception {
         Random random = new Random();
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
 
 
         JSONObject jsonObj = new JSONObject();

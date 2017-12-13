@@ -14,9 +14,8 @@ public class CidCkeyRegisteredPool {
     private static JSONObject resultJsonObject;
 
     public static JSONObject getCidFromFile() throws IOException, ParseException {
-        //System.out.println("resultJsonObject " + resultJsonObject);
         if(!(resultJsonObject == null)){
-            return resultJsonObject;
+            return new JSONObject(resultJsonObject);
         } else {
             return null;
         }

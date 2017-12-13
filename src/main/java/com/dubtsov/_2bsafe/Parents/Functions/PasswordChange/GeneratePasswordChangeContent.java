@@ -13,8 +13,8 @@ public class GeneratePasswordChangeContent{
     public static JSONObject getPasswordChangeContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
-            jsonObj.put("npwd", new StringBuilder((String) GenerateRegistrationContent.getRegistrationStep1Content.get("pwd")).reverse().toString());
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
+            jsonObj.put("npwd", new StringBuilder((String) GenerateRegistrationContent.getRegStep1Content().get("pwd")).reverse().toString());
         } else {
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
             jsonObj.put("npwd", new StringBuilder((String) UserPool.getUserFromFile().get("pwd")).reverse().toString());

@@ -66,14 +66,22 @@ public class Test {
         authorisationChildClass.authorisationChildren();
     }
 
+
     @org.junit.Test
     public void test4() throws Exception {
-        Integer a = 128;
-        Integer b = 128;
+        test t = new test();
 
-        boolean result = a == b;
+        t.set(100);
 
-        System.out.println(result);
+        Integer b = t.get();
+        System.out.println(b);
+
+        b = 10;
+
+        System.out.println(b);
+
+        System.out.println(t.get());
+
     }
 
 }

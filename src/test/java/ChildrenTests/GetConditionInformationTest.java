@@ -54,7 +54,7 @@ public class GetConditionInformationTest extends BaseClass{
         Assert.assertTrue(conditionInformationFromDevice.getScs().equals("true"));
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateConditionInformationContent.class)

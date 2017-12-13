@@ -4,6 +4,8 @@ import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.Logout.ChildrenLogoutClass;
 import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONObject;
 
@@ -32,6 +34,11 @@ public class GenerateGetProfileListContent {
 
 
     public static Object[] provideFailCid() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
@@ -48,6 +55,11 @@ public class GenerateGetProfileListContent {
 
 
     public static Object[] provideFailCkey() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
@@ -65,6 +77,11 @@ public class GenerateGetProfileListContent {
     }
 
     public static Object[] provideEmptyCid() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
@@ -82,6 +99,11 @@ public class GenerateGetProfileListContent {
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
@@ -99,6 +121,11 @@ public class GenerateGetProfileListContent {
     }
 
     public static Object[] provideEmptyAll() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {

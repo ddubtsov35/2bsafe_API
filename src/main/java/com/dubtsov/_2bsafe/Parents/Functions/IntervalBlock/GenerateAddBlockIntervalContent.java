@@ -3,6 +3,8 @@ package com.dubtsov._2bsafe.Parents.Functions.IntervalBlock;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
@@ -43,6 +45,10 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeGetListInterval() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
 
@@ -125,6 +131,10 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeAddInterval() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = new JSONObject();
@@ -202,6 +212,10 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeEditInterval() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
         JSONObject jsonObj = new JSONObject();
@@ -269,6 +283,10 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeDeleteInterval() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
 

@@ -19,7 +19,7 @@ public class GenerateRegisteredUsersContent{
     public static JSONObject deleteAccountContent() throws Exception {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         } else{
             jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }
@@ -29,7 +29,7 @@ public class GenerateRegisteredUsersContent{
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObj100 = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj100.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
+            jsonObj100.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
         } else{
             jsonObj100.put("pwd", UserPool.getUserFromFile().get("pwd"));
         }

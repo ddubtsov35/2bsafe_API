@@ -43,7 +43,7 @@ public class GenerateAccountContent {
     public static JSONObject getSetAllAccountContent() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
-            jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
+            jsonObj = GenerateRegistrationContent.getRegStep1Content();
         } else{
             jsonObj = UserPool.getUserFromFile();
         }

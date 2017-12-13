@@ -70,7 +70,7 @@ public class RegistrationTests extends BaseClass {
         Assert.assertEquals(response.code(), 200);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -89,7 +89,7 @@ public class RegistrationTests extends BaseClass {
         Assert.assertEquals(response.code(), 200);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -113,7 +113,7 @@ public class RegistrationTests extends BaseClass {
         String success = authorisationUserClass.authorisationUser().getScs();
         Assert.assertTrue(success.equals("false"));
     }
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegisteredUsersContent.class)

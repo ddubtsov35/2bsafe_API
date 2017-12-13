@@ -46,7 +46,7 @@ public class GetInformationTests  extends BaseClass{
         Assert.assertTrue(response.body().string().contains("\"scs\": false") &&  response.code() == 465);
     }
 
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)

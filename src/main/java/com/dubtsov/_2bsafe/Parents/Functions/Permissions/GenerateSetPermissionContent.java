@@ -1,6 +1,8 @@
 package com.dubtsov._2bsafe.Parents.Functions.Permissions;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import org.json.simple.JSONObject;
@@ -85,6 +87,10 @@ public class GenerateSetPermissionContent{
         return jsonObj;
     }
     public static Object[] provideGetPermission() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
         Random random = new Random();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
 

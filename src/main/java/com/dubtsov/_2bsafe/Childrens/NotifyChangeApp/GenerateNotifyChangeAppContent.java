@@ -1,6 +1,8 @@
 package com.dubtsov._2bsafe.Childrens.NotifyChangeApp;
 
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateGetProfileListContent;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
+import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
@@ -54,6 +56,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent2() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();
@@ -77,6 +84,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent3() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();
@@ -100,6 +112,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent4() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONArray jsonArray = new JSONArray();
@@ -122,6 +139,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent5() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();
@@ -145,6 +167,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent6() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
@@ -154,6 +181,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent7() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();
@@ -175,6 +207,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent8() throws Exception {
+        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
+        registrationUserStep1Class.registrationUserStep1();
+        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
+        registrationUserStep2Class.registrationUserStep2Web();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
         JSONObject jsonObject3 = new JSONObject();

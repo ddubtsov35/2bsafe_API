@@ -15,10 +15,8 @@ public class ChildrenCardPools {
     private static JSONObject childrenCardJson;
 
     public static AddChildrenCard getChildrenCardFromFile() throws IOException, ParseException, java.text.ParseException {
-        //System.out.println("childrenCardJson " + childrenCardJson);
         try {
-            AddChildrenCard childrenCard = new AddChildrenCard(childrenCardJson.toString());
-            return childrenCard;
+            return new AddChildrenCard(childrenCardJson.toString());
         }catch (NullPointerException e){
             return null;
         }

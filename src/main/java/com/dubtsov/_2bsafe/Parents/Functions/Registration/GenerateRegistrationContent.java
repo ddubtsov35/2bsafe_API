@@ -25,9 +25,22 @@ public class GenerateRegistrationContent {
 
     private static ListRegisteredUsersClass listRegisteredUsersClass;
     private static List<RegisteredUser> registeredUserList;
-    public static JSONObject getRegistrationStep1Content = new JSONObject();
-    public static JSONObject getRegistrationStep2ContentWeb = new JSONObject();
-    public static JSONObject getRegistrationStep2ContentAndroid = new JSONObject();
+    private static JSONObject getRegistrationStep1Content;
+    private static JSONObject getRegistrationStep2ContentWeb;
+    private static JSONObject getRegistrationStep2ContentAndroid;
+
+    public static JSONObject getRegStep1Content(){
+        return new JSONObject(getRegistrationStep1Content);
+    }
+
+    public static JSONObject getRegStep2ContentWeb(){
+        return new JSONObject(getRegistrationStep2ContentWeb);
+    }
+
+    public static JSONObject getRegStep2ContentAndroid(){
+        return new JSONObject(getRegistrationStep2ContentAndroid);
+    }
+
 
     public GenerateRegistrationContent() throws Exception {}
 

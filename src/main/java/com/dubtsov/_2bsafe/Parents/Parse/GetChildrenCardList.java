@@ -29,8 +29,6 @@ public class GetChildrenCardList {
             }
         } catch (ParseException e){}
         finally {
-            System.out.println("6");
-            LogPools.getLog();
             return childrenCardList;
         }
     }
