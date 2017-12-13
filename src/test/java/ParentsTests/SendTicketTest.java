@@ -42,7 +42,7 @@ public class SendTicketTest extends BaseClass{
         Assert.assertTrue(sendTicketClass.sendTicket()!= 0);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)
@@ -63,7 +63,7 @@ public class SendTicketTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)

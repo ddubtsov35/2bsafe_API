@@ -28,7 +28,6 @@ public class ChangeEmailPhoneTest extends BaseClass{
         listRegisteredUsersClass = new ListRegisteredUsersClass();
     }
 
-    //Need code
     @Ignore
     @Test
     public void changeEmail() throws Exception {
@@ -46,7 +45,6 @@ public class ChangeEmailPhoneTest extends BaseClass{
         Assert.assertTrue(afterEmail.equals(newEmail) && !beforeEmail.equals(newEmail));
     }
 
-    //Need code
     @Ignore
     @Test
     public void changeEmailError() throws Exception {

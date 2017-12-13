@@ -58,7 +58,7 @@ public class IntervalBlockTest extends BaseClass {
         Assert.assertTrue(intervalBlock.size() > 0);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddBlockIntervalContent.class)
@@ -79,7 +79,7 @@ public class IntervalBlockTest extends BaseClass {
         Assert.assertTrue(addIntervalBlock.getScs().equals("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddBlockIntervalContent.class)
@@ -103,7 +103,7 @@ public class IntervalBlockTest extends BaseClass {
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-   // @Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddBlockIntervalContent.class)
@@ -128,7 +128,7 @@ public class IntervalBlockTest extends BaseClass {
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddBlockIntervalContent.class)

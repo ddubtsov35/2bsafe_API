@@ -48,7 +48,7 @@ public class ZoneTest extends BaseClass{
         Assert.assertTrue(zone.size() > 0);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateZoneContent.class)
@@ -67,7 +67,7 @@ public class ZoneTest extends BaseClass{
         Assert.assertTrue(addZone.getScs().equals("true") && addZone.getZone_id() != 0);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateZoneContent.class)
@@ -87,7 +87,7 @@ public class ZoneTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateZoneContent.class)

@@ -57,7 +57,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(app.getScs().contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -74,7 +74,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(appsInGroup.getScs().contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -92,7 +92,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(appsDetailInfo.getScs().equals("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -111,7 +111,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(result.contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -131,7 +131,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(result.contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -151,7 +151,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(result.contains("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)
@@ -172,7 +172,7 @@ public class AppsTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAppsContent.class)

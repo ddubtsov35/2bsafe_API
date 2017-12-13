@@ -36,7 +36,6 @@ public class AuthorisationTest extends BaseClass{
         childrenCardClass = new ChildrenCardClass();
     }
 
-    //Need code
     //@Ignore
     @Test
     public void PositiveAuthorisation() throws Exception {

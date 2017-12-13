@@ -54,7 +54,6 @@ public class GroupAppTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
 
-    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)

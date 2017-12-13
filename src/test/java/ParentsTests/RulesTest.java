@@ -63,7 +63,7 @@ public class RulesTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     public void NegativeGetRules() throws Exception {
         response = rulesClass.getRulesListResponse();
@@ -83,7 +83,7 @@ public class RulesTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -115,7 +115,7 @@ public class RulesTest extends BaseClass{
         Assert.assertTrue(setRulesModel.getScs().equals("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -136,7 +136,7 @@ public class RulesTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)
@@ -157,7 +157,7 @@ public class RulesTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRequestAddRule.class)

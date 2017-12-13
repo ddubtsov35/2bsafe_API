@@ -59,7 +59,7 @@ public class HelpMeTest extends BaseClass {
     }
 
 
-    //@Ignore
+    @Ignore
     @Test
     public void setHelpMe() throws Exception {
         response = helpMeParentClass.setHelpMe();
@@ -67,7 +67,7 @@ public class HelpMeTest extends BaseClass {
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200);
     }
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateHelpMeContent.class)

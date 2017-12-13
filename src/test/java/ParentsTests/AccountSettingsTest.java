@@ -54,7 +54,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
@@ -72,7 +72,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
 
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
@@ -83,7 +83,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
-    //@Ignore
+    @Ignore
     @Test
     public void setAllAccountSettings() throws Exception {
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
