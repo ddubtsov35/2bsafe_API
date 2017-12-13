@@ -15,10 +15,8 @@ import java.io.IOException;
  */
 public class GenerateRecoveryPasswordContent{
 
-    private static JSONObject jsonObj;
-
     public static JSONObject startRecoveryPasswordContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
         } else{
@@ -28,7 +26,7 @@ public class GenerateRecoveryPasswordContent{
     }
 
     public static JSONObject confirmRecoveryPasswordContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("login", GenerateRegistrationContent.getRegistrationStep1Content.get("em"));
             jsonObj.put("code", new GetActCode().getCode(GenerateRegistrationContent.getRegistrationStep1Content.get("em").toString()).getAct_code());
@@ -43,7 +41,7 @@ public class GenerateRecoveryPasswordContent{
 
 
     public static Object[] provideNegativeGetAuthContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
 
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();

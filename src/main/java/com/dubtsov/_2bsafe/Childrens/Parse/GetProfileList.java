@@ -17,24 +17,15 @@ import java.util.List;
  */
 public class GetProfileList {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
-    private static List<ProfileCard> profileCard;
-
     public static List<ProfileCard> getProfileCard(String profileCardString) throws ParseException, java.text.ParseException, IOException {
-        parser = new JSONParser();
-        jsonObj = (JSONObject) obj;
-        profileCard = new ArrayList<>();
+        JSONParser parser = new JSONParser();
+        List<ProfileCard> profileCard = new ArrayList<>();
         try {
-            obj = parser.parse(profileCardString);
-            jsonObj = (JSONObject) obj;
+            JSONObject jsonObj = (JSONObject) parser.parse(profileCardString);
 
             System.out.println("jsonObj " + jsonObj);
             String scs = jsonObj.get("scs").toString();
-            jsonArray = (JSONArray) jsonObj.get("data");
+            JSONArray jsonArray = (JSONArray) jsonObj.get("data");
             try {
                 for (int i = 0; i < jsonArray.size(); i++) {
 

@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
+import com.dubtsov._2bsafe.Childrens.Models.Rules;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
@@ -15,22 +16,14 @@ import java.util.Random;
  */
 public class GenerateRequestAddRule{
 
-    private static JSONObject jsonObject;
-    private static JSONObject jsonObject3;
-    private static JSONObject jsonObject5;
-    private static JSONArray jsonArray;
-    private static JSONArray jsonArray2;
-    private static RulesClass rulesClass;
-    private static JSONObject jsonObj;
-
 
     public static JSONObject addRuleContent() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonObject5 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONObject jsonObject5 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObject.put("name", "TestName");
         jsonObject.put("profiles",jsonArray);
@@ -50,12 +43,12 @@ public class GenerateRequestAddRule{
         return jsonObject;
     }
     public static Object[] provideNegativeAddRuleContent() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonObject5 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONObject jsonObject5 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
@@ -147,8 +140,8 @@ public class GenerateRequestAddRule{
 
 
     public static JSONObject getDel_Get_Content() throws Exception {
-        jsonObj = new JSONObject();
-        rulesClass = new RulesClass();
+        JSONObject jsonObj = new JSONObject();
+        RulesClass rulesClass = new RulesClass();
         int rule_id = rulesClass.addRule().getRule_id();
         jsonObj.put("rule_id", rule_id);
         return jsonObj;
@@ -179,8 +172,8 @@ public class GenerateRequestAddRule{
 
 
     public static JSONObject getSwitchContent() throws Exception {
-        jsonObj = new JSONObject();
-        rulesClass = new RulesClass();
+        JSONObject jsonObj = new JSONObject();
+        RulesClass rulesClass = new RulesClass();
         int rule_id = rulesClass.addRule().getRule_id();
         jsonObj.put("rule_id", rule_id);
         jsonObj.put("enabled", 1);
@@ -188,9 +181,8 @@ public class GenerateRequestAddRule{
     }
     public static Object[] provideNegativeGetSwitchContent() throws Exception {
         Random random = new Random();
-        jsonObj = new JSONObject();
-
         JSONObject jsonObj = new JSONObject();
+
         jsonObj.put("rule_id", 1233);
         jsonObj.put("enabled",null);
 

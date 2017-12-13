@@ -17,12 +17,11 @@ import java.util.Random;
  */
 public class GenerateIntervalUpdateContent {
 
-    private static JSONObject jsonObj = new JSONObject();
-    public static int itoRandom;
-    private static Random random;
+    public static Integer itoRandom;
 
     public static JSONObject setIntervalUpdateContent() throws Exception {
-        random = new Random();
+        JSONObject jsonObj = new JSONObject();
+        Random random = new Random();
         GetIntervalUpdateClass getIntervalUpdateClass = new GetIntervalUpdateClass();
         if(getIntervalUpdateClass.getIntervalUpdateResponse() != null) {
             itoRandom = random.nextInt((90 - 0) + 1) + 0;

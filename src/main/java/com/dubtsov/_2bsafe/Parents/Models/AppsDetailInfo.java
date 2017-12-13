@@ -17,19 +17,14 @@ public class AppsDetailInfo {
     private String alias;
     private Boolean blocked;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
 
     public AppsDetailInfo(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObj = (JSONObject) parser.parse(jsonObjectString);
 
         try {
             if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else {setScs(null);}

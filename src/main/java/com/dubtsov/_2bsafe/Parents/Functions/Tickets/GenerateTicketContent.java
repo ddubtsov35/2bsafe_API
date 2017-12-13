@@ -15,16 +15,14 @@ import java.io.IOException;
  */
 public class GenerateTicketContent{
 
-    private static JSONObject jsonObj;
-
     public static JSONObject getSendTicketContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("subj", "TestSubject");
         jsonObj.put("msg", "TestMessage");
         return jsonObj;
     }
     public static Object[] provideNegativeGetSendTicketContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
 
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("subj", null);
@@ -77,14 +75,14 @@ public class GenerateTicketContent{
     
 
     public static JSONObject getSendTicketLandingContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("subj", "TestSubject");
         jsonObj.put("msg", "TestMessage");
         jsonObj.put("em", GenerateEmailClass.getGeneratedEmail());
         return jsonObj;
     }
     public static Object[] provideGetSendTicketLandingContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("subj", null);
         jsonObj.put("msg", null);
         jsonObj.put("em", null);

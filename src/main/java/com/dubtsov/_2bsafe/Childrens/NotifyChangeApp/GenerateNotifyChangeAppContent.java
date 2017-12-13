@@ -9,19 +9,12 @@ import org.json.simple.JSONObject;
  */
 public class GenerateNotifyChangeAppContent{
 
-    private static JSONObject jsonObject2;
-    private static JSONObject jsonObject3;
-    private static JSONArray jsonArray2;
-    private static JSONArray jsonArray;
-    private static JSONObject jsonObj;
-
-
     public static JSONObject appsNotifyContent() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
@@ -38,11 +31,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent1() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = new JSONObject();
         jsonObj.put("cid", null);
@@ -61,11 +54,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent2() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
         jsonObj.remove("cid");
@@ -84,11 +77,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent3() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
         jsonObj.remove("ckey");
@@ -107,11 +100,10 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent4() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
         jsonObj.remove("cid");
@@ -130,11 +122,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent5() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
         jsonObj.remove("ckey");
@@ -153,7 +145,7 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent6() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
@@ -162,11 +154,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent7() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
@@ -183,11 +175,11 @@ public class GenerateNotifyChangeAppContent{
     }
 
     public static Object[] provideNegativeAppsNotifyContent8() throws Exception {
-        jsonObj = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        jsonArray2 = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
 
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 

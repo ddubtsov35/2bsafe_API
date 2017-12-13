@@ -20,12 +20,9 @@ import java.util.Random;
  */
 public class GenerateNotifyListContent{
 
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray = new JSONArray();
-
     public static JSONObject getNotifyListContent() throws Exception {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
 
         jsonObj.put("start", 0);
 
@@ -52,8 +49,8 @@ public class GenerateNotifyListContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGetNotifyListContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         jsonObj.put("start", null);
         jsonObj.put("profile_id", null);
         jsonObj.put("limit", null);
@@ -96,7 +93,7 @@ public class GenerateNotifyListContent{
 
 
     public static JSONObject createSession_alarm_update_updateLong() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         } else{
@@ -105,7 +102,7 @@ public class GenerateNotifyListContent{
         return jsonObj;
     }
     public static Object[] provideNegativeCreateSession_alarm_update_updateLong() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
 
         JSONObject jsonObj2 = new JSONObject();
@@ -126,7 +123,7 @@ public class GenerateNotifyListContent{
 
 
     public static JSONObject blockScreen() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         } else{
@@ -141,7 +138,7 @@ public class GenerateNotifyListContent{
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
 
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("pin", null);
         jsonObj.put("profile_id", null);
 

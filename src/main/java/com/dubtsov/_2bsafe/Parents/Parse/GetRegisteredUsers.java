@@ -21,24 +21,23 @@ public class GetRegisteredUsers {
 
     private static JSONParser parser;
     private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
 
 
     private static String getResultJsonString(String registeredUserListString) throws ParseException {
         parser = new JSONParser();
         obj = parser.parse(registeredUserListString);
-        jsonObj = (JSONObject) obj;
+        JSONObject jsonObj = (JSONObject) obj;
         resultJsonStringGlobal = jsonObj.get("result").toString();
         return resultJsonStringGlobal;
     }
 
     public static List<RegisteredUser> getRegisteredUsersList(String registeredUserListString) throws ParseException, java.text.ParseException {
+        JSONObject jsonObj = new JSONObject();
         registeredUsersList = new ArrayList();
         String resultJsonString = getResultJsonString(registeredUserListString);
         System.out.println("resultJsonString " + resultJsonString);
         obj = parser.parse(resultJsonString);
-        jsonArray = (JSONArray) obj;
+        JSONArray jsonArray = (JSONArray) obj;
         itemsJsonString = jsonObj.get("num").toString();
         for(int i=0; i<jsonArray.size(); i++){
             registeredUsersList.add(new RegisteredUser(jsonArray.get(i).toString()));

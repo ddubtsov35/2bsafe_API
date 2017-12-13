@@ -11,14 +11,12 @@ import java.util.Random;
  * Created by user on 12.09.17.
  */
 public class GenerateSetPermissionContent{
-
-    private static JSONObject jsonObj;
     public static JSONObject setPermissionObject;
 
     private static PermissionsClass permissionsClass;
 
         public static JSONObject setPermission() throws Exception {
-            jsonObj = new JSONObject();
+            JSONObject jsonObj = new JSONObject();
             permissionsClass = new PermissionsClass();
             if (permissionsClass.getPermission().getGeo() == 0){
                 jsonObj.put("geo", 1);
@@ -47,7 +45,7 @@ public class GenerateSetPermissionContent{
             return jsonObj;
         }
     public static Object[] provideSetPermission() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("geo", null);
         jsonObj.put("wifi", null);
         jsonObj.put("datetime", null);
@@ -76,7 +74,7 @@ public class GenerateSetPermissionContent{
 
 
     public static JSONObject getPermission() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
 
         if(GenerateProfileIdContent.profileId == null){
@@ -90,7 +88,7 @@ public class GenerateSetPermissionContent{
         Random random = new Random();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
 
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", null);
         jsonObj.put("profile_id", null);
 

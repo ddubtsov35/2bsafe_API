@@ -12,10 +12,6 @@ import java.io.IOException;
  */
 public class ChildrenResponseAuthorisationModel {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     private String scs;
     private Integer ito;
     private String cid;
@@ -30,9 +26,8 @@ public class ChildrenResponseAuthorisationModel {
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObj = (JSONObject) parser.parse(jsonObjectString);
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
         if(jsonObj.get("ito") != null) {setIto(Integer.parseInt(jsonObj.get("ito").toString()));} else{setIto(null);}
         try {

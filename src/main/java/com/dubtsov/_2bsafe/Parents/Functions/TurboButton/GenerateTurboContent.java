@@ -16,11 +16,10 @@ import java.util.Random;
  */
 public class GenerateTurboContent{
 
-    private static JSONObject jsonObj;
     public static Integer turboStatic;
 
     public static JSONObject getTurboContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         } else{
@@ -29,7 +28,7 @@ public class GenerateTurboContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGetTurboContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         Random random = new Random();
         jsonObj.put("profile_id", null);
 
@@ -49,7 +48,7 @@ public class GenerateTurboContent{
 
 
     public static JSONObject setTurboContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         } else{
@@ -61,7 +60,7 @@ public class GenerateTurboContent{
     public static Object[] provideSetTurboContent() throws Exception {
         RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
         registrationUserStep1Class.registrationUserStep1();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         Random random = new Random();
         jsonObj.put("profile_id", null);
         jsonObj.put("turbo", null);

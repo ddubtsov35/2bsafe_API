@@ -20,15 +20,6 @@ public class AppsInGroup {
     private List<AppsInGroup.Apps> apps;
     private List<AppsInGroup.Intervals> intervals;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
-    private static JSONParser parser2;
-    private static Object obj2;
-    private static JSONObject jsonObj2;
-
 
     public AppsInGroup(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
@@ -38,9 +29,8 @@ public class AppsInGroup {
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
         apps = new LinkedList<>();
         intervals = new LinkedList<>();
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObj = (JSONObject) parser.parse(jsonObjectString);
 
         try {
             if (jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else {setScs(null);}
@@ -52,7 +42,7 @@ public class AppsInGroup {
             setDefaul(null);
         }
 
-        jsonArray = (JSONArray) jsonObj.get("intervals");
+        JSONArray jsonArray = (JSONArray) jsonObj.get("intervals");
         if (jsonArray != null && !jsonArray.isEmpty()) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 intervals.add(new AppsInGroup.Intervals(jsonArray.get(i).toString()));
@@ -119,9 +109,8 @@ public class AppsInGroup {
         }
 
         private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-            parser2 = new JSONParser();
-            obj2 = parser2.parse(jsonObjectString);
-            jsonObj2 = (JSONObject) obj2;
+            JSONParser parser2 = new JSONParser();
+            JSONObject jsonObj2 = (JSONObject) parser2.parse(jsonObjectString);
 
             try {
                 if (jsonObj2.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj2.get("profile_id").toString()));} else {setProfile_id(null);}
@@ -135,7 +124,7 @@ public class AppsInGroup {
                 setInterval_id(null);
             }
 
-            jsonArray = (JSONArray) jsonObj2.get("repeat");
+            JSONArray jsonArray = (JSONArray) jsonObj2.get("repeat");
             if(!jsonArray.isEmpty()) {
                 for (int i = 0; i < jsonArray.size(); i++) {
                     repeat.add(Integer.parseInt(jsonArray.get(i).toString()));
@@ -206,9 +195,8 @@ public class AppsInGroup {
         }
 
         private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-            parser2 = new JSONParser();
-            obj2 = parser2.parse(jsonObjectString);
-            jsonObj2 = (JSONObject) obj2;
+            JSONParser parser2 = new JSONParser();
+            JSONObject jsonObj2 = (JSONObject) parser2.parse(jsonObjectString);
 
             try {
                 if (jsonObj2.get("alias") != null) {setAlias(jsonObj2.get("alias").toString());}

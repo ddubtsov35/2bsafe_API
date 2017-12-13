@@ -9,10 +9,6 @@ import org.json.simple.parser.ParseException;
  */
 public class DeviceShortInfo {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     private String phone;
     private int age;
     private String update_date;
@@ -26,9 +22,8 @@ public class DeviceShortInfo {
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObj = (JSONObject) parser.parse(jsonObjectString);;
 
 
         if(jsonObj.get("phone") != null) {setPhone(jsonObj.get("phone").toString());} else{setPhone("");}

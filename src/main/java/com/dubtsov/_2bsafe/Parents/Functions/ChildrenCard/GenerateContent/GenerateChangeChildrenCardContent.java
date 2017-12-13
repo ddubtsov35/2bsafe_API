@@ -13,13 +13,13 @@ import java.util.Random;
  * Created by user on 08.09.17.
  */
 public class GenerateChangeChildrenCardContent{
-
-    private static JSONObject jsonObj = new JSONObject();
     public GenerateChangeChildrenCardContent() throws ParseException {}
     public static String generatedPhone = GeneratePhoneClass.getGeneratedPhone();
     public static int generatedAge = getGeneratedAge();
 
     private static JSONObject generateContent(String type){
+        JSONObject jsonObj = new JSONObject();
+
         switch (type){
             case "phone":
                 jsonObj.put("phone", generatedPhone);
@@ -36,6 +36,7 @@ public class GenerateChangeChildrenCardContent{
     }
 
     public static JSONObject getChangeChildrenCardContent(String type) throws Exception {
+        JSONObject jsonObj = new JSONObject();
         jsonObj = generateContent(type);
         /*if(GenerateProfileIdContent.profileId == null){*/
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -47,7 +48,7 @@ public class GenerateChangeChildrenCardContent{
     }
 
     public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
 
         JSONObject jsonObj2 = new JSONObject();

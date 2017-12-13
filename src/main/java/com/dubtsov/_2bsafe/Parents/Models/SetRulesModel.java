@@ -13,9 +13,8 @@ public class SetRulesModel {
     private String scs;
     private Integer rule_id;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
+    private JSONParser parser;
+    private Object obj;
 
 
     public SetRulesModel(String jsonObjectString) throws ParseException, java.text.ParseException {
@@ -25,7 +24,7 @@ public class SetRulesModel {
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONObject jsonObj = (JSONObject) obj;
 
         try {
             if (jsonObj.get("scs") != null) { setScs(jsonObj.get("scs").toString()); } else {setScs(null);}

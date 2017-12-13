@@ -12,12 +12,12 @@ import org.json.simple.parser.ParseException;
 public class GenerateGpsPositionContent {
 
     private static ChildrenCardClass childrenCardClass;
-    private static JSONObject jsonObj = new JSONObject();
 
     public GenerateGpsPositionContent() throws ParseException {}
 
     public static JSONObject getGpsPositionContent() throws Exception {
         childrenCardClass = new ChildrenCardClass();
+        JSONObject jsonObj = new JSONObject();
         //if(GenerateProfileIdContent.profileId == null){
         jsonObj  = GenerateProfileIdContent.getProfileId();
         jsonObj.put("profile_id", jsonObj.get("profile_id"));

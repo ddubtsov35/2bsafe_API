@@ -13,11 +13,11 @@ import java.util.List;
  */
 public class ChildrenCard {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-    private static JSONObject jsonObjDevice;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
+    private JSONArray jsonArray;
+    private JSONObject jsonObjDevice;
 
     private Integer age;
     private Integer profile_id;
@@ -73,29 +73,6 @@ public class ChildrenCard {
                 '}';
     }
 
-    public static JSONParser getParser() {
-        return parser;
-    }
-
-    public static void setParser(JSONParser parser) {
-        ChildrenCard.parser = parser;
-    }
-
-    public static Object getObj() {
-        return obj;
-    }
-
-    public static void setObj(Object obj) {
-        ChildrenCard.obj = obj;
-    }
-
-    public static JSONObject getJsonObj() {
-        return jsonObj;
-    }
-
-    public static void setJsonObj(JSONObject jsonObj) {
-        ChildrenCard.jsonObj = jsonObj;
-    }
 
     public Integer getAge() {
         return age;

@@ -13,13 +13,11 @@ import java.util.HashMap;
  * Created by user on 24.08.17.
  */
 public class GenerateHelpMeContent {
-    private static JSONObject jsonObject;
-    private static JSONObject jsonObject2;
 
 
     public static JSONObject getHelpMeContent() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         //jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -37,8 +35,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent1() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -53,8 +51,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent2() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.remove("cid");
@@ -71,8 +69,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent3() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.remove("ckey");
@@ -89,8 +87,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent4() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject.put("ckey", null);
         jsonObject.put("cid", null);
@@ -106,8 +104,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent5() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject.put("ckey", null);
         jsonObject.put("cid", null);
@@ -123,8 +121,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent6() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.remove("ckey");
@@ -141,8 +139,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent7() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.remove("cid");
@@ -159,8 +157,8 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeConten8() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
 
         jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
 

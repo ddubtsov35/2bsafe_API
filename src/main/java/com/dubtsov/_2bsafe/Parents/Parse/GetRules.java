@@ -17,22 +17,14 @@ import java.util.List;
  */
 public class GetRules {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-    private static JSONObject jsonObj2;
-    private static JSONObject jsonObj3;
-
     private static List<GetRulesModel> rulesList;
 
     public static List<GetRulesModel> getRulesList(String getRulesListResponse) throws ParseException, java.text.ParseException {
         rulesList = new ArrayList();
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         System.out.println("getRulesListResponse " + getRulesListResponse);
-        obj = parser.parse(getRulesListResponse);
-        jsonObj = (JSONObject) obj;
-        jsonArray = (JSONArray) jsonObj.get("data");
+        JSONObject jsonObj = (JSONObject) parser.parse(getRulesListResponse);
+        JSONArray jsonArray = (JSONArray) jsonObj.get("data");
         if(jsonArray.size() > 0) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 rulesList.add(new GetRulesModel(jsonArray.get(i).toString()));

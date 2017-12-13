@@ -24,9 +24,9 @@ public class Device {
     private static JSONParser parser;
     private static Object obj;
 
-    private static JSONParser parser2;
-    private static Object obj2;
-    private static JSONObject jsonObj2;
+    private JSONParser parser2;
+    private Object obj2;
+    private JSONObject jsonObj2;
 
     public Device(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);

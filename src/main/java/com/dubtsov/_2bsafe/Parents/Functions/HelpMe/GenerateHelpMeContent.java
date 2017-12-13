@@ -15,12 +15,8 @@ import java.util.Random;
  */
 public class GenerateHelpMeContent{
 
-    private static JSONObject jsonObj;
-    private static JSONObject jsonObj2 = new JSONObject();
-    private static JSONArray jsonArray = new JSONArray();
-
     public static  JSONObject getHelpMe() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         jsonObj.put("cid", authorisationChildClass.authorisationChildren().getCid());
         //if(GenerateProfileIdContent.profileId == null){
@@ -35,7 +31,7 @@ public class GenerateHelpMeContent{
         Random random = new Random();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
 
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", null);
         jsonObj.put("profile_id", null);
 
@@ -75,7 +71,9 @@ public class GenerateHelpMeContent{
 
 
     public static JSONObject setHelpMe() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObj2 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         //if(GenerateProfileIdContent.profileId == null){
         jsonObj  = GenerateProfileIdContent.getProfileId();
@@ -99,7 +97,10 @@ public class GenerateHelpMeContent{
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         Random random = new Random();
 
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
+        JSONObject jsonObj2 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+
         jsonObj.put("cid", null);
         jsonObj.put("state", null);
         jsonObj.put("push", null);
@@ -110,7 +111,7 @@ public class GenerateHelpMeContent{
         jsonObj2.put("phone", null);
         jsonArray.add(jsonObj2);
 
-        JSONObject jsonObj2 = new JSONObject();
+
         jsonObj.put("cid", "fakeCid");
         jsonObj.put("state", "fakeState");
         jsonObj.put("push", "fakePush");

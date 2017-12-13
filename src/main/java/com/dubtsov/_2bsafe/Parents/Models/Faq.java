@@ -10,9 +10,9 @@ import org.json.simple.parser.ParseException;
  */
 public class Faq {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
 
     private int pos;
     private String label;

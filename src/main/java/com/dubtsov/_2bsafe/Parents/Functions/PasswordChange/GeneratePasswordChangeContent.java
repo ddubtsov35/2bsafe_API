@@ -10,9 +10,8 @@ import org.json.simple.JSONObject;
  */
 public class GeneratePasswordChangeContent{
 
-    private static JSONObject jsonObj = new JSONObject();
-
     public static JSONObject getPasswordChangeContent() throws Exception {
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
             jsonObj.put("npwd", new StringBuilder((String) GenerateRegistrationContent.getRegistrationStep1Content.get("pwd")).reverse().toString());

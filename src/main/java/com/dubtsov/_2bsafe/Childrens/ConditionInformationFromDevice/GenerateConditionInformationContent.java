@@ -11,34 +11,20 @@ import org.json.simple.JSONObject;
  */
 public class GenerateConditionInformationContent{
 
-    private static JSONObject jsonObject1;
-    private static JSONObject jsonObject2_1;
-    private static JSONObject jsonObject2_2;
-    private static JSONObject jsonObject2_3;
-    private static JSONObject jsonObject2_4;
-    private static JSONObject jsonObject2_5;
-    private static JSONObject jsonObject2_6;
-    private static JSONObject jsonObject2_7;
-    private static JSONObject jsonObject2_8;
-    private static JSONObject jsonObject3;
-    private static JSONArray jsonArray1;
-    private static JSONArray jsonArray2;
-    private static JSONArray jsonArray3;
-
     public static JSONObject getConditionInformationContent() throws Exception {
-        jsonObject1 = new JSONObject();
-        jsonObject2_1 = new JSONObject();
-        jsonObject2_2 = new JSONObject();
-        jsonObject2_3 = new JSONObject();
-        jsonObject2_4 = new JSONObject();
-        jsonObject2_5 = new JSONObject();
-        jsonObject2_6 = new JSONObject();
-        jsonObject2_7 = new JSONObject();
-        jsonObject2_8 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray1 = new JSONArray();
-        jsonArray2 = new JSONArray();
-        jsonArray3 = new JSONArray();
+        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject2_1 = new JSONObject();
+        JSONObject jsonObject2_2 = new JSONObject();
+        JSONObject jsonObject2_3 = new JSONObject();
+        JSONObject jsonObject2_4 = new JSONObject();
+        JSONObject jsonObject2_5 = new JSONObject();
+        JSONObject jsonObject2_6 = new JSONObject();
+        JSONObject jsonObject2_7 = new JSONObject();
+        JSONObject jsonObject2_8 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray1 = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
+        JSONArray jsonArray3 = new JSONArray();
 
         //jsonObject3.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
         //jsonObject3.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
@@ -104,19 +90,19 @@ public class GenerateConditionInformationContent{
     }
 
     public static Object[] provideGetConditionInformationContentEmptyData() throws Exception {
-        jsonObject1 = new JSONObject();
-        jsonObject2_1 = new JSONObject();
-        jsonObject2_2 = new JSONObject();
-        jsonObject2_3 = new JSONObject();
-        jsonObject2_4 = new JSONObject();
-        jsonObject2_5 = new JSONObject();
-        jsonObject2_6 = new JSONObject();
-        jsonObject2_7 = new JSONObject();
-        jsonObject2_8 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray1 = new JSONArray();
-        jsonArray2 = new JSONArray();
-        jsonArray3 = new JSONArray();
+        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject2_1 = new JSONObject();
+        JSONObject jsonObject2_2 = new JSONObject();
+        JSONObject jsonObject2_3 = new JSONObject();
+        JSONObject jsonObject2_4 = new JSONObject();
+        JSONObject jsonObject2_5 = new JSONObject();
+        JSONObject jsonObject2_6 = new JSONObject();
+        JSONObject jsonObject2_7 = new JSONObject();
+        JSONObject jsonObject2_8 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray1 = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
+        JSONArray jsonArray3 = new JSONArray();
 
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
@@ -181,19 +167,19 @@ public class GenerateConditionInformationContent{
     }
 
     public static Object[] provideGetConditionInformationContentEmptyAll() throws Exception {
-        jsonObject1 = new JSONObject();
-        jsonObject2_1 = new JSONObject();
-        jsonObject2_2 = new JSONObject();
-        jsonObject2_3 = new JSONObject();
-        jsonObject2_4 = new JSONObject();
-        jsonObject2_5 = new JSONObject();
-        jsonObject2_6 = new JSONObject();
-        jsonObject2_7 = new JSONObject();
-        jsonObject2_8 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray1 = new JSONArray();
-        jsonArray2 = new JSONArray();
-        jsonArray3 = new JSONArray();
+        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject2_1 = new JSONObject();
+        JSONObject jsonObject2_2 = new JSONObject();
+        JSONObject jsonObject2_3 = new JSONObject();
+        JSONObject jsonObject2_4 = new JSONObject();
+        JSONObject jsonObject2_5 = new JSONObject();
+        JSONObject jsonObject2_6 = new JSONObject();
+        JSONObject jsonObject2_7 = new JSONObject();
+        JSONObject jsonObject2_8 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray1 = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
+        JSONArray jsonArray3 = new JSONArray();
 
         jsonObject3.put("ckey", null);
         jsonObject3.put("cid", null);
@@ -256,19 +242,19 @@ public class GenerateConditionInformationContent{
     }
 
     public static Object[] provideGetConditionInformationContentEmptyCid() throws Exception {
-        jsonObject1 = new JSONObject();
-        jsonObject2_1 = new JSONObject();
-        jsonObject2_2 = new JSONObject();
-        jsonObject2_3 = new JSONObject();
-        jsonObject2_4 = new JSONObject();
-        jsonObject2_5 = new JSONObject();
-        jsonObject2_6 = new JSONObject();
-        jsonObject2_7 = new JSONObject();
-        jsonObject2_8 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray1 = new JSONArray();
-        jsonArray2 = new JSONArray();
-        jsonArray3 = new JSONArray();
+        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject2_1 = new JSONObject();
+        JSONObject jsonObject2_2 = new JSONObject();
+        JSONObject jsonObject2_3 = new JSONObject();
+        JSONObject jsonObject2_4 = new JSONObject();
+        JSONObject jsonObject2_5 = new JSONObject();
+        JSONObject jsonObject2_6 = new JSONObject();
+        JSONObject jsonObject2_7 = new JSONObject();
+        JSONObject jsonObject2_8 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray1 = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
+        JSONArray jsonArray3 = new JSONArray();
 
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
@@ -335,19 +321,19 @@ public class GenerateConditionInformationContent{
     }
 
     public static Object[] provideGetConditionInformationContentEmptyCkey() throws Exception {
-        jsonObject1 = new JSONObject();
-        jsonObject2_1 = new JSONObject();
-        jsonObject2_2 = new JSONObject();
-        jsonObject2_3 = new JSONObject();
-        jsonObject2_4 = new JSONObject();
-        jsonObject2_5 = new JSONObject();
-        jsonObject2_6 = new JSONObject();
-        jsonObject2_7 = new JSONObject();
-        jsonObject2_8 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray1 = new JSONArray();
-        jsonArray2 = new JSONArray();
-        jsonArray3 = new JSONArray();
+        JSONObject jsonObject1 = new JSONObject();
+        JSONObject jsonObject2_1 = new JSONObject();
+        JSONObject jsonObject2_2 = new JSONObject();
+        JSONObject jsonObject2_3 = new JSONObject();
+        JSONObject jsonObject2_4 = new JSONObject();
+        JSONObject jsonObject2_5 = new JSONObject();
+        JSONObject jsonObject2_6 = new JSONObject();
+        JSONObject jsonObject2_7 = new JSONObject();
+        JSONObject jsonObject2_8 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray1 = new JSONArray();
+        JSONArray jsonArray2 = new JSONArray();
+        JSONArray jsonArray3 = new JSONArray();
 
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();

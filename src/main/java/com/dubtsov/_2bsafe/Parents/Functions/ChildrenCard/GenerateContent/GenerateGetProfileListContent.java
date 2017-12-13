@@ -12,13 +12,12 @@ import org.json.simple.JSONObject;
  */
 public class GenerateGetProfileListContent {
     private static AuthorisationChildClass authorisationChildClass;
-    private static JSONObject jsonObj;
     private static ChildrenLogoutClass childrenLogoutClass;
 
     public static JSONObject getProfileListContent() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
         childrenLogoutClass = new ChildrenLogoutClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
@@ -34,7 +33,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailCid() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
@@ -50,7 +49,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailCkey() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
@@ -67,7 +66,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyCid() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
@@ -84,7 +83,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyCkey() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
@@ -101,7 +100,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideEmptyAll() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
@@ -118,7 +117,7 @@ public class GenerateGetProfileListContent {
 
     public static Object[] provideFailAll() throws Exception {
         authorisationChildClass = new AuthorisationChildClass();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", "failCid");

@@ -14,15 +14,10 @@ import java.util.List;
  */
 public class GetTicket {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     public static Integer getTicketId(String getFaqListResponse) throws ParseException, java.text.ParseException {
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         System.out.println("getFaqListResponse " + getFaqListResponse);
-        obj = parser.parse(getFaqListResponse);
-        jsonObj = (JSONObject) obj;
+        JSONObject jsonObj = (JSONObject) parser.parse(getFaqListResponse);
         Integer tid;
 
         try {

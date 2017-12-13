@@ -18,16 +18,10 @@ public class GetHelpMe {
 
     private static HelpMe helpMe;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
     public static HelpMe getHelpMe(String helpMeString){
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         try {
-            obj = parser.parse(helpMeString);
-            jsonObj = (JSONObject) obj;
+            JSONObject jsonObj = (JSONObject) parser.parse(helpMeString);
             String scs = jsonObj.get("scs").toString();
             jsonObj = (JSONObject) jsonObj.get("data");
             helpMe = new HelpMe(jsonObj.toJSONString(), scs);

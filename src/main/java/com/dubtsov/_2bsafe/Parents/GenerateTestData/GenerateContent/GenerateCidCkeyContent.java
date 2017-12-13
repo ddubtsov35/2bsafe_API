@@ -15,10 +15,9 @@ import java.io.IOException;
  */
 public class GenerateCidCkeyContent{
     public static JSONObject jsonObjectCidCkey = null;
-    private static JSONObject jsonObj;
 
     public static JSONObject getCidCkey(ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel) throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
             jsonObj.put("cid", childrenResponseAuthorisationModel.getCid());
             jsonObj.put("ckey", childrenResponseAuthorisationModel.getCkey());

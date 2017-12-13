@@ -13,9 +13,9 @@ public class GroupApp {
     private String scs;
     private Integer group_id;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
 
     public GroupApp(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);

@@ -9,20 +9,17 @@ import org.json.simple.parser.ParseException;
  */
 public class ProfileCard {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     private String scs;
     private Integer profile_id;
     private String name;
     private Integer age;
     private Integer busy;
 
+    private JSONObject jsonObj;
+
     public ProfileCard(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        jsonObj = (JSONObject) parser.parse(jsonObjectString);
 
         setScs(scs);
         setObject();

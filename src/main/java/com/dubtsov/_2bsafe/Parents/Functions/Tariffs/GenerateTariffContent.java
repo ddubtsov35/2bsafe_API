@@ -15,9 +15,9 @@ import java.util.Random;
  */
 public class GenerateTariffContent{
 
-    private static JSONObject jsonObj = new JSONObject();
-
     public static JSONObject setTariffContent() throws Exception {
+        JSONObject jsonObj = new JSONObject();
+
         TariffsClass tariffsClass = new TariffsClass();
         List<TariffList> tariffList = tariffsClass.getTariffsList();
         int tariffId = 0;

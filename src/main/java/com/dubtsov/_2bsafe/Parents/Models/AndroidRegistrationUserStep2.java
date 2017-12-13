@@ -14,9 +14,9 @@ public class AndroidRegistrationUserStep2 {
         private String lkid;
 
 
-        private static JSONParser parser;
-        private static Object obj;
-        private static JSONObject jsonObj;
+        private JSONParser parser;
+        private Object obj;
+        private JSONObject jsonObj;
 
 
         public AndroidRegistrationUserStep2(String jsonObjectString) throws ParseException, java.text.ParseException {

@@ -16,21 +16,13 @@ import java.util.List;
  */
 public class GetChildrenCardList {
 
-    private static List<ChildrenCard> childrenCardList;
-
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
     public static List<ChildrenCard> getChildrenCardList(String childrenCardListString) throws ParseException, java.text.ParseException, IOException {
-        parser = new JSONParser();
-        childrenCardList = new ArrayList();
+        JSONParser parser = new JSONParser();
+        List<ChildrenCard> childrenCardList = new ArrayList();
         System.out.println("childrenCardListString " + childrenCardListString);
         try {
-            obj = parser.parse(childrenCardListString);
-            jsonObj = (JSONObject) obj;
-            jsonArray = (JSONArray) jsonObj.get("data");
+            JSONObject jsonObj = (JSONObject) parser.parse(childrenCardListString);
+            JSONArray jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
                 childrenCardList.add(new ChildrenCard(jsonArray.get(i).toString()));
                 //System.out.println(i + " " + childrenCardList.get(i).getProfile_id());

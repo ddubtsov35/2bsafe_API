@@ -19,19 +19,13 @@ public class GetIntervalBlock {
 
     private static List<IntervalBlock> intervalBlockList;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
     public static List<IntervalBlock> getIntervalBlock(String intervalBlockString){
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         intervalBlockList = new ArrayList();
         try {
-            obj = parser.parse(intervalBlockString);
-            jsonObj = (JSONObject) obj;
+            JSONObject jsonObj = (JSONObject) parser.parse(intervalBlockString);
             String scs = jsonObj.get("scs").toString();
-            jsonArray = (JSONArray) jsonObj.get("data");
+            JSONArray jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
                 intervalBlockList.add(new IntervalBlock(jsonArray.get(i).toString(), scs));
             }

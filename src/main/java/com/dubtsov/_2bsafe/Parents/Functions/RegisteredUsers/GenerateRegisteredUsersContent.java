@@ -16,10 +16,8 @@ import java.util.Random;
  */
 public class GenerateRegisteredUsersContent{
 
-    private static JSONObject jsonObj;
-
     public static JSONObject deleteAccountContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
         } else{
@@ -28,7 +26,7 @@ public class GenerateRegisteredUsersContent{
         return jsonObj;
     }
     public static Object[] provideNegativeDeleteAccountContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         JSONObject jsonObj100 = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj100.put("pwd", GenerateRegistrationContent.getRegistrationStep1Content.get("pwd"));
@@ -70,14 +68,14 @@ public class GenerateRegisteredUsersContent{
 
 
     public static JSONObject getHeadersString() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("em", "111@ru.ru");
         jsonObj.put("pwd", "3,14plsvtijr");
         return jsonObj;
     }
 
     public static JSONObject getListRegisteredContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("sortt", 0);
         jsonObj.put("sortf", 0);
         return jsonObj;

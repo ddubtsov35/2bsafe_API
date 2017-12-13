@@ -16,10 +16,6 @@ import java.util.List;
  */
 public class ConditionInformationFromDevice {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     String jsonObjectString;
 
     private String scs;
@@ -32,10 +28,11 @@ public class ConditionInformationFromDevice {
     private List<Integer> permissions;
     private List<Intervals> intervals;
 
+    private JSONObject jsonObj;
+
     public ConditionInformationFromDevice(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        jsonObj = (JSONObject) parser.parse(jsonObjectString);
 
         this.jsonObjectString = jsonObjectString;
 

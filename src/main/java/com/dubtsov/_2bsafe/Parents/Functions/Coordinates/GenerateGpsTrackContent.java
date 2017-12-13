@@ -11,9 +11,9 @@ import org.json.simple.parser.ParseException;
 public class GenerateGpsTrackContent {
 
     public GenerateGpsTrackContent() throws ParseException {}
-    private static JSONObject jsonObj = new JSONObject();
 
     public static JSONObject getGpsTrackContent() throws Exception {
+        JSONObject jsonObj = new JSONObject();
         ChildrenCardClass addChildrenCardClass = new ChildrenCardClass();
         jsonObj.put("profile_id", addChildrenCardClass.addChildrenCard().getProfile_id());
         jsonObj.put("start_date", "20.10.2017");

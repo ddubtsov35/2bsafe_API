@@ -8,17 +8,15 @@ import org.json.simple.JSONObject;
  */
 public class GeneratePollContent{
 
-    private static JSONObject jsonObj;
-
     public static JSONObject getPollContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         PollClass pollClass = new PollClass();
         jsonObj.put("pid", pollClass.getPoll().getPid());
         return jsonObj;
     }
 
     public static JSONObject setPollContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         PollClass pollClass = new PollClass();
         jsonObj.put("pid", pollClass.getPoll().getPid());
         jsonObj.put("vid", pollClass.getPollById().getVid());

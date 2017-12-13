@@ -15,16 +15,14 @@ public class GenerateAccountContent {
 
     public GenerateAccountContent() throws ParseException {}
 
-    private static JSONObject jsonObj;
-
     public static JSONObject getSetAccountContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("nbat", 1);
         return jsonObj;
     }
 
     public static Object[] provideGetSetAccountContent1() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("nbat", null);
 
         JSONObject jsonObj5 = new JSONObject();
@@ -43,7 +41,7 @@ public class GenerateAccountContent {
 
 
     public static JSONObject getSetAllAccountContent() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj = GenerateRegistrationContent.getRegistrationStep1Content;
         } else{
@@ -64,7 +62,7 @@ public class GenerateAccountContent {
 
 
     public static JSONObject getAccountContent() throws IOException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         return jsonObj;
     }
 

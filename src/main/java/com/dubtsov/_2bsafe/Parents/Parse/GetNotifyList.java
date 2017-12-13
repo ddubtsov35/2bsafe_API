@@ -13,10 +13,6 @@ public class GetNotifyList {
 
     private static NotifyList notifyList;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     public static NotifyList getNotifyList(String getNotifyListString){
         try {
             notifyList = new NotifyList(getNotifyListString);

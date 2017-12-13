@@ -13,10 +13,8 @@ import java.util.List;
  */
 public class Zone {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
+    private JSONParser parser;
+    private Object obj;
 
     private String scs;
     private Float lat;
@@ -33,8 +31,8 @@ public class Zone {
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
-        jsonArray = (JSONArray) jsonObj.get("data");
+        JSONObject jsonObj = (JSONObject) obj;
+        JSONArray jsonArray = (JSONArray) jsonObj.get("data");
 
         if(jsonObj.get("lat") != null) {setLat(Float.parseFloat(jsonObj.get("lat").toString()));} else {setLat(null);}
         if(jsonObj.get("lon") != null) {setLon(Float.parseFloat(jsonObj.get("lon").toString()));} else {setLon(null);}

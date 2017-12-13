@@ -10,16 +10,15 @@ import java.io.IOException;
  */
 public class GenerateFaqContent {
 
-    private static JSONObject jsonObj = new JSONObject();
-
     public static JSONObject getChildrenCardListContent() throws IOException, ParseException, java.text.ParseException {
         GetFaqListClass getFaqListClass = new GetFaqListClass();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("fid", getFaqListClass.getFaqListLk().get(0).getFid());
         return jsonObj;
     }
 
     public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("fid", null);
 
         JSONObject jsonObj2 = new JSONObject();

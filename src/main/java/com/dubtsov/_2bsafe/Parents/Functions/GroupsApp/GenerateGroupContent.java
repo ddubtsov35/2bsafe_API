@@ -18,20 +18,16 @@ import java.io.IOException;
  */
 public class GenerateGroupContent{
 
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-    private static String alias = null;
-
     private static String getAlias() throws Exception {
         NotifyChangeAppClass notifyChangeAppClass = new NotifyChangeAppClass();
         notifyChangeAppClass.notifyChangeApp();
-        alias = "com.google.android.youtube";
+        String alias = "com.google.android.youtube";
         return alias;
     }
 
     public static JSONObject generatedAddGroup() throws Exception {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         jsonObj.put("name", "TestName");
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -47,8 +43,8 @@ public class GenerateGroupContent{
 
 
     public static JSONObject generatedEditGroup() throws Exception {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         jsonObj.put("group_id", 1);
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -179,8 +175,8 @@ public class GenerateGroupContent{
 
 
     public static JSONObject generatedSetGroup() throws Exception {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         } else{
@@ -294,14 +290,14 @@ public class GenerateGroupContent{
 
 
     public static JSONObject generatedDeleteGroup(GroupApp groupApp) throws Exception {
-        jsonObj = new JSONObject();
-        jsonArray = new JSONArray();
+        JSONObject jsonObj = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
         jsonObj.put("group_id", groupApp.getGroup_id());
         System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
     public static Object[] provideNegativeGetAccountContent1() throws IOException, ParseException {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("group_id", null);
 
         JSONObject jsonObj2 = new JSONObject();

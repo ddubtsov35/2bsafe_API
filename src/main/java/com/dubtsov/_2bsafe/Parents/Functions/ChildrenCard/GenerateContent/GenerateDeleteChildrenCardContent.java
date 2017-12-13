@@ -17,7 +17,6 @@ import java.util.Random;
 public class GenerateDeleteChildrenCardContent {
 
     private static ChildrenCardClass childrenCardClass;
-    private static JSONObject jsonObj = new JSONObject();
 
     public GenerateDeleteChildrenCardContent() throws ParseException {}
 
@@ -41,6 +40,8 @@ public class GenerateDeleteChildrenCardContent {
         }
         jsonObj.put("pwd", UserPool.getUserFromFile().get("pwd"));
         return jsonObj;*/
+
+        JSONObject jsonObj = new JSONObject();
 
         childrenCardClass = new ChildrenCardClass();
         if(ChildrenCardPools.getChildrenCardFromFile() == null) {

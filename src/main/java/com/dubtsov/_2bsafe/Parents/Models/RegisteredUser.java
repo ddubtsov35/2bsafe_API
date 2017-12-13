@@ -13,9 +13,9 @@ import org.json.simple.parser.ParseException;
  */
 public class RegisteredUser {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
 
     private String name;
     private int cnum;

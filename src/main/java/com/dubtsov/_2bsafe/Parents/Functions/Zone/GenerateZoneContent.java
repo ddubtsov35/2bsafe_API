@@ -15,10 +15,8 @@ import java.util.Random;
  */
 public class GenerateZoneContent{
 
-    private static JSONObject jsonObj;
-
     public static JSONObject addZoneContent() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("lat", 0);
         jsonObj.put("long", 0);
         jsonObj.put("rad", 0);
@@ -28,7 +26,7 @@ public class GenerateZoneContent{
         return jsonObj;
     }
     public static Object[] provideSetPermission() throws Exception {
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("lat", null);
         jsonObj.put("long", null);
         jsonObj.put("rad", null);
@@ -75,7 +73,7 @@ public class GenerateZoneContent{
     public static JSONObject delZoneContent() throws Exception {
         ZoneClass zoneClass = new ZoneClass();
         int zoneId = zoneClass.addZone().getZone_id();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("zone_id", zoneId);
         jsonObj.put("confirm", true);
         return jsonObj;
@@ -86,7 +84,7 @@ public class GenerateZoneContent{
         ZoneClass zoneClass = new ZoneClass();
         int zoneId = zoneClass.addZone().getZone_id();
         //Integer zoneId = 0;
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
 
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("zone_id", null);
@@ -158,7 +156,7 @@ public class GenerateZoneContent{
     public static JSONObject getZoneListContent() throws Exception {
         ZoneClass zoneClass = new ZoneClass();
         int zoneId = zoneClass.addZone().getZone_id();
-        jsonObj = new JSONObject();
+        JSONObject jsonObj = new JSONObject();
         //jsonObj.put("zone_id", zoneId);
         //jsonObj.put("type", 0);
         //jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));

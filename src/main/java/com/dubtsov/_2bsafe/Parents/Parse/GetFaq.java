@@ -14,21 +14,14 @@ import java.util.List;
  */
 public class GetFaq {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
     private static List<Faq> faqList;
-    private static String resultJsonStringGlobal;
 
     public static List<Faq> getFaqList(String getFaqListResponse) throws ParseException, java.text.ParseException {
         faqList = new ArrayList();
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         System.out.println("getFaqListResponse " + getFaqListResponse);
-        obj = parser.parse(getFaqListResponse);
-        jsonObj = (JSONObject) obj;
-        jsonArray = (JSONArray) jsonObj.get("data");
+        JSONObject jsonObj = (JSONObject) parser.parse(getFaqListResponse);
+        JSONArray jsonArray = (JSONArray) jsonObj.get("data");
         if(jsonArray.size() > 0) {
             for (int i = 0; i < jsonArray.size(); i++) {
                 faqList.add(new Faq(jsonArray.get(i).toString()));

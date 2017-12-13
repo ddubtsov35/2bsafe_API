@@ -13,10 +13,6 @@ import java.io.IOException;
  */
 public class AddChildrenCard {
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-
     private String scs;
     private int profile_id;
 
@@ -25,9 +21,8 @@ public class AddChildrenCard {
     }
 
     private void setObject(String jsonObjectString) throws ParseException, java.text.ParseException, IOException {
-        parser = new JSONParser();
-        obj = parser.parse(jsonObjectString);
-        jsonObj = (JSONObject) obj;
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObj = (JSONObject) parser.parse(jsonObjectString);
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());}
         if(jsonObj.get("profile_id") != null) {setProfile_id(Integer.parseInt(jsonObj.get("profile_id").toString()));}
         ChildrenCardPools.setChildrenCard(jsonObj);

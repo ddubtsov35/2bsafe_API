@@ -14,23 +14,16 @@ import java.util.HashMap;
  * Created by user on 24.08.17.
  */
 public class GenerateProcessingCommandContent {
-    private static JSONObject jsonObject;
-    private static JSONObject jsonObject2;
-    private static JSONObject jsonObject3;
-    private static JSONArray jsonArray;
-    private static String lastRequest;
-    private static String result;
-    private static String result2;
-    private static String result3;
+
     private GenerateCidCkeyContent generateCidCkeyContent;
 
 
     public JSONObject getProcessingCommandsContent() throws Exception {
-        jsonObject = new JSONObject();
-        jsonObject2 = new JSONObject();
-        jsonObject3 = new JSONObject();
-        jsonArray = new JSONArray();
-        lastRequest = GenerateNotifyChangeAppContent.appsNotifyContent().toJSONString();
+        JSONObject jsonObject = new JSONObject();
+        JSONObject jsonObject2 = new JSONObject();
+        JSONObject jsonObject3 = new JSONObject();
+        JSONArray jsonArray = new JSONArray();
+        String lastRequest = GenerateNotifyChangeAppContent.appsNotifyContent().toJSONString();
         generateCidCkeyContent = new GenerateCidCkeyContent();
         jsonObject3 = generateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -44,9 +37,9 @@ public class GenerateProcessingCommandContent {
         jsonObject3.put("commands",jsonArray);
 
         System.out.println("jsonObject " + jsonObject3);
-        result = jsonObject3.toJSONString();
-        result2 = result.substring(0, result.indexOf("null")-1);
-        result3 = result.substring(result.indexOf("null") + 7, result.length());
+        String result = jsonObject3.toJSONString();
+        String result2 = result.substring(0, result.indexOf("null")-1);
+        String result3 = result.substring(result.indexOf("null") + 7, result.length());
         result = result2 + result3;
         System.out.println("qweqweqweqweqweqwe qew " + result);
         JSONParser parser = new JSONParser();

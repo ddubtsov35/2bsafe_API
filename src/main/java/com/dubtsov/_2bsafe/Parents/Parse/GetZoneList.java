@@ -18,18 +18,12 @@ public class GetZoneList {
 
     private static List<Zone> zoneList;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-
     public static List<Zone> getZoneList(String getZoneString){
-        parser = new JSONParser();
+        JSONParser parser = new JSONParser();
         zoneList = new ArrayList();
         try {
-            obj = parser.parse(getZoneString);
-            jsonObj = (JSONObject) obj;
-            jsonArray = (JSONArray) jsonObj.get("data");
+            JSONObject jsonObj = (JSONObject) parser.parse(getZoneString);
+            JSONArray jsonArray = (JSONArray) jsonObj.get("data");
             for (int i = 0; i < jsonArray.size(); i++) {
                 zoneList.add(new Zone(jsonArray.get(i).toString(), jsonObj.get("scs").toString()));
             }

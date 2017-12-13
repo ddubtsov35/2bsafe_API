@@ -15,24 +15,22 @@ import java.io.IOException;
  */
 public class AccountSettingClass extends BaseClass{
 
-    private static JSONObject jsonObject;
-
     public AccountSettingClass() throws IOException {}
 
     public Response setAccountSetting() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateAccountContent.getSetAccountContent();
+        JSONObject jsonObject = GenerateAccountContent.getSetAccountContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response setAllAccountSetting() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateAccountContent.getSetAllAccountContent();
+        JSONObject jsonObject = GenerateAccountContent.getSetAllAccountContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_all_settings", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public AccountSettings getAccountSetting() throws IOException, ParseException, java.text.ParseException {
-        jsonObject = GenerateAccountContent.getAccountContent();
+        JSONObject jsonObject = GenerateAccountContent.getAccountContent();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", jsonObject);
         return GetAccountSetting.getAccountSettings(responseClass.getJsonResponse().body().string());
     }

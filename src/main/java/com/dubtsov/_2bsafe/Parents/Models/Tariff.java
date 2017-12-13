@@ -17,14 +17,14 @@ public class Tariff {
     private int tariff;
     private List<Tariff.Profiles> profilesList;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
+    private JSONArray jsonArray;
 
-    private static JSONParser parser2;
-    private static Object obj2;
-    private static JSONObject jsonObj2;
+    private JSONParser parser2;
+    private Object obj2;
+    private JSONObject jsonObj2;
 
     public Tariff(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);

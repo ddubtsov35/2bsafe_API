@@ -20,10 +20,10 @@ public class IntervalBlock {
     private String interval_end;
     private List<Integer> repeat;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
+    private JSONArray jsonArray;
 
 
     public IntervalBlock(String jsonObjectString, String scs) throws ParseException, java.text.ParseException {

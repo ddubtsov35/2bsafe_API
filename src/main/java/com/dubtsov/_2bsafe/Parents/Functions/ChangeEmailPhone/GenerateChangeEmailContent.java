@@ -12,9 +12,8 @@ import java.io.IOException;
 public class GenerateChangeEmailContent {
     public GenerateChangeEmailContent() throws ParseException {}
 
-    private static JSONObject jsonObj = new JSONObject();
-
     public static JSONObject getChangeEmailContent() throws IOException {
+        JSONObject jsonObj = new JSONObject();
         jsonObj.put("em", GenerateEmailClass.getGeneratedEmail());
         return jsonObj;
     }

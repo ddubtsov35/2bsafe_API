@@ -20,12 +20,11 @@ public class GetRulesModel {
     private String triggers;
     private String actions;
 
-    private static JSONParser parser;
-    private static Object obj;
-    private static JSONObject jsonObj;
-    private static JSONArray jsonArray;
-    private static JSONObject jsonObj2;
-    private static JSONObject jsonObj3;
+    private JSONParser parser;
+    private Object obj;
+    private JSONObject jsonObj;
+    private JSONObject jsonObj2;
+    private JSONObject jsonObj3;
 
     public GetRulesModel(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
