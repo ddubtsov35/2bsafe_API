@@ -4,6 +4,7 @@ import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.apache.http.auth.AUTH;
@@ -13,8 +14,6 @@ import org.json.simple.JSONObject;
  * Created by user on 12.09.17.
  */
 public class GenerateLogoutContent{
-
-    private static AuthorisationChildClass authorisationChildClass;
 
     public JSONObject getLogoutContent() throws Exception {
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkeyForLogout();
@@ -48,12 +47,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent2() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
@@ -65,12 +59,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent3() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
@@ -82,12 +71,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent4() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
@@ -99,12 +83,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent5() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
@@ -116,12 +95,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent6() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("reason", null);
@@ -131,12 +105,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent7() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
@@ -152,10 +121,7 @@ public class GenerateLogoutContent{
 
 
     public static Object[] provideNegativeGetLogoutContent1() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", null);
         jsonObj.put("ckey", null);
@@ -170,10 +136,8 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideNegativeGetLogoutContent2() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
@@ -188,10 +152,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideNegativeGetLogoutContent3() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
@@ -206,10 +167,8 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideNegativeGetLogoutContent4() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", null);
         //System.out.println("jsonObject " + jsonObj);
@@ -217,10 +176,7 @@ public class GenerateLogoutContent{
     }
 
     public static Object[] provideNegativeGetLogoutContent5() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", "failPwd");
         //System.out.println("jsonObject " + jsonObj);

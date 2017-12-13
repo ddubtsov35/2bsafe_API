@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
@@ -58,10 +59,7 @@ public class GenerateGroupContent{
     }
     public static Object[] provideNegativeGeneratedEditGroup() throws Exception {
 
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         authorisationChildClass.authorisationChildren();
@@ -191,10 +189,7 @@ public class GenerateGroupContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGetAuthContent() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONArray jsonArray = new JSONArray();
 

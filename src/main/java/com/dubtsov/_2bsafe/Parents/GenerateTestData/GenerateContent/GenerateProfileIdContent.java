@@ -39,11 +39,6 @@ public class GenerateProfileIdContent {
             if (CidCkeyRegisteredPool.getCidFromFile() == null) {
                 jsonObj.put("profile_id", childrenCardClass.addChildrenCard().getProfile_id());
             } else {
-                /*childrenLogoutClass.logout();
-                authorisationChildClass.authorisationChildren();
-                profileCardList = profileClass.getProfileList();
-                jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
-                jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());*/
                 jsonObj.put("profile_id", ChildrenCardPools.getChildrenCardFromFile().getProfile_id());
             }
         } else{

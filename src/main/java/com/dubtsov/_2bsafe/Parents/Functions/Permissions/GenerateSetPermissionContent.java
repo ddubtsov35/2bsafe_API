@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Permissions;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import org.json.simple.JSONObject;
@@ -35,7 +36,7 @@ public class GenerateSetPermissionContent{
                 jsonObj.put("tether", 0);
                 jsonObj.put("gsm", 0);
             }
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
 
             if(GenerateProfileIdContent.profileId == null){
                 jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -77,7 +78,7 @@ public class GenerateSetPermissionContent{
 
     public static JSONObject getPermission() throws Exception {
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+        jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
 
         if(GenerateProfileIdContent.profileId == null){
             jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -87,10 +88,8 @@ public class GenerateSetPermissionContent{
         return jsonObj;
     }
     public static Object[] provideGetPermission() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
+
         Random random = new Random();
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
 

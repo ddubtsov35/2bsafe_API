@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.Zone;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
@@ -81,12 +82,8 @@ public class GenerateZoneContent{
         return jsonObj;
     }
     public static Object[] provideNegativeGetSendTicketContent() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.authorisationUser();
+        ForProvideData.getTestData();
+
         ZoneClass zoneClass = new ZoneClass();
         int zoneId = zoneClass.addZone().getZone_id();
         //Integer zoneId = 0;

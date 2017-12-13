@@ -5,6 +5,7 @@ import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
@@ -45,12 +46,7 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeGetListInterval() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = new JSONObject();
         if(GenerateProfileIdContent.profileId == null){
@@ -131,12 +127,8 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeAddInterval() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = new JSONObject();
         JSONArray jsonArray = new JSONArray();
         JSONArray jsonArray3 = new JSONArray();
@@ -212,12 +204,8 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeEditInterval() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = new JSONObject();
         JSONArray jsonArray = new JSONArray();
         JSONArray jsonArray3 = new JSONArray();
@@ -283,12 +271,7 @@ public class GenerateAddBlockIntervalContent {
         return jsonObj;
     }
     public static Object[] provideNegativeDeleteInterval() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         IntervalBlockClass intervalBlockClass = new IntervalBlockClass();
         List<IntervalBlock> intervalBlockList = intervalBlockClass.getIntervalBlockList();

@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
@@ -56,10 +57,7 @@ public class GenerateDeleteChildrenCardContent {
     }
 
     public static Object[] provideNegativeGetAppsInGroupContent() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("profile_id", null);
         jsonObj.put("pwd", null);

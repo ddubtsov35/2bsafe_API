@@ -3,6 +3,7 @@ package com.dubtsov._2bsafe.Childrens.StatisticsInformation;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONObject;
 
@@ -19,12 +20,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("osv", null);
         //System.out.println("jsonObject " + jsonObj);
@@ -32,12 +29,7 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", null);
         jsonObj.put("ckey", null);
@@ -47,12 +39,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
@@ -62,12 +50,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
@@ -77,12 +61,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("ckey");
         jsonObj.put("ckey", "failCkey");
@@ -92,12 +72,8 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent6() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.remove("cid");
         jsonObj.put("cid", "failCid");
@@ -107,12 +83,7 @@ public class GenerateStatisticInfoContent{
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent7() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("cid", "failCid");

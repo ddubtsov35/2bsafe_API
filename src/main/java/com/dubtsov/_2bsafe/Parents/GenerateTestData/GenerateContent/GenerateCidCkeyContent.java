@@ -14,7 +14,11 @@ import java.io.IOException;
  * Created by user on 12.09.17.
  */
 public class GenerateCidCkeyContent{
-    public static JSONObject jsonObjectCidCkey = null;
+    private static JSONObject jsonObjectCidCkey = null;
+
+    public static JSONObject jsonObjectCidCkey(){
+        return new JSONObject(jsonObjectCidCkey);
+    }
 
     public static JSONObject getCidCkey(ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel) throws Exception {
         JSONObject jsonObj = new JSONObject();
@@ -43,8 +47,8 @@ public class GenerateCidCkeyContent{
     public static JSONObject getJsonObjectCidCkey() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         if(CidCkeyPool.getCidFromFile() == null) {
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
         } else {
             jsonObj.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
             jsonObj.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));

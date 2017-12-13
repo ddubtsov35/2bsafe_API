@@ -2,6 +2,7 @@ package com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers;
 
 import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
@@ -26,6 +27,8 @@ public class GenerateRegisteredUsersContent{
         return jsonObj;
     }
     public static Object[] provideNegativeDeleteAccountContent() throws Exception {
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = new JSONObject();
         JSONObject jsonObj100 = new JSONObject();
         if(UserPool.getUserFromFile() == null) {

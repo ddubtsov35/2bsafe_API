@@ -6,6 +6,7 @@ import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import org.json.simple.JSONObject;
 
@@ -20,115 +21,100 @@ public class GenerateGetProfileListContent {
         authorisationChildClass = new AuthorisationChildClass();
         childrenLogoutClass = new ChildrenLogoutClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return jsonObj;
         } else{
             authorisationChildClass.authorisationChildren();
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return jsonObj;
         }
     }
 
 
     public static Object[] provideFailCid() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             jsonObj.put("cid", "failCid");
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return new Object[]{new Object[]{jsonObj}};
         } else{
             authorisationChildClass.authorisationChildren();
             jsonObj.put("cid", "failCid");
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return new Object[]{new Object[]{jsonObj}};
         }
     }
 
 
     public static Object[] provideFailCkey() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", "failCkey");
             return new Object[]{new Object[]{jsonObj}};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", "failCkey");
             return new Object[]{new Object[]{jsonObj}};
         }
     }
 
     public static Object[] provideEmptyCid() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return new Object[]{new Object[]{jsonObj}};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
-            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey.get("ckey"));
+            jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return new Object[]{new Object[]{jsonObj}};
         }
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", null);
             return new Object[]{new Object[]{jsonObj}};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
-            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey.get("cid"));
+            jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", null);
             return new Object[]{new Object[]{jsonObj}};
         }
     }
 
     public static Object[] provideEmptyAll() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         authorisationChildClass = new AuthorisationChildClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
             jsonObj.put("ckey", null);
@@ -143,9 +129,10 @@ public class GenerateGetProfileListContent {
     }
 
     public static Object[] provideFailAll() throws Exception {
-        authorisationChildClass = new AuthorisationChildClass();
+        ForProvideData.getTestData();
+
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", "failCkey");

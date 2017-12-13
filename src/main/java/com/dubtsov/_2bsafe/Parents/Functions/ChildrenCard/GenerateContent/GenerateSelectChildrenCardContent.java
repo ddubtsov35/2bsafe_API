@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateProfileIdContent;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
@@ -40,10 +41,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideFailProfileId() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         Random random = new Random();
@@ -52,10 +50,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyProfileId() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", null);
@@ -63,10 +58,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -76,10 +68,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideFailCkey() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -89,10 +78,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideFailCid() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
@@ -102,10 +88,7 @@ public class GenerateSelectChildrenCardContent {
     }
 
     public static Object[] provideEmptyCid() throws Exception {
-        AuthorisationUserClass authorisationUserClass = new AuthorisationUserClass();
-        authorisationUserClass.RegistrationAndAuthorisationWeb();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
-        authorisationChildClass.authorisationChildren();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));

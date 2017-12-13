@@ -1,14 +1,20 @@
 package com.dubtsov._2bsafe.Childrens.HelpMe;
 
+import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
+import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
+import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
 
+import java.io.IOException;
 import java.util.HashMap;
 
 /**
@@ -36,11 +42,9 @@ public class GenerateHelpMeContent {
         return jsonObject;
     }
 
+
     public static Object[] provideNegativeGetHelpMeContent1() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
@@ -58,10 +62,7 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent2() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
@@ -81,10 +82,7 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent3() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
@@ -138,10 +136,7 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent6() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
@@ -161,10 +156,7 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeContent7() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
@@ -184,10 +176,7 @@ public class GenerateHelpMeContent {
     }
 
     public static Object[] provideNegativeGetHelpMeConten8() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        ForProvideData.getTestData();
 
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
