@@ -36,7 +36,6 @@ public class AuthorisationTest extends BaseClass{
         childrenCardClass = new ChildrenCardClass();
     }
 
-    //@Ignore
     @Test
     public void PositiveAuthorisation() throws Exception {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -47,7 +46,6 @@ public class AuthorisationTest extends BaseClass{
     }
 
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthorisationChildren.class)

@@ -55,7 +55,6 @@ public class GetConditionInformationTest extends BaseClass{
     }
 
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateConditionInformationContent.class)
