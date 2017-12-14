@@ -8,6 +8,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1C
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import org.json.simple.JSONObject;
 
 /**
@@ -21,7 +22,8 @@ public class GenerateGetProfileListContent {
         authorisationChildClass = new AuthorisationChildClass();
         childrenLogoutClass = new ChildrenLogoutClass();
         JSONObject jsonObj = new JSONObject();
-        if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
+        if(GenerateCidCkeyContent.jsonObjectCidCkey != null) {
+            LogPools.getLog();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
             return jsonObj;

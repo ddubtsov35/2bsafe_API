@@ -11,6 +11,7 @@ import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.ListRegisteredUsersClass;
 import com.dubtsov._2bsafe.Parents.Models.ChildrenCard;
 import com.dubtsov._2bsafe.Parents.Pool.ChildrenCardPools;
+import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import com.sun.jna.platform.win32.Netapi32Util;
 import junitparams.JUnitParamsRunner;
@@ -46,7 +47,7 @@ public class ChildrenCardsTests extends BaseClass {
         authorisationUserClass.RegistrationAndAuthorisationWeb();
     }
 
-    @Ignore
+
     @Test
     public void addChildrenCardsWeb() throws Exception {
         childrenCardClass.deleteChildrenCard();
@@ -58,7 +59,7 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println("countCardAfter  " + countCardAfter);
         Assert.assertTrue(countCardAfter - countCardBefore == 1);
     }
-    @Ignore
+
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddChildrenCardContent.class)
@@ -72,7 +73,7 @@ public class ChildrenCardsTests extends BaseClass {
     }
 
 
-    @Ignore
+
     @Test
     public void addChildrenCardsAndroid() throws Exception {
         childrenCardClass.deleteChildrenCard();
@@ -107,7 +108,7 @@ public class ChildrenCardsTests extends BaseClass {
 
 
 
-    @Ignore
+
     @Test
     public void deleteChildrenCards() throws Exception {
         childrenCardClass.addChildrenCard();
@@ -142,6 +143,7 @@ public class ChildrenCardsTests extends BaseClass {
     @Test
     public void changeChildrenCardsPhone() throws Exception {
         childrenCardClass.addChildrenCard();
+        LogPools.getLog();
         response = childrenCardClass.changeChildrenCard("phone");
         ChildrenCard childrenCard = childrenCardClass.getChildrenCardByProfileId();
         System.out.println(childrenCard.toString());
@@ -149,7 +151,6 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getPhone().equals(GenerateChangeChildrenCardContent.generatedPhone));
     }
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateChangeChildrenCardContent.class)

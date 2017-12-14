@@ -93,6 +93,7 @@ public class ResponseClass {
                 .addHeader("cookie", sessionId)
                 .build();
         System.out.println("Request: " + request.toString());
+        System.out.println("RequestJson " + String.valueOf(jsonRequest));
         response = client.newCall(request).execute();
         System.out.println("Response: " + response);
         System.out.println();

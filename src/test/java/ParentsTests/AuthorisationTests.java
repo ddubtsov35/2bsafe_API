@@ -54,7 +54,6 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthContent.class)
@@ -72,7 +71,6 @@ public class AuthorisationTests extends BaseClass {
     }
 
 
-
     @Ignore
     @Test
     public void recoveryPassword() throws Exception {
@@ -82,7 +80,6 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRecoveryPasswordContent.class)
@@ -95,7 +92,6 @@ public class AuthorisationTests extends BaseClass {
 
 
 
-    @Ignore
     @Test
     public void successPasswordChange() throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
@@ -105,7 +101,6 @@ public class AuthorisationTests extends BaseClass {
         Assert.assertTrue(authorisationUser.getScs().contains("true"));
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthContent.class)
@@ -128,7 +123,6 @@ public class AuthorisationTests extends BaseClass {
         response = logoutClass.logout();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
     }
-    @Ignore
     @Test
     public void NegativeLogout() throws Exception {
         response = logoutClass.logout();

@@ -114,8 +114,13 @@ public class ChildrenCardClass extends BaseClass {
 
 
     public ChildrenCard getChildrenCardByProfileId() throws Exception {
+        int profileId;
 
-        int profileId = Integer.parseInt(String.valueOf(GenerateProfileIdContent.getProfileId().get("profile_id")));
+        if(GenerateProfileIdContent.profileId == null){
+            profileId = Integer.parseInt(String.valueOf(GenerateProfileIdContent.getProfileId().get("profile_id")));
+        } else{
+            profileId = GenerateProfileIdContent.profileId;
+        }
 
         List<ChildrenCard> childrenCardList = getChildrenCardList();
         for(int i=0; i<childrenCardList.size(); i++){

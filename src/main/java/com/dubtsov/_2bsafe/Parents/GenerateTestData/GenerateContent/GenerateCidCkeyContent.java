@@ -14,7 +14,7 @@ import java.io.IOException;
  * Created by user on 12.09.17.
  */
 public class GenerateCidCkeyContent{
-    private static JSONObject jsonObjectCidCkey = null;
+    public static JSONObject jsonObjectCidCkey = null;
 
     public static JSONObject jsonObjectCidCkey(){
         return new JSONObject(jsonObjectCidCkey);
