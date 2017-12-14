@@ -53,7 +53,7 @@ public class GroupAppTest extends BaseClass{
         System.out.println("result " + result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
-
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)

@@ -79,7 +79,7 @@ public class AuthorisationTests extends BaseClass {
         response = recoveryPasswordClass.recoveryPasswordConfirm();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200);
     }
-
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRecoveryPasswordContent.class)
@@ -123,6 +123,7 @@ public class AuthorisationTests extends BaseClass {
         response = logoutClass.logout();
         Assert.assertTrue(response.body().string().contains("\"scs\": true") &&  response.code() == 200 );
     }
+
     @Test
     public void NegativeLogout() throws Exception {
         response = logoutClass.logout();

@@ -69,7 +69,7 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkEmail();
         Assert.assertEquals(response.code(), 200);
     }
-
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -86,6 +86,7 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkPhone();
         Assert.assertEquals(response.code(), 200);
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
