@@ -1,0 +1,2065 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c5fb3240-afb5-488a-b1b6-4886c5449063" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/2bsafe_API$IntervalTest_NegativeGetInterval.coverage" NAME="IntervalTest.NegativeGetInterval Coverage Results" MODIFIED="1508752519420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ParentsTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/2bsafe_API$AuthorisationTest_PositiveAuthorisation.coverage" NAME="AuthorisationTest.PositiveAuthorisation Coverage Results" MODIFIED="1512134957344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ChildrenTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/2bsafe_API$AppsTest_getMainInfoApps.coverage" NAME="AppsTest.getMainInfoApps Coverage Results" MODIFIED="1504707902475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ParentsTests.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/2bsafe_API$AuthorisationTest_and_5_more.coverage" NAME="AuthorisationTest and 5 more Coverage Results" MODIFIED="1512999943679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AuthorisationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="114" column="76" lean-forward="false" selection-start-line="114" selection-start-column="76" selection-end-line="114" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vcs.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="34" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="3" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ChildrenCardPool.se</find>
+      <find>ChildrenCardPool.s</find>
+      <find>ChildrenCardPool.</find>
+      <find>ChildrenCardPool</find>
+      <find>ChildrenCardPools</find>
+      <find>ChildrenCardPools.</find>
+      <find>ChildrenCardPools.s</find>
+      <find>provideNegativeGetAppsBlockContent</find>
+      <find>provideNegativeGetLogoutContent2</find>
+      <find>R</find>
+      <find>Re</find>
+      <find>Reg</find>
+      <find>Regis</find>
+      <find>Regist</find>
+      <find>Registra</find>
+      <find>http://lkn.safec.ru/os_api/accounts/v1.0/auth</find>
+      <find>s</find>
+      <find>se</find>
+      <find>set</find>
+      <find>setC</find>
+      <find>setCi</find>
+      <find>setCid</find>
+      <find>prov</find>
+      <find>provid</find>
+      <find>istrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();        registrationUserStep1Class.registrationUserStep1();        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();        registrationUserStep2Class.registrationUserStep2Web();</find>
+      <find>p</find>
+      <find>pr</find>
+      <find>pro</find>
+      <find>provi</find>
+      <find>provide</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/test/java/ParentsTests</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="v1.3_CI_withNewTypePool" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="MIXED" />
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="v1.2_CI" repo="$PROJECT_DIR$" source="v1.2_with_UserPool_with_ChildrenCardPool_CI" />
+      <push-target-info target-remote="origin" target-branch="v1.3_ci_newPoolVersion" repo="$PROJECT_DIR$" source="v1.3_CI_withNewTypePool" />
+    </push-targets>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="v1.2_CI" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/Test/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test/test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test/qwe.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/UserPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/LogPools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/ChildrenCardPools.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/CidCkeyPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/CidCkeyRegisteredPool.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetAccountSetting.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/GenerateRegistrationContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/PasswordChange/GeneratePasswordChangeContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Account/GenerateAccountContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Authorisation/GenerateAuthContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/GenerateAuthorisationChildren.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RecoveryPassword/GenerateRecoveryPasswordContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/RegistrationUserStep2Class.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Apps/GenerateAppsContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateCidCkeyContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateGetProfileListContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Logout/GenerateLogoutContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateProfileIdContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/ForProvideData.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/HelpMe/GenerateHelpMeContent.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/IntervalBlockTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/ZoneTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/ChangeEmailPhoneTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/GetInformationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/HelpMeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AppsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/ChildrenCardsTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/IntervalTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/SendTicketTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/TurboButtonTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/GetStatisticsInformationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/HelpMeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/LogoutTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/NotifyChangeAppTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/RulesTriggerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/DeleteUserClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/RegistrationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/ChildrenCardTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/GetConditionInformationTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="2bsafe_API_tests" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="2bsafe_API_tests" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1922" />
+    <option name="height" value="1029" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParentsTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ChildrenTests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Pool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GenerateTestData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GenerateTestData" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GenerateContent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Functions" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="ToolWindowRun.ShowToolbar" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.RegistrationTests.deleteUser">
+    <configuration default="false" name="HelpMeTest and 29 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns>
+        <pattern testClass="ChildrenTests.HelpMeTest" />
+        <pattern testClass="ChildrenTests.GetStatisticsInformationTest" />
+        <pattern testClass="ParentsTests.PermissionTest" />
+        <pattern testClass="ChildrenTests.GetConditionInformationTest" />
+        <pattern testClass="ParentsTests.RegistrationTests" />
+        <pattern testClass="ParentsTests.PushTest" />
+        <pattern testClass="ParentsTests" />
+        <pattern testClass="ParentsTests.PollTittleTest" />
+        <pattern testClass="ParentsTests.ChildrenCardsTests" />
+        <pattern testClass="ParentsTests.ZoneTest" />
+        <pattern testClass="ParentsTests.CoordinatesTests" />
+        <pattern testClass="ParentsTests.ChangeEmailPhoneTest" />
+        <pattern testClass="ChildrenTests.NotifyChangeAppTest" />
+        <pattern testClass="ParentsTests.RulesTest" />
+        <pattern testClass="ParentsTests.AppsTest" />
+        <pattern testClass="ParentsTests.AuthorisationTests" />
+        <pattern testClass="ChildrenTests.LogoutTest" />
+        <pattern testClass="ParentsTests.GroupAppTest" />
+        <pattern testClass="ParentsTests.TurboButtonTest" />
+        <pattern testClass="ParentsTests.HelpMeTest" />
+        <pattern testClass="ParentsTests.SendTicketTest" />
+        <pattern testClass="ParentsTests.IntervalBlockTest" />
+        <pattern testClass="ChildrenTests.PackageProcessingCommandsTest" />
+        <pattern testClass="ChildrenTests.ChildrenCardTest" />
+        <pattern testClass="ParentsTests.IntervalTest" />
+        <pattern testClass="ParentsTests.FaqTest" />
+        <pattern testClass="ParentsTests.AccountSettingsTest" />
+        <pattern testClass="ChildrenTests.RulesTriggerTest" />
+        <pattern testClass="ParentsTests.GetInformationTests" />
+        <pattern testClass="ChildrenTests.AuthorisationTest" />
+      </patterns>
+      <method />
+    </configuration>
+    <configuration default="false" name="IntervalBlockTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ParentsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ParentsTests" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.IntervalBlockTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AppsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ParentsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ParentsTests" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.AppsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegistrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ParentsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ParentsTests" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.RegistrationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="RegistrationTests.deleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ParentsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ParentsTests" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.RegistrationTests" />
+      <option name="METHOD_NAME" value="deleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="2bsafe_API" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.HelpMeTest and 29 more" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.IntervalBlockTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.AppsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RegistrationTests" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RegistrationTests.deleteUser" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RegistrationTests.deleteUser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RegistrationTests" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.AppsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IntervalBlockTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HelpMeTest and 29 more" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c5fb3240-afb5-488a-b1b6-4886c5449063" name="Default" comment="" />
+      <created>1499686631533</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1499686631533</updated>
+    </task>
+    <task id="LOCAL-00081" summary="v0.74 Починил тесты ParentTest/ChildrenCardTest">
+      <created>1511448138196</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1511448138196</updated>
+    </task>
+    <task id="LOCAL-00082" summary="v0.74">
+      <created>1511448940759</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1511448940759</updated>
+    </task>
+    <task id="LOCAL-00083" summary="v0.74">
+      <created>1511449251624</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1511449251624</updated>
+    </task>
+    <task id="LOCAL-00084" summary="v0.74">
+      <created>1511449425672</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1511449425673</updated>
+    </task>
+    <task id="LOCAL-00085" summary="v0.74">
+      <created>1511449556329</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1511449556329</updated>
+    </task>
+    <task id="LOCAL-00086" summary="v0.74">
+      <created>1511449939405</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1511449939405</updated>
+    </task>
+    <task id="LOCAL-00087" summary="v0.74">
+      <created>1511536878650</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1511536878650</updated>
+    </task>
+    <task id="LOCAL-00088" summary="v0.75 Нужно изменить все статик методы на обычные для корректной работы метода generateCidCkeyContent и дальнейшей работы функционала с одним профилем.">
+      <created>1511796437279</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1511796437286</updated>
+    </task>
+    <task id="LOCAL-00089" summary="v0.76 Сделал функционал с использованием одного профиля ребенка.">
+      <created>1511872222876</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1511872222876</updated>
+    </task>
+    <task id="LOCAL-00090" summary="v0.77">
+      <created>1511969875834</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1511969875835</updated>
+    </task>
+    <task id="LOCAL-00091" summary="v0.78 &#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512053738648</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1512053738648</updated>
+    </task>
+    <task id="LOCAL-00092" summary="v0.78 Null Pools&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512111032409</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1512111032410</updated>
+    </task>
+    <task id="LOCAL-00093" summary="v1.0.0 &#10;&#10;Обнуление файла iterator&#10;Изменение имени почтового ящика при регистрации аккаунта&#10;Новая ветка для CI&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512112482763</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1512112482763</updated>
+    </task>
+    <task id="LOCAL-00094" summary="v1.0.0 &#10;&#10;Обнуление файла iterator&#10;Изменение имени почтового ящика при регистрации аккаунта&#10;Новая ветка для CI&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512112618012</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1512112618013</updated>
+    </task>
+    <task id="LOCAL-00095" summary="v1.0.0 &#10;&#10;Обнуление файла iterator&#10;Изменение имени почтового ящика при регистрации аккаунта&#10;Новая ветка для CI&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512112832266</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1512112832266</updated>
+    </task>
+    <task id="LOCAL-00096" summary="Обнуление файла iterator&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512112994636</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1512112994637</updated>
+    </task>
+    <task id="LOCAL-00097" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512113117635</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1512113117635</updated>
+    </task>
+    <task id="LOCAL-00098" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512117689963</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1512117689963</updated>
+    </task>
+    <task id="LOCAL-00099" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512118081867</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1512118081867</updated>
+    </task>
+    <task id="LOCAL-00100" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512118157064</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1512118157065</updated>
+    </task>
+    <task id="LOCAL-00101" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512118240521</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1512118240521</updated>
+    </task>
+    <task id="LOCAL-00102" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512124120623</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1512124120625</updated>
+    </task>
+    <task id="LOCAL-00103" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512134080580</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1512134080581</updated>
+    </task>
+    <task id="LOCAL-00104" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512134806126</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1512134806126</updated>
+    </task>
+    <task id="LOCAL-00105" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512134877067</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1512134877067</updated>
+    </task>
+    <task id="LOCAL-00106" summary="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512136415271</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1512136415271</updated>
+    </task>
+    <task id="LOCAL-00107" summary="v1.0.0 &#10;&#10;Переделал Pools, теперь никакой пул не хранится в файлах&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512138702366</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1512138702366</updated>
+    </task>
+    <task id="LOCAL-00108" summary="v1.0.1 &#10;&#10;**/ChildrenTests/AuthorisationTest.java&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
+      <created>1512377615993</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1512377615994</updated>
+    </task>
+    <task id="LOCAL-00109" summary="v1.0.2&#10;&#10;All test classes without TarriffTest.&#10;Without negative tests.">
+      <created>1512997809073</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1512997809134</updated>
+    </task>
+    <task id="LOCAL-00110" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513004617831</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1513004617832</updated>
+    </task>
+    <task id="LOCAL-00111" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513006216111</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1513006216111</updated>
+    </task>
+    <task id="LOCAL-00112" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513061280077</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1513061280077</updated>
+    </task>
+    <task id="LOCAL-00113" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513065091344</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1513065091345</updated>
+    </task>
+    <task id="LOCAL-00114" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513065362475</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1513065362475</updated>
+    </task>
+    <task id="LOCAL-00115" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513065588354</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1513065588354</updated>
+    </task>
+    <task id="LOCAL-00116" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513066150939</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1513066150939</updated>
+    </task>
+    <task id="LOCAL-00117" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513066642021</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1513066642021</updated>
+    </task>
+    <task id="LOCAL-00118" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513067008679</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1513067008679</updated>
+    </task>
+    <task id="LOCAL-00119" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513067634115</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1513067634115</updated>
+    </task>
+    <task id="LOCAL-00120" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513068148237</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1513068148237</updated>
+    </task>
+    <task id="LOCAL-00121" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513069192606</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1513069192606</updated>
+    </task>
+    <task id="LOCAL-00122" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513069595706</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1513069595706</updated>
+    </task>
+    <task id="LOCAL-00123" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513070104632</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1513070104632</updated>
+    </task>
+    <task id="LOCAL-00124" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513071483312</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1513071483312</updated>
+    </task>
+    <task id="LOCAL-00125" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513080090033</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1513080090033</updated>
+    </task>
+    <task id="LOCAL-00126" summary="v1.0.2&#10;&#10;With AuthorisationChildren negative test">
+      <created>1513150992394</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1513150992394</updated>
+    </task>
+    <task id="LOCAL-00127" summary="v1.1.0&#10;&#10;With all negative tests!!!!">
+      <created>1513168048093</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1513168048093</updated>
+    </task>
+    <task id="LOCAL-00128" summary="v1.1.0&#10;&#10;With all negative tests!!!!">
+      <created>1513172345070</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1513172345070</updated>
+    </task>
+    <task id="LOCAL-00129" summary="v1.1.1&#10;&#10;With all negative tests!!!!&#10;&#10;Tests...">
+      <created>1513175144207</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1513175144222</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="HelpMeTest_and_29_more - 2017.12.13 at 16h 03m 58s.xml">
+      <configuration name="HelpMeTest and 29 more" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntervalBlockTest - 2017.12.13 at 16h 37m 59s.xml">
+      <configuration name="IntervalBlockTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="IntervalBlockTest - 2017.12.13 at 17h 05m 17s.xml">
+      <configuration name="IntervalBlockTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogoutTest - 2017.12.13 at 15h 42m 09s.xml">
+      <configuration name="LogoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogoutTest - 2017.12.13 at 15h 43m 33s.xml">
+      <configuration name="LogoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LogoutTest - 2017.12.13 at 15h 44m 02s.xml">
+      <configuration name="LogoutTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationTests - 2017.12.13 at 17h 53m 54s.xml">
+      <configuration name="RegistrationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationTests - 2017.12.13 at 17h 55m 05s.xml">
+      <configuration name="RegistrationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationTests_deleteUser - 2017.12.13 at 18h 00m 31s.xml">
+      <configuration name="RegistrationTests.deleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RegistrationTests_deleteUser - 2017.12.13 at 18h 00m 42s.xml">
+      <configuration name="RegistrationTests.deleteUser" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-1" y="-11" width="1922" height="1029" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93988436" sideWeight="0.51280683" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.092315905" sideWeight="0.48208094" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7815029" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7641618" sideWeight="0.48078975" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93988436" sideWeight="0.48719317" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3004269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66936415" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.092315905" sideWeight="0.51791906" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.92369944" sideWeight="0.51280683" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.092315905" sideWeight="0.4867052" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5283237" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.92369944" sideWeight="0.48719317" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7815029" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.092315905" sideWeight="0.5132948" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.94104046" sideWeight="0.49786553" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28762007" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="v0.64 Prom Test CI with Tests needs email (Registration test)" />
+    <MESSAGE value="v0.65 Prom Test CI with Tests needs email (Registration test)" />
+    <MESSAGE value="v0.66 Prom Test CI with Tests needs email (Registration test)" />
+    <MESSAGE value="v0.67 negative tests (not all)" />
+    <MESSAGE value="v0.71 negative tests (90% debug)" />
+    <MESSAGE value="v0.72 negative tests (93% debug)" />
+    <MESSAGE value="v0.73 need getCodeMethod from Backend" />
+    <MESSAGE value="v0.74 Добавлен метод, достающий код активации через апи" />
+    <MESSAGE value="v0.74 отредактировал pom и оставил несколько классов для запуска для теста" />
+    <MESSAGE value="v0.74 Починил тесты ParentTest/ChildrenCardTest" />
+    <MESSAGE value="v0.74" />
+    <MESSAGE value="v0.75 Нужно изменить все статик методы на обычные для корректной работы метода generateCidCkeyContent и дальнейшей работы функционала с одним профилем." />
+    <MESSAGE value="v0.76 Сделал функционал с использованием одного профиля ребенка." />
+    <MESSAGE value="v0.77" />
+    <MESSAGE value="v0.78 &#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="v0.78 Null Pools&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="v1.0.0 &#10;&#10;Обнуление файла iterator&#10;Изменение имени почтового ящика при регистрации аккаунта&#10;Новая ветка для CI&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="Обнуление файла iterator&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="v1.0.0 &#10;&#10;Переделал Pools, теперь никакой пул не хранится в файлах&#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="v1.0.1 &#10;&#10;**/ChildrenTests/AuthorisationTest.java&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java" />
+    <MESSAGE value="v1.0.2&#10;&#10;All test classes without TarriffTest.&#10;Without negative tests." />
+    <MESSAGE value="v1.0.2&#10;&#10;With AuthorisationChildren negative test" />
+    <MESSAGE value="v1.1.0&#10;&#10;With all negative tests!!!!" />
+    <MESSAGE value="v1.1.1&#10;&#10;With all negative tests!!!!&#10;&#10;Tests..." />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1.1&#10;&#10;With all negative tests!!!!&#10;&#10;Tests..." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetPollTittle.java</url>
+          <line>14</line>
+          <properties />
+          <option name="timeStamp" value="851" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/PollTittle.java</url>
+          <line>24</line>
+          <properties />
+          <option name="timeStamp" value="855" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="859" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetZoneList.java</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="887" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetNotifyList.java</url>
+          <line>16</line>
+          <properties />
+          <option name="timeStamp" value="889" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/NotifyList.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="890" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetIntervalBlock.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="902" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/IntervalBlock.java</url>
+          <line>29</line>
+          <properties />
+          <option name="timeStamp" value="906" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/IntervalBlock.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="907" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/AppsInGroup.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="930" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/DataUpdate.java</url>
+          <line>45</line>
+          <properties />
+          <option name="timeStamp" value="939" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetDataUpdate.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="945" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateChangeChildrenCardContent.java</url>
+          <line>19</line>
+          <properties />
+          <option name="timeStamp" value="1034" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateProfileIdContent.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="1070" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="1078" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/NotifyChangeApp/GenerateNotifyChangeAppContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateGetProfileListContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="110" column="53" lean-forward="false" selection-start-line="110" selection-start-column="53" selection-end-line="110" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="79" column="68" lean-forward="false" selection-start-line="79" selection-start-column="68" selection-end-line="79" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/RegistrationUserStep1Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="24" column="61" lean-forward="true" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/RegistrationUserStep2Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetAuthorisationUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/AuthorisationChildClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="29" column="38" lean-forward="false" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateCidCkeyContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Logout/GenerateLogoutContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateProfileIdContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/ForProvideData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/HelpMe/GenerateHelpMeContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="178" column="37" lean-forward="false" selection-start-line="178" selection-start-column="37" selection-end-line="178" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateDeleteChildrenCardContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="61" column="31" lean-forward="false" selection-start-line="61" selection-start-column="31" selection-end-line="61" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TariffsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/SendTicketTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ZoneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1206">
+          <caret line="89" column="4" lean-forward="false" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TurboButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-148">
+          <caret line="50" column="32" lean-forward="false" selection-start-line="50" selection-start-column="32" selection-end-line="50" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/GetStatisticsInformationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="536">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/HelpMeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/LogoutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/NotifyChangeAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/PackageProcessingCommandsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/RulesTriggerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="44" column="4" lean-forward="false" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="85" column="4" lean-forward="false" selection-start-line="85" selection-start-column="4" selection-end-line="85" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AppsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2597">
+          <caret line="174" column="4" lean-forward="false" selection-start-line="174" selection-start-column="4" selection-end-line="174" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1859">
+          <caret line="130" column="4" lean-forward="false" selection-start-line="130" selection-start-column="4" selection-end-line="130" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChangeEmailPhoneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChildrenCardsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="151" column="4" lean-forward="true" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/CoordinatesTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/FaqTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-508">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/GetInformationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-436">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/HelpMeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/IntervalBlockTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-796">
+          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/IntervalTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="87" column="4" lean-forward="false" selection-start-line="87" selection-start-column="4" selection-end-line="87" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PushTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1678">
+          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/BaseClass/BaseClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="60" column="37" lean-forward="false" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/DeleteUserClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="27" column="58" lean-forward="false" selection-start-line="27" selection-start-column="58" selection-end-line="27" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="159" column="4" lean-forward="false" selection-start-line="159" selection-start-column="4" selection-end-line="159" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PollTittleTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1062">
+          <caret line="79" column="4" lean-forward="false" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RegistrationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="101" column="6" lean-forward="false" selection-start-line="101" selection-start-column="6" selection-end-line="101" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/GetConditionInformationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="50" column="33" lean-forward="false" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/ChildrenCardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="75" column="4" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="75" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Authorisation/AuthorisationUserClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="54" column="47" lean-forward="false" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Authorisation/GenerateAuthContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="37" column="72" lean-forward="false" selection-start-line="37" selection-start-column="72" selection-end-line="37" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/GenerateRegistrationContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding>
+            <element signature="e#1348#1349#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="114" column="76" lean-forward="false" selection-start-line="114" selection-start-column="76" selection-end-line="114" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="34" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="3" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>2bsafe_API_tests</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.googlecode.json-simple:json-simple:1.1.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

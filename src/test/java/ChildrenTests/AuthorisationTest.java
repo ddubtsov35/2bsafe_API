@@ -28,6 +28,7 @@ public class AuthorisationTest extends BaseClass{
 
     public AuthorisationTest() throws IOException, ParseException, java.text.ParseException {}
 
+
     @Before
     public void before() throws ParseException, java.text.ParseException, IOException {
         authorisationUserClass = new AuthorisationUserClass();
@@ -46,7 +47,8 @@ public class AuthorisationTest extends BaseClass{
         Assert.assertTrue(childrenResponseAuthorisationModel.getScs().equals("true"));
     }
 
-    //@Ignore
+
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthorisationChildren.class)

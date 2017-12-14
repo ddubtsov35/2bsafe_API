@@ -26,9 +26,6 @@ public class DeleteUserClass extends BaseClass {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);
         responseClass.getJsonResponse();
         if(responseClass.getJsonResponse().code() == 200){
-            System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
-            //GenerateProfileIdContent.profileId = null;
-            System.out.println("After GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
             ChildrenCardPools.clearFile();
             GenerateProfileIdContent.profileId = null;
             CidCkeyPool.clearFile();

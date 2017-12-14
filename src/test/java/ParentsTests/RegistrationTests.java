@@ -70,7 +70,6 @@ public class RegistrationTests extends BaseClass {
         Assert.assertEquals(response.code(), 200);
     }
 
-    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -82,14 +81,11 @@ public class RegistrationTests extends BaseClass {
 
 
 
-
     @Test
     public void checkPhone() throws IOException, ParseException {
         response = registrationUserStep1Class.checkPhone();
         Assert.assertEquals(response.code(), 200);
     }
-
-    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -103,7 +99,7 @@ public class RegistrationTests extends BaseClass {
 
 
 
-    @Ignore
+    //@Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -113,7 +109,7 @@ public class RegistrationTests extends BaseClass {
         String success = authorisationUserClass.authorisationUser().getScs();
         Assert.assertTrue(success.equals("false"));
     }
-    //@Ignore
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegisteredUsersContent.class)
@@ -125,8 +121,6 @@ public class RegistrationTests extends BaseClass {
         String success = authorisationUserClass.authorisationUser().getScs();
         Assert.assertTrue(success.equals("true"));
     }
-
-
 
 
     @Test
