@@ -30,6 +30,7 @@ public class ChildrenLogoutClass extends BaseClass{
             CidCkeyRegisteredPool.clearFile();
             CidCkeyPool.clearFile();
         }
+        LogPools.getLog();
         return response;
     }
 

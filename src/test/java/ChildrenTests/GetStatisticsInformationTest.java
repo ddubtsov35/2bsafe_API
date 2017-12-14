@@ -53,8 +53,6 @@ public class GetStatisticsInformationTest extends BaseClass{
         String result = response.body().string();
         System.out.println("Result string " + result);
 
-        LogPools.getLog();
-
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 

@@ -32,6 +32,7 @@ public class DeleteUserClass extends BaseClass {
             CidCkeyRegisteredPool.clearFile();
             UserPool.clearFile();
         }
+        LogPools.getLog();
     }
     public void NegativeDeleteUser(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/delete_account", jsonObject);

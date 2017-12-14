@@ -26,9 +26,10 @@ public class RegistrationUserStep2Class extends BaseClass {
             if(response.code() == 200) {
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegStep1Content());
             }
-
+            LogPools.getLog();
             return jsonObject;
         } else {
+            LogPools.getLog();
             return jsonObject;
         }
     }

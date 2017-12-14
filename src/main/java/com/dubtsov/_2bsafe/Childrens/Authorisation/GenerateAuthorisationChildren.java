@@ -54,8 +54,6 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("type",1);
         jsonObj.put("TEST", "TEST");
 
-        LogPools.getLog();
-
         return jsonObj;
     }
 

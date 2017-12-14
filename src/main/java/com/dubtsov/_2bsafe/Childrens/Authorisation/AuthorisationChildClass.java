@@ -28,7 +28,7 @@ public class AuthorisationChildClass extends BaseClass{
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         generateCidCkeyContent.getCidCkey(childrenResponseAuthorisationModel);
-
+        LogPools.getLog();
         return childrenResponseAuthorisationModel;
     }
 

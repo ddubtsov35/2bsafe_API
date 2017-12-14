@@ -44,6 +44,7 @@ public class ProfileClass extends BaseClass{
     public ConditionInformationFromDevice setProfileCard() throws Exception {
         jsonObject  = GenerateSelectChildrenCardContent.getGenerateSelectChildrenCardContent();
         responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_set", jsonObject);
+        LogPools.getLog();
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }
 

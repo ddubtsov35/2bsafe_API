@@ -1,6 +1,5 @@
 package com.dubtsov._2bsafe.Parents.Functions.ChildrenCard;
 
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateAddChildrenCardContent;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateChangeChildrenCardContent;
@@ -20,11 +19,9 @@ import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,10 +37,13 @@ public class ChildrenCardClass extends BaseClass {
         if(ChildrenCardPools.getChildrenCardFromFile() == null) {
             jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+            LogPools.getLog();
             return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
         } else {
+            LogPools.getLog();
             return ChildrenCardPools.getChildrenCardFromFile();
         }
+
     }
     public AddChildrenCard NegativeAddChildrenCard(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
@@ -66,6 +66,7 @@ public class ChildrenCardClass extends BaseClass {
             CidCkeyPool.clearFile();
             CidCkeyRegisteredPool.clearFile();
         }
+        LogPools.getLog();
     }
     public void NegativeDeleteChildrenCard(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
