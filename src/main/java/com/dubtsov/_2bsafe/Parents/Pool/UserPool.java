@@ -24,7 +24,6 @@ public class UserPool {
             finally {
                 return new JSONObject(resultJsonObject);
             }
-
         } else {
             return null;
         }

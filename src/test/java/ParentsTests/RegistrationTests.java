@@ -99,7 +99,7 @@ public class RegistrationTests extends BaseClass {
 
 
 
-    @Ignore
+    //@Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();

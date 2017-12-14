@@ -15,7 +15,6 @@ public class GenerateStatisticInfoContent{
     public static JSONObject getRulesTriggerContent() throws Exception {
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("osv", "testVersion");
-        //System.out.println("jsonObject " + jsonObj);
         return jsonObj;
     }
 
@@ -24,7 +23,6 @@ public class GenerateStatisticInfoContent{
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -34,7 +32,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.put("cid", null);
         jsonObj.put("ckey", null);
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -45,7 +42,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -56,7 +52,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -67,7 +62,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("ckey");
         jsonObj.put("ckey", "failCkey");
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -78,7 +72,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("cid");
         jsonObj.put("cid", "failCid");
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
@@ -89,7 +82,6 @@ public class GenerateStatisticInfoContent{
         jsonObj.put("cid", "failCid");
         jsonObj.put("ckey", "failCkey");
         jsonObj.put("osv", null);
-        //System.out.println("jsonObject " + jsonObj);
         return new Object[]{new Object[]{jsonObj}};
     }
 
