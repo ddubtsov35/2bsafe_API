@@ -46,7 +46,7 @@ public class AuthorisationTest extends BaseClass{
     }
 
 
-    //@Test
+    @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAuthorisationChildren.class)
     public void NegativeAuthorisation(JSONObject jsonObj) throws Exception {

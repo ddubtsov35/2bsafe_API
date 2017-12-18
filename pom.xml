@@ -104,26 +104,8 @@
                         </property>
                     </properties>
                     <includes>
-                        <!--<include>**/ChildrenTests/AuthorisationTest.java</include>
-                        <include>**/ChildrenTests/ChildrenCardTest.java</include>
-                        <include>**/ChildrenTests/GetConditionInformationTest.java</include>
-                        &lt;!&ndash;Test&ndash;&gt;&lt;!&ndash;<include>**/ChildrenTests/HelpMeTest.java</include>
-                        <include>**/ChildrenTests/LogoutTest.java</include>&ndash;&gt;
-                        <include>**/ParentsTests/GetInformationTests.java</include>
-                        <include>**/ParentsTests/AccountSettingsTest.java</include>
-                        <include>**/ParentsTests/ChildrenCardsTests.java</include>
-                        &lt;!&ndash;<include>**/ParentsTests/HelpMeTest.java</include>&ndash;&gt;
-                        <include>**/ParentsTests/RegistrationTests.java</include>
-                        <include>**/ParentsTests/AuthorisationTests.java</include>-->
                         <include>**/*.java</include>
-                        <!--<include>**/ParentsTests/RegistrationTests.java</include>-->
                     </includes>
-                    <excludes>
-                        <exclude>**/ParentsTests/TariffsTest.java</exclude>
-                        <exclude>**/Test/Test.java</exclude>
-                        <exclude>**/Test/qwe.java</exclude>
-                        <exclude>**/Test/test.java</exclude>
-                    </excludes>
                 </configuration>
                 <dependencies>
                     <dependency>

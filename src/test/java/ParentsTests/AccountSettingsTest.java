@@ -53,14 +53,6 @@ public class AccountSettingsTest extends BaseClass{
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
-    @Test
-    @TestCaseName("{0}")
-    @Parameters(source = GenerateAccountContent.class)
-    public void NegativeAccountSettings(JSONObject jsonObject) throws Exception {
-        AccountSettings accountSettings = accountSettingClass.NegativeGetAccountSetting(jsonObject);
-        System.out.println("accountSettings " + accountSettings);
-        Assert.assertTrue(accountSettings.getScs().equals("false"));
-    }
 
 
     @Test
@@ -70,6 +62,7 @@ public class AccountSettingsTest extends BaseClass{
         AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
+    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)

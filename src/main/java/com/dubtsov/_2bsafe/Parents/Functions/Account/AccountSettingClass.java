@@ -35,11 +35,6 @@ public class AccountSettingClass extends BaseClass{
         return GetAccountSetting.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
-    //Negative Content Tests
-    public AccountSettings NegativeGetAccountSetting(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", jsonObject);
-        return GetAccountSetting.getAccountSettings(responseClass.getJsonResponse().body().string());
-    }
 
     public Response NegativeSetAccountSetting(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", jsonObject);

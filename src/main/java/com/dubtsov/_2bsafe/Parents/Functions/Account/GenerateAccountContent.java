@@ -19,15 +19,6 @@ public class GenerateAccountContent {
     }
 
 
-    public static Object[] provideNegativeGetHelpMeContent1() throws Exception{
-
-        JSONObject jsonObject = new JSONObject();
-
-        jsonObject.put("test", 101);
-
-        return new Object[]{new Object[]{jsonObject}};
-    }
-
 
 
 
