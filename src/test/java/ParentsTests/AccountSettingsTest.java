@@ -73,7 +73,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
-
+    @Ignore
     @Test
     public void setAllAccountSettings() throws Exception {
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();

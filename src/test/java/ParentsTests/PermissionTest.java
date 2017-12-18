@@ -59,7 +59,7 @@ public class PermissionTest extends BaseClass{
     }
 
 
-
+    @Ignore
     @Test
     public void setPermission() throws Exception {
         response = permissionsClass.setPermission();

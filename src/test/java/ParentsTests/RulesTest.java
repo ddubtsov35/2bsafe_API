@@ -62,7 +62,7 @@ public class RulesTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
-
+    @Ignore
     @Test
     public void NegativeGetRules() throws Exception {
         response = rulesClass.getRulesListResponse();
