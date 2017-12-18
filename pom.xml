@@ -115,8 +115,8 @@
                         &lt;!&ndash;<include>**/ParentsTests/HelpMeTest.java</include>&ndash;&gt;
                         <include>**/ParentsTests/RegistrationTests.java</include>
                         <include>**/ParentsTests/AuthorisationTests.java</include>-->
-                        <include>**/*.java</include>
-                        <!--<include>**/ParentsTests/RegistrationTests.java</include>-->
+                        <include>**/ParentsTests/AccountSettingsTest.java</include>
+                        <!--<include>**/*.java</include>-->
                     </includes>
                     <excludes>
                         <exclude>**/ParentsTests/TariffsTest.java</exclude>

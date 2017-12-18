@@ -26,7 +26,6 @@ public class PasswordChangeClass extends BaseClass {
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             UserPool.setNewPassword(jsonObject.get("npwd").toString());
-            //GenerateProfileIdContent.profileId = null;
         }
         return response;
     }

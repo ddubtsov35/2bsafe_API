@@ -53,7 +53,7 @@ public class AccountSettingsTest extends BaseClass{
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
-    @Ignore
+    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)

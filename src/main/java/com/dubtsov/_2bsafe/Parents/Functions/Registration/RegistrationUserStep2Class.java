@@ -39,10 +39,11 @@ public class RegistrationUserStep2Class extends BaseClass {
         if (jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
             responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
-            String getLkid = responseClass.getJsonResponse().body().string();
+            response = responseClass.getJsonResponse();
+            String getLkid = response.body().string();
             jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));
 
-            if (responseClass.getJsonResponse().code() == 200) {
+            if (response.code() == 200) {
                 UserPool.setUserFromFile(GenerateRegistrationContent.getRegStep1Content());
             }
 
