@@ -59,7 +59,6 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println("countCardAfter  " + countCardAfter);
         Assert.assertTrue(countCardAfter - countCardBefore == 1);
     }
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAddChildrenCardContent.class)
@@ -151,7 +150,7 @@ public class ChildrenCardsTests extends BaseClass {
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true") &&  response.code() == 200 && childrenCard.getPhone().equals(GenerateChangeChildrenCardContent.generatedPhone));
     }
-    @Ignore
+
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateChangeChildrenCardContent.class)

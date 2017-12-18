@@ -1,7 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Account;
 
 import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Pool.UserPool;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
@@ -13,28 +12,20 @@ import java.io.IOException;
  */
 public class GenerateAccountContent {
 
-    public GenerateAccountContent() throws ParseException {}
-
     public static JSONObject getSetAccountContent() throws IOException, ParseException {
         JSONObject jsonObj = new JSONObject();
         jsonObj.put("nbat", 1);
         return jsonObj;
     }
 
-    public static Object[] provideGetSetAccountContent1() throws IOException, ParseException {
-        JSONObject jsonObj = new JSONObject();
-        jsonObj.put("nbat", null);
 
-        JSONObject jsonObj5 = new JSONObject();
+    public static Object[] provideNegativeGetHelpMeContent1() throws Exception{
 
-        JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("nbat", 146);
+        JSONObject jsonObject = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
-        };
+        jsonObject.put("test", 101);
+
+        return new Object[]{new Object[]{jsonObject}};
     }
 
 

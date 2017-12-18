@@ -2,6 +2,7 @@ package ParentsTests;
 
 import ChildrenTests.LogoutTest;
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
+import com.dubtsov._2bsafe.Childrens.HelpMe.GenerateHelpMeContent;
 import com.dubtsov._2bsafe.Childrens.RulesTrigger.GeneratedRulesTriggerContent;
 import com.dubtsov._2bsafe.Parents.Functions.Account.AccountSettingClass;
 import com.dubtsov._2bsafe.Parents.Functions.Account.GenerateAccountContent;
@@ -47,21 +48,20 @@ public class AccountSettingsTest extends BaseClass{
         childrenCardClass.addChildrenCard();
         authorisationChildClass.authorisationChildren();
     }
-
     @Test
     public void getAccountSettings() throws Exception {
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettings.getScs().equals("true"));
     }
-    //@Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
-    public void NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
+    public void NegativeAccountSettings(JSONObject jsonObject) throws Exception {
         AccountSettings accountSettings = accountSettingClass.NegativeGetAccountSetting(jsonObject);
         System.out.println("accountSettings " + accountSettings);
         Assert.assertTrue(accountSettings.getScs().equals("false"));
     }
+
 
     @Test
     public void setAccountSettings() throws Exception {
@@ -70,8 +70,6 @@ public class AccountSettingsTest extends BaseClass{
         AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
         Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
     }
-
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateAccountContent.class)
@@ -82,7 +80,7 @@ public class AccountSettingsTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": false"));
     }
 
-    @Ignore
+
     @Test
     public void setAllAccountSettings() throws Exception {
         AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();

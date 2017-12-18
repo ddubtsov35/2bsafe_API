@@ -69,7 +69,6 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkEmail();
         Assert.assertEquals(response.code(), 200);
     }
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -86,7 +85,6 @@ public class RegistrationTests extends BaseClass {
         response = registrationUserStep1Class.checkPhone();
         Assert.assertEquals(response.code(), 200);
     }
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)
@@ -100,7 +98,6 @@ public class RegistrationTests extends BaseClass {
 
 
 
-    //@Ignore
     @Test
     public void deleteUser() throws Exception {
         registrationUserStep1Class.registrationUserStep1();
@@ -110,7 +107,6 @@ public class RegistrationTests extends BaseClass {
         String success = authorisationUserClass.authorisationUser().getScs();
         Assert.assertTrue(success.equals("false"));
     }
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegisteredUsersContent.class)
@@ -139,8 +135,6 @@ public class RegistrationTests extends BaseClass {
         Assert.assertTrue(countUsersAfter - countUsersBefore == 1);
     }
 
-
-    //Need code
     @Ignore
     @Test
     public void sendCodeActivation() throws IOException, ParseException {
@@ -149,8 +143,6 @@ public class RegistrationTests extends BaseClass {
         System.out.println(result);
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
-    //Need code
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateRegistrationContent.class)

@@ -16,7 +16,6 @@ import java.util.Random;
  * Created by user on 08.09.17.
  */
 public class GenerateAppsContent{
-    public GenerateAppsContent() throws ParseException {}
 
     private static String alias;
 

@@ -32,12 +32,11 @@ public class GenerateTariffContent{
             }
         }
         jsonObj.put("tariff_id", tariffId);
-        //if(GenerateProfileIdContent.profileId == null){
-        jsonObj  = GenerateProfileIdContent.getProfileId();
-        jsonObj.put("profile_id", jsonObj.get("profile_id"));
-        /*} else{
+        if(GenerateProfileIdContent.profileId == null){
+            jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
+        } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
-        }*/
+        }
         return jsonObj;
     }
 

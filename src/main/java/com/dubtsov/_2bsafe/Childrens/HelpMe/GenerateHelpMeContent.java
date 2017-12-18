@@ -1,21 +1,9 @@
 package com.dubtsov._2bsafe.Childrens.HelpMe;
 
-import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
-import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
-import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
-import com.dubtsov._2bsafe.Parents.Models.RegisteredUser;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
-import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
-import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
-
-import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 24.08.17.
@@ -26,8 +14,6 @@ public class GenerateHelpMeContent {
     public static JSONObject getHelpMeContent() throws Exception {
         JSONObject jsonObject = new JSONObject();
         JSONObject jsonObject2 = new JSONObject();
-
-        //jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         jsonObject.put("cid", CidCkeyPool.getCidFromFile().get("cid"));
         jsonObject.put("ckey", CidCkeyPool.getCidFromFile().get("ckey"));

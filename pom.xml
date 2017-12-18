@@ -90,7 +90,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
-                    <rerunFailingTestsCount>3</rerunFailingTestsCount>
+                    <rerunFailingTestsCount>0</rerunFailingTestsCount>
                     <!--<parallel>classes</parallel>
                     <threadCount>1</threadCount>-->
                     <testFailureIgnore>false</testFailureIgnore>
@@ -115,8 +115,8 @@
                         &lt;!&ndash;<include>**/ParentsTests/HelpMeTest.java</include>&ndash;&gt;
                         <include>**/ParentsTests/RegistrationTests.java</include>
                         <include>**/ParentsTests/AuthorisationTests.java</include>-->
-                        <include>**/ParentsTests/AccountSettingsTest.java</include>
-                        <!--<include>**/*.java</include>-->
+                        <include>**/*.java</include>
+                        <!--<include>**/ParentsTests/RegistrationTests.java</include>-->
                     </includes>
                     <excludes>
                         <exclude>**/ParentsTests/TariffsTest.java</exclude>

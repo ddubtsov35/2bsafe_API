@@ -69,7 +69,6 @@ public class TariffsTest extends BaseClass{
         Assert.assertTrue(response.code() == 200);
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)

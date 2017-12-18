@@ -81,18 +81,6 @@ public class GenerateAddChildrenCardContent{
 
         JSONObject jsonObj11 = new JSONObject();
 
-        /*JSONObject jsonObj12 = new JSONObject();
-        jsonObj12.put("name", GenerateNameClass.getGenerateName());
-        jsonObj12.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj12.put("age", String.valueOf(random.nextInt((90 - 0) + 1) + 0));
-        jsonObj12.put("send_sms", "214234");*/
-
-        /*JSONObject jsonObj13 = new JSONObject();
-        jsonObj13.put("name", GenerateNameClass.getGenerateName());
-        jsonObj13.put("phone", GeneratePhoneClass.getGeneratedPhone());
-        jsonObj13.put("age", "54234234");
-        jsonObj13.put("send_sms", String.valueOf(0));*/
-
         JSONObject jsonObj14 = new JSONObject();
         jsonObj14.put("name", GenerateNameClass.getGenerateName());
         jsonObj14.put("phone", "fakePhone");
@@ -106,7 +94,7 @@ public class GenerateAddChildrenCardContent{
                 new JSONObject[]{jsonObj3},
                 new JSONObject[]{jsonObj4},
                 new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6},
+                //new JSONObject[]{jsonObj6},
                 new JSONObject[]{jsonObj7},
                 new JSONObject[]{jsonObj8},
                 new JSONObject[]{jsonObj9},

@@ -61,7 +61,6 @@ public class IntervalTest extends BaseClass{
         Assert.assertTrue(result.contains("\"scs\": true") && response.code() == 200);
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)
@@ -85,7 +84,6 @@ public class IntervalTest extends BaseClass{
         Assert.assertTrue(getDataUpdate.getScs().equals("true") && resultData == GenerateIntervalUpdateContent.itoRandom);
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateIntervalUpdateContent.class)

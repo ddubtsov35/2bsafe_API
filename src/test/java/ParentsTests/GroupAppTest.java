@@ -82,8 +82,6 @@ public class GroupAppTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
-
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)
@@ -104,8 +102,6 @@ public class GroupAppTest extends BaseClass{
         String result = response.body().string();
         Assert.assertTrue(result.contains("\"scs\": true"));
     }
-
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)

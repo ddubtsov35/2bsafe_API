@@ -42,7 +42,6 @@ public class SendTicketTest extends BaseClass{
         Assert.assertTrue(sendTicketClass.sendTicket()!= 0);
     }
 
-    @Ignore
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateTicketContent.class)

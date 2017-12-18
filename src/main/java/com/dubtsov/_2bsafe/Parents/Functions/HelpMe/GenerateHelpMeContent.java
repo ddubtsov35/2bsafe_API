@@ -62,12 +62,12 @@ public class GenerateHelpMeContent{
         jsonObj6.put("profile_id", random.nextInt(1000000 -1 +1) +1);
 
         return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
+                new Object[] {jsonObj},
+                new Object[]{jsonObj2},
+                new Object[]{jsonObj3},
+                new Object[]{jsonObj4},
+                new Object[]{jsonObj5},
+                new Object[]{jsonObj6}
         };
     }
 
@@ -128,9 +128,9 @@ public class GenerateHelpMeContent{
         JSONObject jsonObj3 = new JSONObject();
 
         return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
+                new Object[] {jsonObj},
+                new Object[]{jsonObj2},
+                new Object[]{jsonObj3}
         };
     }
 
