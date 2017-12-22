@@ -48,7 +48,7 @@ public class ZoneClass extends BaseClass{
 
 
     public List<Zone> getZoneList() throws Exception {
-        jsonObject = GenerateZoneContent.getZoneListContent();
+        JSONObject jsonObject = new JSONObject();
         responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_zone_list", jsonObject);
         return GetZoneList.getZoneList(responseClass.getJsonResponse().body().string());
     }

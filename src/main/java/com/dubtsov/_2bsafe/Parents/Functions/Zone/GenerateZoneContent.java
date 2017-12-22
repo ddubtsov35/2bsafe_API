@@ -38,12 +38,12 @@ public class GenerateZoneContent{
         jsonObj.put("confirm", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        jsonObj.put("lat", 1234);
-        jsonObj.put("long", 1234);
-        jsonObj.put("rad", 1234);
-        jsonObj.put("name", 1234);
-        jsonObj.put("type", 1234);
-        jsonObj.put("confirm", null);
+        jsonObj2.put("lat", 1234);
+        jsonObj2.put("long", 1234);
+        jsonObj2.put("rad", 1234);
+        jsonObj2.put("name", 1234);
+        jsonObj2.put("type", 1234);
+        jsonObj2.put("confirm", null);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},
@@ -86,8 +86,6 @@ public class GenerateZoneContent{
 
         ZoneClass zoneClass = new ZoneClass();
         int zoneId = zoneClass.addZone().getZone_id();
-        //Integer zoneId = 0;
-        JSONObject jsonObj = new JSONObject();
 
         JSONObject jsonObj1 = new JSONObject();
         jsonObj1.put("zone_id", null);
@@ -100,9 +98,6 @@ public class GenerateZoneContent{
         JSONObject jsonObj3 = new JSONObject();
         jsonObj3.put("zone_id", null);
         jsonObj3.put("confirm",true);
-
-        JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("confirm",null);
 
 
         JSONObject jsonObj5 = new JSONObject();
@@ -127,43 +122,20 @@ public class GenerateZoneContent{
         jsonObj9.put("zone_id", zoneId);
         jsonObj9.put("confirm",true);
 
-
-        JSONObject jsonObj11 = new JSONObject();
-        jsonObj11.put("confirm",false);
-
         JSONObject jsonObj12 = new JSONObject();
         jsonObj12.put("zone_id", zoneId);
 
-        JSONObject jsonObj13 = new JSONObject();
-
         return new Object[]{
-                new JSONObject[] {jsonObj},
+                new JSONObject[]{jsonObj1},
                 new JSONObject[]{jsonObj2},
                 new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
                 new JSONObject[]{jsonObj5},
                 new JSONObject[]{jsonObj6},
                 new JSONObject[]{jsonObj7},
                 new JSONObject[]{jsonObj8},
                 new JSONObject[]{jsonObj9},
-                new JSONObject[]{jsonObj11},
-                new JSONObject[]{jsonObj12},
-                new JSONObject[]{jsonObj13},
+                new JSONObject[]{jsonObj12}
         };
-    }
-
-
-
-
-
-    public static JSONObject getZoneListContent() throws Exception {
-        ZoneClass zoneClass = new ZoneClass();
-        int zoneId = zoneClass.addZone().getZone_id();
-        JSONObject jsonObj = new JSONObject();
-        //jsonObj.put("zone_id", zoneId);
-        //jsonObj.put("type", 0);
-        //jsonObj.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        return jsonObj;
     }
 
 }

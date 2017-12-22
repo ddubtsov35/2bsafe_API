@@ -17,8 +17,7 @@ import java.util.List;
  * Created by user on 13.07.17.
  */
 public class ListRegisteredUsersClass extends BaseClass {
-    public ListRegisteredUsersClass() throws IOException {
-    }
+    public ListRegisteredUsersClass() throws IOException {}
 
     String sessionId;
     String responseString;

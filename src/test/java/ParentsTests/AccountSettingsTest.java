@@ -51,46 +51,7 @@ public class AccountSettingsTest extends BaseClass{
     @Test
     public void getAccountSettings() throws Exception {
         AccountSettings accountSettings = accountSettingClass.getAccountSetting();
+        System.out.println(accountSettings.toString());
         Assert.assertTrue(accountSettings.getScs().equals("true"));
-    }
-
-
-    @Test
-    public void setAccountSettings() throws Exception {
-        AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
-        response = setAccountSettingClass.setAccountSetting();
-        AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
-        Assert.assertTrue(accountSettingsBefore != accountSettingsAfter && accountSettingsAfter.getNbat() == 1);
-    }
-    @Ignore
-    @Test
-    @TestCaseName("{0}")
-    @Parameters(source = GenerateAccountContent.class)
-    public void NegativeSetAccountSettings(JSONObject jsonObject) throws Exception {
-        response = setAccountSettingClass.NegativeSetAccountSetting(jsonObject);
-        String result = response.body().string();
-        System.out.println("RESULT " + result);
-        Assert.assertTrue(result.contains("\"scs\": false"));
-    }
-
-    @Ignore
-    @Test
-    public void setAllAccountSettings() throws Exception {
-        AccountSettings accountSettingsBefore = accountSettingClass.getAccountSetting();
-        response = setAccountSettingClass.setAllAccountSetting();
-        AccountSettings accountSettingsAfter = accountSettingClass.getAccountSetting();
-        System.out.println("accountSettingsBefore " + accountSettingsBefore.toString());
-        System.out.println("accountSettingsAfter " + accountSettingsAfter.toString());
-        Assert.assertTrue(accountSettingsBefore != accountSettingsAfter &&
-                accountSettingsAfter.getLbat() == 1 &&
-                accountSettingsAfter.getNbat() == 1 &&
-                accountSettingsAfter.getLsig() == 1 &&
-                accountSettingsAfter.getNsig() == 1 &&
-                accountSettingsAfter.getLunav() == 1 &&
-                accountSettingsAfter.getNunav() == 1 &&
-                accountSettingsAfter.getNph() == 1 &&
-                accountSettingsAfter.getNsms() == 1 &&
-                accountSettingsAfter.getNgps() == 1 &&
-                accountSettingsAfter.getName().equals("Толян"));
     }
 }

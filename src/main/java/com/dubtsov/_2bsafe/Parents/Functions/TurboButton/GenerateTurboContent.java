@@ -68,36 +68,18 @@ public class GenerateTurboContent{
         jsonObj.put("turbo", null);
 
         JSONObject jsonObj2 = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj2.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        } else{
-            jsonObj2.put("profile_id", GenerateProfileIdContent.profileId);
-        }
         jsonObj2.put("turbo", null);
 
         JSONObject jsonObj3 = new JSONObject();
         jsonObj3.put("turbo", setTurboStatic());
 
         JSONObject jsonObj4 = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj4.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        } else{
-            jsonObj4.put("profile_id", GenerateProfileIdContent.profileId);
-        }
-
-        JSONObject jsonObj5 = new JSONObject();
-
-        JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        jsonObj6.put("turbo", random.nextInt(1000000 -1 +1 ) + 1);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},
                 new JSONObject[]{jsonObj2},
                 new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
+                new JSONObject[]{jsonObj4}
         };
     }
 

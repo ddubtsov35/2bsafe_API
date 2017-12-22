@@ -3,9 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="c5fb3240-afb5-488a-b1b6-4886c5449063" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/ListRegisteredUsersClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/ListRegisteredUsersClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/TurboButton/GenerateTurboContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/TurboButton/GenerateTurboContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/GenerateZoneContent.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/GenerateZoneContent.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/AddIntervalBlock.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/AddIntervalBlock.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Response/ResponseClass.java" afterPath="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Response/ResponseClass.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java" afterPath="$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java" afterPath="$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java" afterPath="$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java" afterPath="$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java" afterPath="$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,102 +38,22 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PermissionTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java">
+    <leaf>
+      <file leaf-file-name="ZoneTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ZoneTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="608">
-              <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+            <state relative-caret-position="482">
+              <caret line="51" column="34" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RulesTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java">
+      <file leaf-file-name="GenerateZoneContent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/GenerateZoneContent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorisationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorisationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="125" column="11" lean-forward="false" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IntervalBlockTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/IntervalBlockTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1571">
-              <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AccountSettingsTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChildrenCardTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/ChildrenCardTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="107" column="31" lean-forward="false" selection-start-line="107" selection-start-column="31" selection-end-line="107" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChangeEmailPhoneTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChangeEmailPhoneTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TariffsTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TariffsTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+            <state relative-caret-position="464">
+              <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -143,26 +70,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>if(response.code() == 200){</find>
-      <find>if(responseCla == 200)</find>
-      <find>if(responseCl == 200)</find>
-      <find>if(responseC == 200)</find>
-      <find>if(response == 200)</find>
-      <find>if(response. == 200)</find>
-      <find>if(response.code() == 200)</find>
-      <find>if(responseClass() == 200)</find>
-      <find>if(responseClass. == 200)</find>
-      <find>if(responseClass == 200)</find>
-      <find>if(responseClas == 200)</find>
-      <find>if(re == 200)</find>
-      <find>if(r == 200)</find>
-      <find>== 200)</find>
-      <find>== 200)</find>
-      <find>C</find>
-      <find>Cho</find>
-      <find>Ch</find>
-      <find>Child</find>
-      <find>Childrens</find>
       <find>ChildrensTe</find>
       <find>ChildrensTes</find>
       <find>ChildrensTest</find>
@@ -173,6 +80,26 @@
       <find>NegativeLogout:</find>
       <find>NegativeLogout</find>
       <find>if(GenerateProfileIdContent</find>
+      <find>Admin</find>
+      <find>AdminA</find>
+      <find>AdminAu</find>
+      <find>g</find>
+      <find>get</find>
+      <find>getAcc</find>
+      <find>getAccCo</find>
+      <find>getAccC</find>
+      <find>a</find>
+      <find>accC</find>
+      <find>acc</find>
+      <find>A</find>
+      <find>Acc</find>
+      <find>C</find>
+      <find>Co</find>
+      <find>Code</find>
+      <find>getListRegisteredUsers</find>
+      <find>fakeBlo</find>
+      <find>Response</find>
+      <find>1233</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -217,15 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/GenerateAuthorisationChildren.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RecoveryPassword/GenerateRecoveryPasswordContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Logout/GenerateLogoutContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateProfileIdContent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/ForProvideData.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/GetInformationTests.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Pool/UserPool.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/RegistrationUserStep2Class.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/AuthorisationChildClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Logout/ChildrenLogoutClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/ProfileCards/ProfileClass.java" />
@@ -249,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ChildrenTests/AccountSettingsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AppsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/ChildrenCardsTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/HelpMeTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/IntervalBlockTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/IntervalTest.java" />
@@ -264,10 +181,20 @@
         <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Account/AccountSettingClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Account/GenerateAccountContent.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/ListRegisteredUsersClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test/Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Response/ResponseClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/AddIntervalBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java" />
         <option value="$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/TurboButton/GenerateTurboContent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/GenerateZoneContent.java" />
       </list>
     </option>
   </component>
@@ -307,9 +234,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="-4" />
-    <option name="width" value="1920" />
-    <option name="height" value="1021" />
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1922" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -327,8 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -338,6 +264,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,8 +363,202 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Response" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Parents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RegisteredUsers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2bsafe_API" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_2bsafe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -424,7 +570,6 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Functions" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
-    <property name="ToolWindowRun.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -443,61 +588,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PermissionTest.setPermission">
-    <configuration default="false" name="AuthorisationTest and 30 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="2bsafe_API_tests" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="pattern" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns>
-        <pattern testClass="ChildrenTests.AuthorisationTest" />
-        <pattern testClass="ChildrenTests.ChildrenCardTest" />
-        <pattern testClass="ChildrenTests.GetConditionInformationTest" />
-        <pattern testClass="ChildrenTests.GetStatisticsInformationTest" />
-        <pattern testClass="ChildrenTests.HelpMeTest" />
-        <pattern testClass="ChildrenTests.LogoutTest" />
-        <pattern testClass="ChildrenTests.NotifyChangeAppTest" />
-        <pattern testClass="ChildrenTests.PackageProcessingCommandsTest" />
-        <pattern testClass="ChildrenTests.RulesTriggerTest" />
-        <pattern testClass="ParentsTests" />
-        <pattern testClass="ParentsTests.AccountSettingsTest" />
-        <pattern testClass="ParentsTests.AppsTest" />
-        <pattern testClass="ParentsTests.AuthorisationTests" />
-        <pattern testClass="ParentsTests.ChangeEmailPhoneTest" />
-        <pattern testClass="ParentsTests.ChildrenCardsTests" />
-        <pattern testClass="ParentsTests.CoordinatesTests" />
-        <pattern testClass="ParentsTests.FaqTest" />
-        <pattern testClass="ParentsTests.GetInformationTests" />
-        <pattern testClass="ParentsTests.GroupAppTest" />
-        <pattern testClass="ParentsTests.HelpMeTest" />
-        <pattern testClass="ParentsTests.IntervalBlockTest" />
-        <pattern testClass="ParentsTests.IntervalTest" />
-        <pattern testClass="ParentsTests.PermissionTest" />
-        <pattern testClass="ParentsTests.PollTittleTest" />
-        <pattern testClass="ParentsTests.PushTest" />
-        <pattern testClass="ParentsTests.RegistrationTests" />
-        <pattern testClass="ParentsTests.RulesTest" />
-        <pattern testClass="ParentsTests.SendTicketTest" />
-        <pattern testClass="ParentsTests.TariffsTest" />
-        <pattern testClass="ParentsTests.TurboButtonTest" />
-        <pattern testClass="ParentsTests.ZoneTest" />
-      </patterns>
-      <method />
-    </configuration>
-    <configuration default="false" name="TariffsTest.getChangeTariff" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ZoneTest.NegativeGetZoneList">
+    <configuration default="false" name="RulesTest.NegativeGetRulesByProfile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ParentsTests.*" />
@@ -508,8 +600,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ParentsTests" />
-      <option name="MAIN_CLASS_NAME" value="ParentsTests.TariffsTest" />
-      <option name="METHOD_NAME" value="getChangeTariff" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.RulesTest" />
+      <option name="METHOD_NAME" value="NegativeGetRulesByProfile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -520,42 +612,10 @@
         <value defaultName="singleModule" />
       </option>
       <envs />
-      <patterns>
-        <pattern testClass="ChildrenTests.AuthorisationTest" />
-        <pattern testClass="ChildrenTests.ChildrenCardTest" />
-        <pattern testClass="ChildrenTests.GetConditionInformationTest" />
-        <pattern testClass="ChildrenTests.GetStatisticsInformationTest" />
-        <pattern testClass="ChildrenTests.HelpMeTest" />
-        <pattern testClass="ChildrenTests.LogoutTest" />
-        <pattern testClass="ChildrenTests.NotifyChangeAppTest" />
-        <pattern testClass="ChildrenTests.PackageProcessingCommandsTest" />
-        <pattern testClass="ChildrenTests.RulesTriggerTest" />
-        <pattern testClass="ParentsTests" />
-        <pattern testClass="ParentsTests.AccountSettingsTest" />
-        <pattern testClass="ParentsTests.AppsTest" />
-        <pattern testClass="ParentsTests.AuthorisationTests" />
-        <pattern testClass="ParentsTests.ChangeEmailPhoneTest" />
-        <pattern testClass="ParentsTests.ChildrenCardsTests" />
-        <pattern testClass="ParentsTests.CoordinatesTests" />
-        <pattern testClass="ParentsTests.FaqTest" />
-        <pattern testClass="ParentsTests.GetInformationTests" />
-        <pattern testClass="ParentsTests.GroupAppTest" />
-        <pattern testClass="ParentsTests.HelpMeTest" />
-        <pattern testClass="ParentsTests.IntervalBlockTest" />
-        <pattern testClass="ParentsTests.IntervalTest" />
-        <pattern testClass="ParentsTests.PermissionTest" />
-        <pattern testClass="ParentsTests.PollTittleTest" />
-        <pattern testClass="ParentsTests.PushTest" />
-        <pattern testClass="ParentsTests.RegistrationTests" />
-        <pattern testClass="ParentsTests.RulesTest" />
-        <pattern testClass="ParentsTests.SendTicketTest" />
-        <pattern testClass="ParentsTests.TariffsTest" />
-        <pattern testClass="ParentsTests.TurboButtonTest" />
-        <pattern testClass="ParentsTests.ZoneTest" />
-      </patterns>
+      <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="AuthorisationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="AuthorisationTest.PositiveAuthorisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ChildrenTests.*" />
@@ -567,8 +627,8 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ChildrenTests" />
       <option name="MAIN_CLASS_NAME" value="ChildrenTests.AuthorisationTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="PositiveAuthorisation" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -581,7 +641,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="TariffsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TurboButtonTest.NegativeSetTurbo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ParentsTests.*" />
@@ -592,9 +652,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ParentsTests" />
-      <option name="MAIN_CLASS_NAME" value="ParentsTests.TariffsTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.TurboButtonTest" />
+      <option name="METHOD_NAME" value="NegativeSetTurbo" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -607,7 +667,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="PermissionTest.setPermission" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="TurboButtonTest.NegativeSendTicketWithAuthorisation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="ParentsTests.*" />
@@ -618,8 +678,34 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="ParentsTests" />
-      <option name="MAIN_CLASS_NAME" value="ParentsTests.PermissionTest" />
-      <option name="METHOD_NAME" value="setPermission" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.TurboButtonTest" />
+      <option name="METHOD_NAME" value="NegativeSendTicketWithAuthorisation" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ZoneTest.NegativeGetZoneList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="ParentsTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="2bsafe_API_tests" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="ParentsTests" />
+      <option name="MAIN_CLASS_NAME" value="ParentsTests.ZoneTest" />
+      <option name="METHOD_NAME" value="NegativeGetZoneList" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -860,19 +946,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.AuthorisationTest and 30 more" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TariffsTest.getChangeTariff" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AuthorisationTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TariffsTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PermissionTest.setPermission" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.RulesTest.NegativeGetRulesByProfile" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.AuthorisationTest.PositiveAuthorisation" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TurboButtonTest.NegativeSetTurbo" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TurboButtonTest.NegativeSendTicketWithAuthorisation" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ZoneTest.NegativeGetZoneList" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.PermissionTest.setPermission" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TariffsTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.AuthorisationTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TariffsTest.getChangeTariff" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AuthorisationTest and 30 more" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ZoneTest.NegativeGetZoneList" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TurboButtonTest.NegativeSendTicketWithAuthorisation" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TurboButtonTest.NegativeSetTurbo" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RulesTest.NegativeGetRulesByProfile" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.AuthorisationTest.PositiveAuthorisation" />
       </list>
     </recent_temporary>
   </component>
@@ -886,13 +972,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1499686631533</updated>
-    </task>
-    <task id="LOCAL-00090" summary="v0.77">
-      <created>1511969875834</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1511969875835</updated>
     </task>
     <task id="LOCAL-00091" summary="v0.78 &#10;&#10;**/ChildrenTests/AuthorisationTest.java&lt;/include&gt;&#10;**/ChildrenTests/ChildrenCardTest.java&#10;**/ChildrenTests/GetConditionInformationTest.java&#10;**/ParentsTests/AccountSettingsTest.java&#10;**/ParentsTests/ChildrenCardsTests.java&#10;**/ParentsTests/GetInformationTests.java&#10;**/ParentsTests/RegistrationTests.java&#10;**/ParentsTests/AuthorisationTests.java">
       <created>1512053738648</created>
@@ -1230,39 +1309,46 @@
       <option name="project" value="LOCAL" />
       <updated>1513609669145</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="v1.1.5">
+      <created>1513610575423</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1513610575423</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AccountSettingsTest - 2017.12.18 at 15h 45m 14s.xml">
-      <configuration name="AccountSettingsTest" configurationId="JUnit" />
+    <history-entry file="TurboButtonTest_NegativeSendTicketWithAuthorisation - 2017.12.22 at 17h 09m 00s.xml">
+      <configuration name="TurboButtonTest.NegativeSendTicketWithAuthorisation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AccountSettingsTest - 2017.12.18 at 15h 53m 04s.xml">
-      <configuration name="AccountSettingsTest" configurationId="JUnit" />
+    <history-entry file="TurboButtonTest_NegativeSendTicketWithAuthorisation - 2017.12.22 at 17h 11m 07s.xml">
+      <configuration name="TurboButtonTest.NegativeSendTicketWithAuthorisation" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AuthorisationTest - 2017.12.18 at 18h 01m 20s.xml">
-      <configuration name="AuthorisationTest" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 11m 30s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AuthorisationTest_and_30_more - 2017.12.18 at 17h 17m 04s.xml">
-      <configuration name="AuthorisationTest and 30 more" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 13m 27s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AuthorisationTest_and_30_more - 2017.12.18 at 17h 38m 04s.xml">
-      <configuration name="AuthorisationTest and 30 more" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 13m 40s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HelpMeTest - 2017.12.18 at 16h 57m 03s.xml">
-      <configuration name="HelpMeTest" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 14m 55s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PermissionTest_setPermission - 2017.12.18 at 18h 21m 31s.xml">
-      <configuration name="PermissionTest.setPermission" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 16m 29s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TariffsTest - 2017.12.18 at 18h 07m 13s.xml">
-      <configuration name="TariffsTest" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 23m 44s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TariffsTest_getChangeTariff - 2017.12.18 at 17h 40m 20s.xml">
-      <configuration name="TariffsTest.getChangeTariff" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 24m 22s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TariffsTest_getChangeTariff - 2017.12.18 at 17h 42m 57s.xml">
-      <configuration name="TariffsTest.getChangeTariff" configurationId="JUnit" />
+    <history-entry file="ZoneTest_NegativeGetZoneList - 2017.12.22 at 17h 25m 01s.xml">
+      <configuration name="ZoneTest.NegativeGetZoneList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1275,7 +1361,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1920" height="1021" extended-state="6" />
+    <frame x="-1" y="-11" width="1922" height="1029" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1285,25 +1371,25 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93988436" sideWeight="0.51280683" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9713262" sideWeight="0.51280683" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.092315905" sideWeight="0.48208094" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7815029" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9352601" sideWeight="0.48078975" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9352601" sideWeight="0.48078975" order="2" side_tool="false" content_ui="tabs" x="605" y="404" width="777" height="442" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93988436" sideWeight="0.48719317" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.94104046" sideWeight="0.48719317" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3004269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2022412" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32947975" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2497332" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6150289" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.092315905" sideWeight="0.51791906" order="0" side_tool="true" content_ui="tabs" />
@@ -1392,12 +1478,6 @@
           <option name="timeStamp" value="855" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="859" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetZoneList.java</url>
           <line>21</line>
           <properties />
@@ -1414,12 +1494,6 @@
           <line>35</line>
           <properties />
           <option name="timeStamp" value="890" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetIntervalBlock.java</url>
-          <line>22</line>
-          <properties />
-          <option name="timeStamp" value="902" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/IntervalBlock.java</url>
@@ -1457,17 +1531,11 @@
           <properties />
           <option name="timeStamp" value="1034" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateGetProfileListContent.java</url>
-          <line>24</line>
-          <properties />
-          <option name="timeStamp" value="1084" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1087" />
+      <option name="time" value="1089" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1476,285 +1544,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/StatisticsInformation/GenerateStatisticInfoContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="65" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/GetStatisticsInformationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateSelectChildrenCardContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="49" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/pl/pragmatists/JUnitParams/1.1.0/JUnitParams-1.1.0.jar!/junitparams/internal/parameters/ParametersReader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/pl/pragmatists/JUnitParams/1.1.0/JUnitParams-1.1.0.jar!/junitparams/internal/parameters/ParametersFromExternalClassProvideMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/pl/pragmatists/JUnitParams/1.1.0/JUnitParams-1.1.0.jar!/junitparams/internal/ParameterisedTestMethodRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/HelpMe/HelpMeClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="24" column="20" lean-forward="false" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/RulesTrigger/GeneratedRulesTriggerContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/GenerateAuthorisationChildren.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetAccountSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/HelpMeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="52" column="31" lean-forward="false" selection-start-line="52" selection-start-column="31" selection-end-line="52" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/HelpMe/GenerateHelpMeContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/HelpMe/GenerateHelpMeContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1580">
-          <caret line="130" column="36" lean-forward="false" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/RulesTriggerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="47" column="35" lean-forward="false" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Logout/LogoutClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/CoordinatesTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/GetInformationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="103" column="5" lean-forward="false" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/HelpMeTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/IntervalTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PollTittleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PushTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="30" column="13" lean-forward="false" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/SendTicketTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TurboButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/ChildrenCardClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="47" column="27" lean-forward="false" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/GenerateTestData/GenerateContent/GenerateProfileIdContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Tariffs/GenerateTariffContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="33" column="39" lean-forward="false" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Tariffs/TariffsClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="35" column="48" lean-forward="true" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateAddChildrenCardContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="96" column="18" lean-forward="false" selection-start-line="96" selection-start-column="18" selection-end-line="96" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChildrenCardsTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ZoneTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="85" column="0" lean-forward="false" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Apps/GenerateAppsContent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="61" column="5" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="61" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AppsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="154" column="30" lean-forward="false" selection-start-line="154" selection-start-column="30" selection-end-line="154" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1762,7 +1555,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6340">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1770,15 +1562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="59" column="32" lean-forward="true" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RegistrationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="554">
-          <caret line="147" column="32" lean-forward="false" selection-start-line="147" selection-start-column="32" selection-end-line="147" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1786,6 +1569,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="118" column="5" lean-forward="false" selection-start-line="104" selection-start-column="4" selection-end-line="118" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Account/GenerateAccountContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/ChildrenCardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="828">
+          <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TariffsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChangeEmailPhoneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="125" column="11" lean-forward="false" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Admin/Model/GenerateGetCodeContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="32" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Admin/Parse/GetActCodeParse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="5" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Admin/Model/UserModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/ProfileCards/ProfileClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="32" column="57" lean-forward="false" selection-start-line="32" selection-start-column="57" selection-end-line="32" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Admin/GetActCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Admin/AdminAuthorisation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1794,30 +1658,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/ListRegisteredUsersClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Account/GenerateAccountContent.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Authorisation/GenerateAuthContent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="268">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/ChildrenCardTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Authorisation/AuthorisationUserClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="67" column="4" lean-forward="false" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TariffsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="66" column="36" lean-forward="false" selection-start-line="66" selection-start-column="36" selection-end-line="66" selection-end-column="36" />
+        <state relative-caret-position="441">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="8" selection-end-line="56" selection-end-column="103" />
           <folding />
         </state>
       </provider>
@@ -1830,58 +1693,246 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChangeEmailPhoneTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/GroupsApp/GroupsAppClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="30" column="11" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="401">
+          <caret line="53" column="20" lean-forward="false" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AccountSettingsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="75" column="11" lean-forward="false" selection-start-line="75" selection-start-column="11" selection-end-line="75" selection-end-column="11" />
+        <state relative-caret-position="486">
+          <caret line="53" column="53" lean-forward="false" selection-start-line="53" selection-start-column="53" selection-end-line="53" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Test/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/HelpMeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/AuthorisationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetRegisteredUsers.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="125" column="11" lean-forward="false" selection-start-line="125" selection-start-column="11" selection-end-line="125" selection-end-column="11" />
+        <state relative-caret-position="356">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ChildrenCardsTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="82" column="27" lean-forward="true" selection-start-line="82" selection-start-column="27" selection-end-line="82" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/GroupsApp/GenerateGroupContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="120" column="8" lean-forward="true" selection-start-line="120" selection-start-column="8" selection-end-line="120" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/ChildrenCard/GenerateContent/GenerateGetProfileListContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetIntervalBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/GroupAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Parse/GetAddIntervalBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Models/AddIntervalBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/IntervalBlock/IntervalBlockClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="36" column="21" lean-forward="false" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/IntervalBlockTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1571">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="91">
+          <caret line="85" column="56" lean-forward="true" selection-start-line="85" selection-start-column="56" selection-end-line="85" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Permissions/GenerateSetPermissionContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/DeleteUserClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="37" column="63" lean-forward="true" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RegistrationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="116" column="34" lean-forward="true" selection-start-line="116" selection-start-column="34" selection-end-line="116" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/RegisteredUsers/GenerateRegisteredUsersContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/PermissionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="61" column="11" lean-forward="false" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+        <state relative-caret-position="432">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Response/ResponseClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Registration/RegistrationUserStep1Class.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Childrens/Authorisation/GenerateAuthorisationChildren.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="159" column="0" lean-forward="false" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ChildrenTests/AuthorisationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/RulesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="64" column="4" lean-forward="false" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="4" />
+        <state relative-caret-position="342">
+          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Rules/GenerateRequestAddRule.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/TurboButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="84" column="32" lean-forward="false" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/TurboButton/GenerateTurboContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="81" column="42" lean-forward="false" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/ZoneClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ParentsTests/ZoneTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="51" column="34" lean-forward="false" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dubtsov/_2bsafe/Parents/Functions/Zone/GenerateZoneContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="128" column="16" lean-forward="false" selection-start-line="128" selection-start-column="16" selection-end-line="128" selection-end-column="16" />
           <folding />
         </state>
       </provider>

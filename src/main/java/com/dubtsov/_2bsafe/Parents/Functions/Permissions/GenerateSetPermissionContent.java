@@ -94,34 +94,15 @@ public class GenerateSetPermissionContent{
         AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
 
         JSONObject jsonObj = new JSONObject();
-        jsonObj.put("cid", null);
         jsonObj.put("profile_id", null);
-
-        JSONObject jsonObj2 = new JSONObject();
-        jsonObj2.put("cid", authorisationChildClass.authorisationChildren().getCid());
-        jsonObj2.put("profile_id", null);
-
-        JSONObject jsonObj3 = new JSONObject();
-        if(GenerateProfileIdContent.profileId == null){
-            jsonObj3.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
-        } else{
-            jsonObj3.put("profile_id", GenerateProfileIdContent.profileId);
-        }
-
-        JSONObject jsonObj4 = new JSONObject();
-        jsonObj4.put("cid", authorisationChildClass.authorisationChildren().getCid());
 
         JSONObject jsonObj5 = new JSONObject();
 
         JSONObject jsonObj6 = new JSONObject();
-        jsonObj6.put("cid", authorisationChildClass.authorisationChildren().getCid());
         jsonObj6.put("profile_id", random.nextInt(1000000 -1 +1) +1);
 
         return new Object[]{
                 new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
                 new JSONObject[]{jsonObj5},
                 new JSONObject[]{jsonObj6}
         };

@@ -71,7 +71,6 @@ public class ResponseClass {
             return response;
         } finally {
             System.out.println(response);
-            //System.out.println(response.body().string());
             System.out.println();
         }
 
@@ -117,68 +116,6 @@ public class ResponseClass {
         body = body + "\r\n------WebKitFormBoundary7MA4YWxkTrZu0gW--";
         return body;
     }
-
-        /*private Request getRequest(){
-        MediaType mediaType = MediaType.parse("application/json");
-        RequestBody body = RequestBody.create(mediaType, "{" + convertHashContentToBodyString() + "}");
-        Request request = new Request.Builder()
-                .url(url)
-                .post(body)
-                .addHeader("content-type", "application/json")
-                .addHeader("cache-control", "no-cache")
-                .addHeader("postman-token", postmanToken)
-                .addHeader("cookie", sessionId)
-                .build();
-        System.out.println("REQUEST ");
-        System.out.println(convertHashContentToBodyString().toString());
-        System.out.println();
-       *//* if(ContentClearFlag.isContentClearFlag()) {
-            content.clear();
-        }*//*
-        return request;
-    }*/
-
-    /*public Response getResponse() throws IOException {
-        response = client.newCall(getRequest()).execute();
-        System.out.println("Response: " + response.code());
-        System.out.println();
-
-        try {
-            listRegisteredUsersClass = new ListRegisteredUsersClass();
-            String sessionId = listRegisteredUsersClass.getSessionId(response.headers().toString());
-            setSessionId(sessionId);
-        } catch (StringIndexOutOfBoundsException e){
-            return response;
-        }
-        return response;
-    }*/
-
-    /*private String convertHashContentToBodyString(){
-        System.out.println("content " + content);
-        String result = "";
-        if(!this.content.isEmpty()) {
-            for (Map.Entry entry : content.entrySet()) {
-                try {
-                    Integer.parseInt(entry.getValue().toString());
-                } catch(NumberFormatException e) {
-                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
-                    continue;
-                }
-                //0 для выборки всех пользователей sortf
-                if(Integer.parseInt(entry.getValue().toString())  == 0 || Integer.parseInt(entry.getValue().toString())  == 1 || Integer.parseInt(entry.getValue().toString())  == 2) {
-                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + entry.getValue();
-                } else{
-                    result = result + ", " + "\"" + entry.getKey() + "\"" + ":" + "\"" + entry.getValue() + "\"";
-                }
-                continue;
-            }
-        } else{
-            return result;
-        }
-        result = result.substring(2, result.length());
-        System.out.println(result);
-        return result;
-    }*/
 
     public void setPostmanToken(String postmanToken) {
         this.postmanToken = postmanToken;

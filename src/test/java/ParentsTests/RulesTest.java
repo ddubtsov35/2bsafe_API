@@ -8,11 +8,8 @@ import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.Registration.GenerateRegistrationContent;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.*;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.TurboButtonClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
-import com.dubtsov._2bsafe.Parents.Models.GetRulesModel;
 import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -24,11 +21,8 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.remote.Augmentable;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 29.08.17.

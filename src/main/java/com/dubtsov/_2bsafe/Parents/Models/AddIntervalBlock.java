@@ -33,13 +33,17 @@ public class AddIntervalBlock {
 
         if(jsonObj.get("scs") != null) {setScs(jsonObj.get("scs").toString());} else{setScs(null);}
 
-        JSONArray jsonArray = (JSONArray) jsonObj.get("intervals");
-        for(int i = 0; i < jsonArray.size(); i++) {
-            if (jsonArray.get(i) != null) {
-                intervals.add(Integer.parseInt(jsonArray.get(i).toString()));
-            } else {
-                intervals.add(null);
+        try {
+            JSONArray jsonArray = (JSONArray) jsonObj.get("intervals");
+            for (int i = 0; i < jsonArray.size(); i++) {
+                if (jsonArray.get(i) != null) {
+                    intervals.add(Integer.parseInt(jsonArray.get(i).toString()));
+                } else {
+                    intervals.add(null);
+                }
             }
+        } catch (Exception e){
+            intervals.add(null);
         }
     }
 

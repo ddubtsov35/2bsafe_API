@@ -85,7 +85,7 @@ public class GroupAppTest extends BaseClass{
     @Test
     @TestCaseName("{0}")
     @Parameters(source = GenerateGroupContent.class)
-    public void NegativeAddGroupApp(JSONObject jsonObject) throws Exception {
+    public void NegativeEditGroupApp(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.NegativeEditGroupApp(jsonObject);
         String result = response.body().string();

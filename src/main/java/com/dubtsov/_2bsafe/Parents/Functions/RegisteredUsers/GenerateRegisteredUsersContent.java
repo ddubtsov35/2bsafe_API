@@ -30,38 +30,19 @@ public class GenerateRegisteredUsersContent{
         ForProvideData.getTestData();
 
         JSONObject jsonObj = new JSONObject();
-        JSONObject jsonObj100 = new JSONObject();
-        if(UserPool.getUserFromFile() == null) {
-            jsonObj100.put("pwd", GenerateRegistrationContent.getRegStep1Content().get("pwd"));
-        } else{
-            jsonObj100.put("pwd", UserPool.getUserFromFile().get("pwd"));
-        }
-
-
-        jsonObj.put("pwd", jsonObj100.get("pwd"));
 
         JSONObject jsonObj2 = new JSONObject();
         jsonObj2.put("pwd", null);
-
-        JSONObject jsonObj3 = new JSONObject();
 
         JSONObject jsonObj4 = new JSONObject();
         Random random = new Random();
         jsonObj4.put("pwd", random.nextInt(1000000 - 1 + 1) + 1);
 
-        JSONObject jsonObj5 = new JSONObject();
-        jsonObj5.put("pwd", null);
-        JSONObject jsonObj6 = new JSONObject();
-        jsonObj4.put("pwd", jsonObj100.get("pwd"));
-
 
         return new Object[]{
                 new JSONObject[]{jsonObj},
                 new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
+                new JSONObject[]{jsonObj4}
         };
     }
 
