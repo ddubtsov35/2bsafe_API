@@ -18,12 +18,12 @@ public class HelpMeClass extends BaseClass{
 
     public Response helpMe() throws Exception {
         jsonObject = GenerateHelpMeContent.getHelpMeContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/help_me", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response NegativeHelpMe(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/help_me", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/help_me", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

@@ -25,7 +25,7 @@ public class AuthorisationChildClass extends BaseClass{
 
     public ChildrenResponseAuthorisationModel authorisationChildren() throws Exception {
         jsonObject = GenerateAuthorisationChildren.PositiveGetAuthorisationChildrenContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/auth", jsonObject);
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         generateCidCkeyContent.getCidCkey(childrenResponseAuthorisationModel);
         LogPools.getLog();
@@ -33,7 +33,7 @@ public class AuthorisationChildClass extends BaseClass{
     }
 
     public ChildrenResponseAuthorisationModel NegativeAuthorisationChildren(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/auth", jsonObject);
         childrenResponseAuthorisationModel = GetChildrenResponseAuthorisation.getChildrenResponseAuthorisation(responseClass.getJsonResponse().body().string());
         return childrenResponseAuthorisationModel;
     }

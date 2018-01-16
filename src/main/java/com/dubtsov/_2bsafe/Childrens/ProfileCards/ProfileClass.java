@@ -31,31 +31,31 @@ public class ProfileClass extends BaseClass{
 
     public List<ProfileCard> getProfileList() throws Exception {
         jsonObject = GenerateGetProfileListContent.getProfileListContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_list", jsonObject);
         return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());
     }
 
     public List<ProfileCard> NegativeGetProfileList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_list", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_list", jsonObject);
         return GetProfileList.getProfileCard(responseClass.getJsonResponse().body().string());
     }
 
 
     public ConditionInformationFromDevice setProfileCard() throws Exception {
         jsonObject  = GenerateSelectChildrenCardContent.getGenerateSelectChildrenCardContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_set", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_set", jsonObject);
         LogPools.getLog();
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }
 
     /*public Response selectProfileCardResponse() throws Exception {
         jsonObject  = GenerateSelectChildrenCardContent.getGenerateSelectChildrenCardContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_set", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_set", jsonObject);
         return responseClass.getJsonResponse();
     }*/
 
     public Response NegativeSelectProfileCardResponse(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/profile_set", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_set", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

@@ -22,17 +22,17 @@ public class GroupsAppClass extends BaseClass{
     public GroupsAppClass() throws IOException {}
 
     public Response getListGroupApp() throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/list");
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/list");
         return responseClass.getJsonResponse();
     }
 
     public Response setGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedSetGroup();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/set_app", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/set_app", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeSetGroupApp(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/set_app", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/set_app", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -40,7 +40,7 @@ public class GroupsAppClass extends BaseClass{
 
     public GroupApp addGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedAddGroup();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/add", jsonObject);
         return GetGroupApp.getGroup(responseClass.getJsonResponse().body().string());
     }
 
@@ -48,11 +48,11 @@ public class GroupsAppClass extends BaseClass{
 
     public Response editGroupApp() throws Exception {
         jsonObject = GenerateGroupContent.generatedEditGroup();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/edit", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeEditGroupApp(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/edit", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -61,11 +61,11 @@ public class GroupsAppClass extends BaseClass{
 
     public Response deleteGroupApp(GroupApp groupApp) throws Exception {
         jsonObject = GenerateGroupContent.generatedDeleteGroup(groupApp);
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/del", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeDeleteGroupApp(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/groups/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/groups/del", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

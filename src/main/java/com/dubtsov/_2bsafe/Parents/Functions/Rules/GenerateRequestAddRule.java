@@ -122,16 +122,7 @@ public class GenerateRequestAddRule{
 
         JSONObject jsonObj8 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6},
-                new JSONObject[]{jsonObj7},
-                new JSONObject[]{jsonObj8}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5, jsonObj6, jsonObj7, jsonObj8};
     }
 
 
@@ -159,11 +150,7 @@ public class GenerateRequestAddRule{
         jsonObj3.put("rule_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3};
     }
 
 
@@ -202,13 +189,7 @@ public class GenerateRequestAddRule{
         jsonObj5.put("enabled",null);
 
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5};
     }
 
 }

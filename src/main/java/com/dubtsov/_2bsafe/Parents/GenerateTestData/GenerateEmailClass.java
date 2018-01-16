@@ -24,7 +24,7 @@ public class GenerateEmailClass {
 
     public static String getGeneratedEmail() throws IOException {
         getRandomInt();
-        String generatedEmail = "dev_ci_t" + count + "@p33.org";
+        String generatedEmail = "preprod_ci_t" + count + "@p33.org";
         emailStatic = generatedEmail;
         return generatedEmail;
     }

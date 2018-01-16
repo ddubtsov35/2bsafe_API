@@ -26,6 +26,7 @@ public class GetRegisteredUsers {
 
 
     private static String getResultJsonString(String registeredUserListString) throws ParseException {
+        System.out.println("111 " + registeredUserListString);
         parser = new JSONParser();
         obj = parser.parse(registeredUserListString);
         jsonObj = (JSONObject) obj;

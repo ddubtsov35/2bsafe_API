@@ -19,25 +19,25 @@ public class AccountSettingClass extends BaseClass{
 
     public Response setAccountSetting() throws IOException, ParseException, java.text.ParseException {
         JSONObject jsonObject = GenerateAccountContent.getSetAccountContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/set_settings", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response setAllAccountSetting() throws IOException, ParseException, java.text.ParseException {
         JSONObject jsonObject = GenerateAccountContent.getSetAllAccountContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_all_settings", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/set_all_settings", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public AccountSettings getAccountSetting() throws IOException, ParseException, java.text.ParseException {
         JSONObject jsonObject = GenerateAccountContent.getAccountContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/get_settings", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/get_settings", jsonObject);
         return GetAccountSetting.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
 
     public Response NegativeSetAccountSetting(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_settings", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/set_settings", jsonObject);
         return responseClass.getJsonResponse();
     }
 

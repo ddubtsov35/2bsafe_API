@@ -25,12 +25,12 @@ public class GetIntervalUpdateClass extends BaseClass{
         } else{
             jsonObj.put("profile_id", GenerateProfileIdContent.profileId);
         }
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObj);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_info_timeout", jsonObj);
         return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
     }
 
     public DataUpdate NegativeGetIntervalUpdateResponse(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_info_timeout", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_info_timeout", jsonObject);
         return GetDataUpdate.dataUpdate(responseClass.getJsonResponse().body().string());
     }
 }

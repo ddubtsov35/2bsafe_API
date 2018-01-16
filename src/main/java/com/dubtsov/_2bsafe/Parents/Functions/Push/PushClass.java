@@ -22,17 +22,17 @@ public class PushClass extends BaseClass{
 
     public AddSession InitSession() throws Exception {
         jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/ses/create", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/ses/create", jsonObject);
         return GetSession.addSession(responseClass.getJsonResponse().body().string());
     }
 
     public Response lockScreen() throws Exception {
         jsonObject = GenerateNotifyListContent.blockScreen();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/block", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/block", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeLockScreen(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/block", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/block", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -40,11 +40,11 @@ public class PushClass extends BaseClass{
 
     public Response onSound() throws Exception {
         jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/alarm", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/alarm", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeOnSound(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/alarm", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/alarm", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -53,11 +53,11 @@ public class PushClass extends BaseClass{
 
     public Response update() throws Exception {
         jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/update", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeUpdate(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/update", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -67,11 +67,11 @@ public class PushClass extends BaseClass{
 
     public Response updateLong() throws Exception {
         jsonObject = GenerateNotifyListContent.createSession_alarm_update_updateLong();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update_long", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/update_long", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeUpdateLong(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/update_long", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/update_long", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -81,11 +81,11 @@ public class PushClass extends BaseClass{
 
     public NotifyList getNotifyList() throws Exception {
         jsonObject = GenerateNotifyListContent.getNotifyListContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/get_notify_list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/get_notify_list", jsonObject);
         return GetNotifyList.getNotifyList(responseClass.getJsonResponse().body().string());
     }
     public NotifyList NegativeGetNotifyList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/devs/get_notify_list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/devs/get_notify_list", jsonObject);
         return GetNotifyList.getNotifyList(responseClass.getJsonResponse().body().string());
     }
 }

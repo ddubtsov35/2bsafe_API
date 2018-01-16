@@ -46,7 +46,7 @@ public class GenerateSelectChildrenCardContent {
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         Random random = new Random();
         jsonObject.put("profile_id", random.nextInt(1000000 - 1 + 1) + 1);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideEmptyProfileId() throws Exception {
@@ -54,7 +54,7 @@ public class GenerateSelectChildrenCardContent {
 
         JSONObject jsonObject = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObject.put("profile_id", null);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideEmptyCkey() throws Exception {
@@ -64,7 +64,7 @@ public class GenerateSelectChildrenCardContent {
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("ckey");
         jsonObject.put("ckey", null);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideFailCkey() throws Exception {
@@ -74,7 +74,7 @@ public class GenerateSelectChildrenCardContent {
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("ckey");
         jsonObject.put("ckey", "failCkey");
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideFailCid() throws Exception {
@@ -84,7 +84,7 @@ public class GenerateSelectChildrenCardContent {
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("cid");
         jsonObject.put("cid", "failCid");
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideEmptyCid() throws Exception {
@@ -94,6 +94,6 @@ public class GenerateSelectChildrenCardContent {
         jsonObject.put("profile_id", GenerateProfileIdContent.getProfileId().get("profile_id"));
         jsonObject.remove("cid");
         jsonObject.put("cid", null);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 }

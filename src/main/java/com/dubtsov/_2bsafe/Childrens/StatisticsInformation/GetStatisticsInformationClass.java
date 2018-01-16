@@ -19,12 +19,12 @@ public class GetStatisticsInformationClass extends BaseClass{
 
     public Response getStatisticsInformation() throws Exception {
         jsonObject = GenerateStatisticInfoContent.getRulesTriggerContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/stat_update", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response NegativeGetStatisticsInformation(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/stat_update", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/stat_update", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

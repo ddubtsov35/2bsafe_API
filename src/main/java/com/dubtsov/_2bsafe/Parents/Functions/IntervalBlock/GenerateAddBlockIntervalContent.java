@@ -80,16 +80,8 @@ public class GenerateAddBlockIntervalContent {
         jsonObj6.put("group_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5, jsonObj6};
     }
-
 
 
 
@@ -166,11 +158,7 @@ public class GenerateAddBlockIntervalContent {
 
 
         System.out.println("jsonObject " + jsonObj);
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj6}
-        };
+        return new Object[]{jsonObj, jsonObj4, jsonObj6};
     }
 
 
@@ -243,11 +231,7 @@ public class GenerateAddBlockIntervalContent {
 
 
         System.out.println("jsonObject " + jsonObj);
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj6}
-        };
+        return new Object[]{jsonObj, jsonObj4, jsonObj6};
     }
 
 
@@ -307,14 +291,7 @@ public class GenerateAddBlockIntervalContent {
         jsonObj4.put("interval_id", random.nextInt(1000000 - 1 + 1)+1);
 
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5, jsonObj6};
     }
 
 }

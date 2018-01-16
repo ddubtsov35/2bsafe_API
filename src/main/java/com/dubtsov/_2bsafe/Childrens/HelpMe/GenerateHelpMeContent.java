@@ -44,7 +44,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent2() throws Exception {
@@ -64,7 +64,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent3() throws Exception {
@@ -84,7 +84,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent4() throws Exception {
@@ -101,7 +101,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent5() throws Exception {
@@ -118,7 +118,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent6() throws Exception {
@@ -138,7 +138,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeContent7() throws Exception {
@@ -158,7 +158,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetHelpMeConten8() throws Exception {
@@ -171,7 +171,7 @@ public class GenerateHelpMeContent {
 
         jsonObject.put("geo", jsonObject2);
 
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
 

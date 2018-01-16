@@ -43,7 +43,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", "Mne pysos!");
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent2() throws Exception {
@@ -55,7 +55,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", "Mne pysos!");
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent3() throws Exception {
@@ -67,7 +67,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", "Mne pysos!");
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent4() throws Exception {
@@ -79,7 +79,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", "Mne pysos!");
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent5() throws Exception {
@@ -91,7 +91,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", "Mne pysos!");
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent6() throws Exception {
@@ -101,7 +101,7 @@ public class GenerateLogoutContent{
         jsonObj.put("reason", null);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideGetLogoutWithoutPasswordContent7() throws Exception {
@@ -110,7 +110,7 @@ public class GenerateLogoutContent{
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
 
@@ -132,7 +132,7 @@ public class GenerateLogoutContent{
         }
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetLogoutContent2() throws Exception {
@@ -148,7 +148,7 @@ public class GenerateLogoutContent{
         }
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetLogoutContent3() throws Exception {
@@ -163,7 +163,7 @@ public class GenerateLogoutContent{
         }
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetLogoutContent4() throws Exception {
@@ -172,7 +172,7 @@ public class GenerateLogoutContent{
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", null);
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetLogoutContent5() throws Exception {
@@ -180,7 +180,7 @@ public class GenerateLogoutContent{
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("pwd", "failPwd");
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
 }

@@ -66,11 +66,7 @@ public class GenerateSetPermissionContent{
 
         JSONObject jsonObj3 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3};
     }
 
 
@@ -101,10 +97,6 @@ public class GenerateSetPermissionContent{
         JSONObject jsonObj6 = new JSONObject();
         jsonObj6.put("profile_id", random.nextInt(1000000 -1 +1) +1);
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6}
-        };
+        return new Object[]{jsonObj, jsonObj5, jsonObj6};
     }
 }

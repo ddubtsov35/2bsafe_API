@@ -23,22 +23,22 @@ public class TariffsClass extends BaseClass{
     public TariffsClass() throws IOException {}
 
     public List<TariffList> getTariffsList() throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/list");
+        responseClass = new ResponseClass(lkApi + "/tariffs/v1.0/list");
         return GetTariff.getTariffList(responseClass.getJsonResponse().body().string());
     }
 
     public Tariff getCurrentTariff() throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/get");
+        responseClass = new ResponseClass(lkApi + "/tariffs/v1.0/get");
         return GetTariff.getCurrentTariff(responseClass.getJsonResponse().body().string());
     }
 
     public Response setTariff() throws Exception {
         jsonObject = GenerateTariffContent.setTariffContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/set", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/tariffs/v1.0/set", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeSetTariff(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/tariffs/v1.0/set", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/tariffs/v1.0/set", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

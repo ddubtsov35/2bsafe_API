@@ -49,7 +49,7 @@ public class GeneratedRulesTriggerContent{
 
 
         //System.out.println("jsonObject " + jsonObject2);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
@@ -71,7 +71,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject2.put("geo", jsonObject);
 
         //System.out.println("jsonObject " + jsonObject2);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
@@ -94,7 +94,7 @@ public class GeneratedRulesTriggerContent{
 
 
         //System.out.println("jsonObject " + jsonObject2);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
@@ -104,7 +104,7 @@ public class GeneratedRulesTriggerContent{
         JSONObject jsonObject2 = GenerateCidCkeyContent.getJsonObjectCidCkey();
 
         System.out.println("jsonObject " + jsonObject2);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
@@ -123,7 +123,7 @@ public class GeneratedRulesTriggerContent{
         jsonObject2.put("geo", null);
 
        //System.out.println("jsonObject " + jsonObject2);
-        return new Object[]{new Object[]{jsonObject}};
+        return new Object[]{jsonObject};
     }
 
 

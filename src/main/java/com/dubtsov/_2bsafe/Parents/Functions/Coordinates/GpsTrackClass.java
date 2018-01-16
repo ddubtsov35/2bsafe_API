@@ -20,7 +20,7 @@ public class GpsTrackClass extends BaseClass{
 
     public GpsTrackModel getGpsTrack() throws Exception {
         jsonObject = GenerateGpsTrackContent.getGpsTrackContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_gps_track", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_gps_track", jsonObject);
         return GetGpsTrack.getGpsTrackModel(responseClass.getJsonResponse().body().string());
     }
 }

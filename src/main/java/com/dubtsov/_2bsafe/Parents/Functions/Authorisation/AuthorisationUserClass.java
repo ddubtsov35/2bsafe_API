@@ -29,11 +29,11 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep1Class.registrationUserStep1();
         registrationUserStep2Class.registrationUserStep2Web();
         jsonObject = GenerateAuthContent.getAuthContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
     public AuthorisationUser NegativeRegistrationAndAuthorisationWeb(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
@@ -43,7 +43,7 @@ public class AuthorisationUserClass extends BaseClass {
         registrationUserStep1Class.registrationUserStep1();
         registrationUserStep2Class.registrationUserStep2AndroidPhone();
         jsonObject = GenerateAuthContent.getAuthContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
@@ -53,17 +53,17 @@ public class AuthorisationUserClass extends BaseClass {
 
     public AuthorisationUser authorisationUser() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateAuthContent.getAuthContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 
     public AuthorisationUser authorisationUserWithNewPassword() throws Exception {
         jsonObject = GenerateAuthContent.getAuthContentWithNewPassword();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
     public AuthorisationUser NegativeAuthorisationUserWithNewPassword(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/auth", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/auth", jsonObject);
         return GetAuthorisationUser.authorisationUser(responseClass.getJsonResponse().body().string());
     }
 

@@ -23,7 +23,7 @@ public class GenerateTariffContent{
 
         TariffsClass tariffsClass = new TariffsClass();
         List<TariffList> tariffList = tariffsClass.getTariffsList();
-        int tariffId = 0;
+        int tariffId = 1;
         int currentTariffId = tariffsClass.getCurrentTariff().getTariff();
         for(int i=0; i<tariffList.size(); i++){
             if (tariffList.get(i).getId() != currentTariffId){

@@ -20,7 +20,7 @@ public class LogoutClass extends BaseClass {
     public LogoutClass() throws IOException {}
 
     public Response logout() throws IOException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/logout", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/logout", jsonObject);
         return responseClass.getJsonResponse();
     }
 

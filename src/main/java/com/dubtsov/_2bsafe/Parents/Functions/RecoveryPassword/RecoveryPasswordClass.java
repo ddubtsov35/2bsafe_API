@@ -19,17 +19,17 @@ public class RecoveryPasswordClass extends BaseClass {
 
     public Response recoveryPasswordStart() throws Exception {
         jsonObject = GenerateRecoveryPasswordContent.startRecoveryPasswordContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/start", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/recovery/start", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response recoveryPasswordConfirm() throws Exception {
         jsonObject = GenerateRecoveryPasswordContent.confirmRecoveryPasswordContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/recovery/confirm", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeRecoveryPasswordConfirm(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/recovery/confirm", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/recovery/confirm", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

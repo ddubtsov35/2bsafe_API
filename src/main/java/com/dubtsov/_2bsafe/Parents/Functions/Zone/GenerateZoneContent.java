@@ -46,8 +46,8 @@ public class GenerateZoneContent{
         jsonObj2.put("confirm", null);
 
         return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2}
+                jsonObj,
+                jsonObj2
         };
     }
 
@@ -125,17 +125,7 @@ public class GenerateZoneContent{
         JSONObject jsonObj12 = new JSONObject();
         jsonObj12.put("zone_id", zoneId);
 
-        return new Object[]{
-                new JSONObject[]{jsonObj1},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6},
-                new JSONObject[]{jsonObj7},
-                new JSONObject[]{jsonObj8},
-                new JSONObject[]{jsonObj9},
-                new JSONObject[]{jsonObj12}
-        };
+        return new Object[]{jsonObj1, jsonObj2, jsonObj3, jsonObj5, jsonObj6, jsonObj7, jsonObj8, jsonObj9, jsonObj12};
     }
 
 }

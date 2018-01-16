@@ -24,7 +24,7 @@ public class ChildrenLogoutClass extends BaseClass{
 
     public Response logout() throws Exception {
         jsonObject = generateLogoutContent.getLogoutContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/logout", jsonObject);
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             CidCkeyRegisteredPool.clearFile();
@@ -35,19 +35,19 @@ public class ChildrenLogoutClass extends BaseClass{
     }
 
     public Response NegativeLogout(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/logout", jsonObject);
         return responseClass.getJsonResponse();
     }
 
 
     public Response logoutWithoutPassword() throws Exception {
         jsonObject = generateLogoutContent.getLogoutWithoutPasswordContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout_nopassword", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/logout_nopassword", jsonObject);
         return responseClass.getJsonResponse();
     }
 
     public Response NegativeLogoutWithoutPassword(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/logout_nopassword", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/logout_nopassword", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

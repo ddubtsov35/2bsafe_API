@@ -39,11 +39,7 @@ public class GenerateTurboContent{
 
         JSONObject jsonObj3 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3};
     }
 
 
@@ -75,11 +71,7 @@ public class GenerateTurboContent{
 
         JSONObject jsonObj4 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4}
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4
         };
     }
 

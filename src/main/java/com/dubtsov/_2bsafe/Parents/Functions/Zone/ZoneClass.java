@@ -25,11 +25,11 @@ public class ZoneClass extends BaseClass{
 
     public AddZone addZone() throws Exception {
         jsonObject = GenerateZoneContent.addZoneContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/add_zone", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/add_zone", jsonObject);
         return GetAddZone.addZone(responseClass.getJsonResponse().body().string());
     }
     public AddZone NegativeAddZone(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/add_zone", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/add_zone", jsonObject);
         return GetAddZone.addZone(responseClass.getJsonResponse().body().string());
     }
 
@@ -37,11 +37,11 @@ public class ZoneClass extends BaseClass{
 
     public Response deleteZone() throws Exception {
         jsonObject = GenerateZoneContent.delZoneContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/del_zone", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/del_zone", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeDeleteZone(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/del_zone", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/del_zone", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -49,11 +49,11 @@ public class ZoneClass extends BaseClass{
 
     public List<Zone> getZoneList() throws Exception {
         JSONObject jsonObject = new JSONObject();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_zone_list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_zone_list", jsonObject);
         return GetZoneList.getZoneList(responseClass.getJsonResponse().body().string());
     }
     public List<Zone> NegativeGetZoneList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_zone_list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_zone_list", jsonObject);
         return GetZoneList.getZoneList(responseClass.getJsonResponse().body().string());
     }
 

@@ -18,7 +18,7 @@ public class ChangeEmailClass extends BaseClass{
 
     public Response changeEmail() throws Exception {
         jsonObject = GenerateChangeEmailContent.getChangeEmailContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/set_email", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/set_email", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

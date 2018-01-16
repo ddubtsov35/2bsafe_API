@@ -163,7 +163,7 @@ public class GenerateConditionInformationContent{
         jsonArray3.add(jsonObject2_8);
         jsonObject3.put("sms", jsonArray3);
 
-        return new Object[]{new Object[]{jsonObject3}};
+        return new Object[]{jsonObject3};
     }
 
     public static Object[] provideGetConditionInformationContentEmptyAll() throws Exception {
@@ -238,7 +238,7 @@ public class GenerateConditionInformationContent{
         jsonArray3.add(jsonObject2_8);
         jsonObject3.put("sms", jsonArray3);
 
-        return new Object[]{new Object[]{jsonObject3}};
+        return new Object[]{jsonObject3};
     }
 
     public static Object[] provideGetConditionInformationContentEmptyCid() throws Exception {
@@ -317,7 +317,7 @@ public class GenerateConditionInformationContent{
         jsonArray3.add(jsonObject2_8);
         jsonObject3.put("sms", jsonArray3);
 
-        return new Object[]{new Object[]{jsonObject3}};
+        return new Object[]{jsonObject3};
     }
 
     public static Object[] provideGetConditionInformationContentEmptyCkey() throws Exception {
@@ -396,7 +396,7 @@ public class GenerateConditionInformationContent{
         jsonArray3.add(jsonObject2_8);
         jsonObject3.put("sms", jsonArray3);
 
-        return new Object[]{new Object[]{jsonObject3}};
+        return new Object[]{jsonObject3};
     }
 
 }

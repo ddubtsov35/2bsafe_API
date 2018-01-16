@@ -44,12 +44,12 @@ public class GenerateGetProfileListContent {
         if(GenerateCidCkeyContent.jsonObjectCidCkey() != null) {
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 
@@ -63,13 +63,13 @@ public class GenerateGetProfileListContent {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", "failCkey");
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", "failCkey");
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 
@@ -82,13 +82,13 @@ public class GenerateGetProfileListContent {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
             jsonObj.put("ckey", GenerateCidCkeyContent.jsonObjectCidCkey().get("ckey"));
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 
@@ -101,13 +101,13 @@ public class GenerateGetProfileListContent {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", null);
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", GenerateCidCkeyContent.jsonObjectCidCkey().get("cid"));
             jsonObj.put("ckey", null);
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 
@@ -120,13 +120,13 @@ public class GenerateGetProfileListContent {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
             jsonObj.put("ckey", null);
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", null);
             jsonObj.put("ckey", null);
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 
@@ -138,13 +138,13 @@ public class GenerateGetProfileListContent {
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", "failCkey");
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         } else{
             authorisationChildClass.authorisationChildren();
             //GenerateCidCkeyContent.getJsonObjectCidCkey();
             jsonObj.put("cid", "failCid");
             jsonObj.put("ckey", "failCkey");
-            return new Object[]{new Object[]{jsonObj}};
+            return new Object[]{jsonObj};
         }
     }
 

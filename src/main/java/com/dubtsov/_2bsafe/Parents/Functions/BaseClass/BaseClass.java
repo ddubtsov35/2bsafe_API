@@ -54,9 +54,11 @@ import java.util.LinkedHashMap;
  */
 public class BaseClass {
 
-    protected static HashMap superContent = new LinkedHashMap();
+    protected String adminApi = "http://admin.preprod.safe.com.ru/os_api/admin/v1.0";
+    protected String lkApi = "http://preprod.safe.com.ru/os_api";
+    protected String clientApi = "http://preprod.safe.com.ru/c_api";
+
     protected ResponseClass responseClass;
-    protected String dynamicPassword = "wwwwww" + GenerateEmailClass.getCountFromFile();
     protected DeleteUserClass deleteUserClass;
     protected AuthorisationUserClass authorisationUserClass;
     protected ListRegisteredUsersClass listRegisteredUsersClass;
@@ -71,14 +73,12 @@ public class BaseClass {
     protected AuthorisationChildClass authorisationChildClass;
     protected ProfileClass profileClass;
     protected ChildrenResponseAuthorisationModel childrenResponseAuthorisationModel;
-    protected GenerateConditionInformationContent generationRequestJsonClass;
     protected GetConditionInformation getConditionInformation;
     protected GetStatisticsInformationClass getStatisticsInformationClass;
     protected ChildrenLogoutClass childrenLogoutClass;
     protected GenerateNotifyChangeAppContent generatedRequestJsonClass;
     protected NotifyChangeAppClass notifyChangeAppClass;
     protected RulesTriggerClass rulesTriggerClass;
-    protected GeneratedRulesTriggerContent generatedJsonRulesTriggerClass;
     protected PackageProcessingCommandsClass packageProcessingCommandsClass;
     protected HelpMeClass helpMeClass;
     protected GetIntervalUpdateClass getIntervalUpdateClass;
@@ -94,7 +94,6 @@ public class BaseClass {
     protected AddAndSelectChildrenCardClass addAndSelectChildrenCardClass;
     protected PushClass pushClass;
     protected GroupsAppClass groupsAppClass;
-    protected IntervalBlockClass intervalBlockClass;
     protected HelpMeParentClass helpMeParentClass;
     protected PermissionsClass permissionsClass;
     protected AppsClass appsClass;

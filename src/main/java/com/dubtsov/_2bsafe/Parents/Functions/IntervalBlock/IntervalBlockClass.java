@@ -24,11 +24,11 @@ public class IntervalBlockClass extends BaseClass{
 
     public List<IntervalBlock> getIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.getListInterval();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/list", jsonObject);
         return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
     }
     public List<IntervalBlock> NegativeGetIntervalBlockList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/list", jsonObject);
         return GetIntervalBlock.getIntervalBlock(responseClass.getJsonResponse().body().string());
     }
 
@@ -36,11 +36,11 @@ public class IntervalBlockClass extends BaseClass{
 
     public AddIntervalBlock addIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.addInterval();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/add", jsonObject);
         return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
     public AddIntervalBlock NegativeAddIntervalBlockList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/add", jsonObject);
         return GetAddIntervalBlock.getAccountSettings(responseClass.getJsonResponse().body().string());
     }
 
@@ -48,11 +48,11 @@ public class IntervalBlockClass extends BaseClass{
 
     public Response editIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.editInterval();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeEditIntervalBlockList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/edit", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/edit", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -60,11 +60,11 @@ public class IntervalBlockClass extends BaseClass{
 
     public Response deleteIntervalBlockList() throws Exception {
         jsonObject = GenerateAddBlockIntervalContent.deleteInterval();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/del", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeDeleteIntervalBlockList(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/intervals/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/intervals/del", jsonObject);
         return responseClass.getJsonResponse();
     }
 

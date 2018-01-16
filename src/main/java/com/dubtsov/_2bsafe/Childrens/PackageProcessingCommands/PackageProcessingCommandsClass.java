@@ -19,7 +19,7 @@ public class PackageProcessingCommandsClass extends BaseClass{
 
     public Response packageProcessingCommands() throws Exception {
         jsonObject = generateProcessingCommandContent.getProcessingCommandsContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/batch_process", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/batch_process", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

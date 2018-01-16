@@ -18,7 +18,7 @@ public class AdminAuthorisation extends BaseClass{
 
     public String adminAuthorisation() throws Exception {
         JSONObject jsonObject = GenerateRegisteredUsersContent.getHeadersString();
-        super.responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/login", jsonObject);
+        super.responseClass = new ResponseClass(adminApi + "/login", jsonObject);
         headersString = responseClass.getJsonResponse().headers().toString();
         return headersString;
     }

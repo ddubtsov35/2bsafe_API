@@ -54,7 +54,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent2() throws Exception {
@@ -79,7 +79,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent3() throws Exception {
@@ -104,7 +104,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent4() throws Exception {
@@ -128,7 +128,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent5() throws Exception {
@@ -153,7 +153,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent6() throws Exception {
@@ -164,7 +164,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj = GenerateGetProfileListContent.getProfileListContent();
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent7() throws Exception {
@@ -187,7 +187,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeAppsNotifyContent8() throws Exception {
@@ -210,7 +210,7 @@ public class GenerateNotifyChangeAppContent{
         jsonObj.put("apps", jsonArray);
 
         //System.out.println("jsonObject " + jsonObj);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
 }

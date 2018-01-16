@@ -33,7 +33,7 @@ public class UserModel {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-        if(jsonObj.get("success") != null) {setSuccess(jsonObj.get("success").toString());} else{setSuccess(null);}
+        if(jsonObj.get("scs") != null) {setSuccess(jsonObj.get("scs").toString());} else{setSuccess(null);}
         if(jsonObj.get("emsg") != null) {setEmsg(Integer.parseInt(jsonObj.get("emsg").toString()));} else{setEmsg(null);}
         if (jsonObj.get("act_code") != null) {setAct_code(Integer.parseInt(jsonObj.get("act_code").toString()));} else {setAct_code(null);}
     }

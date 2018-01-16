@@ -20,7 +20,7 @@ public class RegistrationUserStep2Class extends BaseClass {
         JSONObject jsonObject = UserPool.getUserFromFile();
         if(jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentWeb();
-            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
+            responseClass = new ResponseClass(lkApi + "/accounts/v1.0/reg/step2", jsonObject);
             response = responseClass.getJsonResponse();
 
             if(response.code() == 200) {
@@ -38,7 +38,7 @@ public class RegistrationUserStep2Class extends BaseClass {
         JSONObject jsonObject = UserPool.getUserFromFile();
         if (jsonObject == null) {
             jsonObject = GenerateRegistrationContent.getRegistrationStep2ContentAndroid();
-            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/reg/step2", jsonObject);
+            responseClass = new ResponseClass(lkApi + "/accounts/v1.0/reg/step2", jsonObject);
             response = responseClass.getJsonResponse();
             String getLkid = response.body().string();
             jsonObject.put("lkid", getLkid.substring(getLkid.indexOf("lkid"), getLkid.indexOf("lkid", getLkid.indexOf("\""))));

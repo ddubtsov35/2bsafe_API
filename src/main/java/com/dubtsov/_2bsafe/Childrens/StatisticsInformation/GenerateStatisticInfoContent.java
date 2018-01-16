@@ -23,7 +23,7 @@ public class GenerateStatisticInfoContent{
 
         JSONObject jsonObj = GenerateCidCkeyContent.getJsonObjectCidCkey();
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent2() throws Exception {
@@ -32,7 +32,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.put("cid", null);
         jsonObj.put("ckey", null);
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent3() throws Exception {
@@ -42,7 +42,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("cid");
         jsonObj.put("cid", null);
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent4() throws Exception {
@@ -52,7 +52,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("ckey");
         jsonObj.put("ckey", null);
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent5() throws Exception {
@@ -62,7 +62,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("ckey");
         jsonObj.put("ckey", "failCkey");
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent6() throws Exception {
@@ -72,7 +72,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.remove("cid");
         jsonObj.put("cid", "failCid");
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideNegativeGetRulesTriggerContent7() throws Exception {
@@ -82,7 +82,7 @@ public class GenerateStatisticInfoContent{
         jsonObj.put("cid", "failCid");
         jsonObj.put("ckey", "failCkey");
         jsonObj.put("osv", null);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
 }

@@ -20,7 +20,7 @@ public class GetActCode extends BaseClass{
 
     public UserModel getCode(String email) throws Exception {
         jsonObject = new GenerateGetCodeContent().getContent(email);
-        responseClass = new ResponseClass("http://admin.safec.ru/os_api/admin/v1.0/accounts_code", jsonObject);
+        responseClass = new ResponseClass(adminApi + "/accounts_code", jsonObject);
         return new GetActCodeParse().getActCode(responseClass.getJsonResponse().body().string());
     }
 

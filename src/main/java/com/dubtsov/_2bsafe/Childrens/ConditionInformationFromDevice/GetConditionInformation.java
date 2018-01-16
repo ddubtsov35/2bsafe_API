@@ -22,12 +22,12 @@ public class GetConditionInformation extends BaseClass{
 
     public ConditionInformationFromDevice getConditionInformation() throws Exception {
         jsonObject = generateConditionInformationContent.getConditionInformationContent();
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/update", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/update", jsonObject);
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }
 
     public ConditionInformationFromDevice NegativeGetConditionInformation(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://api.safec.ru/os_api/clients/v1.0/update", jsonObject);
+        responseClass = new ResponseClass(clientApi + "/clients/v1.0/update", jsonObject);
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }
 }

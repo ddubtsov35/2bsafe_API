@@ -21,11 +21,11 @@ public class SendTicketClass extends BaseClass{
 
     public Integer sendTicket() throws Exception {
         jsonObject = GenerateTicketContent.getSendTicketContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/ticket/send", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/ticket/send", jsonObject);
         return GetTicket.getTicketId(responseClass.getJsonResponse().body().string());
     }
     public Integer NegativeSendTicket(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/ticket/send", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/ticket/send", jsonObject);
         return GetTicket.getTicketId(responseClass.getJsonResponse().body().string());
     }
 
@@ -33,11 +33,11 @@ public class SendTicketClass extends BaseClass{
 
     public Response sendTicketWithoutAuthorisation() throws Exception {
         jsonObject = GenerateTicketContent.getSendTicketLandingContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/land/v1.0/ticket/send", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/land/v1.0/ticket/send", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeSendTicketWithoutAuthorisation(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/land/v1.0/ticket/send", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/land/v1.0/ticket/send", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

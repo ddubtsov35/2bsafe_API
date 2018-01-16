@@ -111,21 +111,7 @@ public class GenerateAuthContent{
 
         JSONObject jsonObj13 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6},
-                new JSONObject[]{jsonObj7},
-                new JSONObject[]{jsonObj8},
-                new JSONObject[]{jsonObj9},
-                new JSONObject[]{jsonObj10},
-                new JSONObject[]{jsonObj11},
-                new JSONObject[]{jsonObj12},
-                new JSONObject[]{jsonObj13},
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5, jsonObj6, jsonObj7, jsonObj8, jsonObj9, jsonObj10, jsonObj11, jsonObj12, jsonObj13,};
     }
 
 

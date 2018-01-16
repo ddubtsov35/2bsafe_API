@@ -22,7 +22,7 @@ public class PasswordChangeClass extends BaseClass {
 
     public Response passwordChange() throws Exception {
         jsonObject = GeneratePasswordChangeContent.getPasswordChangeContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/pwd_change", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/pwd_change", jsonObject);
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             UserPool.setNewPassword(jsonObject.get("npwd").toString());

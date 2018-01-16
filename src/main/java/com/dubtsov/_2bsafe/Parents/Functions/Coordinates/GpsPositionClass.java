@@ -21,7 +21,7 @@ public class GpsPositionClass extends BaseClass{
 
     public GpsPositionModel getGpsPositionResponse(HashMap content) throws Exception {
         jsonObject = GenerateGpsPositionContent.getGpsPositionContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/main/get_gps_position", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/main/get_gps_position", jsonObject);
         return GetGpsPosition.getGpsPositionModel(responseClass.getJsonResponse().body().string());
     }
 }

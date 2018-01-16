@@ -23,11 +23,11 @@ public class RulesClass extends BaseClass{
 
     public SetRulesModel addRule() throws Exception {
         jsonObject = GenerateRequestAddRule.addRuleContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/add", jsonObject);
         return GetRules.getSetRules(responseClass.getJsonResponse().body().string());
     }
     public SetRulesModel NegativeAddRule(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/add", jsonObject);
         return GetRules.getSetRules(responseClass.getJsonResponse().body().string());
     }
 
@@ -35,12 +35,12 @@ public class RulesClass extends BaseClass{
 
 
     public Response getRulesListResponse() throws IOException, ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/list");
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/list");
         return responseClass.getJsonResponse();
     }
 
     public List<GetRulesModel> getRulesList() throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/list");
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/list");
         return GetRules.getRulesList(responseClass.getJsonResponse().body().string());
     }
 
@@ -49,11 +49,11 @@ public class RulesClass extends BaseClass{
 
     public Response getRulesByProfileResponse() throws Exception {
         jsonObject = GenerateRequestAddRule.getDel_Get_Content();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/get", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/get", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeGetRulesByProfileResponse(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/get", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/get", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -63,11 +63,11 @@ public class RulesClass extends BaseClass{
 
     public Response deleteRules() throws Exception {
         jsonObject = GenerateRequestAddRule.getDel_Get_Content();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/del", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeDeleteRules(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/del", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/del", jsonObject);
         return responseClass.getJsonResponse();
     }
 
@@ -76,11 +76,11 @@ public class RulesClass extends BaseClass{
 
     public Response switchRules() throws Exception {
         jsonObject = GenerateRequestAddRule.getSwitchContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/switch", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/switch", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeSwitchRules(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/rules/switch", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/rules/switch", jsonObject);
         return responseClass.getJsonResponse();
     }
 }

@@ -36,7 +36,7 @@ public class ChildrenCardClass extends BaseClass {
     public AddChildrenCard addChildrenCard() throws Exception {
         if(ChildrenCardPools.getChildrenCardFromFile() == null) {
             jsonObject = GenerateAddChildrenCardContent.getAddChildrenCard();
-            responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+            responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/add", jsonObject);
             LogPools.getLog();
             return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
         } else {
@@ -46,7 +46,7 @@ public class ChildrenCardClass extends BaseClass {
 
     }
     public AddChildrenCard NegativeAddChildrenCard(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/add", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/add", jsonObject);
         return GetAddChildrenCard.addChildrenCard(responseClass.getRequestAddChildrenCardList().body().string());
     }
 
@@ -55,7 +55,7 @@ public class ChildrenCardClass extends BaseClass {
 
     public void deleteChildrenCard() throws Exception {
         jsonObject = GenerateDeleteChildrenCardContent.getDeleteChildrenCardContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/delete", jsonObject);
         response = responseClass.getJsonResponse();
         if(response.code() == 200){
             System.out.println("Before GenerateProfileIdContent.profileId = " + GenerateProfileIdContent.profileId);
@@ -69,7 +69,7 @@ public class ChildrenCardClass extends BaseClass {
         LogPools.getLog();
     }
     public void NegativeDeleteChildrenCard(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/delete", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/delete", jsonObject);
         responseClass.getJsonResponse();
     }
 
@@ -78,7 +78,7 @@ public class ChildrenCardClass extends BaseClass {
 
     public DeviceShortInfo getShortInfo() throws Exception {
         jsonObject = GenerateProfileIdContent.getProfileId();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/short_info", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/short_info", jsonObject);
         return GetDeviceShortInfo.getDeviceShortInfo(responseClass.getJsonResponse().body().string());
     }
 
@@ -88,11 +88,11 @@ public class ChildrenCardClass extends BaseClass {
 
     public List<ChildrenCard> getChildrenCardList() throws IOException, ParseException, java.text.ParseException {
         jsonObject = GenerateGetChildrenCardListContent.getChildrenCardListContent();
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/list", jsonObject);
         return GetChildrenCardList.getChildrenCardList(responseClass.getJsonResponse().body().string());
     }
     public List<ChildrenCard> NegativeGetChildrenCardList(JSONObject jsonObject) throws IOException, ParseException, java.text.ParseException {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/list", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/list", jsonObject);
         return GetChildrenCardList.getChildrenCardList(responseClass.getJsonResponse().body().string());
     }
 
@@ -101,11 +101,11 @@ public class ChildrenCardClass extends BaseClass {
 
     public Response changeChildrenCard(String type) throws Exception {
         jsonObject = GenerateChangeChildrenCardContent.getChangeChildrenCardContent(type);
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/change_info", jsonObject);
         return responseClass.getJsonResponse();
     }
     public Response NegativeChangeChildrenCard(JSONObject jsonObject) throws Exception {
-        responseClass = new ResponseClass("http://lkn.safec.ru/os_api/accounts/v1.0/profile/change_info", jsonObject);
+        responseClass = new ResponseClass(lkApi + "/accounts/v1.0/profile/change_info", jsonObject);
         return responseClass.getJsonResponse();
     }
 

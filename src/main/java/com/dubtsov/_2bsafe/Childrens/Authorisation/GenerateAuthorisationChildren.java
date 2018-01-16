@@ -70,7 +70,7 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideFailEmail() throws Exception {
@@ -100,7 +100,7 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideFailPassword() throws Exception {
@@ -130,7 +130,7 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideEmptyAll() throws Exception {
@@ -152,14 +152,12 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideEmptyEmail() throws Exception {
-        RegistrationUserStep1Class registrationUserStep1Class = new RegistrationUserStep1Class();
-        registrationUserStep1Class.registrationUserStep1();
-        RegistrationUserStep2Class registrationUserStep2Class = new RegistrationUserStep2Class();
-        registrationUserStep2Class.registrationUserStep2Web();
+        new RegistrationUserStep1Class().registrationUserStep1();
+        new RegistrationUserStep2Class().registrationUserStep2Web();
         JSONObject jsonObj = new JSONObject();
         if(UserPool.getUserFromFile() == null) {
             jsonObj.put("em", null);
@@ -182,7 +180,7 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 
     public static Object[] provideEmptyPassword() throws Exception {
@@ -212,6 +210,6 @@ public class GenerateAuthorisationChildren{
         jsonObj.put("man","TestMan");
         jsonObj.put("mod","TestMod");
         jsonObj.put("type",1);
-        return new Object[]{new Object[]{jsonObj}};
+        return new Object[]{jsonObj};
     }
 }

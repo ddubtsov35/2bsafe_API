@@ -81,11 +81,7 @@ public class GenerateNotifyListContent{
 
         JSONObject jsonObj3 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3};
     }
 
 
@@ -112,11 +108,7 @@ public class GenerateNotifyListContent{
 
         JSONObject jsonObj3 = new JSONObject();
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3};
     }
 
 
@@ -171,16 +163,7 @@ public class GenerateNotifyListContent{
         jsonObj6.put("pin", null);
         jsonObj6.put("profile_id", random.nextInt(10000000 -1 +1) +1);
 
-        return new Object[]{
-                new JSONObject[] {jsonObj},
-                new JSONObject[]{jsonObj2},
-                new JSONObject[]{jsonObj3},
-                new JSONObject[]{jsonObj4},
-                new JSONObject[]{jsonObj5},
-                new JSONObject[]{jsonObj6},
-                new JSONObject[]{jsonObj7},
-                new JSONObject[]{jsonObj8}
-        };
+        return new Object[]{jsonObj, jsonObj2, jsonObj3, jsonObj4, jsonObj5, jsonObj6, jsonObj7, jsonObj8};
     }
 
 }
