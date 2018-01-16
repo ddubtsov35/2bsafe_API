@@ -14,10 +14,10 @@ public class Faq {
     private Object obj;
     private JSONObject jsonObj;
 
-    private int pos;
+    private Integer pos;
     private String label;
     private String title;
-    private int fid;
+    private Integer fid;
 
     public Faq(String jsonObjectString) throws ParseException, java.text.ParseException {
         setObject(jsonObjectString);
@@ -27,18 +27,18 @@ public class Faq {
         parser = new JSONParser();
         obj = parser.parse(jsonObjectString);
         jsonObj = (JSONObject) obj;
-        if(jsonObj.get("pos") != null) {setPos(Integer.parseInt(jsonObj.get("pos").toString()));}
-        if(jsonObj.get("label") != null) {setLabel(jsonObj.get("label").toString());}
-        if(jsonObj.get("title") != null) {setTitle(jsonObj.get("title").toString());}
-        if(jsonObj.get("fid") != null) {setFid(Integer.parseInt(jsonObj.get("fid").toString()));}
+        if(jsonObj.get("pos") != null) {try {setPos(Integer.parseInt(jsonObj.get("pos").toString()));} catch (Exception e){setPos(null);}} else {setPos(null);}
+        if(jsonObj.get("label") != null) {setLabel(jsonObj.get("label").toString());} else {setLabel("");}
+        if(jsonObj.get("title") != null) {setTitle(jsonObj.get("title").toString());} else {setTitle("");}
+        if(jsonObj.get("fid") != null) {setFid(Integer.parseInt(jsonObj.get("fid").toString()));} else {setFid(null);}
     }
 
 
-    public int getPos() {
+    public Integer getPos() {
         return pos;
     }
 
-    public void setPos(int pos) {
+    public void setPos(Integer pos) {
         this.pos = pos;
     }
 
@@ -58,11 +58,11 @@ public class Faq {
         this.title = title;
     }
 
-    public int getFid() {
+    public Integer getFid() {
         return fid;
     }
 
-    public void setFid(int fid) {
+    public void setFid(Integer fid) {
         this.fid = fid;
     }
 }
