@@ -9,6 +9,10 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.Rules.*;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateData.GenerateRequestAddRule;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateData.ProvideAddRule;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateData.ProvideGetDel_Get;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateData.ProvideGetSwitch;
 import com.dubtsov._2bsafe.Parents.Functions.TurboButton.TurboButtonClass;
 import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
 import junitparams.JUnitParamsRunner;
@@ -78,7 +82,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRequestAddRule.class)
+    @Parameters(source = ProvideGetDel_Get.class)
     public void NegativeGetRulesByProfile(JSONObject jsonObject) throws Exception {
         profileClass.setProfileCard();
         response = rulesClass.NegativeGetRulesByProfileResponse(jsonObject);
@@ -109,7 +113,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRequestAddRule.class)
+    @Parameters(source = ProvideAddRule.class)
     public void NegativeAddRule(JSONObject jsonObject) throws Exception {
         SetRulesModel setRulesModel = rulesClass.NegativeAddRule(jsonObject);
         Assert.assertTrue(setRulesModel.getScs().equals("false"));
@@ -129,7 +133,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRequestAddRule.class)
+    @Parameters(source = ProvideGetSwitch.class)
     public void NegativeSwitchRule(JSONObject jsonObject) throws Exception {
         response = rulesClass.NegativeSwitchRules(jsonObject);
         String result = response.body().string();
@@ -149,7 +153,7 @@ public class RulesTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateRequestAddRule.class)
+    @Parameters(source = ProvideGetDel_Get.class)
     public void NegativeDeleteRule(JSONObject jsonObject) throws Exception {
         response = rulesClass.NegativeDeleteRules(jsonObject);
         String result = response.body().string();

@@ -1,9 +1,8 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Parents.Functions.Apps.GenerateAppsContent;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
-import com.dubtsov._2bsafe.Parents.Functions.Authorisation.GenerateAuthContent;
-import com.dubtsov._2bsafe.Parents.Functions.Authorisation.InputClass;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.GenerateData.GenerateAuthContent;
+import com.dubtsov._2bsafe.Parents.Functions.Authorisation.GenerateData.ProvideGetAuth;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.Logout.LogoutClass;
 import com.dubtsov._2bsafe.Parents.Functions.PasswordChange.PasswordChangeClass;
@@ -11,7 +10,6 @@ import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.GenerateRecoveryPa
 import com.dubtsov._2bsafe.Parents.Functions.RecoveryPassword.RecoveryPasswordClass;
 import com.dubtsov._2bsafe.Parents.Functions.RegisteredUsers.DeleteUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.AuthorisationUser;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -25,8 +23,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 17.07.17.
@@ -56,7 +52,7 @@ public class AuthorisationTests extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAuthContent.class)
+    @Parameters(source = ProvideGetAuth.class)
     public void NegativeAuthorisationWeb(JSONObject jsonObject) throws Exception {
         authorisationUser = authorisationUserClass.NegativeRegistrationAndAuthorisationWeb(jsonObject);
         Assert.assertTrue(authorisationUser.getScs() == null || authorisationUser.getScs().equals("false"));
@@ -103,7 +99,7 @@ public class AuthorisationTests extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAuthContent.class)
+    @Parameters(source = ProvideGetAuth.class)
     public void NegativeSuccessPasswordChange(JSONObject jsonObject) throws Exception {
         authorisationUser = authorisationUserClass.RegistrationAndAuthorisationWeb();
         response = passwordChangeClass.passwordChange();

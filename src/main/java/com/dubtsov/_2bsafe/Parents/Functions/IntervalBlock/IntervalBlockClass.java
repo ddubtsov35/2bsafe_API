@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalBlock;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.GenerateData.GenerateAddBlockIntervalContent;
 import com.dubtsov._2bsafe.Parents.Models.AddIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Models.IntervalBlock;
 import com.dubtsov._2bsafe.Parents.Parse.GetAddIntervalBlock;
@@ -8,7 +9,6 @@ import com.dubtsov._2bsafe.Parents.Parse.GetIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 import java.util.List;

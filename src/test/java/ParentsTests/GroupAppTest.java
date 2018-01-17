@@ -1,13 +1,14 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateGroupContent;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateData.GenerateGroupContent;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateData.ProvideDeleteGroup;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateData.ProvideEditGroup;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateData.ProvideSetGroup;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
-import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateIntervalUpdateContent;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -21,10 +22,6 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Created by user on 31.08.17.
@@ -56,8 +53,8 @@ public class GroupAppTest extends BaseClass{
     @Ignore
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateGroupContent.class)
-    public void NegativeChangeChildrenCardsPhone(JSONObject jsonObject) throws Exception {
+    @Parameters(source = ProvideSetGroup.class)
+    public void NegativeSetGroupAdd(JSONObject jsonObject) throws Exception {
         response = groupsAppClass.NegativeSetGroupApp(jsonObject);
         String result = response.body().string();
         System.out.println("result " + result);
@@ -84,7 +81,7 @@ public class GroupAppTest extends BaseClass{
     }
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateGroupContent.class)
+    @Parameters(source = ProvideEditGroup.class)
     public void NegativeEditGroupApp(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.NegativeEditGroupApp(jsonObject);
@@ -104,7 +101,7 @@ public class GroupAppTest extends BaseClass{
     }
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateGroupContent.class)
+    @Parameters(source = ProvideDeleteGroup.class)
     public void NegativeDeleteGroupApp(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         response = groupsAppClass.NegativeDeleteGroupApp(jsonObject);

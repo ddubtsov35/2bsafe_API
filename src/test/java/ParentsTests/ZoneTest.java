@@ -2,10 +2,10 @@ package ParentsTests;
 
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
-import com.dubtsov._2bsafe.Parents.Functions.TurboButton.GenerateTurboContent;
-import com.dubtsov._2bsafe.Parents.Functions.Zone.GenerateZoneContent;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.GenerateData.GenerateZoneContent;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.GenerateData.ProvideAddZone;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.GenerateData.ProvideDeleteZone;
 import com.dubtsov._2bsafe.Parents.Functions.Zone.ZoneClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.AddZone;
 import com.dubtsov._2bsafe.Parents.Models.Zone;
 import junitparams.JUnitParamsRunner;
@@ -15,13 +15,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -49,7 +46,7 @@ public class ZoneTest extends BaseClass{
     }
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateZoneContent.class)
+    @Parameters(source = ProvideAddZone.class)
     public void NegativeGetZoneList(JSONObject jsonObject) throws Exception {
         zone = zoneClass.NegativeGetZoneList(jsonObject);
         System.out.println("Test zone " + zone.toString());
@@ -67,7 +64,7 @@ public class ZoneTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateZoneContent.class)
+    @Parameters(source = ProvideAddZone.class)
     public void NegativeAddZone(JSONObject jsonObject) throws Exception {
         addZone = zoneClass.NegativeAddZone(jsonObject);
         System.out.println(addZone);
@@ -86,7 +83,7 @@ public class ZoneTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateZoneContent.class)
+    @Parameters(source = ProvideDeleteZone.class)
     public void NegativeDeleteZone(JSONObject jsonObject) throws Exception {
         response = zoneClass.NegativeDeleteZone(jsonObject);
         String result = response.body().string();

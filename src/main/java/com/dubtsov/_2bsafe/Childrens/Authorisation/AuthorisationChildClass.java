@@ -6,9 +6,7 @@ import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.GenerateCidCkeyContent;
 import com.dubtsov._2bsafe.Parents.Pool.LogPools;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
-import okhttp3.Response;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 

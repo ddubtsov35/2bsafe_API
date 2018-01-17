@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Childrens.Logout;
 
+import com.dubtsov._2bsafe.Childrens.Logout.GenerateData.GenerateLogoutContent;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyPool;
 import com.dubtsov._2bsafe.Parents.Pool.CidCkeyRegisteredPool;
@@ -8,9 +9,7 @@ import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 
-import javax.xml.bind.util.JAXBSource;
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 24.08.17.

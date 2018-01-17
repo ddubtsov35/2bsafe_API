@@ -1,13 +1,11 @@
 package com.dubtsov._2bsafe.Parents.Functions.GroupsApp;
 
-import com.dubtsov._2bsafe.Childrens.ConditionInformationFromDevice.GetConditionInformation;
-import com.dubtsov._2bsafe.Childrens.Models.ConditionInformationFromDevice;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateData.GenerateGroupContent;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
 import com.dubtsov._2bsafe.Parents.Parse.GetGroupApp;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import java.io.IOException;

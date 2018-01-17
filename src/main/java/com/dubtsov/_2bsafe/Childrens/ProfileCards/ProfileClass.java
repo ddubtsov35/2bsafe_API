@@ -48,12 +48,6 @@ public class ProfileClass extends BaseClass{
         return GetConditionInformationFromDevice.getConditionInformationFromDevice(responseClass.getJsonResponse().body().string());
     }
 
-    /*public Response selectProfileCardResponse() throws Exception {
-        jsonObject  = GenerateSelectChildrenCardContent.getGenerateSelectChildrenCardContent();
-        responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_set", jsonObject);
-        return responseClass.getJsonResponse();
-    }*/
-
     public Response NegativeSelectProfileCardResponse(JSONObject jsonObject) throws Exception {
         responseClass = new ResponseClass(clientApi + "/clients/v1.0/profile_set", jsonObject);
         return responseClass.getJsonResponse();

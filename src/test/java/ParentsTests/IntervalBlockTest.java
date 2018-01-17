@@ -4,8 +4,7 @@ import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClas
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
-import com.dubtsov._2bsafe.Parents.Functions.HelpMe.GenerateHelpMeContent;
-import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.GenerateAddBlockIntervalContent;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.GenerateData.*;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalBlock.IntervalBlockClass;
 import com.dubtsov._2bsafe.Parents.Models.AddIntervalBlock;
 import com.dubtsov._2bsafe.Parents.Models.GroupApp;
@@ -17,13 +16,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 
 /**
@@ -60,7 +56,7 @@ public class IntervalBlockTest extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAddBlockIntervalContent.class)
+    @Parameters(source = ProvideGetListInterval.class)
     public void NegativeGetIntervalBlockList(JSONObject jsonObject) throws Exception {
         intervalBlockClass.addIntervalBlockList();
         intervalBlock = intervalBlockClass.NegativeGetIntervalBlockList(jsonObject);
@@ -80,7 +76,7 @@ public class IntervalBlockTest extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAddBlockIntervalContent.class)
+    @Parameters(source = ProvideAddInterval.class)
     public void NegativeAddIntervalBlockList(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         addIntervalBlock = intervalBlockClass.NegativeAddIntervalBlockList(jsonObject);
@@ -103,7 +99,7 @@ public class IntervalBlockTest extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAddBlockIntervalContent.class)
+    @Parameters(source = ProvideEditInterval.class)
     public void NegativeEditIntervalBlockList(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         System.out.println(groupApp.toString());
@@ -127,7 +123,7 @@ public class IntervalBlockTest extends BaseClass {
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAddBlockIntervalContent.class)
+    @Parameters(source = ProvideDeleteInterval.class)
     public void NegativeDeleteIntervalBlockList(JSONObject jsonObject) throws Exception {
         groupApp = groupsAppClass.addGroupApp();
         addIntervalBlock = intervalBlockClass.addIntervalBlockList();

@@ -1,13 +1,12 @@
 package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateData.GenerateIntervalUpdateContent;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 /**
  * Created by user on 20.07.17.

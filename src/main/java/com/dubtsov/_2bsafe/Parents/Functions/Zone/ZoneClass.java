@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Zone;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.Zone.GenerateData.GenerateZoneContent;
 import com.dubtsov._2bsafe.Parents.Models.AddZone;
 import com.dubtsov._2bsafe.Parents.Models.Zone;
 import com.dubtsov._2bsafe.Parents.Parse.GetAddZone;
@@ -9,9 +10,7 @@ import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
 
-import javax.xml.bind.util.JAXBSource;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 
 /**

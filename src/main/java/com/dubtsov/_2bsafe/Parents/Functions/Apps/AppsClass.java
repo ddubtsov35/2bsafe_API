@@ -1,5 +1,6 @@
 package com.dubtsov._2bsafe.Parents.Functions.Apps;
 
+import com.dubtsov._2bsafe.Parents.Functions.Apps.GenerateData.GenerateAppsContent;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Models.Apps;
 import com.dubtsov._2bsafe.Parents.Models.AppsDetailInfo;
@@ -8,7 +9,6 @@ import com.dubtsov._2bsafe.Parents.Parse.GetApps;
 import com.dubtsov._2bsafe.Parents.Response.ResponseClass;
 import okhttp3.Response;
 import org.json.simple.JSONObject;
-import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
 

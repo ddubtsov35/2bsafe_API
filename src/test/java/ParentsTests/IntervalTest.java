@@ -1,19 +1,14 @@
 package ParentsTests;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
-import com.dubtsov._2bsafe.Childrens.Models.ChildrenResponseAuthorisationModel;
-import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.GenerateNotifyChangeAppContent;
-import com.dubtsov._2bsafe.Childrens.NotifyChangeApp.NotifyChangeAppClass;
 import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.ChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.HelpMe.GenerateHelpMeContent;
-import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateIntervalUpdateContent;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateData.GenerateIntervalUpdateContent;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.SetIntervalUpdateClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
 import com.dubtsov._2bsafe.Parents.Models.DataUpdate;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
@@ -22,13 +17,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 29.08.17.

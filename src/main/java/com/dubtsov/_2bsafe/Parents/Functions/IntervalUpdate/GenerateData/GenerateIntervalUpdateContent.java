@@ -1,7 +1,8 @@
-package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate;
+package com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GenerateData;
 
 import com.dubtsov._2bsafe.Childrens.Authorisation.AuthorisationChildClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.GenerateContent.GenerateSelectChildrenCardContent;
+import com.dubtsov._2bsafe.Parents.Functions.IntervalUpdate.GetIntervalUpdateClass;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep1Class;
 import com.dubtsov._2bsafe.Parents.Functions.Registration.RegistrationUserStep2Class;
 import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateContent.ForProvideData;

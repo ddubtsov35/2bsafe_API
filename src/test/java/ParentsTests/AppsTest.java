@@ -1,16 +1,10 @@
 package ParentsTests;
 
-import com.dubtsov._2bsafe.Childrens.ProfileCards.ProfileClass;
-import com.dubtsov._2bsafe.Parents.Functions.Account.GenerateAccountContent;
 import com.dubtsov._2bsafe.Parents.Functions.Apps.AppsClass;
-import com.dubtsov._2bsafe.Parents.Functions.Apps.GenerateAppsContent;
+import com.dubtsov._2bsafe.Parents.Functions.Apps.GenerateData.*;
 import com.dubtsov._2bsafe.Parents.Functions.Authorisation.AuthorisationUserClass;
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
 import com.dubtsov._2bsafe.Parents.Functions.ChildrenCard.AddAndSelectChildrenCardClass;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GenerateGroupContent;
-import com.dubtsov._2bsafe.Parents.Functions.GroupsApp.GroupsAppClass;
-import com.dubtsov._2bsafe.Parents.GenerateTestData.GenerateTokenClass;
-import com.dubtsov._2bsafe.Parents.Models.AccountSettings;
 import com.dubtsov._2bsafe.Parents.Models.Apps;
 import com.dubtsov._2bsafe.Parents.Models.AppsDetailInfo;
 import com.dubtsov._2bsafe.Parents.Models.AppsInGroup;
@@ -21,13 +15,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 
 /**
  * Created by user on 04.09.17.
@@ -60,7 +51,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsInfo.class)
     public void NegativeNotifyChangeApp(JSONObject jsonObject) throws Exception {
         app = appsClass.NegativeGetAppsInfo(jsonObject);
         System.out.println(app);
@@ -76,7 +67,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsInGroup.class)
     public void NegativeGetAppsInGroup(JSONObject jsonObject) throws Exception {
         appsInGroup = appsClass.NegativeGetAppsInGroup(jsonObject);
         System.out.println(appsInGroup.toString());
@@ -94,7 +85,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetDetailInfo.class)
     public void NegativeGetDetailInfo(JSONObject jsonObject) throws Exception {
         appsDetailInfo = appsClass.NegativeGetDetailInfo(jsonObject);
         System.out.println(appsDetailInfo.toString());
@@ -113,7 +104,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsBlock.class)
     public void NegativeGetAppsBlock(JSONObject jsonObject) throws Exception {
         response = appsClass.NegativeGetAppsBlock(jsonObject);
         String result = response.body().string();
@@ -132,7 +123,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsBlock.class)
     public void NegativeGetAppsBlockUpdate(JSONObject jsonObject) throws Exception {
         response = appsClass.NegativeGetAppsBlockUpdate(jsonObject);
         String result = response.body().string();
@@ -152,7 +143,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsUpdate.class)
     public void NegativeGetAppsUpdate(JSONObject jsonObject) throws Exception {
         response = appsClass.NegativeGetAppsUpdate(jsonObject);
         String result = response.body().string();
@@ -173,7 +164,7 @@ public class AppsTest extends BaseClass{
 
     @Test
     @TestCaseName("{0}")
-    @Parameters(source = GenerateAppsContent.class)
+    @Parameters(source = ProvideGetAppsUpdate.class)
     public void NegativeGetAppsDelete(JSONObject jsonObject) throws Exception {
         response = appsClass.NegativeGetAppsDelete(jsonObject);
         String result = response.body().string();

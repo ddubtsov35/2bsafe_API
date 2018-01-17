@@ -1,6 +1,7 @@
 package com.dubtsov._2bsafe.Parents.Functions.Rules;
 
 import com.dubtsov._2bsafe.Parents.Functions.BaseClass.BaseClass;
+import com.dubtsov._2bsafe.Parents.Functions.Rules.GenerateData.GenerateRequestAddRule;
 import com.dubtsov._2bsafe.Parents.Models.GetRulesModel;
 import com.dubtsov._2bsafe.Parents.Models.SetRulesModel;
 import com.dubtsov._2bsafe.Parents.Parse.GetRules;

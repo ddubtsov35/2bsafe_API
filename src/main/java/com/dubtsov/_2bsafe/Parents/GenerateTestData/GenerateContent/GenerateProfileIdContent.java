@@ -30,9 +30,7 @@ public class GenerateProfileIdContent {
     public static JSONObject getProfileId() throws Exception {
         JSONObject jsonObj = new JSONObject();
         ProfileClass profileClass = new ProfileClass();
-        AuthorisationChildClass authorisationChildClass = new AuthorisationChildClass();
         ChildrenCardClass childrenCardClass = new ChildrenCardClass();
-        ChildrenLogoutClass childrenLogoutClass = new ChildrenLogoutClass();
 
         List<ProfileCard> profileCardList = profileClass.getProfileList();
         if (profileCardList.isEmpty()) {
@@ -45,6 +43,6 @@ public class GenerateProfileIdContent {
             jsonObj.put("profile_id", profileCardList.get(profileCardList.size()-1).getProfile_id());
         }
         profileId = (Integer) jsonObj.get("profile_id");
-        return jsonObj;
+        return new JSONObject(jsonObj);
     }
 }
