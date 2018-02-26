@@ -4,23 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>2bsafe_API_tests</groupId>
-    <artifactId>2bsafe_API_tests</artifactId>
+    <groupId>appium</groupId>
+    <artifactId>appium</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/io.appium/java-client -->
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>5.0.4</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp/okhttp -->
-        <dependency>
-            <groupId>com.squareup.okhttp</groupId>
-            <artifactId>okhttp</artifactId>
-            <version>2.7.5</version>
         </dependency>
 
     </dependencies>
@@ -30,14 +32,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.20</version>
+                <version>2.20.1</version>
                 <configuration>
                     <includes>
-                        <include>**/Test.java</include>
+                        <include>Test</include>
                     </includes>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 
 </project>
