@@ -14,7 +14,6 @@ public class Test extends BaseDriverClass{
         //getDriver2();
 
     }
-
     /*@org.junit.Test
     public void test2() throws MalformedURLException {
 

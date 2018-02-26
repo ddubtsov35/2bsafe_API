@@ -28,6 +28,7 @@ public class BaseDriverClass {
         return appiumDriverLocalService;
     }
 
+
     public AppiumDriver getDriver() throws MalformedURLException {
         //Start local server
         getAppiumDriverLocalService().start();
